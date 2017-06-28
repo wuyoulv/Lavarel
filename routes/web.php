@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+//后台路由
 Route::get("/login","Admin\LoginController@index");
 Route::get("admin/getcode","Admin\LoginController@getCode");//加载验证码
 Route::post("admin/dologin","Admin\LoginController@dologin");
@@ -29,6 +31,9 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get("/log","Admin\LogController@index");
 	
 });
+
+//前台路由
+Route::get("/dydetails","Home\DydetailsController@index");
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/',"Home\IndexController@index");
     
