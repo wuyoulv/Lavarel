@@ -317,6 +317,16 @@
               </ul>
             </li>
             
+                        <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-bomb"></i> <span> VIP会员管理</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="{{url('admin/user_vip')}}"><i class="fa fa-circle-o"></i> 浏览VIP会员</a></li>
+                <li><a href="{{url('admin/stu/create')}}"><i class="fa fa-circle-o"></i> 修改VIP会员状态</a></li>
+              </ul>
+            </li>
+
             <li class="active treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 学生信息管理</span> <i class="fa fa-angle-left pull-right"></i>
