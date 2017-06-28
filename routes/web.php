@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 =======
     Route::get("/ad","Admin\AdController@index");
     Route::get("/log","Admin\LogController@index");
+    Route::get("/dddlog","Admin\LogController@index");
 	
 >>>>>>> bebaec737bd7a1fe882bdeb408c6ad503ea549da
 });
