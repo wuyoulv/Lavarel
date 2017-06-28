@@ -18,9 +18,10 @@ class AdController extends Controller
     {
         $user = Ad::get();
        
-        return view('admin.ad.index',['list'=>$user]);
-    }
+       return view('admin.ad.index',['list'=>$user]);
+   }
 
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -28,7 +29,8 @@ class AdController extends Controller
      */
     public function create()
     {
-        //
+       return view("admin.ad.add");
+       // return "加载添加表单!";
     }
 
     /**
@@ -39,7 +41,21 @@ class AdController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$input = $request->all(); //获取所有参数信息
+        //unset($input['_token']);//移除_token参数
+        //下面语句等价于上面两句
+        $input = $request->only(['userid','title','picname','addtime','deadline','status']);
+        //print_r($input);
+        $id = \DB::table("ad")->insertGetId($input);
+        //return "添加的id:".$id;
+        if($id>0){
+            return redirect('admin/ad');
+            //echo "成功";
+        }else{
+            echo "添加失败";
+        }
+        
+
     }
 
     /**
@@ -50,7 +66,7 @@ class AdController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -61,7 +77,9 @@ class AdController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ob = \DB::table("ad")->where("id","=",$id)->first();
+        //print_r($ob);
+        return view("ad.edit",['stu'=>$ob]);
     }
 
     /**
@@ -73,7 +91,13 @@ class AdController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->only(['name','age','sex','classid']);
+        $id = \DB::table("ad")->where("id",$id)->update($input);
+        if($id>0){
+            echo "修改成功!";
+        }else{
+            echo "失败!";
+        }
     }
 
     /**
@@ -84,6 +108,9 @@ class AdController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \DB::table('stu')->where('id', $id)->delete();
+        //return redirect()->route('/stu');
+        return redirect('stu');
     }
 }
+

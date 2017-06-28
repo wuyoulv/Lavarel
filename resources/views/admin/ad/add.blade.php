@@ -26,23 +26,48 @@
                   <h3 class="box-title"><i class="fa fa-plus"></i> 添加角色信息</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal" action="{{URL('admin/role')}}" method="post">
+                <form class="form-horizontal" action="{{url('admin/role')}}" method="post">
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   <div class="box-body">
+                  <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">UID</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="userid" class="form-control" placeholder="uid">
+                      </div>
+                    </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">角色名称</label>
                       <div class="col-sm-4">
-                        <input type="text" name="name" class="form-control" placeholder="角色名称">
+                        <input type="text" name="title" class="form-control" placeholder="角色名称">
                       </div>
                     </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">图片</label>
+                      <div class="col-sm-4">
+                        <input type="file" name="picname" >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">添加时间</label>
+                      <div class="col-sm-4">
+                        <input type="datetime-local" name="addtime" class="form-control">
+                      </div>
+                    </div>
+                      <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">到期时间</label>
+                      <div class="col-sm-4">
+                        <input type="datetime-local" name="deadline" class="form-control" >
+                      </div>
+                    </div>
+                  
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">当前状态</label>
                       <div class="col-sm-4">
                         <label class="radio-inline">
-                          <input type="radio" name="state" id="inlineRadio1" value="0"> 启用
+                          <input type="radio" name="status" id="inlineRadio1" value="0"> 启用
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="state" id="inlineRadio2" value="1"> 禁用
+                          <input type="radio" name="status" id="inlineRadio2" value="1"> 禁用
                         </label>
                       </div>
                     </div>
