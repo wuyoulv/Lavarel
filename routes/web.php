@@ -25,5 +25,6 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get("/userlog","Admin\UserLogController@index");
     Route::get("/ad","Admin\AdController@index");
     Route::get("/log","Admin\LogController@index");
+    Route::get("/dddlog","Admin\LogController@index");
 	
 });
