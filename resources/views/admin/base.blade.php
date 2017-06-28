@@ -346,6 +346,25 @@
                 <li><a href="{{url('admin/type/create')}}"><i class="fa fa-circle-o"></i> 添加类别</a></li>
               </ul>
             </li>
+
+             <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-bomb"></i> <span> 视频信息</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="{{url('/film_info')}}"><i class="fa fa-circle-o"></i> 浏览视频</a></li>
+                <li><a href="{{url('/film_info/create')}}"><i class="fa fa-circle-o"></i> 添加视频</a></li>
+              </ul>
+            </li>
+            <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-bomb"></i> <span> 七牛云视频信息</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="{{url('/qiniu_info')}}"><i class="fa fa-circle-o"></i> 浏览七牛云</a></li>
+                <li><a href="{{url('/qiniu_info/create')}}"><i class="fa fa-circle-o"></i> 添加七牛云</a></li>
+              </ul>
+            </li>
             
             <li class="active treeview">
               <a href="#">
