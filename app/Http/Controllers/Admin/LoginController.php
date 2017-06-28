@@ -104,9 +104,10 @@ class LoginController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function logout(Request $request)
     {
-        //
+        $request->session()->forget('adminuser');
+        return redirect('admin');
     }
 
     /**

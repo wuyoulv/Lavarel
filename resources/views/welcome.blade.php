@@ -90,6 +90,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
                 <a href="{{url('admin/')}}">后台管理</a>
+                <a href="{{url('home/')}}">前台管理</a>
             </div>
         </div>
     </body>
