@@ -247,7 +247,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="{{asset('myadmin/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image"/>
-                  <span class="hidden-xs">亚力山大-皮尔斯</span>
+                  <span class="hidden-xs">{{ session('adminuser') }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
