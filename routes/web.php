@@ -23,9 +23,15 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/',"Admin\IndexController@index" );
     Route::get("/user","Admin\UserController@index");
     Route::get("/userlog","Admin\UserLogController@index");
+<<<<<<< HEAD
     Route::get("/logout","Admin\LoginController@logout");
     Route::get("/user_vip","Admin\User_vipController@index");
 
+=======
+    Route::get("/ad","Admin\AdController@index");
+    Route::get("/log","Admin\LogController@index");
+	
+>>>>>>> bebaec737bd7a1fe882bdeb408c6ad503ea549da
 });
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/',"Home\IndexController@index");
