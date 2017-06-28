@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\User_vip;
+use App\Http\Controllers\Controller;
+use App\Model\User_film;
 
-class User_vipController extends Controller
+class User_filmController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class User_vipController extends Controller
      */
     public function index()
     {
-        $user = User_vip::get();//取stu表的一条数据
-        return view('admin/User_vip/index',['list'=>$user]);
-
+        $lost=User_film::get();
+        //var_dump($lost); 
+        return view("admin.user_film.index",["list"=>$lost]);
     }
 
     /**
