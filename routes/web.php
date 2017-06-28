@@ -21,8 +21,7 @@ Route::get("/login","Admin\LoginController@index");
 Route::get("admin/getcode","Admin\LoginController@getCode");//加载验证码
 Route::post("admin/dologin","Admin\LoginController@dologin");
 
-Route::get('/film_info','Admin\Film_infoController@index');  //视频管理
-Route::get('/qiniu_info','Admin\Qiniu_infoController@index'); //视频添加
+
 
 //Route::get("admin","Admin\IndexController@index");
 Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
@@ -33,6 +32,9 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get("/user_vip","Admin\User_vipController@index");
     Route::get("/ad","Admin\AdController@index");
     Route::get("/log","Admin\LogController@index");
+
+    Route::get('/film_info','Admin\Film_infoController@index');  //视频管理
+    Route::get('/qiniu_info','Admin\Qiniu_infoController@index'); //视频添加
 	
 });
 
