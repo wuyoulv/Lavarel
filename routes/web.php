@@ -16,7 +16,12 @@ Route::get('/', function () {
 });
 
 
+
 //后台路由
+
+Route::get("admin/user_film","Admin\User_filmController@index");//用户视频中间表
+Route::get("admin/logins","Admin\LoginsController@login");//登录信息
+
 Route::get("/login","Admin\LoginController@index");
 Route::get("admin/getcode","Admin\LoginController@getCode");//加载验证码
 Route::post("admin/dologin","Admin\LoginController@dologin");
