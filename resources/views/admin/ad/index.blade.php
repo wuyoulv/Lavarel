@@ -22,7 +22,7 @@
               <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title"><i class="fa fa-th"></i> 角色信息管理</h3>
-                  <button class="btn btn-primary" onclick="window.location='{{URL('admin/ad/add')}}'">发布信息</button>
+                  <button class="btn btn-primary" onclick="window.location='{{URL('admin/add')}}'">发布信息</button>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">

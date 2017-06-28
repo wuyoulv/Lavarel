@@ -56,7 +56,7 @@ class LoginController extends Controller
             //判断密码
             if(md5($password)==$users->password){
                 //存储session跳转页面
-                session()->put("adminuser",$users->account);
+                session()->put("adminuser",$user);
                 return redirect("admin");
                //echo "测试成功!";
             }
@@ -64,14 +64,60 @@ class LoginController extends Controller
         return back()->with("msg","账号或密码错误！");
         //return view("admin/ceshi");
     }
-    
-    
-    
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function logout(Request $request)
     {
         $request->session()->forget('adminuser');
         return redirect('admin');
     }
 
-    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }
