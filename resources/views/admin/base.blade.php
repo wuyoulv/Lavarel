@@ -313,7 +313,6 @@
               <ul class="treeview-menu">
                 <li class="active"><a href="{{URL('admin/userlog')}}"><i class="fa fa-youtube-play"></i> 登陆管理</a></li>
                 <li class="active"><a href="{{URL('admin/user')}}"><i class="fa fa-youtube-play"></i> 会员管理</a></li>
-                <li class="active"><a href="{{URL('admin/node')}}"><i class="fa fa-youtube-play"></i> 节点管理</a></li>
               </ul>
             </li>            
             <li class="active treeview">
@@ -321,30 +320,11 @@
                 <i class="fa fa-bomb"></i> <span> 信息管理</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/logins')}}"><i class="fa fa-circle-o"></i> 浏览学生</a></li>
-                <li><a href="{{url('admin/user_film')}}"><i class="fa fa-circle-o"></i> 添加学生</a></li>
+                <li class="active"><a href="{{url('admin/logins')}}"><i class="fa fa-circle-o"></i> 登陆信息</a></li>
+                <li><a href="{{url('admin/user_film')}}"><i class="fa fa-circle-o"></i> 用户与电影</a></li>
               </ul>
             </li>
 
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-bomb"></i> <span> 学生信息管理</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/stu')}}"><i class="fa fa-circle-o"></i> 浏览学生</a></li>
-                <li><a href="{{url('admin/stu/create')}}"><i class="fa fa-circle-o"></i> 添加学生</a></li>
-              </ul>
-            </li>
-            
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-bomb"></i> <span> 学生信息管理</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/stu')}}"><i class="fa fa-circle-o"></i> 浏览学生</a></li>
-                <li><a href="{{url('admin/stu/create')}}"><i class="fa fa-circle-o"></i> 添加学生</a></li>
-              </ul>
-            </li>
             <li class="active treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 影片分类管理</span> <i class="fa fa-angle-left pull-right"></i>
@@ -354,16 +334,17 @@
                 <li><a href="{{url('admin/type/create')}}"><i class="fa fa-circle-o"></i> 添加分类</a></li>
               </ul>
             </li>
+
             <li class="active treeview">
             <a href="">
             		<i class="fa fa-bomb"></i> <span>谷宇模块</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
- 			
-            <ul class="treeview-menu">
+ 			      <ul class="treeview-menu">
                 <li class="active"><a href="{{url('admin/ad')}}"><i class="fa fa-circle-o"></i> 广告详情</a></li>
                 <li><a href="{{url('admin/log')}}"><i class="fa fa-circle-o"></i> 日志详情</a></li>
               </ul>
             </li>
+
           <li class="active treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 影片评论管理</span> <i class="fa fa-angle-left pull-right"></i>
@@ -372,16 +353,6 @@
                 <li class="active"><a href="{{url('admin/cmt')}}"><i class="fa fa-circle-o"></i> 浏览评论</a></li>
               </ul>
             </li>      
-
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-bomb"></i> <span> 类别信息管理</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/type')}}"><i class="fa fa-circle-o"></i> 浏览类别</a></li>
-                <li><a href="{{url('admin/type/create')}}"><i class="fa fa-circle-o"></i> 添加类别</a></li>
-              </ul>
-            </li>
 
              <li class="active treeview">
               <a href="#">
@@ -399,27 +370,6 @@
               <ul class="treeview-menu">
                 <li class="active"><a href="{{url('admin/qiniu_info')}}"><i class="fa fa-circle-o"></i> 浏览七牛云</a></li>
                 <li><a href="{{url('admin/qiniu_info/create')}}"><i class="fa fa-circle-o"></i> 添加七牛云</a></li>
-              </ul>
-            </li>
-            
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-bomb"></i> <span> 商品信息管理</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/goods')}}"><i class="fa fa-circle-o"></i> 浏览商品</a></li>
-                <li><a href="{{url('admin/goods/create')}}"><i class="fa fa-circle-o"></i> 添加商品</a></li>
-              </ul>
-            </li>
-            
-             <li class="treeview">
-              <a href="#">
-                <i class="fa fa-pie-chart"></i>
-                <span>数据统计</span>
-                <span class="label label-primary pull-right">4</span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="{{URL('admin/chart')}}"><i class="fa fa-circle-o"></i> ChartJS实例</a></li>
               </ul>
             </li>
             
