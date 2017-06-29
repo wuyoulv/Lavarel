@@ -25,7 +25,7 @@ Route::get("/login","Admin\LoginController@index");
 Route::get("admin/getcode","Admin\LoginController@getCode");//加载验证码
 Route::post("admin/dologin","Admin\LoginController@dologin");
 
-
+    //Route::resource('/admin/ad', 'Admin\AdController');
 
 //Route::get("admin","Admin\IndexController@index");
 Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
@@ -37,8 +37,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get("/logout","Admin\LoginController@logout");
     Route::get("/user_vip","Admin\User_vipController@index");
 
-    Route::get("/ad","Admin\AdController@index");  
-    Route::get("/log","Admin\LogController@index");
+    
 
     Route::get("/user_film","Admin\User_filmController@index");//用户视频中间表
     Route::get("/logins","Admin\LoginsController@login");//登录信息
@@ -46,10 +45,13 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/film_info','Admin\Film_infoController@index');  //视频信息
     Route::get('/qiniu_info','Admin\Qiniu_infoController@index'); //七牛信息
 	
+    Route::resource('/admin/ad', 'Admin\AdController');//广告
+    Route::resource('/admin/log', 'Admin\LogController');//日志
 
-    Route::get("/add","Admin\AdController@create");
-    Route::post("/role","Admin\AdController@store");
-
+    //Route::get("/add","Admin\AdController@create");
+    //Route::post("/role","Admin\AdController@store");
+	//Route::get("/ad","Admin\AdController@index");  
+    //Route::get("/log","Admin\LogController@index");
 
 });
 

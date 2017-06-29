@@ -6,15 +6,9 @@
         <section class="content-header">
           <h1>
             <i class="fa fa-calendar"></i>
-			角色信息管理
+			广告添加
           </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li><a href="#">信息管理</a></li>
-            <li class="active">添加信息</li>
-          </ol>
         </section>
-
         <!-- Main content -->
         <section class="content">
           <div class="row">
@@ -26,7 +20,7 @@
                   <h3 class="box-title"><i class="fa fa-plus"></i> 添加角色信息</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal" action="{{url('admin/role')}}" method="post">
+                <form class="form-horizontal" action="{{url('admin/admin/ad')}}" method="post">
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   <div class="box-body">
                   <div class="form-group">
@@ -44,7 +38,7 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">图片</label>
                       <div class="col-sm-4">
-                        <input type="file" name="picname" >
+                        <input type="text" name="picname" >
                       </div>
                     </div>
                     <div class="form-group">

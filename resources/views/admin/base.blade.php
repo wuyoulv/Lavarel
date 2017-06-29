@@ -327,6 +327,16 @@
 
             <li class="active treeview">
               <a href="#">
+                <i class="fa fa-bomb"></i> <span> 会员信息管理</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="{{url('admin/user_vip')}}"><i class="fa fa-circle-o"></i> 浏览会员信息</a></li>
+                <li><a href="{{url('admin/user_film')}}"><i class="fa fa-circle-o"></i> 添加学生</a></li>
+              </ul>
+            </li>
+
+            <li class="active treeview">
+              <a href="#">
                 <i class="fa fa-bomb"></i> <span> 影片分类管理</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
@@ -340,8 +350,8 @@
             		<i class="fa fa-bomb"></i> <span>谷宇模块</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
  			      <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/ad')}}"><i class="fa fa-circle-o"></i> 广告详情</a></li>
-                <li><a href="{{url('admin/log')}}"><i class="fa fa-circle-o"></i> 日志详情</a></li>
+                <li class="active"><a href="{{url('admin/admin/ad')}}"><i class="fa fa-circle-o"></i> 广告详情</a></li>
+                <li><a href="{{url('admin/admin/log')}}"> <i class="fa fa-circle-o"></i> 日志详情</a></li>
               </ul>
             </li>
 

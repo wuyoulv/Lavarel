@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 
 use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
 use App\Model\Ad;
 
@@ -49,7 +50,7 @@ class AdController extends Controller
         $id = \DB::table("ad")->insertGetId($input);
         //return "添加的id:".$id;
         if($id>0){
-            return redirect('admin/ad');
+            return redirect('admin/admin/ad');
             //echo "成功";
         }else{
             echo "添加失败";
@@ -77,9 +78,10 @@ class AdController extends Controller
      */
     public function edit($id)
     {
-        $ob = \DB::table("ad")->where("id","=",$id)->first();
+        //echo "ddddddddddddddddddddddddd";
+         $ob = \DB::table("ad")->where("id","=",$id)->first();
         //print_r($ob);
-        return view("ad.edit",['stu'=>$ob]);
+         return view("admin.ad.edit",['vo'=>$ob]);
     }
 
     /**
@@ -91,12 +93,16 @@ class AdController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->only(['name','age','sex','classid']);
+        $input = $request->only(['title','picname','addtime','deadline','status']);
         $id = \DB::table("ad")->where("id",$id)->update($input);
+        
         if($id>0){
+            return redirect('admin/admin/ad');
             echo "修改成功!";
-        }else{
-            echo "失败!";
+        }else{            
+            return "失败!";
+            //echo "失败!";
+            
         }
     }
 
@@ -108,9 +114,11 @@ class AdController extends Controller
      */
     public function destroy($id)
     {
-        \DB::table('stu')->where('id', $id)->delete();
+        \DB::table('ad')->where('id', $id)->delete();
         //return redirect()->route('/stu');
-        return redirect('stu');
+        return redirect('admin/admin/ad');
     }
+    
+   
 }
 

@@ -5,8 +5,7 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
           <h1>
-            信息输出表
-            <small>preview of simple tables</small>
+            广告后台详情表
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
@@ -21,8 +20,8 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title"><i class="fa fa-th"></i> 角色信息管理</h3>
-                  <button class="btn btn-primary" onclick="window.location='{{URL('admin/add')}}'">发布信息</button>
+                  <h3 class="box-title"><i class="fa fa-th"></i> 广告信息管理</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a class="btn btn-primary" href="{{ URL('admin/admin/ad') }}/create">发布广告</a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">
@@ -44,9 +43,9 @@
                       <td>{{ $vo->addtime }}</td>
                       <td>{{ $vo->deadline }}</td>
                       <td>{{ $vo->status }}</td>
-                      <td><button class="btn btn-xs btn-danger" onclick="doDel({{ $vo->id }})">删除</button> 
-                         <button class="btn btn-xs btn-primary" onclick="window.location='{{URL('/admin/role')}}/{{ $vo->id }}/edit'">编辑</button> 
-                         <button class="btn btn-xs btn-success" onclick="loadNode({{ $vo->id }},'{{ $vo->name}}')">分配节点</button></td>
+                      <td><a class="btn btn-xs btn-danger"  href="javascript:doDel({{ $vo->id }})">删除</a> 
+                          <a class="btn btn-xs btn-primary" href="{{ URL('admin/admin/ad') }}/{{ $vo->id }}/edit">编辑</a> 
+                        
                     </tr>
                     @endforeach
                     
@@ -62,11 +61,11 @@
     @endsection
     
     @section('myscript')
-    <form action="/role/" method="post" name="myform" style="display:none;">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
-            <input type="hidden" name="_method" value="delete"/>
-           
-    </form>
+    <!--  form表单是用来删除的  -->
+        <form style="display:none;" action="" name="myform" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        </form>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -88,9 +87,11 @@
         function doDel(id){
             Modal.confirm({msg: "是否删除信息？"}).on(function(e){
                 if(e){
-                   var form = document.myform;
-                    form.action = "{{URL('/admin/role')}}/"+id;
-                    form.submit(); 
+                     document.myform.action = "{{URL('/admin/admin/ad')}}/"+id;
+                     document.myform.submit();
+                    //var form = document.myform;
+                    //form.action = "{{URL('/admin/admin/destroy')}}/"+id;
+                    //form.submit(); 
                 }
               });
         }

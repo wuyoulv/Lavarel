@@ -43,7 +43,6 @@
                             <td>{{ date("Y-m-d",$vo->updated_at) }}</td>
                             <td><button class="btn btn-xs btn-danger" onclick="doDel({{ $vo->id }})">删除</button> 
                                <button class="btn btn-xs btn-primary" onclick="window.location='{{URL('/admin/role')}}/{{ $vo->id }}/edit'">编辑</button> 
-                               <button class="btn btn-xs btn-success" onclick="loadNode({{ $vo->id }},'{{ $vo->name}}')">分配节点</button></td>
                         </tr>
                     @endforeach
                     
