@@ -3,7 +3,7 @@
 	<div class="box-body">
       <table class="table table-bordered">
         <tr>
-          <th>学号</th>
+          <th>会员号</th>
           <th>账号</th>
           <th>头像</th>
           <th>密码</th>
@@ -42,11 +42,38 @@
           <td>{{$v->login_time}}</td>
           <td>{{$v->last_time}}</td>
           <td><button onclick="doDel({{$v->id}})" class="btn btn-xs btn-danger">删除</button> 
-          <button class="btn btn-xs btn-primary">编辑</button> </td>
+          <button onclick="window.location='{{URL('admin/user')}}/{{ $v->id }}/edit'" class="btn btn-xs btn-primary" >编辑</button> </td>
         </tr>
         @endforeach
-      
-       
       </table>
-    </div><!-- /.box-body -->
-@endsection
+                </div><!-- /.box-body -->
+                
+              </div><!-- /.box -->
+
+              
+              
+            </div><!-- /.col -->
+            
+          </div><!-- /.row -->
+         
+        </section><!-- /.content -->
+        <form action="" style="display:none;" id="mydeleteform" method="post">
+            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+            <input type="hidden" name="_method" value="DELETE">
+        </form>
+    @endsection
+    
+    
+    @section("myscript")
+      <script type="text/javascript">
+            function doDel(id){
+                Modal.confirm({msg:'确定要删除吗？'}).on(function(e){
+                   if(e){
+                    $("#mydeleteform").attr("action","{{url('admin/user')}}/"+id).submit();
+                    }                    
+                });
+            }
+      </script>
+    @endsection
+       
+      

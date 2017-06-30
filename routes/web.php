@@ -49,6 +49,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
     Route::get("/add","Admin\AdController@create");
     Route::post("/role","Admin\AdController@store");
+    Route::resource('/user', 'Admin\UserController');
 
 
 });
