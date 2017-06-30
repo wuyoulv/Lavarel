@@ -21,7 +21,7 @@
                 <div class="box-header with-border">
                   <h3 class="box-title"><i class="fa fa-th"></i> 分类浏览</h3>
                   <div class="box-tools">
-                    <form action="{{url('admin/stu')}}" method="get">
+                    <form action="{{url('admin/ad')}}" method="get">
                     <div class="input-group" style="width: 150px;">
                       <input type="text" name="name" class="form-control input-sm pull-right" placeholder="学员姓名"/>
                       <div class="input-group-btn">

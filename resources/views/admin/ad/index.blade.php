@@ -22,6 +22,18 @@
                 <div class="box-header with-border">
                   <h3 class="box-title"><i class="fa fa-th"></i> 广告信息管理</h3>&nbsp;&nbsp;&nbsp;&nbsp;
                   <a class="btn btn-primary" href="{{ URL('admin/admin/ad') }}/create">发布广告</a>
+                  <div class="box-tools">
+                    <form action="{{URL('admin/ddd/ad')}}" method="get">
+                     <input type="hidden" name="_method" value="delete">
+                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="input-group" style="width: 150px;">
+                      <input type="text" name="title" class="form-control input-sm pull-right" placeholder="角色名称"/>
+                      <div class="input-group-btn">
+                        <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                    </form>
+                  </div>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">
@@ -34,6 +46,7 @@
                       <th>状态</th>
                       <th style="width: 170px">操作</th>
                     </tr>
+
                     </tr>
                     @foreach($list as $vo)
                     <tr>
@@ -48,8 +61,9 @@
                         
                     </tr>
                     @endforeach
-                    
+
                   </table>
+                  {{ $list->appends($params)->links() }}
                 </div><!-- /.box-body -->
                 
               </div><!-- /.box -->

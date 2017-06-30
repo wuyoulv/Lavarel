@@ -38,7 +38,7 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">图片</label>
                       <div class="col-sm-4">
-                        <input type="text" name="picname" >
+                        <input type="file" name="picname" />
                       </div>
                     </div>
                     <div class="form-group">
@@ -75,6 +75,11 @@
 					</div>
                   </div><!-- /.box-footer -->
                 </form>
+                @if (session('status'))
+                <span style="color:red;">
+                     {{ session('status') }}
+                </span>
+        @endif
 				<div class="row"><div class="col-sm-12">&nbsp;</div></div>
 				<div class="row"><div class="col-sm-12">
                 <br/>

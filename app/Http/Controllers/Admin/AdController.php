@@ -17,9 +17,22 @@ class AdController extends Controller
      */
     public function index()
     {
-        $user = Ad::get();
+        /**
+        $user = ad::get();//取stu表的一条数据
+        return view('admin.ad.index',['list'=>$user]);
+        */
+        $db = \DB::table("ad");
        
-       return view('admin.ad.index',['list'=>$user]);
+       //判断并封装搜索条件
+       $params = array();
+       if(!empty($_GET['title'])){
+           $db->where("title","like","%{$_GET['title']}%");
+           $params['title'] = $_GET['title']; //维持搜索条件
+       }
+       
+       // $list = $db->get(); //获取全部
+       $list = $db->orderBy("id",'desc')->paginate(5); //5条每页浏览 
+       return view("admin.ad.index",['list'=>$list,'params'=>$params]);
    }
 
     
@@ -118,6 +131,53 @@ class AdController extends Controller
         //return redirect()->route('/stu');
         return redirect('admin/admin/ad');
     }
+
+    //执行上传
+    public function upload(Request $request)
+    {
+        return 1;
+        //判断是否是一个有效上传文件
+        if ($request->file('ufile') && $request->file('ufile')->isValid()) {
+            //获取上传文件信息
+            $file = $request->file('ufile');
+            $ext = $file->extension(); //获取文件的扩展名
+            //随机一个新的文件名
+            $filename = time().rand(1000,9999).".".$ext;
+            //移动上传文件
+            $file->move("./public/upload/",$filename);
+                                
+            return response($filename); //输出
+            exit();
+        }else{
+            //闪存信息
+            return redirect('demo/upload')->with('status', '请选择上传文件!');
+        }
+    }
+    //搜索 分页
+    public function indexs()
+    {
+
+        
+        $user = ad::get();//取stu表的一条数据
+        return view('admin.ad.index',['list'=>$user]);
+        
+        $db = \DB::table("ad");
+       
+       //判断并封装搜索条件
+       $params = array();
+       if(!empty($_GET['titil'])){
+           $db->where("titil","like","%{$_GET['titil']}%");
+           $params['titil'] = $_GET['titil']; //维持搜索条件
+       }
+       
+       // $list = $db->get(); //获取全部
+       $list = $db->orderBy("id",'desc')->paginate(5); //5条每页浏览
+        
+       return view("admin.ad.index",['list'=>$list,'params'=>$params]);
+        
+
+    }
+
     
    
 }
