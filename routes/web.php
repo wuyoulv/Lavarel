@@ -44,15 +44,17 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
     Route::get('/film_info','Admin\Film_infoController@index');  //视频信息
     Route::get('/qiniu_info','Admin\Qiniu_infoController@index'); //七牛信息
-	//谷宇路由开始
+
     Route::resource('/admin/ad', 'Admin\AdController');//广告
     Route::resource('/admin/log', 'Admin\LogController');//日志
     Route::get('/ddd/ad','Admin\AdController@index');
-    //谷宇路由结束
-    //Route::get("/add","Admin\AdController@create");
-    //Route::post("/role","Admin\AdController@store");
-	//Route::get("/ad","Admin\AdController@index");  
-    //Route::get("/log","Admin\LogController@index");
+    
+	
+
+    Route::get("/add","Admin\AdController@create");
+    Route::post("/role","Admin\AdController@store");
+    Route::resource('/user', 'Admin\UserController');
+
 
 });
 
