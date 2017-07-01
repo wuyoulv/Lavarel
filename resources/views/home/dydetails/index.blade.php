@@ -1,5 +1,16 @@
 @extends('home.base')
     @section('content')
+    
+<link href="{{ asset('home1/css/yk.css') }}" type="text/css" rel="stylesheet">
+<link href="{{ asset('home1/css/grid_pc.css') }}" type="text/css" rel="stylesheet">
+<link href="{{ asset('home1/css/uhome.css') }}" type="text/css" rel="stylesheet">
+<script type="text/javascript" async="" src="{{ asset('home1/js/index.js.下载') }}" id="aplus-sufei"></script><script type="text/javascript" async="" src="{{ asset('home1/image/saved_resource') }}"></script><script src="{{ asset('home1/js/jquery.js.下载') }}"></script><script>jQuery.noConflict();</script>
+<script src="{{ asset('home1/js/prototype.js.下载') }}"></script><script>if(!window.Nova){Nova={};}if(!window.NovaOptions){NovaOptions={};NovaOptions.compatibleMode=true;}</script>
+<script>if(!window.Local){Local={"RELEASE_TAG":"v1.0.166","PLAYER_RELEASE_TAG":"v1.0.0653","YOUKU_DOMAIN":"youku.com","YOUKU_HOMEURL":"www.youku.com","IMGSERVER":"\/\/static.youku.com","JSSERVER":"\/\/static.youku.com","CSSSERVER":"\/\/static.youku.com","VIDEO_PLAYPAGE_DOMAIN":"v.youku.com","PASSPORT_DOMAIN":"passport.youku.com","LOGIN_DOMAIN":"login.youku.com","UC_DOMAIN":"i.youku.com","SPACE_DOMAIN":"u.youku.com","INDEX_DOMAIN":"index.youku.com","NOTICE_DOMAIN":"notice.youku.com","COMMENT_DOMAIN":"comments.youku.com","NC_DOMAIN":"nc.youku.com","CMS_DOMAIN":"youku.com","WIDGET_DOMAIN":"comments.youku.com"};}</script>
+<script src="{{ asset('home1/js/loadFrame.js.下载') }}"></script>
+<script src="{{ asset('home1/js/common_1.js.下载') }}"></script>
+<script type="text/javascript" src="{{ asset('home1/js/cmsCommon.js.下载') }}"></script>
+<script type="text/javascript" src="{{ asset('home1/js/cmsDatafromPrototype.js.下载') }}"></script>
 <!--sub nav-->
 <div class="g-sub-nav" id="nav-second">
     <div class="g-content">
@@ -1974,4 +1985,19 @@ window.nova_init_hook_myyouku = function() {
 
 	</div>
     
+<script type="text/javascript" src="{{ asset('home1/js/tdstat.js.下载') }}"></script>
+<script type="text/javascript" src="{{ asset('home1/js/ani.js.下载') }}"></script>
+<script type="text/javascript" src="{{ asset('home1/js/hover.js.下载') }}"></script>
+<script type="text/javascript" src="{{ asset('home1/js/gridTab.js.下载') }}"></script>
+<script type="text/javascript" src="{{ asset('home1/js/ikuAdapterNew.js.下载') }}"></script>
+<script type="text/javascript" src="{{ asset('home1/js/ikuDown.js.下载') }}"></script>
+
+<script>
+
+document.observe("dom:loaded", function() {
+	VideoHover('.ishover');
+});
+
+</script>
+
 @endsection

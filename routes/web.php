@@ -48,7 +48,8 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::post('/cmt/update','Admin\Film_cmtController@update');
 
     Route::get("/logout","Admin\LoginController@logout");
-    Route::get("/user_vip","Admin\User_vipController@index");
+    Route::get("/user_vip","Admin\User_vipController@index"); //VIP用户管理
+    Route::resource('/user_vip', 'Admin\User_vipController');
 
     
 
@@ -79,3 +80,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
 
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
