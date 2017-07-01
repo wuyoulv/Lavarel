@@ -28,9 +28,9 @@
                 <div class="box-header with-border">
                   <h3 class="box-title"><i class="fa fa-th"></i> 七牛云视频管理</h3>
                   <div class="box-tools">
-                    <form action="{{url('/qiniu_info')}}" method="get">
+                    <form action="/admin/qiniu_info" method="get">
                     <div class="input-group" style="width: 150px;">
-                      <input type="text" name="name" class="form-control input-sm pull-right" placeholder="学员姓名"/>
+                      <input type="text" name="name" class="form-control input-sm pull-right" placeholder="文件名姓名"/>
                       <div class="input-group-btn">
                         <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                       </div>
@@ -65,8 +65,10 @@
             @endforeach
                    
                   
-                   
+               
+
                   </table>
+                  {{ $data->appends($where)->links() }}
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
                 </div>

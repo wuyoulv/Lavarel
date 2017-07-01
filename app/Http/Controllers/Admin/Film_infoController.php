@@ -13,10 +13,21 @@ class Film_infoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $film_info=Film_info::all();
-        return view('admin.Film_info.index',['data'=>$film_info]);
+
+        $db = \DB::table('film_info');
+        $where = [];
+        //var_dump($request->input('name'));die;
+        if($request->has('title')){
+            $name=$request->input('title');
+            $list=$db->where('title','like',"%{$name}%");
+            $where['name']=$name;
+        }
+
+            $list=$db->paginate(3);
+       
+        return view('admin.Film_info.index',['data'=>$list,'where'=>$where]);
     }
 
     /**

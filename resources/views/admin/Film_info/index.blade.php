@@ -28,13 +28,13 @@
                 <div class="box-header with-border">
                   <h3 class="box-title"><i class="fa fa-th"></i> 视频信息管理</h3>
                   <div class="box-tools">
-                    <form action="{{url('admin/stu')}}" method="get">
-                    <div class="input-group" style="width: 150px;">
-                      <input type="text" name="name" class="form-control input-sm pull-right" placeholder="学员姓名"/>
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
-                      </div>
-                    </div>
+                    <form action="/admin/film_info" method="get">
+                        <div class="input-group" style="width: 150px;">
+                          <input type="text" name="title" class="form-control input-sm pull-right" placeholder="电影名"/>
+                          <div class="input-group-btn">
+                            <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                          </div>
+                        </div>
                     </form>
                   </div>
                 </div><!-- /.box-header -->
@@ -88,6 +88,7 @@
                   
                    
                   </table>
+                  {{ $data->appends($where)->links() }}
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
                 </div>

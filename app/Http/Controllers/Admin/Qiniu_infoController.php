@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Qiniu_info;
 
+
 class Qiniu_infoController extends Controller
 {
     /**
@@ -13,11 +14,20 @@ class Qiniu_infoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $qiniu_info=Qiniu_info::all();
-        //var_dump($qiniu_info);
-        return view('admin.Qiniu_info.index',['data'=>$qiniu_info]);
+        //$qiniu_info=Qiniu_info::all();
+        $db=\DB::table('qiniu_info');
+        $where=[];
+
+        if($request->has('name')){
+            $name=$request->input("name");
+            $db->where("fname","like","%{$name}%");
+            $where['name']=$name;
+        }
+
+        $list=$db->paginate(5);
+        return view('admin.Qiniu_info.index',['data'=>$list,'where'=>$where]);
     }
 
     /**
