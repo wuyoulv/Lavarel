@@ -21,11 +21,7 @@
                 <div class="box-header with-border">
                   <h3 class="box-title"><i class="fa fa-th"></i> 影评浏览</h3>
                   <div class="box-tools">
-<<<<<<< HEAD
                     <form action="{{url('admin/cmt')}}" method="get">
-=======
-                    <form action="{{url('admin/ad')}}" method="get">
->>>>>>> 2a434e2d444529c5cf0311df162c88a86df2f42e
                     <div class="input-group" style="width: 150px;">
                       <input type="text" name="title" class="form-control input-sm pull-right" placeholder="视频名称"/>
                       <div class="input-group-btn">
