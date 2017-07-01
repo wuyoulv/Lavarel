@@ -35,7 +35,8 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/type','Admin\Film_typeController@index'); //分类管理
 	Route::get('/cmt','Admin\Film_cmtController@index');  //影评
     Route::get("/logout","Admin\LoginController@logout");
-    Route::get("/user_vip","Admin\User_vipController@index");
+    Route::get("/user_vip","Admin\User_vipController@index"); //VIP用户管理
+    Route::resource('/user_vip', 'Admin\User_vipController');
 
     Route::get("/ad","Admin\AdController@index");  
     Route::get("/log","Admin\LogController@index");
