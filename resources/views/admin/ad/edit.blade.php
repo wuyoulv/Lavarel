@@ -26,31 +26,49 @@
                   <h3 class="box-title"><i class="fa fa-plus"></i> 编辑角色信息</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal" action="{{URL('admin/role')}}/{{ $vo->id }}" method="post">
-                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                  <input type="hidden" name="_method" value="put">
+                 <form class="form-horizontal" action="{{URL('admin/admin/ad')}}/{{ $vo->id }}" method="post">
+                        <input type="hidden" name="_method" value="put">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">角色名称</label>
                       <div class="col-sm-4">
-                        <input type="text" name="name" class="form-control" value="{{ $vo->name }}">
+                        <input type="text" name="title" class="form-control" value="{{ $vo->title }}">
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">图片名称</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="picname" class="form-control" value="{{ $vo->picname }}">
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">添加时间</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="addtime" class="form-control" value="{{ $vo->addtime }}">
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">到期时间</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="deadline" class="form-control" value="{{ $vo->deadline }}">
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">当前状态</label>
                       <div class="col-sm-4">
                         <label class="radio-inline">
-                          <input type="radio" name="state" id="inlineRadio1" {{ ($vo->state == 0)?"checked":"" }} value="0"> 启用
+                          <input type="radio" name="status" id="inlineRadio1" {{ ($vo->status == 0)?"checked":"" }} value="0"> 启用
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="state" id="inlineRadio2" {{ ($vo->state == 1)?"checked":"" }} value="1"> 禁用
+                          <input type="radio" name="status" id="inlineRadio2" {{ ($vo->status == 1)?"checked":"" }} value="1"> 禁用
                         </label>
                       </div>
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
 				    <div class="col-sm-offset-2 col-sm-1">
-						<button type="submit" class="btn btn-primary">保存</button>
+						<button type="submit" class="btn btn-primary" >保存</button>
                     </div>
 					<div class="col-sm-1">
 						<button type="submit" class="btn btn-primary">重置</button>

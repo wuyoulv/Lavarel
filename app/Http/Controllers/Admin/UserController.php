@@ -27,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.user.add");
     }
 
     /**
@@ -38,7 +38,25 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $input = $request->only(['account','picname','password','name','birthday','sex','tel','email','address','months','money','role','buy_time','dead_line','login_time','last_time']);
+        $id = User::insertGetId($input);
+        //$input['buy_time',''];
+        /* $input['buy_time']=date("Y-m-d H:i:s",time());
+        $input['dead_line']=date("Y-m-d H:i:s",time());
+        $input['login_time']=date("Y-m-d H:i:s",time());
+        $input['last_time']=date("Y-m-d H:i:s",time()); */
+        if($id>0){
+            echo "修改成功!";
+        }else{
+            echo "失败!";
+        }
+        /* $InsertNotice = new User;
+        $InsertNotice ->notice_title =$request->notice_title;
+        $InsertNotice ->notice_content = $request ->notice_content;
+        $InsertNotice ->notice_time =$request->notice_time;
+        $InsertNotice->save();
+        return redirect("admin/notice"); */
     }
 
     /**
@@ -60,7 +78,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $re=User::find($id);
+        //echo "<pre>";
+        //var_dump($re);
+        return view('admin.user.edit',['user'=>$re]);
     }
 
     /**
@@ -72,7 +93,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->only(['account','picname','name','birthday','sex','tel','email','address','months','money','role','buy_time','dead_line','login_time','last_time']);
+        $id = User::where("id",$id)->update($input);
+        
+        if($id>0){
+            return redirect('admin/user');
+            echo "修改成功!";
+        }else{            
+            return "失败!";
+            //echo "失败!";
+            
+        }
     }
 
     /**
@@ -83,6 +114,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::delete($id);
+        return redirect("admin/user");
     }
 }
