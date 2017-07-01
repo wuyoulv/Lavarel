@@ -43,10 +43,9 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get("/user_film","Admin\User_filmController@index");//用户视频中间表
     Route::get("/logins","Admin\LoginsController@login");//登录信息
 
-    Route::get('/film_info','Admin\Film_infoController@index');  //视频信息
-    Route::get('/qiniu_info','Admin\Qiniu_infoController@index'); //七牛信息
-	
-
+    Route::resource('/film_info','Admin\Film_infoController');
+    Route::resource('/qiniu_info', 'Admin\Qiniu_infoController');
+    
     Route::get("/add","Admin\AdController@create");
     Route::post("/role","Admin\AdController@store");
     Route::resource('/user', 'Admin\UserController');
