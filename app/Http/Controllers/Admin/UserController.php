@@ -13,10 +13,21 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $list=User::get();
-        return view("admin.user.index",["list"=>$list]);
+        
+        $where = [];
+        if ($request->has('name')) {
+           $name = $request->input("name");
+           $list=User::where("account","like","%{$name}%")->paginate(1); 
+           $where['name']=$name;
+        }else{
+            $list = User::paginate(1);
+        }
+        
+        
+        
+        return view("admin.user.index",["list"=>$list,'where'=>$where]);
         //
     }
 
@@ -47,9 +58,9 @@ class UserController extends Controller
         $input['login_time']=date("Y-m-d H:i:s",time());
         $input['last_time']=date("Y-m-d H:i:s",time()); */
         if($id>0){
-            echo "修改成功!";
+            echo "添加成功!";
         }else{
-            echo "失败!";
+            echo "添加失败!";
         }
         /* $InsertNotice = new User;
         $InsertNotice ->notice_title =$request->notice_title;

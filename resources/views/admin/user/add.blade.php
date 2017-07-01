@@ -31,7 +31,7 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">账号：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="account" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="账号" type="text" name="account" class="form-control"/>
                       
                       </div>
                     </div>
@@ -45,21 +45,21 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">头像：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="picname" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="头像" type="text" name="picname" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">真实姓名：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="name" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="真实姓名" type="text" name="name" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">生日：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="birthday" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="生日" type="text" name="birthday" class="form-control"/>
                       
                       </div>
                     </div>
@@ -73,70 +73,70 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">电话：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="tel" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="电话" type="text" name="tel" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">邮箱：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="email" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="邮箱" type="text" name="email" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">地址：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="address" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="地址" type="text" name="address" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">月数：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="months" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="月数" type="text" name="months" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">金额：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="money" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="金额" type="text" name="money" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">角色：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="role" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="角色" type="text" name="role" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">购买时间：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="buy_time" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="购买时间" type="text" name="buy_time" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">到期时间：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="dead_line" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="到期时间" type="text" name="dead_line" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">登陆时间：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="login_time" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="登陆时间" type="text" name="login_time" class="form-control"/>
                       
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">上次登陆时间：</label>
                       <div class="col-sm-4">
-                      <input  id="inputEmail3" placeholder="姓名" type="text" name="last_time" class="form-control"/>
+                      <input  id="inputEmail3" placeholder="上次登陆时间" type="text" name="last_time" class="form-control"/>
                       
                       </div>
                     </div>
