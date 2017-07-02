@@ -30,6 +30,7 @@ Route::post("admin/dologin","Admin\LoginController@dologin");
 //Route::get("admin","Admin\IndexController@index");
 Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/',"Admin\IndexController@index" );
+    //前台用户路由
     Route::get("/user","Admin\UserController@index");
     Route::get("/userlog","Admin\UserLogController@index");
     //分类模块路由
@@ -57,17 +58,14 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get("/logins","Admin\LoginsController@login");//登录信息
 
 
-    //Route::get('/film_info','Admin\Film_infoController@index');  //视频信息
-    //Route::get('/qiniu_info','Admin\Qiniu_infoController@index'); //七牛信息
-
     Route::resource('/admin/ad', 'Admin\AdController');//广告
     Route::resource('/admin/log', 'Admin\LogController');//日志
     Route::get('/ddd/ad','Admin\AdController@index');
     
 	
 
-    Route::resource('/film_info','Admin\Film_infoController');
-    Route::resource('/qiniu_info', 'Admin\Qiniu_infoController');
+    Route::resource('/film_info','Admin\Film_infoController');//视频信息
+    Route::resource('/qiniu_info', 'Admin\Qiniu_infoController');//七牛信息
     
 
     Route::get("/add","Admin\AdController@create");
@@ -79,8 +77,10 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
 //前台路由
 Route::get("/dydetails","Home\DydetailsController@index");
+Route::get("/dydetails/{id}","Home\DydetailsController@index");
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/',"Home\IndexController@index");
+    Route::get('/xq/{id}',"Home\XqController@index");
     
 
 });

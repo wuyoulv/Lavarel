@@ -270,21 +270,14 @@
                                         首页
                                     </a>
                                 </li>
+                                @foreach ($filmtype as $a) 
                                 <li>
-                                    <a href="http://tv.youku.com/">
-                                        剧集
+                                    <a href="{{ url('/dydetails') }}/{{ $a->id }}">
+                                        {{ $a->type }}
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="{{ url('/dydetails') }}">
-                                        电影
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://zy.youku.com/">
-                                        综艺
-                                    </a>
-                                </li>
+                                @endforeach
+                                
                                 
                             <div class="top-nav-more">
                                 <span>
