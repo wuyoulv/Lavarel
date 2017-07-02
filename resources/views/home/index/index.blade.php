@@ -2539,24 +2539,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="">
-                                                    <a href="http://movie.youku.com/PGC" rel="4" hidefocus="true">
-                                                        网络电影
-                                                    </a>
-                                                    <div class="hide yk-AD-sponsor">
-                                                        <div class="ad-inner" data-adid="837" id="ab_837">
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="">
-                                                    <a href="http://movie.youku.com/dubo" rel="5" hidefocus="true">
-                                                        独播影院
-                                                    </a>
-                                                    <div class="hide yk-AD-sponsor">
-                                                        <div class="ad-inner" data-adid="101619" id="ab_101619">
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                              
                                             </ul>
                                             <a class="tab-rank fr" href="http://top.youku.com/rank/detail/?m=96&amp;type=1"
                                             target="_blank">
@@ -2578,11 +2561,12 @@
                                                                 </a>
                                                             </div>
                                                             <ul class="panel" style="width: 2413px; left: 0px;">
+                                                            @foreach ($filminfo as $b)
                                                                 <li class="yk-col4 mr1">
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
-                                                                            <a href="http://v.youku.com/v_show/id_XMTQxNDIyNjk3Mg==.html" data-from="1-1"
-                                                                            target="video" title="九层妖塔">
+                                                                            <a href="{{URL('home/xq')}}/{{$b->id}}" data-from="1-1"
+                                                                            target="video" title="{{$b->title}}">
                                                                             </a>
                                                                             <i class="bg">
                                                                             </i>
@@ -2602,17 +2586,18 @@
                                                                         <ul class="info-list">
                                                                             <li class="title short-title">
                                                                                 <a href="http://v.youku.com/v_show/id_XMTQxNDIyNjk3Mg==.html" data-from="1-2">
-                                                                                    九层妖塔
+                                                                                    {{$b->title}}
                                                                                 </a>
                                                                             </li>
                                                                             <li class="subtitle">
                                                                                 <span>
-                                                                                    全星阵容沙漠探险打怪
+                                                                                    {{$b->introduction}}
                                                                                 </span>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
+                                                            @endforeach
                                                                 <li class="yk-col4 mr1">
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
