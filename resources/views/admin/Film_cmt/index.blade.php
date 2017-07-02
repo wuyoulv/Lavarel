@@ -3,12 +3,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            影片分类表
+            影评信息表
             <small>preview of simple tables</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li><a href="#">分类预览</a></li>
+            <li><a href="#">影评预览</a></li>
            
           </ol>
         </section>
@@ -19,11 +19,11 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title"><i class="fa fa-th"></i> 分类浏览</h3>
+                  <h3 class="box-title"><i class="fa fa-th"></i> 影评浏览</h3>
                   <div class="box-tools">
-                    <form action="{{url('admin/stu')}}" method="get">
+                    <form action="{{url('admin/cmt')}}" method="get">
                     <div class="input-group" style="width: 150px;">
-                      <input type="text" name="name" class="form-control input-sm pull-right" placeholder="学员姓名"/>
+                      <input type="text" name="title" class="form-control input-sm pull-right" placeholder="视频名称"/>
                       <div class="input-group-btn">
                         <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                       </div>
@@ -48,7 +48,7 @@
                             <td>{{$stu->title}}</td>
                             <td>{{$stu->time}}</td>
                             <td>{{$stu->text}}</td>
-                            <td> <button onclick="" class="btn btn-xs btn-danger">删除</button> | <button class="btn btn-xs btn-primary">编辑</button></td>
+                            <td> <a href="{{url('admin/cmt/del')}}/{{$stu->id}}">删除</a> | <a href="{{url('admin/cmt/edit')}}/{{$stu->id}}">编辑</a></td>
                             
                         </tr>
                     @endforeach
@@ -57,6 +57,7 @@
                   </table>
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
+                {{$cmt->appends($where)->links()}}
                 </div>
               </div><!-- /.box -->
 

@@ -1,6 +1,19 @@
 @extends('admin.base')
     @section('content')
 	<div class="box-body">
+  <br/>
+            <form action="{{ URL('admin/user') }}" method="get" class="form-inline">
+              <div class="form-group">
+                <label for="exampleInputName2">关键字:</label>
+                <input type="text" name="name" class="form-control" id="exampleInputName2" placeholder="账号">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputName2">性别:</label>
+                <input type="text" name="sex" class="form-control" size="4" id="exampleInputName2" placeholder="1/2">
+              </div>
+              <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <br/>
       <table class="table table-bordered">
         <tr>
           <th>会员号</th>
@@ -30,13 +43,13 @@
           <td>{{$v->password}}</td>
           <td>{{$v->name}}</td>
           <td>{{$v->birthday}}</td>
-          <td>{{$v->sex}}</td>
+          <td>@if ($v->sex == 1) 男 @else 女 @endif</td>
           <td>{{$v->tel}}</td>
           <td>{{$v->email}}</td>
           <td>{{$v->address}}</td>
           <td>{{$v->months}}</td>
           <td>{{$v->money}}</td>
-          <td>{{$v->role}}</td>
+          <td>@if ($v->role == 1) 会员 @else Vip会员 @endif</td>
           <td>{{$v->buy_time}}</td>
           <td>{{$v->dead_line}}</td>
           <td>{{$v->login_time}}</td>
@@ -47,6 +60,8 @@
         @endforeach
       </table>
                 </div><!-- /.box-body -->
+                {{ $list->appends($where)->links() }}
+
                 
               </div><!-- /.box -->
 

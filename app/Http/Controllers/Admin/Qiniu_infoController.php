@@ -6,12 +6,107 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Qiniu_info;
 
+
 class Qiniu_infoController extends Controller
 {
-    public function index()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
     {
-    	$qiniu_info=Qiniu_info::all();
-    	//var_dump($qiniu_info);
-    	return view('admin.Qiniu_info.index',['data'=>$qiniu_info]);
+        //$qiniu_info=Qiniu_info::all();
+        $db=\DB::table('qiniu_info');
+        $where=[];
+
+        if($request->has('name')){
+            $name=$request->input("name");
+            $db->where("fname","like","%{$name}%");
+            $where['name']=$name;
+        }
+
+        $list=$db->paginate(5);
+        return view('admin.Qiniu_info.index',['data'=>$list,'where'=>$where]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view("admin.Qiniu_info.create");
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $input = $request->only(['uid','fname','key','createtime','description']);
+        $id = Qiniu_info::insertGetid($input);
+        //return "添加的Id".$id;
+        return redirect('/admin/qiniu_info');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $ob = Qiniu_info::where("id",$id)->first();
+        //var_dump($ob);
+        return view("admin.Qiniu_info.edit",['data'=>$ob]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $input = $request->only(['uid','fname','key','createtime','description']);
+        $id = Qiniu_info::where("id",$id)->update($input);
+        if($id>0){
+            return redirect('/admin/qiniu_info');
+        }else{
+            echo "修改失败";
+        }
+
+        
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Qiniu_info::where("id",$id)->delete();
+        return redirect('/admin/qiniu_info');
     }
 }

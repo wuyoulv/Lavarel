@@ -315,7 +315,18 @@
                 <li class="active"><a href="{{URL('admin/user')}}"><i class="fa fa-youtube-play"></i> 会员管理</a></li>
                 <li class="active"><a href="{{URL('admin/user/create')}}"><i class="fa fa-youtube-play"></i> 添加会员</a></li>
               </ul>
-            </li>            
+            </li> 
+
+            <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-bomb"></i> <span> VIP会员管理</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="{{url('admin/user_vip')}}"><i class="fa fa-circle-o"></i> 浏览VIP会员</a></li>
+                <li><a href="{{url('admin/user_vip/create')}}"><i class="fa fa-circle-o"></i> 添加VIP会员</a></li>
+              </ul>
+            </li>
+
             <li class="active treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 信息管理</span> <i class="fa fa-angle-left pull-right"></i>
@@ -323,6 +334,16 @@
               <ul class="treeview-menu">
                 <li class="active"><a href="{{url('admin/logins')}}"><i class="fa fa-circle-o"></i> 登陆信息</a></li>
                 <li><a href="{{url('admin/user_film')}}"><i class="fa fa-circle-o"></i> 用户与电影</a></li>
+              </ul>
+            </li>
+
+            <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-bomb"></i> <span> 会员信息管理</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="{{url('admin/user_vip')}}"><i class="fa fa-circle-o"></i> 浏览会员信息</a></li>
+                <li><a href="{{url('admin/user_film')}}"><i class="fa fa-circle-o"></i> 添加学生</a></li>
               </ul>
             </li>
 
@@ -341,8 +362,8 @@
             		<i class="fa fa-bomb"></i> <span>谷宇模块</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
  			      <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/ad')}}"><i class="fa fa-circle-o"></i> 广告详情</a></li>
-                <li><a href="{{url('admin/log')}}"><i class="fa fa-circle-o"></i> 日志详情</a></li>
+                <li class="active"><a href="{{url('admin/admin/ad')}}"><i class="fa fa-circle-o"></i> 广告详情</a></li>
+                <li><a href="{{url('admin/admin/log')}}"> <i class="fa fa-circle-o"></i> 日志详情</a></li>
               </ul>
             </li>
 
