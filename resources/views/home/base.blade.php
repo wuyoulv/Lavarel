@@ -65,73 +65,73 @@
             var cateStr = 'cms-00-1519-23042-0';
         </script>
         <div class="window">
-            <script type="text/javascript">
-                // 去掉860的栅格 ipad
-                (function(d) {
-                    var isMobile = !!((navigator.userAgent.toLowerCase().match(/android/i) || [''])[0]);
-                    /*检查移动设备是否为移动设备*/
-                    if (navigator.userAgent.indexOf('iPad') > -1 || isMobile) {
-                        var m = d.createElement('meta');
-                        m.setAttribute('name', 'viewport');
-                        m.setAttribute('content', 'width=1210px');
-                        d.head.appendChild(m);
-                        d.body.className += ' w1080';
-                    } else {
-                        var b = d.body;
-                        var c = b.className || '';
-                        var w = (d.documentElement || b).clientWidth;
-                        if (w <= 1330) {
-                            c += ' w1080 ';
-                        } else {
-                            c += ' w1300 ';
-                        }
-                        b.className = c;
-                    }
-                })(document);
-                var ykQHeader = {
-                    ltrim: function(s) {
-                        return s.replace(/^(\s*|　*)/, "")
-                    },
-                    rtrim: function(s) {
-                        return s.replace(/(\s*|　*)$/, "")
-                    },
-                    trim: function(s) {
-                        return this.ltrim(this.rtrim(s));
-                    },
-                    doSearch: function() {
-                        this.form = document.getElementById('qheader_search');
-                        if (!this.form) {
-                            return;
-                        }
-                        this.input = this.form.getElementsByTagName('input')[0];
-                        var q = this.trim(this.input.value),
-                        url = '',
-                        stat = 'spm=a2hww.20023042.#qheader_search~10';
-                        if (window.logPvid) {
-                            stat += '&_rp=' + window.logPvid;
-                        }
+            // <script type="text/javascript">
+            //     // 去掉860的栅格 ipad
+            //     (function(d) {
+            //         var isMobile = !!((navigator.userAgent.toLowerCase().match(/android/i) || [''])[0]);
+            //         /*检查移动设备是否为移动设备*/
+            //         if (navigator.userAgent.indexOf('iPad') > -1 || isMobile) {
+            //             var m = d.createElement('meta');
+            //             m.setAttribute('name', 'viewport');
+            //             m.setAttribute('content', 'width=1210px');
+            //             d.head.appendChild(m);
+            //             d.body.className += ' w1080';
+            //         } else {
+            //             var b = d.body;
+            //             var c = b.className || '';
+            //             var w = (d.documentElement || b).clientWidth;
+            //             if (w <= 1330) {
+            //                 c += ' w1080 ';
+            //             } else {
+            //                 c += ' w1300 ';
+            //             }
+            //             b.className = c;
+            //         }
+            //     })(document);
+            //     var ykQHeader = {
+            //         ltrim: function(s) {
+            //             return s.replace(/^(\s*|　*)/, "")
+            //         },
+            //         rtrim: function(s) {
+            //             return s.replace(/(\s*|　*)$/, "")
+            //         },
+            //         trim: function(s) {
+            //             return this.ltrim(this.rtrim(s));
+            //         },
+            //         doSearch: function() {
+            //             this.form = document.getElementById('qheader_search');
+            //             if (!this.form) {
+            //                 return;
+            //             }
+            //             this.input = this.form.getElementsByTagName('input')[0];
+            //             var q = this.trim(this.input.value),
+            //             url = '',
+            //             stat = 'spm=a2hww.20023042.#qheader_search~10';
+            //             if (window.logPvid) {
+            //                 stat += '&_rp=' + window.logPvid;
+            //             }
 
-                        if (q == '') {
-                            url = 'http://www.soku.com?inner' + ('&' + stat);
-                        } else {
-                            if (this.form.action.indexOf('/q_') === -1) {
-                                q = encodeURIComponent(q);
-                                url = this.form.action + '/q_' + q + ('?' + stat);
-                            } else {
-                                url = this.form.action + ('&' + stat);
-                            }
-                        }
-                        window.open(url);
-                        this.form.action = 'http://www.soku.com/search_video';
-                        return false;
-                    }
-                }
-            </script>
+            //             if (q == '') {
+            //                //    url = 'http://www.soku.com?inner' + ('&' + stat);
+            //             } else {
+            //                 if (this.form.action.indexOf('/q_') === -1) {
+            //                     q = encodeURIComponent(q);
+            //                     url = this.form.action + '/q_' + q + ('?' + stat);
+            //                 } else {
+            //                     url = this.form.action + ('&' + stat);
+            //                 }
+            //             }
+            //             window.open(url);
+            //             this.form.action = 'http://www.soku.com/search_video';
+            //             return false;
+            //         }
+            //     }
+            // </script>
             <div class="g-header g-header-fixed yk-has-nav" id="qheader">
                 <div class="g-header-container">
                     <div class="g-box">
                         <div class="yk-logo" id="ab_625">
-                            <a href="http://www.youku.com/" title="Youku 优酷" attr="idx0">
+                            <a href="" title="Youku 优酷" attr="idx0">
                                 <img src="{{ asset('home2/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷"
                                 from="index">
                             </a>
@@ -144,19 +144,19 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://faxian.youku.com/">
+                                    <a href="">
                                         发现
                                     </a>
                                 </li>
                                 <li>
-                                    <a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">
+                                    <a id="navSub" href="">
                                         订阅
                                         <span class="icon-warn" id="qheader_sub_num" style="display:none;">
                                         </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://cps.youku.com/redirect.html?id=00014c9c">
+                                    <a href="{{url('home/vipuser')}}">
                                         会员
                                     </a>
                                 </li>
@@ -172,10 +172,10 @@
                         <div class="g-ucenter" id="uerCenter">
                             <div class="u-login">
                                 <div class="login-before handle" style="display: block;">
-                                    <a id="qheader_login" href="http://www.youku.com/user_login/">
+                                    <a id="qheader_login" href="">
                                         登录
                                     </a>
-                                    <a id="qheader_reg" href="http://www.youku.com/user_login/">
+                                    <a id="qheader_reg" href="">
                                         注册
                                     </a>
                                 </div>
@@ -193,10 +193,10 @@
                                         <div class="content">
                                         </div>
                                         <div class="u-bottom">
-                                            <a href="http://www.youku.com/#" class="singout">
+                                            <a href="" class="singout">
                                                 退出登录
                                             </a>
-                                            <a href="http://user.youku.com/page/setting/base_profile" target="_blank">
+                                            <a href="" target="_blank">
                                                 账户设置
                                             </a>
                                         </div>
@@ -207,7 +207,7 @@
                         </div>
                         <div class="g-so" data-spm="search">
                             <div class="g-so-box">
-                                <form id="qheader_search" action="http://www.soku.com/search_video" method="get"
+                                <form id="qheader_search" action="" method="get"
                                 target="_blank" onsubmit="
                                 if(typeof(XBox) == &#39;object&#39;){
                                 return false;
@@ -219,13 +219,13 @@
                                     <i class="icon-search">
                                     </i>
                                     <input name="q" id="headq" type="text" autocomplete="off" _xbox_init="t">
-                                    <a href="http://top.youku.com/rank/" target="_blank" class="rankq" title="优酷指数排行榜">
+                                    <a href="" target="_blank" class="rankq" title="优酷指数排行榜">
                                     </a>
                                     <button type="submit" data-spm="dbutton">
                                         搜库
                                     </button>
                                     <div id="qheader_keywords" style="display:none;">
-                                        <a target="_blank" href="http://www.soku.com/search_video/q_" class="">
+                                        <a target="_blank" href="" class="">
                                         </a>
                                     </div>
                                     <input type="text" style="display:none;">
@@ -239,7 +239,7 @@
                                                 </div>
                                                 <div id="_xbox_ad">
                                                     <div class="sk_adsl">
-                                                        <a target="_blank" href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html">
+                                                        <a target="_blank" href="">
                                                             <img sk_live="link" log_pos="8" src="{{ asset('home2/05100000594A26B4ADC0B05C0A0F2481')}}">
                                                         </a>
                                                         <a class="sk_ads_close" href="javascript:;" style="display: inline;">
@@ -312,7 +312,7 @@
                             </div>
                             <div class="top-nav-right">
                                 <div class="g-nav-appdown">
-                                    <a target="_blank" title="下载" href="http://pd.youku.com/">
+                                    <a target="_blank" title="下载" href="">
                                         下载
                                     </a>
                                     <ul>
@@ -323,7 +323,7 @@
                                                 <div class="g-nav-app">
                                                     <img src="{{ asset('home2/0510000058D0FEA1ADC0AE058F099020')}}" width="70">
                                                     <h3>
-                                                        <a href="http://mobile.youku.com/index/wireless" target="_blank">
+                                                        <a href="">
                                                             优酷移动APP
                                                         </a>
                                                     </h3>
@@ -338,14 +338,14 @@
                                                 <div class="g-nav-iku">
                                                     <img src="{{ asset('home2/05100000585A30CB67BC3D2037022435')}}" width="73">
                                                     <h3>
-                                                        <a href="http://pd.youku.com/pc" target="_blank">
+                                                        <a href="" target="_blank">
                                                             优酷客户端
                                                         </a>
                                                     </h3>
                                                     <span>
                                                         Windows &amp; Mac版
                                                     </span>
-                                                    <a class="g-nav-app-btn" href="http://pd.youku.com/pc" target="_blank">
+                                                    <a class="g-nav-app-btn" href="" target="_blank">
                                                         了解详情
                                                     </a>
                                                 </div>
@@ -463,7 +463,7 @@
                                 <a target="_blank" href="http://game.youku.com/">
                                     游戏
                                 </a>
-                                <a target="_blank" href="http://vip.youku.com/">
+                                <a target="_blank" href="">
                                     会员
                                 </a>
                                 <a target="_blank" href="http://faxian.youku.com/?from=PC_main_nav">
