@@ -161,7 +161,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://user.youku.com/">
+                                    <a href="{{ url('home/user/index') }}">
                                         我的
                                     </a>
                                 </li>

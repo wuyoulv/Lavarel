@@ -81,6 +81,7 @@ Route::get("/dydetails/{id}","Home\DydetailsController@index");
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/',"Home\IndexController@index");
     Route::get('/xq/{id}',"Home\XqController@index");
+    Route::get('/user/{id}',"Home\UserController@index");
     
 
 });

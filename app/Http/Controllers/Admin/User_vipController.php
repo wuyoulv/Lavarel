@@ -20,7 +20,7 @@ class User_vipController extends Controller
         $user = User_vip::get();//取stu表的一条数据
         return view('admin/User_vip/index',['list'=>$user]);
         */
-        $db = \DB::table("User_vip");
+        $db = \DB::table("user_vip");
        
        //判断并封装搜索条件
        $params = array();
