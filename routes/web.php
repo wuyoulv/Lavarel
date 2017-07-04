@@ -93,3 +93,4 @@ Route::get('home/vipuser/',"Home\VipuserController@index");
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
+
