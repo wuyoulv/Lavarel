@@ -85,6 +85,8 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::post('/HomeLog/doLogin','Home\HomeLogController@doLogin');
     Route::get('/HomeLog/index','Home\HomeLogController@index');
     Route::post('/HomeLog/register','Home\HomeLogController@register');
+    Route::get('/user/{id}',"Home\UserController@index");
+    
 
 });
 
