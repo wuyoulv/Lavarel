@@ -16,8 +16,16 @@ class UserController extends Controller
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $Ad=Ad::get();
-        $list = User::all(); 
-        var_dump($id);
+        $list = User::find(1);   // 
+        //echo "<pre>";
+        //var_dump($list);
         return view("home.user.index",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
     }
+
+    public function zhanghu()
+    {
+    	//echo "1345";
+      return view('home.user.zhanghu');
+    }
+
 }

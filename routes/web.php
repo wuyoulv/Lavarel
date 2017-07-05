@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/',"Admin\IndexController@index" );
     //前台用户路由
     Route::get("/user","Admin\UserController@index");
+
     Route::get("/userlog","Admin\UserLogController@index");
     //分类模块路由
     Route::get('/type','Admin\Film_typeController@index'); //分类管理
@@ -75,7 +76,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
 
 });
-
+Route::get("home/user/zhanghu","Home\UserController@zhanghu");
 //前台路由
 Route::get("/dydetails","Home\DydetailsController@index");
 Route::get("/dydetails/{id}","Home\DydetailsController@index");
@@ -87,6 +88,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/HomeLog/index','Home\HomeLogController@index');
     Route::post('/HomeLog/register','Home\HomeLogController@register');
     Route::get('/user/{id}',"Home\UserController@index");
+
     //Route::get('home/vipuser/',"Home\VipuserController@index");
     
 
