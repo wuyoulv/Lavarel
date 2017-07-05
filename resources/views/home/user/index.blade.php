@@ -25,10 +25,10 @@
 			<div class="info-box " id="info-box">
 								<img src="{{ asset('home3/image/5.jpg')}}" class="user-img">
 				<div class="uinfo-box">
-					<p class="icon greet" id="greet">下午好</p>
+					<p class="icon greet" >下午好</p>
 					<div class="u-name">
-						<span class="left user-name" >{{$v->account}}</span>
-						<span class="left icon icon-mark"></span>
+						<span class="left" >{{$v->account}}</span>
+						<span class="left icon-mark"></span>
 						<div class="u-grade-icon grade-level15" id="grade-btn" data-stat-role="ck">
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
 								<div class="rect"></div>

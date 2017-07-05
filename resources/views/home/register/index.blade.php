@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>登录</title>
+		<title>注册</title>
 		<link rel="stylesheet" href="{{ asset('home8/css/reset.css')}}" />
 		<link rel="stylesheet" href="{{ asset('home8/css/common.css')}}" />
 	</head>
@@ -16,7 +16,7 @@
 					
 					<div class="login_form">
 						<div class="login_title">
-							登录
+							注册
 						</div>
 						<form action="" method="post">
 							
@@ -28,19 +28,20 @@
 								<input name="password" type="password" placeholder="密码">
 							</div>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
-							<div class="form_check_ipt">
-								<div class="left check_left">
-									<label><input name="" type="checkbox"> 下次自动登录</label>
-								</div>
-								<div class="right check_right">
-									<a href="#">忘记密码</a>
-								</div>
+							<div class="form_text_ipt">
+								<input name="repassword" type="password" placeholder="重复密码">
 							</div>
+							<div class="ececk_warning"><span>数据不能为空</span></div>
+							<div class="form_text_ipt">
+								<input name="code" type="text" placeholder="验证码">
+							</div>
+							<div class="ececk_warning"><span>数据不能为空</span></div>
+							
 							<div class="form_btn">
-								<button type="button">登录</button>
+								<button type="button">注册</button>
 							</div>
 							<div class="form_reg_btn">
-								<span>还没有帐号？</span><a href="register.html">马上注册</a>
+								<span>已有帐号？</span><a href="demo.html">马上登录</a>
 							</div>
 						</form>
 						<div class="other_login">

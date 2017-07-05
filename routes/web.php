@@ -88,10 +88,16 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::post('/HomeLog/register','Home\HomeLogController@register');
     Route::get('/user/{id}',"Home\UserController@index");
     //Route::get('home/vipuser/',"Home\VipuserController@index");
-    
+    Route::get('home/vipuser/',"Home\VipuserController@index");
 
 });
-Route::get('home/vipuser/',"Home\VipuserController@index");
+
+Route::post('/home/sendMobileCode','Home\HomeRegisterController@sendMobileCode');
+Route::post('/home//home/createUser','Home\HomeRegisterController@sendMobileCode');
+Route::get('/home/register','Home\HomeRegisterController@index');
+Route::get('/home/sendSms','Home\HomeRegisterController@sendSms');
+
+
 // Route::get('home/vipuser',function(){
 //     return "aa";
 // });

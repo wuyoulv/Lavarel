@@ -797,7 +797,8 @@ var ykQHeader = {
 <h3 class="title">热门影评</h3>
 </div>
 <div class="comment-list-body">
-<div class="posts-list"></div><div class="posts-more"><a href="javascript:;">查看更多</a></div></div>
+<div class="posts-list"></div><div class="posts-more"><a href="javascript:;">查看更多</a></div>
+</div>
 </div>
 <div id="videoCommentlist">
 <div class="comment-pager-header">
