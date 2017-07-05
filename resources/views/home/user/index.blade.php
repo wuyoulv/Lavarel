@@ -25,9 +25,9 @@
 			<div class="info-box " id="info-box">
 								<img src="{{ asset('home3/image/5.jpg')}}" class="user-img">
 				<div class="uinfo-box">
-					<p class="icon greet" id="greet">下午好</p>
+					<p class="icon greet">下午好</p>
 					<div class="u-name">
-						<span class="left user-name" >{{$v->account}}</span>
+						<span class="left user-name" >{{$list->account}}</span>
 						<span class="left icon icon-mark"></span>
 						<div class="u-grade-icon grade-level15" id="grade-btn" data-stat-role="ck">
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
@@ -67,7 +67,7 @@
 				<li><a href="http://vip.youku.com/?c=account" target="_blank" data-stat-role="ck">我的会员</a></li>
 				<li><a href="http://msg.youku.com/page/msg/index" target="_blank" data-stat-role="ck">我的消息</a></li>
 				<li><a href="http://cvip.youku.com/page/index" target="_blank" data-stat-role="ck">付费专区</a></li>
-				<li><a href="http://user.youku.com/page/setting/base_profile" target="_blank" data-stat-role="ck">账户设置</a></li>
+				<li><a href="{{ url('home/user/zhanghu') }}" target="_blank" data-stat-role="ck">账户设置</a></li>
 			</ul>
 		</div>	
 	</div>

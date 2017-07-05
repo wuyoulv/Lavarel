@@ -53,23 +53,51 @@ class AdController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+  
+     public function store(Request $request)
     {
-        //$input = $request->all(); //获取所有参数信息
-        //unset($input['_token']);//移除_token参数
-        //下面语句等价于上面两句
-        $input = $request->only(['userid','title','picname','addtime','deadline','status']);
-        //print_r($input);
-        $id = \DB::table("ad")->insertGetId($input);
-        //return "添加的id:".$id;
-        if($id>0){
-            return redirect('admin/admin/ad');
-            //echo "成功";
-        }else{
-            echo "添加失败";
-        }
-        
+        //定义一个空数组
+        $array= [];
+        //获取除图片外的信息
+        $data = $request->only(['userid','title','addtime','deadline','status']);
+        //$picname = $data['picname'];
+        //echo "<pre>";
+        //print_r($data);
+        //判断是否是有效的文件
+        if ($request->file('picname') && $request->file('picname')->isValid()){
+            //获取上传文件信息
+            $file = $request->file('picname');
+            //echo "<pre>";
+            //print_r($file);
+            $ext = $file->extension(); //获取文件的扩展名
+            //随机一个新的文件名
+           
+            $filename = time().rand(1000,9999).".".$ext;
+            
+            $array['picname'] = $filename;
+            //echo "<pre>";
+            //print_r($array);
+            //拼接两个信息            
+            $info = array_merge($data,$array);
+            //echo "<pre>";
+            //print_r($info);
+            //添加进数据库
+            Ad::insertGetId($info);
+            //print_r($array);
+            //移动图片
+            //echo "<pre>";
+            //print_r($filename);
+            $file->move("./uploads/",$filename);
+            //$file->move("./uploads/s_".$filename,$fileneme)->resize(100,100);
+            //$img1->save("./uploads/s_".$filename);                   
+            //return response($filename); //输出
+            
+        } 
 
+
+        
+         return redirect('admin/admin/ad');
+       
     }
 
     /**
@@ -137,21 +165,7 @@ class AdController extends Controller
     {
         return 1;
         //判断是否是一个有效上传文件
-        if ($request->file('ufile') && $request->file('ufile')->isValid()) {
-            //获取上传文件信息
-            $file = $request->file('ufile');
-            $ext = $file->extension(); //获取文件的扩展名
-            //随机一个新的文件名
-            $filename = time().rand(1000,9999).".".$ext;
-            //移动上传文件
-            $file->move("./public/upload/",$filename);
-                                
-            return response($filename); //输出
-            exit();
-        }else{
-            //闪存信息
-            return redirect('demo/upload')->with('status', '请选择上传文件!');
-        }
+      
     }
     //搜索 分页
     public function indexs()

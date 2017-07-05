@@ -23,7 +23,7 @@
                   <h3 class="box-title"><i class="fa fa-th"></i> 广告信息管理</h3>&nbsp;&nbsp;&nbsp;&nbsp;
                   <a class="btn btn-primary" href="{{ URL('admin/admin/ad') }}/create">发布广告</a>
                   <div class="box-tools">
-                    <form action="{{URL('admin/ddd/ad')}}" method="get">
+                    <form action="" method="get">
                      <input type="hidden" name="_method" value="delete">
                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="input-group" style="width: 150px;">
@@ -52,7 +52,7 @@
                     <tr>
                       <td>{{ $vo->id }}</td>
                       <td>{{ $vo->title }}</td>
-                      <td>{{ $vo->picname }}</td>
+                      <td><img src="{{asset('uploads')}}/{{ $vo->picname }}" width="50" height="50" /></td> 
                       <td>{{ $vo->addtime }}</td>
                       <td>{{ $vo->deadline }}</td>
                       <td>{{ $vo->status }}</td>
