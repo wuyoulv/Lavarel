@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b76953c9c8bca45feda25d45a16f1882",
+    "content-hash": "922ba7182ea1f053ef4e7b7448000016",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -269,8 +269,14 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/ISCLOUDX/alisms/zipball/c713ea802993fb6dd5a0852e660cf7451ef98d39",
-                "reference": "c713ea802993fb6dd5a0852e660cf7451ef98d39",
-                "shasum": ""
+                "reference": "c713ea802993fb6dd5a0852e660cf7451ef98d39",                
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.5.0"
