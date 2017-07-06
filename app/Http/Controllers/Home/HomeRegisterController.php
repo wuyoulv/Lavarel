@@ -163,13 +163,13 @@ class HomeRegisterController extends Controller
     
     public function sendSms(Request $request){
         $phone = $request ->input('phone','18119986561'); // 用户手机号，接收验证码
-        $name = '吴汉';  // 短信签名,可以在阿里大鱼的管理中心看到
+        $name = '兄弟连';  // 短信签名,可以在阿里大鱼的管理中心看到
         $num = rand(100000, 999999); // 生成随机验证码
         $smsParams = [
-            'number' => "123"
+            'number' => "$num"
         ];
         $content = json_encode($smsParams); // 转换成json格式的
-        $code = "SMS_75835027";   // 阿里大于(鱼)短信模板ID
+        $code = "SMS_75835101";   // 阿里大于(鱼)短信模板ID
         //$request ->session()->put('alidayu',$num);  // 存入session 后面做数据验证
 
         $result=$this->sms->send($phone,$name,$content,$code);
