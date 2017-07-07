@@ -40,13 +40,13 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">用户ID：</label>
                       <div class="col-sm-4">
-                        <input type="text" name="user" class="form-control" id="inputEmail3" value="{{$v->user}}" placeholder="">
+                        <input type="text" name="userid" class="form-control" id="inputEmail3" value="{{$v->userid}}" placeholder="">
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">视频名：</label>
                       <div class="col-sm-4">
-                        <input type="text" name="title" class="form-control" id="inputEmail3" value="{{$v->title}}" placeholder="">
+                        <input type="text" name="filmid" class="form-control" id="inputEmail3" value="{{$v->filmid}}" placeholder="">
                       </div>
                     </div>
                     <div class="form-group">

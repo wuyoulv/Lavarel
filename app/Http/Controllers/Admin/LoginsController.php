@@ -15,6 +15,7 @@ class LoginsController extends Controller
    {
       $lost=Logins::get();
       //var_dump($lost); 
+      //$list=$lost->paginate(3);
       return view("admin.login.index",["list"=>$lost]);
    }
    
