@@ -64,6 +64,7 @@ return [
         ],
 
 
+
 		
 		'qiniu' => [
             'driver'  => 'qiniu',
@@ -81,6 +82,5 @@ return [
             'https'     => '',         //你的HTTPS域名
             'custom'    => '',                //你的自定义域名
          ],
-    
 
 ];

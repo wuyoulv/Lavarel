@@ -2567,7 +2567,7 @@
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
                                                                             <a href="{{URL('home/xq')}}/{{$b->id}}" data-from="1-1"
-                                                                            target="video" title="{{$b->title}}">
+                                                                             title="{{$b->title}}">
                                                                             </a>
                                                                             <i class="bg">
                                                                             </i>
@@ -2586,7 +2586,7 @@
                                                                         </ul>
                                                                         <ul class="info-list">
                                                                             <li class="title short-title">
-                                                                                <a href="http://v.youku.com/v_show/id_XMTQxNDIyNjk3Mg==.html" data-from="1-2">
+                                                                                <a href="" data-from="1-2">
                                                                                     {{$b->title}}
                                                                                 </a>
                                                                             </li>
