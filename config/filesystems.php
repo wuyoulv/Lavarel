@@ -62,10 +62,13 @@ return [
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+
+
 		
 		'qiniu' => [
             'driver'  => 'qiniu',
             'domains' => [
+
                 'default'   => 'http://oslf6mqpo.bkt.clouddn.com', //你的七牛域名
                 'https'     => '',         //你的HTTPS域名
                 'custom'    => '',                //你的自定义域名
@@ -73,9 +76,11 @@ return [
             'access_key'=> 'SnLgMplbzue1aia6JFhEaLSnOHhBCBCLxve8AFsH',  //AccessKey
             'secret_key'=> 'pmrFQYC0lTOqBGzDRGFhPgurMjx7Wsbibl_Jlc6X',  //SecretKey
             'bucket'    => 'guyu',  //Bucket名字
-            'notify_url'=> '',  //持久化处理回调地址
-        ],
 
-    ],
+            'default'   => 'oslstlq36.bkt.clouddn.com', //你的七牛域名
+            'https'     => '',         //你的HTTPS域名
+            'custom'    => '',                //你的自定义域名
+         ],
+    
 
 ];
