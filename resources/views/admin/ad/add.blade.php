@@ -20,7 +20,7 @@
                   <h3 class="box-title"><i class="fa fa-plus"></i> 添加角色信息</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal" action="{{url('admin/admin/ad')}}" method="post">
+                <form class="form-horizontal" action="{{url('admin/admin/ad')}}" method="post" enctype= multipart/form-data>
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   <div class="box-body">
                   <div class="form-group">
@@ -38,7 +38,7 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">图片</label>
                       <div class="col-sm-4">
-                        <input type="file" name="picname" />
+                        <input type="file" name="picname"  />
                       </div>
                     </div>
                     <div class="form-group">

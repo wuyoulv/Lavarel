@@ -60,7 +60,8 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
     Route::resource('/admin/ad', 'Admin\AdController');//广告
     Route::resource('/admin/log', 'Admin\LogController');//日志
-    Route::get('/ddd/ad','Admin\AdController@index');
+    //Route::get('/ddd/ad','Admin\AdController@index');
+
     
 	
 
@@ -81,11 +82,19 @@ Route::get("/dydetails/{id}","Home\DydetailsController@index");
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/',"Home\IndexController@index");
     Route::get('/xq/{id}',"Home\XqController@index");
+    Route::get('/HomeLog/indexs',"Home\HomeLogController@indexs");
+    Route::post('/HomeLog/doLogin','Home\HomeLogController@doLogin');
+    Route::get('/HomeLog/index','Home\HomeLogController@index');
+    Route::post('/HomeLog/register','Home\HomeLogController@register');
+    Route::get('/user/{id}',"Home\UserController@index");
+    //Route::get('home/vipuser/',"Home\VipuserController@index");
     
 
 });
-
-
+Route::get('home/vipuser/',"Home\VipuserController@index");
+// Route::get('home/vipuser',function(){
+//     return "aa";
+// });
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
