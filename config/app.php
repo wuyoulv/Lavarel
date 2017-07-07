@@ -177,8 +177,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         iscms\Alisms\AlidayuServiceProvider::class,
+<<<<<<< HEAD
 		zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
 
+=======
+
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+>>>>>>> 19fb580e85d71143f1d902c360e31ad82ae4b9e1
     ],
 
     /*

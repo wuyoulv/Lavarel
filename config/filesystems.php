@@ -62,6 +62,7 @@ return [
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+<<<<<<< HEAD
 		
 		'qiniu' => [
             'driver'  => 'qiniu',
@@ -73,6 +74,18 @@ return [
             'access_key'=> 'gE1oXFdiiQtgdYfCd_MMa8sMMNdvUJ4CZua39BfR',  //AccessKey
             'secret_key'=> '8qcqBdc6cWgr0FPn50D77EdW3l1kX-fl2H8bqObD',  //SecretKey
             'bucket'    => 'ceshi',  //Bucket名字
+=======
+        'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => env('QINIU_DOMAINS'), //你的七牛域名
+                'https'     => '',         //你的HTTPS域名
+                'custom'    => '',                //你的自定义域名
+             ],
+            'access_key'=> ENV('QINIU_AK'),  //AccessKey
+            'secret_key'=> ENV('QINIU_SK'),  //SecretKey
+            'bucket'    => ENV('QINIU_BUCKET'),  //Bucket名字
+>>>>>>> 19fb580e85d71143f1d902c360e31ad82ae4b9e1
             'notify_url'=> '',  //持久化处理回调地址
         ],
 

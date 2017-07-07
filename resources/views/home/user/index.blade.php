@@ -25,10 +25,17 @@
 			<div class="info-box " id="info-box">
 				<img src="/uploads/{{$list->picname}}" class="user-img">
 				<div class="uinfo-box">
+<<<<<<< HEAD
 					<!-- <p class="icon greet">下午好</p> -->
 					<div class="u-name">
 						<span class="left user-name" >{{$list->account}}</span>
 						<span class="left icon icon-mark"></span>
+=======
+					<p class="icon greet" >下午好</p>
+					<div class="u-name">
+						<span class="left" >{{$v->account}}</span>
+						<span class="left icon-mark"></span>
+>>>>>>> 19fb580e85d71143f1d902c360e31ad82ae4b9e1
 						<div class="u-grade-icon grade-level15" id="grade-btn" data-stat-role="ck">
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
 								<div class="rect"></div>

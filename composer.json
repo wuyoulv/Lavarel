@@ -11,7 +11,12 @@
         "iscms/alisms-for-laravel": "^0.0.3",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+<<<<<<< HEAD
         "zgldh/qiniu-laravel-storage": "^0.6.8"
+=======
+        "zgldh/qiniu-laravel-storage": "^0.6.8",
+        "laravel/tinker": "~1.0",
+>>>>>>> 19fb580e85d71143f1d902c360e31ad82ae4b9e1
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

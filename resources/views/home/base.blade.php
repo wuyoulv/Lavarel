@@ -172,10 +172,10 @@
                         <div class="g-ucenter" id="uerCenter">
                             <div class="u-login">
                                 <div class="login-before handle" style="display: block;">
-                                    <a id="qheader_login" href="">
+                                    <a href="{{ URL('/home/login') }}">
                                         登录
                                     </a>
-                                    <a id="qheader_reg" href="">
+                                    <a id="qheader_reg" href="{{ URL('/home/register') }}">
                                         注册
                                     </a>
                                 </div>
