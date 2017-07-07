@@ -11,11 +11,10 @@ class VipuserController extends Controller
 {
     public function index()
     {
-    	//$list=Film_info::find($id);
-    	//where('id',"=",$id)->
-    	//echo "<pre>";
-    	//var_dump($list);die;
-    	return view("home.vipuser.vipuser");
+    	$db = \DB::table('film_info')->get();
+    	
+    	    	
+    	return view("home.vipuser.vipuser",['film_info'=>$db]);
     }
 }
 
