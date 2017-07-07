@@ -63,6 +63,18 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
+         'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => 'http://oslf5fgsh.bkt.clouddn.com', //你的七牛域名
+                'https'     => '',         //你的HTTPS域名
+                'custom'    => '',                //你的自定义域名
+             ],
+            'access_key'=> 'H8cr7aOsecZYzK7dWwdUBupil1HMGGzXz3pDE3zd',  //AccessKey
+            'secret_key'=> 'e3MjVfzIVbeM8vueZvPout1TXOYBgkRVvV0dm4a4',  //SecretKey
+            'bucket'    => 'ceshi',  //Bucket名字
+            'notify_url'=> '',  //持久化处理回调地址
+        ],
     ],
 
 ];
