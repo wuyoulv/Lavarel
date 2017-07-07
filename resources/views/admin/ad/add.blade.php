@@ -41,6 +41,12 @@
                         <input type="file" name="picname"  />
                       </div>
                     </div>
+                     <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">网站网址</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="web_address" class="form-control" placeholder="网站网址" />
+                      </div>
+                    </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">添加时间</label>
                       <div class="col-sm-4">
