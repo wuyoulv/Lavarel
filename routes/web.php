@@ -47,6 +47,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/cmt/del/{id}','Admin\Film_cmtController@delete');  //影评
     Route::get('/cmt/edit/{id}','Admin\Film_cmtController@edit');  //影评 
     Route::post('/cmt/update','Admin\Film_cmtController@update');
+    Route::get('/cmt/type/{id}','Admin\Film_cmtController@index'); //分类查询影评
 
     Route::get("/logout","Admin\LoginController@logout");
     Route::get("/user_vip","Admin\User_vipController@index"); //VIP用户管理

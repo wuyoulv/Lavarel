@@ -19,7 +19,37 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title"><i class="fa fa-th"></i> 影评浏览</h3>
+                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">分类名 <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                          @foreach($type_table as $type)
+                            <li><a href="{{url('admin/cmt/type')}}/{{$type->id}}">{{$type->type}}</a></li>
+                           @endforeach
+                          </ul>
+                          <!-- 引入jquery -->
+                        <script src="{{asset('./js/jquery-1.8.3.min.js')}}">
+                        </script>        
+                         <!-- 设置分类下拉框 -->
+                        <script>
+                        $('.dropdown-menu li a').click(function(){
+                            var url = $(this).attr('href');
+                            //切割字符串为数组
+                            var arr = url.split('/');
+                            //弹出最后的id参数
+                            var data = arr.pop();
+                           console.log(data);
+                                $.ajax({
+                                    url:url,
+                                    data:data,
+                                    type:'get',
+                                    async: true,
+                                    success:function(mes){
+                                    // alert(mes);
+                                    }
+                                  });                               
+                                return false;
+                        });
+                          
+                        </script>
                   <div class="box-tools">
                     <form action="{{url('admin/cmt')}}" method="get">
                     <div class="input-group" style="width: 150px;">
@@ -44,7 +74,7 @@
                     @foreach($cmt as $stu)
                         <tr>
                             <td>{{$stu->id}}</td>
-                            <td>{{$stu->user}}</td>
+                            <td>{{$stu->user_id}}</td>
                             <td>{{$stu->title}}</td>
                             <td>{{$stu->time}}</td>
                             <td>{{$stu->text}}</td>

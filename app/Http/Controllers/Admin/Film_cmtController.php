@@ -1,14 +1,19 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Film_cmt;
 class Film_cmtController extends Controller
 {
-   public function index(Request $request){
-		$db = \DB::table('film_cmt');
+
+   public function index(Request $request,$id){
+
+   		if($id){
+   			$db = \DB::table('')
+
+   		}
+   		$db = \DB::table('film_cmt');
 		$where = [];
     	if($request->has('title')){
     		$title = $request->input('title');
@@ -16,8 +21,15 @@ class Film_cmtController extends Controller
     		$where['title'] = $title;
     	}
 		$list = $db->paginate(2);
-    	return view('admin.Film_cmt.index',['cmt'=>$list,'where'=>$where]);
+		
+
+		
+		//查询分类表
+		$type_table = \DB::table('film_type')->select('id','type')->get();	
+    	return view('admin.Film_cmt.index',['cmt'=>$list,'where'=>$where,'type_table'=>$type_table]);
 	}
+
+
 	public function delete($id){
 		$cmt = Film_cmt::find($id);
 		if(isset($id)){
