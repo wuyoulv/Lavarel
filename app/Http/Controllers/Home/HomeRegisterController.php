@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use iscms\Alisms\SendsmsPusher as Sms;
 use App\Model\User;
+use App\Model\Login;
+//use App\Model\Login;
 
 
 class HomeRegisterController extends Controller
@@ -52,7 +54,7 @@ class HomeRegisterController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @author zhangyuchao
      */
-    public function createUser(Request $request)
+    public function ccreateUser(Request $request)
     {
         // 密码处理
         $password = trim($request['password']);
@@ -165,6 +167,7 @@ class HomeRegisterController extends Controller
         $phone = $request ->input('account'); // 用户手机号，接收验证码
         $name = '兄弟连';  // 短信签名,可以在阿里大鱼的管理中心看到
         $num = rand(100000, 999999); // 生成随机验证码
+        session()->put('num',$num);
         $smsParams = [
             'number' => "$num"
         ];
@@ -183,5 +186,38 @@ class HomeRegisterController extends Controller
             return json_encode(['ResultData' => '失败', 'info' => '重复发送']);
         }
         
+    }
+     
+     /**
+     * 用户注册
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @author zhangyuchao
+     */
+    public function createUser(Request $request)
+    {
+        $account=$request->input('account');
+        $password=$request->input('password');
+        $repassword=$request->input('repassword');
+        
+        $code=$request->input('code');
+        
+        if(!$password==$repassword){
+            return back()->with('两次密码输入不一致');
+        }
+        $user=Login::where('account','=',$account);
+        if(empty($user)){
+            return back()->with('此账号已存在！');
+        }
+        if(session()->get('num')!=$code){
+            return back()->with('验证码错误！');
+        }
+        //$input = $request->only(['account','picname','password','name','birthday','sex','tel','email','address','months','money','role','buy_time','dead_line','login_time','last_time']);
+        $id=User::insertGetId(['account'=>$account,'password'=>$password,'tel'=>$account,'buy_time'=>null,'dead_line'=>null,'login_time'=>null,'last_time'=>null]);
+        if($id){
+            $vf=Login::insertGetId(['account'=>$account,'password'=>$password,'id'=>$id]);
+        }
+        return redirect("home");
     }
 }

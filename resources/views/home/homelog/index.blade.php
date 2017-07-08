@@ -41,8 +41,13 @@
 								<input type="submit" value="登陆"/>
 							</div>
 							<div class="form_reg_btn">
-								<span>还没有帐号？</span><a href="{{ URL('/home/zhuce') }}">马上注册</a>
+								<span>还没有帐号？</span><a href="{{ URL('/home/register') }}">马上注册</a>
 							</div>
+                            
+                            
+                            
+                            
+                            
 						</form>
 						<div class="other_login">
 							<div class="left other_left">

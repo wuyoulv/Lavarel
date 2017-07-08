@@ -18,10 +18,15 @@
 						<div class="login_title">
 							注册
 						</div>
-						<form action="{{ RUL('/HomeLog/doLogin') }}" method="post">
-							
-							<div class="form_text_ipt">
-								<input name="username" type="text" placeholder="手机号/邮箱">
+						<form action="{{ URL('/home/createUser') }}" method="post">
+							{{ csrf_field() }}
+							<div class="form_text_ipt" style="width:60;">
+								<input name="account" type="text" placeholder="手机号" onblur="sendMobileCode()" >
+                                
+							</div>
+							<div class="ececk_warning"><span>数据不能为空</span></div>
+                            <div class="form_text_ipt">
+								<input name="code" type="text" placeholder="验证码">
 							</div>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
 							<div class="form_text_ipt">
@@ -32,27 +37,23 @@
 								<input name="repassword" type="password" placeholder="重复密码">
 							</div>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
-							<div class="form_text_ipt">
-								<input name="code" type="text" placeholder="验证码">
-							</div>
-							<div class="ececk_warning"><span>数据不能为空</span></div>
 							
+							<input type="submit" value="注册"/>
 							<div class="form_btn">
 								<button type="button">注册</button>
 							</div>
 							<div class="form_reg_btn">
-								<span>已有帐号？</span><a href="demo.html">马上登录</a>
+								<span>已有帐号？</span><a href="/home/login">马上登录</a>
 							</div>
+                            
+                            
+                            
+                        
+                            
+                            
+                            
 						</form>
-						<div class="other_login">
-							<div class="left other_left">
-								<span>其它登录方式</span>
-							</div>
-							<div class="right other_right">
-								<a href="#">QQ登录</a>
-								<a href="#">微信登录</a>
-								<a href="#">微博登录</a>
-							</div>
+						
 						</div>
 					</div>
 				</div>
@@ -60,5 +61,28 @@
 		</div>
 		<script type="text/javascript" src="{{ asset('home8/js/jquery.min.js')}}" ></script>
 		<script type="text/javascript" src="{{ asset('home8/js/common.js')}}" ></script>
+        <script>
+            function sendMobileCode()
+                {
+                    //alert('ok')
+                    var tel = $("input[name='account']").val();
+                    //alert(tel);
+                    $.ajax({
+                        url:'/home/sendSms',
+                        type:"get",
+                        data:'account='+tel,
+                        dataType:'text',
+                        headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')},
+                        success:function(data){
+                            alert('a');
+                        },
+                        error:function(){
+                            alert('b');
+                        }
+                    })
+                }
+
+
+        </script>
 	</body>
 </html>

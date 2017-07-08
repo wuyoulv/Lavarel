@@ -95,7 +95,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
 
 Route::post('/home/sendMobileCode','Home\HomeRegisterController@sendMobileCode');
 Route::post('/home/createUser','Home\HomeRegisterController@createUser');
-Route::get('/home/zhuce','Home\HomeRegisterController@index');
+Route::get('/home/register','Home\HomeRegisterController@index');
 Route::get('/home/login','Home\HomeLogController@index');
 Route::get('/home/sendSms','Home\HomeRegisterController@sendSms');
 Route::post('/HomeLog/doLogin','Home\HomeLogController@doLogin');
