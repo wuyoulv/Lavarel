@@ -11,10 +11,10 @@
         "iscms/alisms-for-laravel": "^0.0.3",
         "laravel/framework": "5.4.*",
 
+
         "laravel/tinker": "~1.0",
         "zgldh/qiniu-laravel-storage": "^0.6.8",
 
-        "laravel/tinker": "~1.0"
 
     },
     "require-dev": {

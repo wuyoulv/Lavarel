@@ -9,7 +9,7 @@
         <meta name="keywords" content="视频,视频分享,视频搜索,视频播放">
         <meta name="description" content="视频服务平台,提供视频播放,视频发布,视频搜索,视频分享">
         <meta name="google-site-verification" content="F2zYXuMVH2X76NeYEdAiGokv0QFtgOB1ZgCSZPglQbs">
-        <link rel="Shortcut Icon" href="http://static.youku.com/v1.0.166/index/img/favicon.ico">
+        
         <title>
             优酷首页
         </title>
@@ -26,17 +26,15 @@
             div.YT-loginWrap{ background: url(//r1.ykimg.com/05100000594C7AC5ADC0AEC6B404125F)
             no-repeat right bottom !important; }
         </style>
-        <script type="text/javascript" id="randomJS" src="{{ asset('home2/html')}}">
-        </script>
-        <script type="text/javascript" src="{{ asset('home2/v4')}}">
-        </script>
+       
+       f
     </head>
     
     <body class="w1300" data-spm="20023042">
         <div style="display:block;clear:both;float:none;position:absolute;right:0;bottom:0;border:none;">
             <object id="MTJ4E1K2LF7HQQP9" data="{{ asset('home2/MTFlashStore.swf.下载')}}" type="application/x-shockwave-flash"
             width="10" height="10" style="position:absolute;right:0;bottom:0;border:none;">
-                <param name="movie" value="//irs01.net/MTFlashStore.swf#">
+                
                 <param name="wmode" value="transparent">
                 <param name="version" value="10">
                 <param name="allowScriptAccess" value="always">
@@ -647,8 +645,6 @@
                         </div>
                     </div>
                 </div>
-                <script src="{{ asset('home2/lib_12.js.下载')}}" id="libjsnode" charset="utf-8">
-                </script>
                 <script type="text/javascript" src="{{ asset('home2/g_68.js.下载')}}">
                 </script>
                 <script type="text/javascript" src="{{ asset('home2/g_107.js.下载')}}">
