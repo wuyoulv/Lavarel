@@ -87,7 +87,7 @@
 						<a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
 					</li>
 					<li>
-						<a href="http://cps.youku.com/redirect.html?id=00014c9c">会员</a>
+						<a href="{{ url('home/vipuser') }}">会员</a>
 					</li>
 					<li>
 						<a href="{{ url('home/user/index') }}">我的</a>
