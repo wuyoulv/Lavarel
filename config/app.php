@@ -163,6 +163,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+		zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
         /*
          * Package Service Providers...
          */
