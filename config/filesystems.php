@@ -66,28 +66,14 @@ return [
 		'qiniu' => [
             'driver'  => 'qiniu',
             'domains' => [
-                'default'   => 'http://oslf6mqpo.bkt.clouddn.com', //你的七牛域名
+                'default'   => env('Qiniu_URL'), //你的七牛域名
                 'https'     => '',         //你的HTTPS域名
                 'custom'    => '',                //你的自定义域名
              ],
-            'access_key'=> 'SnLgMplbzue1aia6JFhEaLSnOHhBCBCLxve8AFsH',  //AccessKey
-            'secret_key'=> 'pmrFQYC0lTOqBGzDRGFhPgurMjx7Wsbibl_Jlc6X',  //SecretKey
-            'bucket'    => 'guyu',  //Bucket名字
-            'notify_url'=> '',  //持久化处理回调地址
-        ],
-
-         'qiniu' => [
-            'driver'  => 'qiniu',
-            'domains' => [
-                'default'   => 'http://oslf5fgsh.bkt.clouddn.com', //你的七牛域名
-                'https'     => '',         //你的HTTPS域名
-                'custom'    => '',                //你的自定义域名
-             ],
-            'access_key'=> 'H8cr7aOsecZYzK7dWwdUBupil1HMGGzXz3pDE3zd',  //AccessKey
-            'secret_key'=> 'e3MjVfzIVbeM8vueZvPout1TXOYBgkRVvV0dm4a4',  //SecretKey
-            'bucket'    => 'ceshi',  //Bucket名字
+            'access_key'=> env('AccessKey'),  //AccessKey
+            'secret_key'=> env('SecretKey'),  //SecretKey
+            'bucket'    => env('Bucket'),  //Bucket名字
             'notify_url'=> '',  //持久化处理回调地址
         ],
     ],
-
 ];

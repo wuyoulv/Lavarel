@@ -13,8 +13,7 @@
 
 
         "laravel/tinker": "~1.0",
-        "zgldh/qiniu-laravel-storage": "^0.6.8",
-
+        "zgldh/qiniu-laravel-storage": "^0.6.8"
 
     },
     "require-dev": {
