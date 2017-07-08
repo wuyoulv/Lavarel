@@ -180,7 +180,6 @@ return [
         iscms\Alisms\AlidayuServiceProvider::class,
 
         zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
-
     ],
 
     /*

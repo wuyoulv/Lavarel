@@ -83,7 +83,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/',"Home\IndexController@index");
     Route::get('/xq/{id}',"Home\XqController@index");
     Route::get('/HomeLog/indexs',"Home\HomeLogController@indexs");
-    Route::post('/HomeLog/doLogin','Home\HomeLogController@doLogin');
+    
     Route::get('/HomeLog/index','Home\HomeLogController@index');
     Route::post('/HomeLog/register','Home\HomeLogController@register');
     Route::get('/user/{id}',"Home\UserController@index");
@@ -94,9 +94,12 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
 });
 
 Route::post('/home/sendMobileCode','Home\HomeRegisterController@sendMobileCode');
-Route::post('/home//home/createUser','Home\HomeRegisterController@sendMobileCode');
-Route::get('/home/register','Home\HomeRegisterController@index');
+Route::post('/home/createUser','Home\HomeRegisterController@createUser');
+Route::get('/home/zhuce','Home\HomeRegisterController@index');
+Route::get('/home/login','Home\HomeLogController@index');
 Route::get('/home/sendSms','Home\HomeRegisterController@sendSms');
+Route::post('/HomeLog/doLogin','Home\HomeLogController@doLogin');
+//Route::get('/home/','');
 
 
 // Route::get('home/vipuser',function(){

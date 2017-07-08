@@ -18,7 +18,7 @@
 						<div class="login_title">
 							注册
 						</div>
-						<form action="" method="post">
+						<form action="{{ RUL('/HomeLog/doLogin') }}" method="post">
 							
 							<div class="form_text_ipt">
 								<input name="username" type="text" placeholder="手机号/邮箱">
