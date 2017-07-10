@@ -39,14 +39,14 @@
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">海报名：</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="海报名" name="picname" value="{{ $data->picname }}"/>
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="海报名" name="picname" value="{{ $data->pic_address }}"/>
                       </div>
                     </div>
 
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">类型：</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="类型" name="type" value="{{ $data->type }}"/>
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="类型" name="type" value="{{ $data->type_id }}"/>
                       </div>
                     </div>
 
@@ -77,7 +77,6 @@
                         <input type="text" class="form-control" id="inputPassword3" placeholder="时长" name="duration" value="{{ $data->duration }}"/>
                       </div>
                     </div>
-
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">地区：</label>
                       <div class="col-sm-4">
@@ -124,20 +123,6 @@
                       <label for="inputPassword3" class="col-sm-2 control-label">点击量：</label>
                       <div class="col-sm-4">
                         <input type="text" class="form-control" id="inputPassword3" placeholder="点击量" name="click" value="{{ $data->click }}"/>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">添加时间：</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="添加时间" name="addtime" value="{{ $data->addtime }}"/>
-                      </div>
-                    </div>
-
-					          <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">修改时间：</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="修改时间" name="lasttime" value="{{ $data->lasttime }}"/>
                       </div>
                     </div>
                   </div>
