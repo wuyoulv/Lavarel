@@ -24,7 +24,7 @@
                   <h3 class="box-title"><i class="fa fa-plus"></i> 添加视频信息</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form action="{{url('admin/film_info')}}" method="post" class="form-horizontal">
+                <form action="{{url('admin/film_info')}}" method="post" class="form-horizontal" enctype="multipart/form-data">
                   <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                   <div class="box-body">
 
@@ -36,16 +36,20 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">海报名：</label>
+                      <label for="inputPassword3" class="col-sm-2 control-label">图片：</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="海报名" name="picname">
+                        <input type="file" class="form-control" id="inputPassword3"  name="picname">
                       </div>
                     </div>
 
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">类型：</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="类型" name="type">
+                        <select class="form-control" name="type_id">
+                          @foreach ($type as $v)
+                            <option value="{{ $v->id }}">{{ $v->type }}</option>
+                          @endforeach
+                          </select>
                       </div>
                     </div>
 
@@ -125,21 +129,6 @@
                         <input type="text" class="form-control" id="inputPassword3" placeholder="点击量" name="click">
                       </div>
                     </div>
-
-                    <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">添加时间：</label>
-                      <div class="col-sm-4">
-                        <input type="datetime-local" class="form-control" id="inputPassword3" placeholder="添加时间" name="addtime">
-                      </div>
-                    </div>
-
-					          <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">修改时间：</label>
-                      <div class="col-sm-4">
-                        <input type="datetime-local" class="form-control" id="inputPassword3" placeholder="修改时间" name="lasttime">
-                      </div>
-                    </div>
-                  </div>
                   <!-- /.box-body -->
                   <div class="box-footer">
 				    <div class="col-sm-offset-2 col-sm-1">
