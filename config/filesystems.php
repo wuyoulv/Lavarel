@@ -66,16 +66,15 @@ return [
 		'qiniu' => [
             'driver'  => 'qiniu',
             'domains' => [
-            'default'   => 'oslstlq36.bkt.clouddn.com', //你的七牛域名
-            'https'     => '',         //你的HTTPS域名
-            'custom'    => '',                //你的自定义域名
-         ],
-            'access_key'=> 'gE1oXFdiiQtgdYfCd_MMa8sMMNdvUJ4CZua39BfR',  //AccessKey
-            'secret_key'=> '8qcqBdc6cWgr0FPn50D77EdW3l1kX-fl2H8bqObD',  //SecretKey
-            'bucket'    => 'ceshi',  //Bucket名字
+
+                'default'   => env('Qiniu_URL'), //你的七牛域名
+                'https'     => '',         //你的HTTPS域名
+                'custom'    => '',                //你的自定义域名
+             ],
+            'access_key'=> env('AccessKey'),  //AccessKey
+            'secret_key'=> env('SecretKey'),  //SecretKey
+            'bucket'    => env('Bucket'),  //Bucket名字
             'notify_url'=> '',  //持久化处理回调地址
         ],
-
     ],
-
 ];

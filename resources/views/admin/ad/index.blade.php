@@ -41,6 +41,7 @@
                       <th style="width:60px">id号</th>
                       <th>角色名称</th>
                       <th>图片名称</th>
+                      <th>网站网址</th>
                       <th>添加时间</th>
                       <th>到期时间</th>
                       <th>状态</th>
@@ -53,6 +54,7 @@
                       <td>{{ $vo->id }}</td>
                       <td>{{ $vo->title }}</td>
                       <td><img src="{{asset('uploads')}}/{{ $vo->picname }}" width="50" height="50" /></td> 
+                      <td>{{ $vo->web_address }}</td>
                       <td>{{ $vo->addtime }}</td>
                       <td>{{ $vo->deadline }}</td>
                       <td>{{ $vo->status }}</td>

@@ -26,9 +26,10 @@
                   <h3 class="box-title"><i class="fa fa-plus"></i> 编辑角色信息</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                 <form class="form-horizontal" action="{{URL('admin/admin/ad')}}/{{ $vo->id }}" method="post">
+                 <form class="form-horizontal" action="{{URL('admin/admin/ad')}}/{{ $vo->id }}" method="post" enctype= multipart/form-data>
                         <input type="hidden" name="_method" value="put">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="userid" value="{{ $vo->userid }}">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">角色名称</label>
@@ -37,9 +38,16 @@
                       </div>
                     </div>
                      <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">图片名称</label>
+                      <label for="inputEmail3" class="col-sm-2 control-label">图片</label>
                       <div class="col-sm-4">
-                        <input type="text" name="picname" class="form-control" value="{{ $vo->picname }}">
+                      <img src="{{ asset("/uploads/$vo->picname")}}" alt="">
+                        <input type="file" name="picname" class="form-control" value>
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">网站网址</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="web_address" class="form-control" value="{{ $vo->web_address }}">
                       </div>
                     </div>
                      <div class="form-group">
