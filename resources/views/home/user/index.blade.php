@@ -23,9 +23,9 @@
 				@foreach($list as $v) 
 			</script><img src="{{ asset('home3/image/day_bg.png')}}" class="head-img" id="head-img">
 			<div class="info-box " id="info-box">
-								<img src="{{ asset('home3/image/5.jpg')}}" class="user-img">
+				<img src="/uploads/{{$list->picname}}" class="user-img">
 				<div class="uinfo-box">
-					<p class="icon greet">下午好</p>
+					<!-- <p class="icon greet">下午好</p> -->
 					<div class="u-name">
 						<span class="left user-name" >{{$list->account}}</span>
 						<span class="left icon icon-mark"></span>
@@ -33,8 +33,8 @@
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
 								<div class="rect"></div>
 								<p class="view-grade-title">
-									<span>我的优酷等级</span>
-									<span class="view-grade-span-r">专属礼包，<a target="_blank" href="http://lv.youku.com/page/grade/task" data-stat-role="ck">立即领取&gt;</a> </span>
+									<!-- <span>我的优酷等级</span>
+									<span class="view-grade-span-r">专属礼包，<a target="_blank" href="http://lv.youku.com/page/grade/task" data-stat-role="ck">立即领取&gt;</a> </span> -->
 								</p>
 								<div class="grade-level-box">
 									<div class="progress-bar">
@@ -49,24 +49,25 @@
 						</div>
 						<a href="https://id.youku.com/bindMobileView.htm" class="icon mobile-icon active-mobile-icon" target="_blank" data-stat-role="ck"></a>
 					</div>
-												<div class="vip-info-box">
-						<a class="vip-buy-btn" href="http://vip.youku.com/" target="_blank">开通会员</a>
-									</div>
-					
-											<div class="zpd-info-box zpd-info-box-no" style="display: block;">	<a class="zpd-text" href="http://user.youku.com/page/usc/myzpd" target="_blank">开通频道会员</a></div>
-									</div>
-							</div>
-							@endforeach
+						<div class="vip-info-box">
+							<a class="vip-buy-btn" href="" >开通会员</a>   <!-- 新页面打开target="_blank" -->
+						</div>
+						<!-- <div class="zpd-info-box zpd-info-box-no" style="display: block;">	
+							<a class="zpd-text" href="#">开通频道会员</a>
+						</div> -->
+				</div>
+			</div>
+			@endforeach
 		</div>
 	</div>
 	<div class="head-menu">
 		<div class="menu-box">
 			<ul class="menu-ul">
 				<li class="active"><a href="javaScript:;" onclick="window.location.reload()" data-stat-role="ck">个人中心</a></li>
-				<li><a href="http://creation.youku.com/" target="_blank" data-stat-role="ck">创作中心</a></li>
+				<!-- <li><a href="http://creation.youku.com/" target="_blank" data-stat-role="ck">创作中心</a></li>
 				<li><a href="http://vip.youku.com/?c=account" target="_blank" data-stat-role="ck">我的会员</a></li>
 				<li><a href="http://msg.youku.com/page/msg/index" target="_blank" data-stat-role="ck">我的消息</a></li>
-				<li><a href="http://cvip.youku.com/page/index" target="_blank" data-stat-role="ck">付费专区</a></li>
+				<li><a href="http://cvip.youku.com/page/index" target="_blank" data-stat-role="ck">付费专区</a></li> -->
 				<li><a href="{{ url('home/user/zhanghu') }}" target="_blank" data-stat-role="ck">账户设置</a></li>
 			</ul>
 		</div>	
@@ -104,16 +105,6 @@
 						<span class="icon arrow-right"></span>
 					</a>
 				</div>
-				<div class="myzpd-box">
-					<a target="_blank" href="http://user.youku.com/page/usc/myzpd" data-stat-role="ck">
-						<span class="icon myzpd-icon"></span>
-						<span class="myzpd-name">
-							我的频道会员
-						</span>
-						<span class="icon arrow-right"></span>
-					</a>
-				</div>
-				
 				<div class="history-box">
 					<div class="content-title history-tilte">
 						<a href="http://faxian.youku.com/watch_record" target="_blank" data-stat-role="ck">
@@ -154,172 +145,173 @@
 					</div>
 				</div> -->
 
-				<div class="vip-box">
-					<p class="box-title">
-						会员专享大片
-						<a href="http://svip.youku.com/portal" target="_blank" class="a-more">更多</a>
-						<a href="http://svip.youku.com/portal" target="_blank" class="a-more-ipad" data-role="vipvideo">用APP查看更多</a>
-					</p>
-					<div class="vip-list" id="vip-box">
-						<ul id="vip-ul" style="width: 1760px;">
-			<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E000058F07C4DADBA1F83EF0314DE')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" target="_blank" data-stat-role="ck">
-				<p title="318女生宿舍">318女生宿舍</p>
-				<p title="高校灵异事件惊悚来袭">高校灵异事件惊悚来袭</p>
-				<div class="hide">
-					<span>1,175万次播放</span>
-					<span>3,884次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" title="318女生宿舍" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- 		<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E000058E2FB3BADBC0993BB089BA3')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" target="_blank" data-stat-role="ck">
-				<p title="灵界警探">灵界警探</p>
-				<p title="美道姑携灵界警司降妖">美道姑携灵界警司降妖</p>
-				<div class="hide">
-					<span>5,194万次播放</span>
-					<span>1,760次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" title="灵界警探" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- 		<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E000058F6D2A9ADBDD3864F0DBEAE')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" target="_blank" data-stat-role="ck">
-				<p title="盗爱时空之笨贼也疯狂">盗爱时空之笨贼也疯狂</p>
-				<p title="清代冰冻人复活救美女">清代冰冻人复活救美女</p>
-				<div class="hide">
-					<span>788.7万次播放</span>
-					<span>271次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" title="盗爱时空之笨贼也疯狂" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- 		<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E000059103FCBADBAC3E366089797')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" target="_blank" data-stat-role="ck">
-				<p title="异能超模">异能超模</p>
-				<p title="美女模特" 变脸"撩男神"="">美女模特"变脸"撩男神</p>
-				<div class="hide">
-					<span>997.0万次播放</span>
-					<span>802次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" title="异能超模" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- 		<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E000058C9FCB2ADBDD3C42B062228')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" target="_blank" data-stat-role="ck">
-				<p title="密道追踪之魔镜邪灵">密道追踪之魔镜邪灵</p>
-				<p title="诡异镜像人追杀地球人">诡异镜像人追杀地球人</p>
-				<div class="hide">
-					<span>1,008万次播放</span>
-					<span>608次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" title="密道追踪之魔镜邪灵" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- 		<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E000059140548ADBAC313210D2137')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" target="_blank" data-stat-role="ck">
-				<p title="悟空前传">悟空前传</p>
-				<p title="至尊玉与紫霞旷世奇恋">至尊玉与紫霞旷世奇恋</p>
-				<div class="hide">
-					<span>1,506万次播放</span>
-					<span>1,084次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" title="悟空前传" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- 		<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E0000592404A2ADBC09664E02E099')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" target="_blank" data-stat-role="ck">
-				<p title="临界2:安魂曲">临界2:安魂曲</p>
-				<p title="拯救女儿反酿致命悲剧">拯救女儿反酿致命悲剧</p>
-				<div class="hide">
-					<span>1,351万次播放</span>
-					<span>192次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" title="临界2:安魂曲" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- 		<li class="con">
-		<a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_blank" data-stat-role="ck">
-			<img src="{{ asset('home3/image/050E000058D4B19EADBA1FA2E007E3ED')}}">
-			<i class="bg"></i>
-			<!--i class="icon pre-bord"></i-->
-			<i class="icon vip-free"></i>
-			</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_blank" data-stat-role="ck">
-				<p title="嫌疑人X的献身">嫌疑人X的献身</p>
-				<p title="王凯张鲁一高智商对决">王凯张鲁一高智商对决</p>
-				<div class="hide">
-					<span>768.0万次播放</span>
-					<span>3,043次评论</span>
-				</div>
-				</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_blank" data-stat-role="ck">
-					</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" title="嫌疑人X的献身" target="video">立刻播放</a>
-				</div>
-			</div>
-		</li>
-
- </ul>
-						<a href="javascript:void(0);" class="icon vip-arrow-right arrow-right" style="display: block;"></a>
-						<a href="javascript:void(0);" class="icon vip-arrow-left arrow-left"></a>
+			<div class="vip-box">
+				<p class="box-title">
+					会员专享大片
+					<a href="" target="_blank" class="a-more">更多</a>
+					<!-- <a href="http://svip.youku.com/portal" target="_blank" class="a-more-ipad" data-role="vipvideo">用APP查看更多</a> -->
+				</p>
+			<div class="vip-list" id="vip-box">
+				<ul id="vip-ul" style="width: 1760px;">
+					<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" target="_blank" data-stat-role="ck">
+					<img src="{{ asset('home3/image/050E000058F07C4DADBA1F83EF0314DE')}}">
+					<i class="bg"></i>
+					<!--i class="icon pre-bord"></i-->
+					<i class="icon vip-free"></i></a>
+					<div class="vip-desc-box">
+						<a href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" target="_blank" data-stat-role="ck">
+						<p title="318女生宿舍">318女生宿舍</p>
+						<p title="高校灵异事件惊悚来袭">高校灵异事件惊悚来袭</p>
+						<div class="hide">
+							<span>1,175万次播放</span>
+							<span>3,884次评论</span>
+						</div></a>
+						<div class="wrap-btn hide">
+						<a href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" target="_blank" data-stat-role="ck"></a>
+						<a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" title="318女生宿舍" target="video">立刻播放</a>
+						</div>
 					</div>
-				</div>
+					</li>
 
+			 		<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" target="_blank" data-stat-role="ck">
+						<img src="{{ asset('home3/image/050E000058E2FB3BADBC0993BB089BA3')}}">
+						<i class="bg"></i>
+						<!--i class="icon pre-bord"></i-->
+						<i class="icon vip-free"></i>
+						</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" target="_blank" data-stat-role="ck">
+							<p title="灵界警探">灵界警探</p>
+							<p title="美道姑携灵界警司降妖">美道姑携灵界警司降妖</p>
+							<div class="hide">
+								<span>5,194万次播放</span>
+								<span>1,760次评论</span>
+							</div>
+							</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" target="_blank" data-stat-role="ck">
+								</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" title="灵界警探" target="video">立刻播放</a>
+							</div>
+						</div>
+					</li>
+
+			 		<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" target="_blank" data-stat-role="ck">
+						<img src="{{ asset('home3/image/050E000058F6D2A9ADBDD3864F0DBEAE')}}">
+						<i class="bg"></i>
+						<!--i class="icon pre-bord"></i-->
+						<i class="icon vip-free"></i>
+						</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" target="_blank" data-stat-role="ck">
+							<p title="盗爱时空之笨贼也疯狂">盗爱时空之笨贼也疯狂</p>
+							<p title="清代冰冻人复活救美女">清代冰冻人复活救美女</p>
+							<div class="hide">
+								<span>788.7万次播放</span>
+								<span>271次评论</span>
+							</div>
+							</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" target="_blank" data-stat-role="ck">
+								</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" title="盗爱时空之笨贼也疯狂" target="video">立刻播放</a>
+							</div>
+						</div>
+					</li>
+
+			 		<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" target="_blank" data-stat-role="ck">
+						<img src="{{ asset('home3/image/050E000059103FCBADBAC3E366089797')}}">
+						<i class="bg"></i>
+						<!--i class="icon pre-bord"></i-->
+						<i class="icon vip-free"></i>
+						</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" target="_blank" data-stat-role="ck">
+							<p title="异能超模">异能超模</p>
+							<p title="美女模特" 变脸"撩男神"="">美女模特"变脸"撩男神</p>
+							<div class="hide">
+								<span>997.0万次播放</span>
+								<span>802次评论</span>
+							</div>
+							</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" target="_blank" data-stat-role="ck">
+								</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" title="异能超模" target="video">立刻播放</a>
+							</div>
+						</div>
+					</li>
+
+			 		<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" target="_blank" data-stat-role="ck">
+						<img src="{{ asset('home3/image/050E000058C9FCB2ADBDD3C42B062228')}}">
+						<i class="bg"></i>
+						<!--i class="icon pre-bord"></i-->
+						<i class="icon vip-free"></i>
+						</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" target="_blank" data-stat-role="ck">
+							<p title="密道追踪之魔镜邪灵">密道追踪之魔镜邪灵</p>
+							<p title="诡异镜像人追杀地球人">诡异镜像人追杀地球人</p>
+							<div class="hide">
+								<span>1,008万次播放</span>
+								<span>608次评论</span>
+							</div>
+							</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" target="_blank" data-stat-role="ck">
+								</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" title="密道追踪之魔镜邪灵" target="video">立刻播放</a>
+							</div>
+						</div>
+					</li>
+
+			 		<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" target="_blank" data-stat-role="ck">
+						<img src="{{ asset('home3/image/050E000059140548ADBAC313210D2137')}}">
+						<i class="bg"></i>
+						<!--i class="icon pre-bord"></i-->
+						<i class="icon vip-free"></i>
+						</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" target="_blank" data-stat-role="ck">
+							<p title="悟空前传">悟空前传</p>
+							<p title="至尊玉与紫霞旷世奇恋">至尊玉与紫霞旷世奇恋</p>
+							<div class="hide">
+								<span>1,506万次播放</span>
+								<span>1,084次评论</span>
+							</div>
+							</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" target="_blank" data-stat-role="ck">
+								</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" title="悟空前传" target="video">立刻播放</a>
+							</div>
+						</div>
+					</li>
+
+			 		<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" target="_blank" data-stat-role="ck">
+						<img src="{{ asset('home3/image/050E0000592404A2ADBC09664E02E099')}}">
+						<i class="bg"></i>
+						<!--i class="icon pre-bord"></i-->
+						<i class="icon vip-free"></i>
+						</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" target="_blank" data-stat-role="ck">
+							<p title="临界2:安魂曲">临界2:安魂曲</p>
+							<p title="拯救女儿反酿致命悲剧">拯救女儿反酿致命悲剧</p>
+							<div class="hide">
+								<span>1,351万次播放</span>
+								<span>192次评论</span>
+							</div>
+							</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" target="_blank" data-stat-role="ck">
+								</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" title="临界2:安魂曲" target="video">立刻播放</a>
+							</div>
+						</div>
+					</li>
+
+			 		<li class="con">
+					<a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_blank" data-stat-role="ck">
+						<img src="{{ asset('home3/image/050E000058D4B19EADBA1FA2E007E3ED')}}">
+						<i class="bg"></i>
+						<!--i class="icon pre-bord"></i-->
+						<i class="icon vip-free"></i>
+						</a><div class="vip-desc-box"><a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_blank" data-stat-role="ck">
+							<p title="嫌疑人X的献身">嫌疑人X的献身</p>
+							<p title="王凯张鲁一高智商对决">王凯张鲁一高智商对决</p>
+							<div class="hide">
+								<span>768.0万次播放</span>
+								<span>3,043次评论</span>
+							</div>
+							</a><div class="wrap-btn hide"><a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_blank" data-stat-role="ck">
+								</a><a class="btn btn-play" href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" title="嫌疑人X的献身" target="video">立刻播放</a>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+					<a href="javascript:void(0);" class="icon vip-arrow-right arrow-right" style="display: block;"></a>
+					<a href="javascript:void(0);" class="icon vip-arrow-left arrow-left"></a>
+			</div>
+			</div>
 			</div>
 		</div>
 	</div>

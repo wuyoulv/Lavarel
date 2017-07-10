@@ -77,6 +77,8 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
 });
 Route::get("home/user/zhanghu","Home\UserController@zhanghu");
+Route::post("home/userdetail/update","Home\UserController@update");
+Route::post("home/userdetail/store","Home\UserController@store");
 //前台路由
 Route::get("/dydetails","Home\DydetailsController@index");
 Route::get("/dydetails/{id}","Home\DydetailsController@index");
@@ -100,3 +102,10 @@ Route::get('home/vipuser/',"Home\VipuserController@index");
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
+
+
+//富文本编辑器测试
+Route::get('/upload', 'UploadController@index');
+
+
+Route::post('/upload', 'UploadController@uploads');
