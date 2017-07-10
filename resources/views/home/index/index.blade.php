@@ -1,5 +1,6 @@
 @extends('home.base')
     @section('content') 
+
   <div id="qnotice" class="notice-wrap">
             </div>
             <!--sub nav-->
@@ -2345,7 +2346,7 @@
                                         src="//static.youku.com/v1.0.166/index/img/sprite.gif"&gt; &lt;/div&gt;
                                         &lt;ul class="p-info pos-bottom"&gt; &lt;li class="status hover-hide"&gt;
                                         &lt;span class="p-time hover-hide"&gt; &lt;i class="ibg"&gt;&lt;/i&gt;
-                                        &lt;span&gt;更新至06-23&lt;/span&gt; &lt;/span&gt; &lt;/li&gt; &lt;/ul&gt;
+                                        &lt;span&g至06-23&lt;/span&gt; &lt;/span&gt; &lt;/li&gt; &lt;/ul&gt;
                                         &lt;ul class="info-list"&gt; &lt;li class="title short-title"&gt; &lt;a
                                         href="http://v.youku.com/v_show/id_XMjg0MTM3ODQxNg==.html" title="&amp;quot;品位&amp;quot;划分演艺圈等级标准"
                                         data-from="7-2" target="video"&gt;&amp;quot;品位&amp;quot;划分演艺圈等级标准&lt;/a&gt;
@@ -2566,7 +2567,7 @@
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
                                                                             <a href="{{URL('home/xq')}}/{{$b->id}}" data-from="1-1"
-                                                                            target="video" title="{{$b->title}}">
+                                                                             title="{{$b->title}}">
                                                                             </a>
                                                                             <i class="bg">
                                                                             </i>
@@ -2585,7 +2586,7 @@
                                                                         </ul>
                                                                         <ul class="info-list">
                                                                             <li class="title short-title">
-                                                                                <a href="http://v.youku.com/v_show/id_XMTQxNDIyNjk3Mg==.html" data-from="1-2">
+                                                                                <a href="" data-from="1-2">
                                                                                     {{$b->title}}
                                                                                 </a>
                                                                             </li>
@@ -4133,344 +4134,78 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 广告 -->
-                    <div name="m_pos" id="m_230879" modshow="1">
-                        <div id="ab_1453377679" data-adid="1453377679" style="display: block;">
-                            <div class="mod mod-new">
-                                <div class="h">
-                                    <h2>
-                                        <img class="mod-icon" title="品牌官网" src="{{ asset('home2/05100000570632EB67BC3D6B230C4F7B')}}">
-                                        <a target="_blank" href="http://tvs.youku.com/">
-                                            品牌官网
-                                        </a>
-                                    </h2>
-                                    <span class="tab-rank fr">
-                                        <img src="{{ asset('home2/ad-icon.png')}}">
-                                    </span>
-                                </div>
-                                <div class="c">
-                                    <div class="yk-row ad-slide">
-                                        <div class="modPSlide2 mod_pslide" id="ad-ppgw">
-                                            <div class="mbtn prev" style="display: none;">
-                                                <a href="http://www.youku.com/#" class="iconfont" title="上一组">
+                     <div name="m_pos" id="m_234502" modshow="1">
+                        <div class="mod">
+                            <style type="text/css">
+                                #m_223499 > .mod{ margin:0 0 20px 0; } #m_234502 > .mod{ margin-right:0
+                                } #m_234502 > .mod:after{ border:none; }
+                            </style>
+                            <div class="c mod-new">
+                                <div name="m_pos" id="m_223499" modshow="1">
+                                    <div class="mod modSwitch">
+                                        <div class="h">
+                                            <h3>
+                                                <img class="mod-icon mod-fix" title="电影" src="{{ asset('home2/051000005706327067BC3D38550115C9')}}">
+                                                <a target="_blank" href="http://movie.youku.com/">
+                                                    品牌官网
                                                 </a>
-                                            </div>
-                                            <div class="mbtn next" style="display: none;">
-                                                <a href="http://www.youku.com/#" class="iconfont" title="下一组">
-                                                </a>
-                                            </div>
-                                            <div class="panel" style="width: 3960px; left: 0px;">
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1453377731&amp;pg=5888888&amp;ca=1180056&amp;ie=734988&amp;k=&amp;u=http://tvs.youku.com/hermes&amp;md5=a77f4e67867291c8452237989b7bd098&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/hermes.jpg')}}">
+                                            </h3>                                         
+                                        </div>
+                                        <div class="c">
+                                            <div class="tab-c" style="display: block;">
+                                                <div name="m_pos" id="m_223500" modshow="1">
+                                                    <div class="yk-row yk-row-sm">
+                                                        <div class="modPSlide mod_pslide " id="md223500">
+                                                            <ul class="panel" style="width: 2413px; left: 0px;">
+                                                            @foreach ($ad as $vo)
+                                                                <li class="yk-col4 mr1">
+                                                                    <div class="yk-pack pack-film">
+                                                                        <div class="p-thumb">
+                                                                            <a href="http://{{$vo->web_address}}" data-from="1-1"
+                                                                            target="video" title="{{$vo->title}}">
+                                                                            </a>
+                                                                            <i class="bg">
+                                                                            </i>
+                                                                            <img src="{{asset('uploads')}}/{{ $vo->picname }}" width="50" height="50" >
+                                                                        </div>
+                                                                        <ul class="p-info pos-bottom">
+                                                                            <li class="status hover-hide">
+                                                                                <span class="p-time">
+                                                                                    <i class="ibg">
+                                                                                    </i>
+                                                                                    <span>
+                                                                                        正品
+                                                                                    </span>
+                                                                                </span>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <ul class="info-list">
+                                                                            <li class="title short-title">
+                                                                                <a href="http://v.youku.com/v_show/id_XMTQxNDIyNjk3Mg==.html" data-from="1-2">
+                                                                                    {{$vo->title}}
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="subtitle">
+                                                                                <span>
+                                                                                    {{$vo->introduction}}
+                                                                                </span>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            @endforeach                                                                                          
+                                                           </ul>
                                                         </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1453377731&amp;pg=5888888&amp;ca=1180056&amp;ie=734988&amp;k=&amp;u=http://tvs.youku.com/hermes&amp;md5=a77f4e67867291c8452237989b7bd098&amp;uri=&amp;dc=0">
-                                                                    爱马仕
-                                                                </a>
-                                                            </li>
-                                                        </ul>
                                                     </div>
                                                 </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513465&amp;pg=5888888&amp;ca=1180081&amp;ie=735136&amp;k=&amp;u=http://tvs.youku.com/gucci&amp;md5=d9c679f8a8470d5c7a080583406cecbb&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/gucci.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513465&amp;pg=5888888&amp;ca=1180081&amp;ie=735136&amp;k=&amp;u=http://tvs.youku.com/gucci&amp;md5=d9c679f8a8470d5c7a080583406cecbb&amp;uri=&amp;dc=0">
-                                                                    GUCCI古驰
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513502&amp;pg=5888888&amp;ca=1698056&amp;ie=914594&amp;k=&amp;u=http://tvs.youku.com/chery&amp;md5=2c0fbaf47fddac9c2f605aa2f96188b2&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/200-110(7).jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513502&amp;pg=5888888&amp;ca=1698056&amp;ie=914594&amp;k=&amp;u=http://tvs.youku.com/chery&amp;md5=2c0fbaf47fddac9c2f605aa2f96188b2&amp;uri=&amp;dc=0">
-                                                                    奇瑞汽车
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513545&amp;pg=5888888&amp;ca=1180085&amp;ie=735138&amp;k=&amp;u=http://tvs.youku.com/samsung&amp;md5=a1ce06abdd342211192079927914f47e&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/200-110-samsung.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513545&amp;pg=5888888&amp;ca=1180085&amp;ie=735138&amp;k=&amp;u=http://tvs.youku.com/samsung&amp;md5=a1ce06abdd342211192079927914f47e&amp;uri=&amp;dc=0">
-                                                                    三星中国品牌官网
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513609&amp;pg=5888888&amp;ca=1650619&amp;ie=903217&amp;k=&amp;u=http://tvs.youku.com/ibm&amp;md5=eddef486ee67b8dd259b6451d30b2d16&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/IBM-Logo-black.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513609&amp;pg=5888888&amp;ca=1650619&amp;ie=903217&amp;k=&amp;u=http://tvs.youku.com/ibm&amp;md5=eddef486ee67b8dd259b6451d30b2d16&amp;uri=&amp;dc=0">
-                                                                    ibm中国
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513662&amp;pg=5888888&amp;ca=1180088&amp;ie=735140&amp;k=&amp;u=http://tvs.youku.com/sephora&amp;md5=4e1bf4c3cbbf7380e17e012eab17d62d&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/sephora.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513662&amp;pg=5888888&amp;ca=1180088&amp;ie=735140&amp;k=&amp;u=http://tvs.youku.com/sephora&amp;md5=4e1bf4c3cbbf7380e17e012eab17d62d&amp;uri=&amp;dc=0">
-                                                                    丝芙兰
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1453377731&amp;pg=5888888&amp;ca=1180056&amp;ie=734988&amp;k=&amp;u=http://tvs.youku.com/hermes&amp;md5=a77f4e67867291c8452237989b7bd098&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/hermes.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1453377731&amp;pg=5888888&amp;ca=1180056&amp;ie=734988&amp;k=&amp;u=http://tvs.youku.com/hermes&amp;md5=a77f4e67867291c8452237989b7bd098&amp;uri=&amp;dc=0">
-                                                                    爱马仕
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513465&amp;pg=5888888&amp;ca=1180081&amp;ie=735136&amp;k=&amp;u=http://tvs.youku.com/gucci&amp;md5=d9c679f8a8470d5c7a080583406cecbb&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/gucci.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513465&amp;pg=5888888&amp;ca=1180081&amp;ie=735136&amp;k=&amp;u=http://tvs.youku.com/gucci&amp;md5=d9c679f8a8470d5c7a080583406cecbb&amp;uri=&amp;dc=0">
-                                                                    GUCCI古驰
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513502&amp;pg=5888888&amp;ca=1698056&amp;ie=914594&amp;k=&amp;u=http://tvs.youku.com/chery&amp;md5=2c0fbaf47fddac9c2f605aa2f96188b2&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/200-110(7).jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513502&amp;pg=5888888&amp;ca=1698056&amp;ie=914594&amp;k=&amp;u=http://tvs.youku.com/chery&amp;md5=2c0fbaf47fddac9c2f605aa2f96188b2&amp;uri=&amp;dc=0">
-                                                                    奇瑞汽车
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513545&amp;pg=5888888&amp;ca=1180085&amp;ie=735138&amp;k=&amp;u=http://tvs.youku.com/samsung&amp;md5=a1ce06abdd342211192079927914f47e&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/200-110-samsung.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513545&amp;pg=5888888&amp;ca=1180085&amp;ie=735138&amp;k=&amp;u=http://tvs.youku.com/samsung&amp;md5=a1ce06abdd342211192079927914f47e&amp;uri=&amp;dc=0">
-                                                                    三星中国品牌官网
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513609&amp;pg=5888888&amp;ca=1650619&amp;ie=903217&amp;k=&amp;u=http://tvs.youku.com/ibm&amp;md5=eddef486ee67b8dd259b6451d30b2d16&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/IBM-Logo-black.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513609&amp;pg=5888888&amp;ca=1650619&amp;ie=903217&amp;k=&amp;u=http://tvs.youku.com/ibm&amp;md5=eddef486ee67b8dd259b6451d30b2d16&amp;uri=&amp;dc=0">
-                                                                    ibm中国
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513662&amp;pg=5888888&amp;ca=1180088&amp;ie=735140&amp;k=&amp;u=http://tvs.youku.com/sephora&amp;md5=4e1bf4c3cbbf7380e17e012eab17d62d&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/sephora.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513662&amp;pg=5888888&amp;ca=1180088&amp;ie=735140&amp;k=&amp;u=http://tvs.youku.com/sephora&amp;md5=4e1bf4c3cbbf7380e17e012eab17d62d&amp;uri=&amp;dc=0">
-                                                                    丝芙兰
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1453377731&amp;pg=5888888&amp;ca=1180056&amp;ie=734988&amp;k=&amp;u=http://tvs.youku.com/hermes&amp;md5=a77f4e67867291c8452237989b7bd098&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/hermes.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1453377731&amp;pg=5888888&amp;ca=1180056&amp;ie=734988&amp;k=&amp;u=http://tvs.youku.com/hermes&amp;md5=a77f4e67867291c8452237989b7bd098&amp;uri=&amp;dc=0">
-                                                                    爱马仕
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513465&amp;pg=5888888&amp;ca=1180081&amp;ie=735136&amp;k=&amp;u=http://tvs.youku.com/gucci&amp;md5=d9c679f8a8470d5c7a080583406cecbb&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/gucci.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513465&amp;pg=5888888&amp;ca=1180081&amp;ie=735136&amp;k=&amp;u=http://tvs.youku.com/gucci&amp;md5=d9c679f8a8470d5c7a080583406cecbb&amp;uri=&amp;dc=0">
-                                                                    GUCCI古驰
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513502&amp;pg=5888888&amp;ca=1698056&amp;ie=914594&amp;k=&amp;u=http://tvs.youku.com/chery&amp;md5=2c0fbaf47fddac9c2f605aa2f96188b2&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/200-110(7).jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513502&amp;pg=5888888&amp;ca=1698056&amp;ie=914594&amp;k=&amp;u=http://tvs.youku.com/chery&amp;md5=2c0fbaf47fddac9c2f605aa2f96188b2&amp;uri=&amp;dc=0">
-                                                                    奇瑞汽车
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513545&amp;pg=5888888&amp;ca=1180085&amp;ie=735138&amp;k=&amp;u=http://tvs.youku.com/samsung&amp;md5=a1ce06abdd342211192079927914f47e&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/200-110-samsung.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513545&amp;pg=5888888&amp;ca=1180085&amp;ie=735138&amp;k=&amp;u=http://tvs.youku.com/samsung&amp;md5=a1ce06abdd342211192079927914f47e&amp;uri=&amp;dc=0">
-                                                                    三星中国品牌官网
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513609&amp;pg=5888888&amp;ca=1650619&amp;ie=903217&amp;k=&amp;u=http://tvs.youku.com/ibm&amp;md5=eddef486ee67b8dd259b6451d30b2d16&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/IBM-Logo-black.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513609&amp;pg=5888888&amp;ca=1650619&amp;ie=903217&amp;k=&amp;u=http://tvs.youku.com/ibm&amp;md5=eddef486ee67b8dd259b6451d30b2d16&amp;uri=&amp;dc=0">
-                                                                    ibm中国
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="yk-col4">
-                                                    <div class="yk-pack p-list">
-                                                        <div class="p-thumb">
-                                                            <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513662&amp;pg=5888888&amp;ca=1180088&amp;ie=735140&amp;k=&amp;u=http://tvs.youku.com/sephora&amp;md5=4e1bf4c3cbbf7380e17e012eab17d62d&amp;uri=&amp;dc=0"
-                                                            target="new">
-                                                            </a>
-                                                            <img src="{{ asset('home2/sephora.jpg')}}">
-                                                        </div>
-                                                        <ul class="info-list">
-                                                            <li class="title auto-height">
-                                                                <a href="http://html.atm.youku.com/htmlclick?&amp;reqid=5b6a1b6ee3dd4c5abf5db5e624f53dfa&amp;p=1453377679&amp;pp=1457513662&amp;pg=5888888&amp;ca=1180088&amp;ie=735140&amp;k=&amp;u=http://tvs.youku.com/sephora&amp;md5=4e1bf4c3cbbf7380e17e012eab17d62d&amp;uri=&amp;dc=0">
-                                                                    丝芙兰
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </div>
                                 </div>
+                          
                             </div>
                         </div>
                     </div>
+                    <!-- 广告 -->
+               
     @endsection               

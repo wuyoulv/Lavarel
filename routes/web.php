@@ -90,6 +90,8 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/user/{id}',"Home\UserController@index");
 
     //Route::get('home/vipuser/',"Home\VipuserController@index");
+    Route::get('/ad', 'Home\AdController@index');//广告
+    
     
 
 });
@@ -100,3 +102,4 @@ Route::get('home/vipuser/',"Home\VipuserController@index");
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
+
