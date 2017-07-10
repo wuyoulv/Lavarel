@@ -2571,7 +2571,7 @@
                                                                             </a>
                                                                             <i class="bg">
                                                                             </i>
-                                                                            <img class="quic" src="{{ asset('home2/0516000055FF6C9567BC3C17910F263E')}}">
+                                                                            <img class="quic" src="{{ $b->pic_address }}">
                                                                         </div>
                                                                         <ul class="p-info pos-bottom">
                                                                             <li class="status hover-hide">
