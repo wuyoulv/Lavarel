@@ -20,22 +20,15 @@
 					document.write('<img src="//static.youku.com/lvip/img/ucenter/night_bg.png" class="head-img" id="head-img">');
 					document.getElementById("head-container").style.backgroundColor="#3391d1"
 				}
-				@foreach($list as $v) 
+				/*@foreach($list as $v) */
 			</script><img src="{{ asset('home3/image/day_bg.png')}}" class="head-img" id="head-img">
 			<div class="info-box " id="info-box">
 				<img src="/uploads/{{$list->picname}}" class="user-img">
 				<div class="uinfo-box">
-
-					<!-- <p class="icon greet">下午好</p> -->
+					<p class="icon greet">你好！</p>
 					<div class="u-name">
 						<span class="left user-name" >{{$list->account}}</span>
 						<span class="left icon icon-mark"></span>
-
-					<p class="icon greet" >下午好</p>
-					<div class="u-name">
-						<span class="left" >{{$v->account}}</span>
-						<span class="left icon-mark"></span>
-
 						<div class="u-grade-icon grade-level15" id="grade-btn" data-stat-role="ck">
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
 								<div class="rect"></div>
