@@ -4151,6 +4151,7 @@
                                                 </a>
                                             </h3>                                         
                                         </div>
+                                        <center>
                                         <div class="c">
                                             <div class="tab-c" style="display: block;">
                                                 <div name="m_pos" id="m_223500" modshow="1">
@@ -4158,15 +4159,23 @@
                                                         <div class="modPSlide mod_pslide " id="md223500">
                                                             <ul class="panel" style="width: 2413px; left: 0px;">
                                                             @foreach ($ad as $vo)
-                                                                <li class="yk-col4 mr1">
+                                                                <li class="yk-col4 mr1" style="width:185px">
                                                                     <div class="yk-pack pack-film">
+                                                                    <ul class="info-list">
+                                                                            <li class="title short-title">
+                                                                                <a href="http://{{$vo->web_address}}" data-from="1-1"
+                                                                            target="video" title="{{$vo->desc}}">
+                                                                                    {{$vo->title}}
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
                                                                         <div class="p-thumb">
                                                                             <a href="http://{{$vo->web_address}}" data-from="1-1"
-                                                                            target="video" title="{{$vo->title}}">
+                                                                            target="video" title="{{$vo->desc}}">
                                                                             </a>
                                                                             <i class="bg">
                                                                             </i>
-                                                                            <img src="{{asset('uploads')}}/{{ $vo->picname }}" width="50" height="50" >
+                                                                            <img alt="{{$vo->desc}}" src="{{asset('uploads')}}/{{ $vo->picname }}" width="50" height="50" >
                                                                         </div>
                                                                         <ul class="p-info pos-bottom">
                                                                             <li class="status hover-hide">
@@ -4174,21 +4183,17 @@
                                                                                     <i class="ibg">
                                                                                     </i>
                                                                                     <span>
-                                                                                        正品
+                                                                                        优酷广告
                                                                                     </span>
                                                                                 </span>
                                                                             </li>
                                                                         </ul>
                                                                         <ul class="info-list">
                                                                             <li class="title short-title">
-                                                                                <a href="http://v.youku.com/v_show/id_XMTQxNDIyNjk3Mg==.html" data-from="1-2">
-                                                                                    {{$vo->title}}
+                                                                                <a href="http://{{$vo->web_address}}" data-from="1-1"
+                                                                            target="video" title="{{$vo->desc}}">
+                                                                                    {{$vo->desc}}
                                                                                 </a>
-                                                                            </li>
-                                                                            <li class="subtitle">
-                                                                                <span>
-                                                                                    {{$vo->introduction}}
-                                                                                </span>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -4200,6 +4205,7 @@
                                                 </div>
                                             </div>                                            
                                         </div>
+                                        </center>
                                     </div>
                                 </div>
                           
