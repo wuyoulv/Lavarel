@@ -60,7 +60,7 @@ class AdController extends Controller
         //定义一个空数组
         $array= [];
         //获取除图片外的信息
-        $data = $request->only(['userid','title','web_address','addtime','deadline','status']);
+        $data = $request->only(['userid','title','desc','web_address','addtime','deadline','status']);
         //$picname = $data['picname'];
         //echo "<pre>";
         //print_r($data);
@@ -155,7 +155,7 @@ class AdController extends Controller
 
          $array= [];
         //获取除图片外的信息
-        $data = $request->only(['userid','title','web_address','addtime','deadline','status']);
+        $data = $request->only(['userid','title','desc','web_address','addtime','deadline','status']);
         //$picname = $data['picname'];
         //echo "<pre>";
         //print_r($data);
