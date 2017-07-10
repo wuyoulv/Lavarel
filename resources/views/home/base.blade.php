@@ -170,10 +170,10 @@
                         <div class="g-ucenter" id="uerCenter">
                             <div class="u-login">
                                 <div class="login-before handle" style="display: block;">
-                                    <a id="qheader_login" href="">
+                                    <a href="{{ URL('/home/login') }}">
                                         登录
                                     </a>
-                                    <a id="qheader_reg" href="">
+                                    <a id="qheader_reg" href="{{ URL('/home/register') }}">
                                         注册
                                     </a>
                                 </div>
@@ -362,32 +362,13 @@
 
                     <div class="g-footer">
                         <dl class="g-w1">
-                            <dt>
-                                <a target="_blank" href="http://c.youku.com/aboutcn/youtu">
-                                    大优酷事业群
-                                </a>
-                                　
-                                <a target="_blank" href="http://c.youku.com/aboutcn/youku">
-                                    关于优酷
-                                </a>
-                                　
-                            </dt>
+                           
                             <dd>
-                                <a target="_blank" href="http://c.youku.com/abouteg/youtu">
-                                    Youku Tudou Inc.
-                                </a>
-                                <a target="_blank" href="http://c.youku.com/abouteg/youku">
-                                    Youku.com
+                                <a  onclick="javaScript:alert('优酷广告投放电话，请拨打：010-88886666')">
+                                <img src="./uploads/2222.jpg" width="300" height="120">
                                 </a>
                             </dd>
-                            <dd>
-                                <a target="_blank" href="http://c.youku.com/link">
-                                    友情链接
-                                </a>
-                                <a target="_blank" href="http://c.youku.com/aboutcn/adservice/">
-                                    广告服务
-                                </a>
-                            </dd>
+                            
                         </dl>
                         <dl class="g-w2">
                             <dt>

@@ -66,6 +66,7 @@ return [
 		'qiniu' => [
             'driver'  => 'qiniu',
             'domains' => [
+
                 'default'   => env('Qiniu_URL'), //你的七牛域名
                 'https'     => '',         //你的HTTPS域名
                 'custom'    => '',                //你的自定义域名
@@ -76,4 +77,5 @@ return [
             'notify_url'=> '',  //持久化处理回调地址
         ],
     ],
+
 ];

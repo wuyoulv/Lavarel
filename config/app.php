@@ -179,7 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         iscms\Alisms\AlidayuServiceProvider::class,
 
-        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+		zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+
 
     ],
 

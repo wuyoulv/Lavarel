@@ -44,6 +44,14 @@
                         <input type="file" name="picname" class="form-control" value>
                       </div>
                     </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">简介</label>
+                      <div class="col-sm-4">
+                        <!-- <input type="text" name="desc" class="form-control" value=""> -->
+                        <textarea name="desc" class="form-control" placeholder="简介" cols="5" rows="6">{{ $vo->desc }}</textarea>
+                      </div>
+                    </div>
+
                      <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">网站网址</label>
                       <div class="col-sm-4">
