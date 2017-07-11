@@ -58,7 +58,8 @@ class Qiniu_infoController extends Controller
             $filename = time().rand(1000,9999).".".$file->getClientOriginalExtension();
             $disk = \Storage::disk('qiniu');
             $filePath = $file->getRealPath();
-            $in = $disk->put('$filename',fopen($filePath,'r+'));
+            //dd($filePath);
+            $in = $disk->put($filename,fopen($filePath,'r+'));
             $path = $disk->downloadUrl($in); 
         }else{
             return back()->with("文件格式不正确");
