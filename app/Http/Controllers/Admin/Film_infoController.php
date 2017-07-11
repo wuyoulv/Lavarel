@@ -107,7 +107,7 @@ class Film_infoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->only('title','picname','type','director','actor','firsttime','duration','region','language','introduction','limit','score','status','click','addtime','lasttime');
+        $input = $request->only('title','pic_address','type_id','director','actor','firsttime','duration','region','language','introduction','limit','score','status','click','addtime','edittime');
         $id = Film_info::where("id",$id)->update($input);
         if($id>0){
             return redirect('/admin/film_info');

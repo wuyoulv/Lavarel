@@ -14,7 +14,7 @@
         "laravel/tinker": "~1.0",
 
         "zgldh/qiniu-laravel-storage": "^0.6.8",
-        "laravel/tinker": "~1.0",
+        "laravel/tinker": "~1.0"
 
 
 

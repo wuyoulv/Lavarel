@@ -11,10 +11,10 @@ class Film_cmtController extends Controller
    public function index(Request $request){
 		$db = \DB::table('film_cmt');
 		$where = [];
-    	if($request->has('filmid')){
-    		$filmid = $request->input('filmid');
-    		$db->where("filmid","like","%{$filmid}%"); 
-    		$where['filmid'] = $filmid;
+    	if($request->has('title')){
+    		$filmid = $request->input('title');
+    		$db->where("title","like","%{$filmid}%"); 
+    		$where['title'] = $filmid;
     	}
 		$list = $db->paginate(2);
     	return view('admin.Film_cmt.index',['cmt'=>$list,'where'=>$where]);
