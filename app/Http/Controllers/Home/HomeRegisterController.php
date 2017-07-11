@@ -215,9 +215,10 @@ class HomeRegisterController extends Controller
         }
         //$input = $request->only(['account','picname','password','name','birthday','sex','tel','email','address','months','money','role','buy_time','dead_line','login_time','last_time']);
         $id=User::insertGetId(['account'=>$account,'password'=>$password,'tel'=>$account,'buy_time'=>null,'dead_line'=>null,'login_time'=>null,'last_time'=>null]);
-        if($id){
+        if($id>0){
             $vf=Login::insertGetId(['account'=>$account,'password'=>$password,'id'=>$id]);
         }
+        session()->put('adminn',$account);
         return redirect("home");
     }
 }
