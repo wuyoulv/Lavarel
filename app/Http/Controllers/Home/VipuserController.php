@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Vipuser;
+use zgldh\QiniuStorage\QiniuFilesystemServiceProvider;
 
 class VipuserController extends Controller
 {
@@ -16,3 +17,4 @@ class VipuserController extends Controller
     	return view("home.vipuser.vipuser",['film_info'=>$db]);
     }
 }
+

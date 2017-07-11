@@ -76,8 +76,14 @@
                     @foreach($cmt[$i] as $stu)                      
                         <tr>
                             <td>{{$stu->id}}</td>
+<<<<<<< HEAD
                             <td>{{$stu->name}}</td>
                             <td>{{$stu->title}}</td>
+=======
+                            <td>{{$stu->userid}}</td>
+                            <td>{{$stu->filmid}}</td>
+                            <td>{{$stu->time}}</td>
+>>>>>>> 34e02aa2d93e2a7dd7fe46e83d93cf50bb54022b
                             <td>{{$stu->text}}</td>
                             <td>{{$stu->time}}</td>
                             <td> <a class="btn btn-xs btn-danger" href="{{url('admin/cmt/del')}}/{{$stu->id}}">删除</a> | <a class="btn btn-xs btn-primary" href="{{url('admin/cmt/edit')}}/{{$stu->id}}">编辑</a></td>                        

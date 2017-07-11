@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Film_cmt;
+
 class Film_cmtController extends Controller {
 	public function index(Request $request, $id = null) {
 		if ($id) {
@@ -30,6 +31,7 @@ class Film_cmtController extends Controller {
 	public function join($like) {
 		$film_cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'Film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_info.title", "like", "%{$like}%")->paginate(5);
 		return $film_cmt;
+
 	}
 	public function delete($id) {
 		$cmt = Film_cmt::find($id);
@@ -56,6 +58,8 @@ class Film_cmtController extends Controller {
 				return redirect('/admin/cmt');
 			} else {
 				return redirect('/admin/cmt/edit/' . $id)->with('err', '修改失败');
+
+	
 			}
 		}
 	

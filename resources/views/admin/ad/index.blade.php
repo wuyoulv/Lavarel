@@ -38,13 +38,15 @@
                 <div class="box-body">
                   <table class="table table-bordered">
                     <tr>
-                      <th style="width:60px">id号</th>
-                      <th>角色名称</th>
-                      <th>图片名称</th>
-                      <th>添加时间</th>
-                      <th>到期时间</th>
-                      <th>状态</th>
-                      <th style="width: 170px">操作</th>
+                      <th style="width:20px">id号</th>
+                      <th style="width:20px">角色名称</th>
+                      <th style="width:20px">图片名称</th>
+                      <th style="width:20px">简介</th>
+                      <th style="width:20px">网站网址</th>
+                      <th style="width:20px">添加时间</th>
+                      <th style="width:20px">到期时间</th>
+                      <th style="width:20px">状态</th>
+                      <th style="width:30px">操作</th>
                     </tr>
 
                     </tr>
@@ -53,6 +55,8 @@
                       <td>{{ $vo->id }}</td>
                       <td>{{ $vo->title }}</td>
                       <td><img src="{{asset('uploads')}}/{{ $vo->picname }}" width="50" height="50" /></td> 
+                      <td>{{ $vo->desc }}</td>
+                      <td>{{ $vo->web_address }}</td>
                       <td>{{ $vo->addtime }}</td>
                       <td>{{ $vo->deadline }}</td>
                       <td>{{ $vo->status }}</td>
