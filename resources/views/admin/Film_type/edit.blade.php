@@ -30,7 +30,7 @@
                   <div class="box-body">
                   
                     <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">分类ID：</label>
+                      <label for="inputEmail3" class="col-sm-2 control-label">评论ID：</label>
                       <div class="col-sm-4">
                         <input type="text" disabled="disabled"   class="form-control" id="inputEmail3" placeholder="{{$v->id}}">
                         <input type="hidden" name="id" value="{{$v->id}}">
