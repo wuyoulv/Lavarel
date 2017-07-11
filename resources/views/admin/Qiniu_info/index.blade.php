@@ -42,7 +42,7 @@
                   <table class="table table-bordered">
                     <tr>
                     <th>ID</th>
-                    <th>文件名</th>
+                    <th>文件地址</th>
                     <th>创建时间</th>
                     <th>描述</th>
                     <th>操作</th>

@@ -57,6 +57,7 @@ class Film_infoController extends Controller
             $disk = \Storage::disk('qiniu');
             $in = $disk->put("$filename",$request->file('picname'));
             $path = $disk->downloadUrl($in); 
+            //dd($path);
         }else{
             return back()->with("文件格式不正确");
         }
