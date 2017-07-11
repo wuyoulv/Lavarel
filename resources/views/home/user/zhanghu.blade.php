@@ -19,8 +19,8 @@
 		.huhu{position: absolute;
               top: 0px;
               left: 110px;
-              width: 110px;
-              height: 110px;
+              width: 80px;
+              height: 80px;
               opacity: 0;
               z-index: 999;}
 	</style>
@@ -440,12 +440,12 @@ var ykQHeader = {
 	<div class="formbox">
 			<fieldset>	
 				
-				<form action="{{url('home/userdetail/update')}}" method="post" id="sv_profile">
+				<form action="{{url('home/userdetail/update')}}" method="post" id="sv_profile" enctype="multipart/form-data">
 				<input type="hidden" name="_token" value="{{csrf_token()}}"/>
 				
-				<div class="entry" >
+				<div class="entry" width="80">
 						<label>头像：</label>
-						<img src="/uploads/{{$list->picname}}" class="user-img">
+						<img src="/uploads/{{$list->picname}}" class="user-img " >
 					</div>
 					<div class="entry">
 						<label>账号：</label>

@@ -197,7 +197,11 @@
             "dist": {
                 "type": "zip",
 
+
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/1bf24f7334fe16c88bf9d467863309ceaf285b01",
+
                 "url": "https://files.phpcomposer.com/files/erusev/parsedown/1bf24f7334fe16c88bf9d467863309ceaf285b01.zip",
+
 
                 "reference": "1bf24f7334fe16c88bf9d467863309ceaf285b01",
                 "shasum": "",
@@ -207,6 +211,12 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/erusev/parsedown/728952b90a333b5c6f77f06ea9422b94b585878d.zip",
+                "reference": "728952b90a333b5c6f77f06ea9422b94b585878d",
+                "shasum": ""
+
 
             },
             "require": {
@@ -1162,7 +1172,11 @@
             "dist": {
                 "type": "zip",
 
+
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+
                 "url": "https://files.phpcomposer.com/files/bobthecow/psysh/fe65c30cbc55c71e61ba3a38b5a581149be31b8e.zip",
+
                 "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
                 "shasum": "",
                 "mirrors": [
@@ -1171,6 +1185,13 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/bobthecow/psysh/58a31cc4404c8f632d8c557bc72056af2d3a83db.zip",
+                "reference": "58a31cc4404c8f632d8c557bc72056af2d3a83db",
+                "shasum": ""
+
+
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1",
@@ -1445,6 +1466,10 @@
 
             "version": "v3.3.3",
 
+
+            "version": "v3.3.4",
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -1464,6 +1489,12 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/symfony/console/a97e45d98c59510f085fa05225a1acb74dfe0546.zip",
+                "reference": "a97e45d98c59510f085fa05225a1acb74dfe0546",
+                "shasum": ""
+
 
             },
             "require": {
@@ -1526,6 +1557,10 @@
 
             "version": "v3.3.3",
 
+
+            "version": "v3.3.4",
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -1585,6 +1620,26 @@
         {
             "name": "symfony/debug",
 
+
+            "version": "v3.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "bcfd02728d9b776e5c2195a4750c813fe440402f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/bcfd02728d9b776e5c2195a4750c813fe440402f",
+                "reference": "bcfd02728d9b776e5c2195a4750c813fe440402f",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+
+
             "version": "v3.3.4",
             "source": {
                 "type": "git",
@@ -1641,6 +1696,14 @@
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
 
+
+            "time": "2017-06-06T14:51:55+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v3.3.3",
+
+
             "time": "2017-07-05T13:02:37+00:00"
         },
         {
@@ -1665,6 +1728,13 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/symfony/event-dispatcher/67535f1e3fd662bdc68d7ba317c93eecd973617e.zip",
+                "reference": "67535f1e3fd662bdc68d7ba317c93eecd973617e",
+                "shasum": ""
+
+
             },
             "require": {
                 "php": ">=5.5.9"
@@ -1719,6 +1789,10 @@
             "name": "symfony/finder",
 
             "version": "v3.3.3",
+
+
+            "version": "v3.3.4",
+
 
             "source": {
                 "type": "git",
@@ -1775,6 +1849,10 @@
         {
             "name": "symfony/http-foundation",
 
+
+            "version": "v3.3.3",
+
+
             "version": "v3.3.4",
 
             "source": {
@@ -1795,6 +1873,12 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/symfony/http-foundation/f347a5f561b03db95ed666959db42bbbf429b7e5.zip",
+                "reference": "f347a5f561b03db95ed666959db42bbbf429b7e5",
+                "shasum": ""
+
 
             },
             "require": {
@@ -1857,6 +1941,19 @@
                         "preferred": true
                     }
                 ]
+
+
+            "version": "v3.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-kernel.git",
+                "reference": "33f87c957122cfbd9d90de48698ee074b71106ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/http-kernel/33f87c957122cfbd9d90de48698ee074b71106ea.zip",
+                "reference": "33f87c957122cfbd9d90de48698ee074b71106ea",
+                "shasum": ""
 
 
             },
@@ -1933,6 +2030,10 @@
 
             "time": "2017-07-04T06:02:59+00:00"
 
+
+            "time": "2017-07-05T13:28:15+00:00"
+
+
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2004,6 +2105,10 @@
 
             "version": "v3.3.3",
 
+
+            "version": "v3.3.4",
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -2022,6 +2127,13 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/symfony/process/5ab8949b682b1bf9d4511a228b5e045c96758c30.zip",
+                "reference": "5ab8949b682b1bf9d4511a228b5e045c96758c30",
+                "shasum": ""
+
+
             },
             "require": {
                 "php": ">=5.5.9"
@@ -2063,6 +2175,10 @@
 
             "version": "v3.3.3",
 
+
+            "version": "v3.3.4",
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
@@ -2070,6 +2186,9 @@
             },
             "dist": {
                 "type": "zip",
+
+
+
                 "url": "https://api.github.com/repos/symfony/routing/zipball/dc70bbd0ca7b19259f63cdacc8af370bc32a4728",
                 "reference": "dc70bbd0ca7b19259f63cdacc8af370bc32a4728",
 
@@ -2080,6 +2199,13 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/symfony/routing/dc70bbd0ca7b19259f63cdacc8af370bc32a4728.zip",
+                "reference": "dc70bbd0ca7b19259f63cdacc8af370bc32a4728",
+                "shasum": ""
+
+
             },
             "require": {
                 "php": ">=5.5.9"
@@ -2150,6 +2276,10 @@
 
             "version": "v3.3.3",
 
+
+            "version": "v3.3.4",
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -2168,6 +2298,13 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/symfony/translation/35dd5fb003c90e8bd4d8cabdf94bf9c96d06fdc3.zip",
+                "reference": "35dd5fb003c90e8bd4d8cabdf94bf9c96d06fdc3",
+                "shasum": ""
+
+
             },
             "require": {
                 "php": ">=5.5.9",
@@ -2240,6 +2377,21 @@
                         "preferred": true
                     }
                 ]
+
+
+            "version": "v3.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "9ee920bba1d2ce877496dcafca7cbffff4dbe08a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/9ee920bba1d2ce877496dcafca7cbffff4dbe08a.zip",
+                "reference": "9ee920bba1d2ce877496dcafca7cbffff4dbe08a",
+                "shasum": ""
+
+
             },
             "require": {
                 "php": ">=5.5.9",
@@ -2295,6 +2447,11 @@
             ],
 
             "time": "2017-06-24T09:29:48+00:00"
+
+
+            "time": "2017-07-05T13:02:37+00:00"
+
+
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -2415,6 +2572,7 @@
             },
             "dist": {
                 "type": "zip",
+
                 "url": "https://api.github.com/repos/zgldh/qiniu-laravel-storage/zipball/a303069b1508e566de748152837b7848d8ff5efd",
                 "reference": "a303069b1508e566de748152837b7848d8ff5efd",
                 "shasum": "",
@@ -2425,6 +2583,10 @@
                     }
                 ]
 
+
+                "url": "https://files.phpcomposer.com/files/zgldh/qiniu-laravel-storage/a303069b1508e566de748152837b7848d8ff5efd.zip",
+                "reference": "a303069b1508e566de748152837b7848d8ff5efd",
+                "shasum": ""
 
 
             },
@@ -3362,6 +3524,7 @@
             },
             "dist": {
                 "type": "zip",
+
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/a23b761686d50a560cc56233b9ecf49597cc9118",
                 "reference": "a23b761686d50a560cc56233b9ecf49597cc9118",
 
@@ -3372,6 +3535,13 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit-mock-objects/a23b761686d50a560cc56233b9ecf49597cc9118.zip",
+                "reference": "a23b761686d50a560cc56233b9ecf49597cc9118",
+                "shasum": ""
+
+
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
@@ -3994,6 +4164,10 @@
         {
             "name": "symfony/yaml",
 
+
+            "version": "v3.3.3",
+
+
             "version": "v3.3.4",
 
             "source": {
@@ -4014,6 +4188,13 @@
                         "preferred": true
                     }
                 ]
+
+
+                "url": "https://files.phpcomposer.com/files/symfony/yaml/1f93a8d19b8241617f5074a123e282575b821df8.zip",
+                "reference": "1f93a8d19b8241617f5074a123e282575b821df8",
+                "shasum": ""
+
+
             },
             "require": {
                 "php": ">=5.5.9"
