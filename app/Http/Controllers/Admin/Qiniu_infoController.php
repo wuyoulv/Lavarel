@@ -60,8 +60,19 @@ class Qiniu_infoController extends Controller
             $filePath = $file->getRealPath();
             //dd($filePath);
             $in = $disk->put($filename,fopen($filePath,'r+'));
-            $path = $disk->downloadUrl($in); 
-            dd($path);
+            //$path = $disk->downloadUrl($in); 
+            //dd($path);
+            $path = 'Http://oslflcaj7.bkt.clouddn.com/'.$filename;
+            //dd($path);
+            
+                $time=date('Y-m-d H:i:s');
+                $input = $request->only(['description']);
+                $input['fname'] = $path;
+                $input['createtime'] = $time;
+                $id = Qiniu_info::insertGetid($input);
+                //return "添加的Id".$id;
+                return redirect('/admin/qiniu_info');
+                   
         }else{
             return back()->with("文件格式不正确");
         }
