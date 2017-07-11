@@ -92,10 +92,12 @@ class Film_infoController extends Controller
      */
     public function edit($id)
     {
+        $type=\DB::table("film_type")->select('id','type')->get();
+
         $time=date('Y-m-d H-i-s');
         $ob = Film_info::where('id',$id)->first();
         $ob['edittime']=$time;
-        return view('admin.Film_info.edit',['data'=>$ob]);
+        return view('admin.Film_info.edit',['data'=>$ob,'type'=>$type]);
     }
 
     /**
@@ -107,7 +109,9 @@ class Film_infoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->only('title','picname','type','director','actor','firsttime','duration','region','language','introduction','limit','score','status','click','addtime','lasttime');
+        $time=date('Y-m-d H:i:s');
+        $input['lasttime']=$time;
+        $input = $request->only('title','type_id','director','actor','firsttime','duration','region','language','introduction','limit','score','status','click');
         $id = Film_info::where("id",$id)->update($input);
         if($id>0){
             return redirect('/admin/film_info');
@@ -125,6 +129,7 @@ class Film_infoController extends Controller
     public function destroy($id)
     {
         Film_info::where("id",$id)->delete();
+        \Storage::delete($key);
         return redirect('/admin/film_info');
     }
 }

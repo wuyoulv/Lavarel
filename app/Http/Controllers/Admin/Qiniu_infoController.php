@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Qiniu_info;
+use zgldh\QiniuStorage\QiniuStorage;
+use Qiniu\Storage\UploadManager;
+use Qiniu\Auth;
 
 
 class Qiniu_infoController extends Controller
@@ -48,10 +51,20 @@ class Qiniu_infoController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->only(['uid','fname','key','createtime','description']);
-        $id = Qiniu_info::insertGetid($input);
-        //return "添加的Id".$id;
-        return redirect('/admin/qiniu_info');
+        //dd($request);
+
+         if($request->file("fname")){
+            $file = $request->file("fname");
+            $filename = time().rand(1000,9999).".".$file->getClientOriginalExtension();
+            $disk = \Storage::disk('qiniu');
+            $filePath = $file->getRealPath();
+            $in = $disk->put('$filename',fopen($filePath,'r+'));
+            $path = $disk->downloadUrl($in); 
+        }else{
+            return back()->with("文件格式不正确");
+        }
+
+       
     }
 
     /**

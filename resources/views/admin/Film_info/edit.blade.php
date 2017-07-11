@@ -37,16 +37,13 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">海报名：</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="海报名" name="picname" value="{{ $data->pic_address }}"/>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">类型：</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="类型" name="type" value="{{ $data->type_id }}"/>
+                        <select class="form-control" name="type_id">
+                          @foreach ($type as $v)
+                            <option value="{{ $v->id }}">{{ $v->type }}</option>
+                          @endforeach
+                          </select>
                       </div>
                     </div>
 
