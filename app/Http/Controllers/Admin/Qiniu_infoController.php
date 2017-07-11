@@ -61,6 +61,7 @@ class Qiniu_infoController extends Controller
             //dd($filePath);
             $in = $disk->put($filename,fopen($filePath,'r+'));
             $path = $disk->downloadUrl($in); 
+            dd($path);
         }else{
             return back()->with("文件格式不正确");
         }
