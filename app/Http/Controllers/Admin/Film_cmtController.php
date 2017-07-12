@@ -13,7 +13,7 @@ class Film_cmtController extends Controller {
 			//通过影片id链接查询 评论内容和用户
 			//$list=array();
 			foreach ($db as $key => $v) {
-				$film_cmt[] = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'Film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where('film_id', $v->id)->where("film_info.title", "like", "%{$request->input('title') }%")->paginate(5);
+				$film_cmt[] = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where('film_id', $v->id)->where("film_info.title", "like", "%{$request->input('title') }%")->paginate(5);
 				$list = $film_cmt;
 				$where['title'] = $request->input('title');
 			}
@@ -30,7 +30,7 @@ class Film_cmtController extends Controller {
 		return view('admin.Film_cmt.index', ['cmt' => $list, 'where' => $where, 'type_table' => $type_table]);
 	}
 	public function join($like) {
-		$film_cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'Film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_info.title", "like", "%{$like}%")->paginate(5);
+		$film_cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_info.title", "like", "%{$like}%")->paginate(5);
 		return $film_cmt;
 
 	}
@@ -45,7 +45,7 @@ class Film_cmtController extends Controller {
 	}
 	public function edit($id) {
 		// $cmt = Film_cmt::where('id', $id)->get();
-		$cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'Film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_cmt.id", $id)->get();
+		$cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_cmt.id", $id)->get();
 
 		return view('admin.Film_cmt.edit', ['cmt' => $cmt]);
 	}

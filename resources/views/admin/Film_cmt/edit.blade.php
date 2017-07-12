@@ -40,23 +40,18 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">用户ID：</label>
                       <div class="col-sm-4">
-<<<<<<< HEAD
+
                         <input type="text" disabled="disabled" name="user" class="form-control" id="inputEmail3" value="{{$v->name}}" placeholder="">
-=======
-                        <input type="text" name="userid" class="form-control" id="inputEmail3" value="{{$v->userid}}" placeholder="">
->>>>>>> 34e02aa2d93e2a7dd7fe46e83d93cf50bb54022b
+
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">评论时间：</label>
                       <div class="col-sm-4">
-<<<<<<< HEAD
+
                         <input type="text" disabled="disabled"   class="form-control" id="inputEmail3" placeholder="{{$v->time}}">
                     </div>
-=======
-                        <input type="text" name="filmid" class="form-control" id="inputEmail3" value="{{$v->filmid}}" placeholder="">
-                      </div>
->>>>>>> 34e02aa2d93e2a7dd7fe46e83d93cf50bb54022b
+
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">视频名：</label>

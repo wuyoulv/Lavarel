@@ -76,13 +76,11 @@
                     @foreach($cmt[$i] as $stu)                      
                         <tr>
                             <td>{{$stu->id}}</td>
-
-                            <td>{{$stu->user_id}}</td>
-                            <td>{{$stu->film_id}}</td>
+                            <td>{{$stu->name}}</td>
                             <td>{{$stu->title}}</td>
-
-                            <td>{{$stu->time}}</td>
+                            
                             <td>{{$stu->text}}</td>
+                            <td>{{$stu->time}}</td>
                             <td> <a class="btn btn-xs btn-danger" href="{{url('admin/cmt/del')}}/{{$stu->id}}">删除</a> | <a class="btn btn-xs btn-primary" href="{{url('admin/cmt/edit')}}/{{$stu->id}}">编辑</a></td>                        
                         </tr>                        
                     @endforeach
