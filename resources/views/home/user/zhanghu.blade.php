@@ -449,31 +449,31 @@ var ykQHeader = {
 					</div>
 					<div class="entry">
 						<label>账号：</label>
-						<input  placeholder="账号" type="text" value="{{$list->account}}" style="width:125px;" name="account"  class="form_input"/>
+						<input  placeholder="账号" type="text" value="{{ session('adminn')->account }}" style="width:125px;" name="account"  class="form_input"/>
 					</div>
 					<div class="entry">
 					  <label></label>
-					  <input   placeholder="头像" style="height:110px;" type="file" value="{{$list->picname}}" name="picname" class="huhu"/>
+					  <input   placeholder="头像" style="height:110px;" type="file" value="{{ session('adminn')->picname }}" name="picname" class="huhu"/>
 					</div>
 					<div class="entry">
 					  <label>真实姓名：</label>
-					  <input   placeholder="真实姓名" type="text" value="{{$list->name}}" name="name" class="form_input" style="width:125px;"/>
+					  <input   placeholder="真实姓名" type="text" value="{{ session('adminn')->name }}" name="name" class="form_input" style="width:125px;"/>
 					</div>
 					<div class="entry">
 						<label>生日：</label>
-						<input   placeholder="生日" type="text" value="{{$list->birthday}}" style="width:125px;" name="birthday"  class="form_input"/>
+						<input   placeholder="生日" type="text" value="{{ session('adminn')->birthday }}" style="width:125px;" name="birthday"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>电话：</label>
-						<input   placeholder="电话" type="text" value="{{$list->tel}}" style="width:125px;" name="tel"  class="form_input"/>
+						<input   placeholder="电话" type="text" value="{{ session('adminn')->tel }}" style="width:125px;" name="tel"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>邮箱：</label>
-						<input  placeholder="邮箱" type="text" value="{{$list->email}}" style="width:155px;" name="email"  class="form_input"/>
+						<input  placeholder="邮箱" type="text" value="{{ session('adminn')->email }}" style="width:155px;" name="email"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>地址：</label>
-						<input type="text" class="form_input" autocomplete="off" value="{{$list->address}}" style="width:185px;"  name="address" id="J_captchaBox"/>
+						<input type="text" class="form_input" autocomplete="off" value="{{ session('adminn')->address }}" style="width:185px;"  name="address" id="J_captchaBox"/>
 					</div>
 					<div class="entry savebtn">
 						<div class="form_btn form_btn_m form_btnmaj_m">
