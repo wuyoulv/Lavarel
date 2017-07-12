@@ -21,13 +21,13 @@
 					document.getElementById("head-container").style.backgroundColor="#3391d1"
 				}
 				/*@foreach($list as $v) */
-			</script><img src="{{ asset('home3/image/day_bg.png')}}" class="head-img" id="head-img">
+			</script><img src="{{ session('adminn')->picname }}" class="head-img" id="head-img">
 			<div class="info-box " id="info-box">
 				<img src="/uploads/{{$list->picname}}" class="user-img">
 				<div class="uinfo-box">
 					<p class="icon greet">你好！</p>
 					<div class="u-name">
-						<span class="left user-name" >{{$list->account}}</span>
+						<span class="left user-name" >{{ session('adminn')->account }}</span>
 						<span class="left icon icon-mark"></span>
 						<div class="u-grade-icon grade-level15" id="grade-btn" data-stat-role="ck">
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
@@ -68,7 +68,7 @@
 				<li><a href="http://vip.youku.com/?c=account" target="_blank" data-stat-role="ck">我的会员</a></li>
 				<li><a href="http://msg.youku.com/page/msg/index" target="_blank" data-stat-role="ck">我的消息</a></li>
 				<li><a href="http://cvip.youku.com/page/index" target="_blank" data-stat-role="ck">付费专区</a></li> -->
-				<li><a href="{{ url('home/user/zhanghu') }}" target="_blank" data-stat-role="ck">账户设置</a></li>
+				<li><a href="{{ url('home/user/zhanghu') }}" data-stat-role="ck">账户设置</a></li> <!-- 新的页面打开target="_blank" -->
 			</ul>
 		</div>	
 	</div>
@@ -77,26 +77,26 @@
 	<div class="content-container">
 		<div class="content-box">
 			<div class="content-left">
-				<div class="left-menu-box">
-					<a href="http://newvideos.youku.com/u/videos" target="_blank" class="right-border bottom-border" data-stat-role="ck">
-						<span class="icon vedio"></span>
-						<span>我的视频</span>
-					</a>
-					<a href="http://playlists.youku.com/" target="_blank" class="bottom-border" data-stat-role="ck">
-						<span class="icon album"></span>
-						<span>我的播单</span>
-					</a>
-					<a href="http://ding.youku.com/u/subscribeUpdate" target="_blank" class="right-border" data-stat-role="ck">
-						<span class="icon subscribe"></span>
-						<span>我的订阅</span>
-					</a>
-					<a href="http://faxian.youku.com/favorite" target="_blank" data-stat-role="ck">
-						<span class="icon collect"></span>
-						<span>我的收藏</span>
-					</a>
-				</div>
+			<!-- 	<div class="left-menu-box">
+				<a href="http://newvideos.youku.com/u/videos" target="_blank" class="right-border bottom-border" data-stat-role="ck">
+					<span class="icon vedio"></span>
+					<span>我的视频</span>
+				</a>
+				<a href="http://playlists.youku.com/" target="_blank" class="bottom-border" data-stat-role="ck">
+					<span class="icon album"></span>
+					<span>我的播单</span>
+				</a>
+				<a href="http://ding.youku.com/u/subscribeUpdate" target="_blank" class="right-border" data-stat-role="ck">
+					<span class="icon subscribe"></span>
+					<span>我的订阅</span>
+				</a>
+				<a href="http://faxian.youku.com/favorite" target="_blank" data-stat-role="ck">
+					<span class="icon collect"></span>
+					<span>我的收藏</span>
+				</a>
+			</div> -->
 
-				<div class="hype-box orders-box">
+				<!-- <div class="hype-box orders-box">
 					<a target="_blank" href="http://vip.youku.com/vips/myAccOrderLists.html" data-stat-role="ck">
 						<span class="icon orders-icon"></span>
 						<span class="hype-name">
@@ -104,15 +104,15 @@
 						</span>
 						<span class="icon arrow-right"></span>
 					</a>
-				</div>
+				</div> -->
 				<div class="history-box">
 					<div class="content-title history-tilte">
-						<a href="http://faxian.youku.com/watch_record" target="_blank" data-stat-role="ck">
+						<a href="{{ url('home/user/jilu') }}" data-stat-role="ck">
 							<span class="icon his-icon"></span>
 							<span class="title-text">我的历史记录</span>
 							<span class="icon arrow-right"></span>
 						</a>
-						<a href="http://svip.youku.com/portal" target="_blank" class="a-more-ipad" data-role="record">用APP查看更多</a>
+						<!-- <a href="http://svip.youku.com/portal" target="_blank" class="a-more-ipad" data-role="record">用APP查看更多</a> -->
 					</div>
 				</div>
 
