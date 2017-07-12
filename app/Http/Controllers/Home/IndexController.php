@@ -14,10 +14,13 @@ class IndexController extends Controller
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $Ad=Ad::get();
+        $Filmlist=\DB::table('film_info')
+                  ->orderBy('click', 'desc')
+                  ->get();
         //echo "<pre>";
-        //var_dump($Film_type);
+        //var_dump($Filmlist);
         //var_dump($Film_info);
         //var_dump($Ad);die;
-        return view("home.index.index",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad]);
+        return view("home.index.index",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'filmlist'=>$Filmlist]);
     }
 }
