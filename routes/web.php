@@ -44,7 +44,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
 
     //影评模块路由
-    Route::get('/cmt','Admin\Film_cmtController@index');  //影评
+    Route::get('/cmt/{id?}','Admin\Film_cmtController@index');  //影评
     Route::get('/cmt/del/{id}','Admin\Film_cmtController@delete');  //影评
     Route::get('/cmt/edit/{id}','Admin\Film_cmtController@edit');  //影评 
     Route::post('/cmt/update','Admin\Film_cmtController@update');

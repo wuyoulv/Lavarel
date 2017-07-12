@@ -41,45 +41,44 @@
                 <div class="box-body">
                   <table class="table table-bordered">
                     <tr>
-                    <th>ID</th>
-                    <th>电影名</th>
-                    <th>海报名</th>
-                    <th>类型</th>
-                    <th>导演</th>
-                    <th>演员</th>
-                    <th>首映时间</th>
-                    <th>时长</th>
-                    <th>地区</th>
-                    <th>语言</th>
-                    <th>简介</th>
-                    <th>权限</th>
-                    <th>评分</th>
-                    <th>状态</th>
-                    <th>点击量</th>
-                    <th>添加时间</th>
-                    <th>修改时间</th>
-                    <th>操作</th>
-                   
-                </tr>
+                        <th>ID</th>
+                        <th>电影名</th>
+                        <th>图片地址</th>
+                        <th>类型</th>
+                        <th>导演</th>
+                        <th>演员</th>
+                        <th>首映时间</th>
+                        <th>时长</th>
+                        <th>地区</th>
+                        <th>语言</th>
+                        <th>简介</th>
+                        <th>权限</th>
+                        <th>评分</th>
+                        <th>状态</th>
+                        <th>点击量</th>
+                        <th>添加时间</th>
+                        <th>修改时间</th>
+                        <th>操作</th>
+                    </tr>
             @foreach ($data as $v)
                 <tr>
                     <td>{{ $v->id }}</td>
                     <td>{{ $v->title }}</td>
-                    <td>{{ $v->picname }}</td>
-                    <td>{{ $v->type }}</td>
+                    <td>{{ substr($v->pic_address,33,18) }}</td>
+                    <td>{{ $v->type_id}}</td>
                     <td>{{ $v->director }}</td>
                     <td>{{ $v->actor }}</td>
                     <td>{{ $v->firsttime }}</td>
                     <td>{{ $v->duration }}</td>
                     <td>{{ $v->region }}</td>
                     <td>{{ $v->language }}</td>
-                    <td>{{ $v->introduction }}</td>
+                    <td>{{ mb_substr($v->introduction,0,12,'utf8') }}</td>
                     <td>{{ $v->limit }}</td>
                     <td>{{ $v->score }}</td>
                     <td>{{ $v->status }}</td>
                     <td>{{ $v->click }}</td>
                     <td>{{ $v->addtime }}</td>
-                    <td>{{ $v->lasttime }}</td>
+                    <td>{{ $v->edittime }}</td>
                     <td><a href="/admin/film_info/{{ $v->id }}/edit">编辑</a>   
                         <a href="javascript:doDel({{ $v->id }})">删除</a>
                     </td>
