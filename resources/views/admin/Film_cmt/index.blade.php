@@ -19,7 +19,38 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title"><i class="fa fa-th"></i> 影评浏览</h3>
+                       <button type="button" id='film_type' class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">分类名 <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                          @foreach($type_table as $type)
+                            <li><a href="{{url('admin/cmt')}}/{{$type->id}}">{{$type->type}}</a></li>
+                           @endforeach
+                          </ul>
+                          <!-- 引入jquery -->
+                        <script src="{{asset('./js/jquery-1.8.3.min.js')}}">
+                        </script>        
+                         <!-- 设置分类下拉框 -->
+                        <script>
+                        $('.dropdown-menu li a').click(function(){
+                            var url = $(this).attr('href');
+                            //切割字符串为数组
+                            // var arr = url.split('/');
+                            //弹出最后的id参数
+                            var data = arr.pop();
+
+                           console.log(data);
+                                $.ajax({
+                                    url:url,
+                                    // data:data,
+                                    type:'get',
+                                    async: false,
+                                    success:function(mes){
+                                         // mes
+                                      }
+                                  });                               
+                                return false;
+                        });
+                          
+                        </script>
                   <div class="box-tools">
                     <form action="{{url('admin/cmt')}}" method="get">
                     <div class="input-group" style="width: 150px;">
@@ -35,29 +66,35 @@
                   <table class="table table-bordered">
                     <tr>
                       <th>评论ID</th>
-                      <th>用户</th>
-                      <th>片名</th>
-                      <th>评论时间</th>
+                      <th>用户</th>                     
+                      <th>影片名</th>
                       <th>评论内容</th>
+                      <th>评论时间</th>
                       <th style="width: 100px">操作</th>
                     </tr>
-                    @foreach($cmt as $stu)
+                    @for($i=0;$i<count($cmt);$i++)                    
+                    @foreach($cmt[$i] as $stu)                      
                         <tr>
                             <td>{{$stu->id}}</td>
+
                             <td>{{$stu->user_id}}</td>
                             <td>{{$stu->film_id}}</td>
+                            <td>{{$stu->title}}</td>
+
                             <td>{{$stu->time}}</td>
                             <td>{{$stu->text}}</td>
-                            <td> <a href="{{url('admin/cmt/del')}}/{{$stu->id}}">删除</a> | <a href="{{url('admin/cmt/edit')}}/{{$stu->id}}">编辑</a></td>
-                            
-                        </tr>
+                            <td> <a class="btn btn-xs btn-danger" href="{{url('admin/cmt/del')}}/{{$stu->id}}">删除</a> | <a class="btn btn-xs btn-primary" href="{{url('admin/cmt/edit')}}/{{$stu->id}}">编辑</a></td>                        
+                        </tr>                        
                     @endforeach
-                  
+                  @endfor
                    
                   </table>
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
-                {{$cmt->appends($where)->links()}}
+                @for($i=0;$i<count($cmt);$i++)                    
+
+                {{$cmt[$i]->appends($where)->links()}}
+                @endfor
                 </div>
               </div><!-- /.box -->
 
