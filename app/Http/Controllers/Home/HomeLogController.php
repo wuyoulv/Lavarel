@@ -21,6 +21,7 @@ class HomeLogController extends Controller
         $res=$request->input("account");
         $password=$request->input('password');
 
+
         $cd=User::where('account','=',$res)->first();
 
         //$dd = User::where('id',$cd->id)->first();

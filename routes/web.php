@@ -77,6 +77,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
 });
 Route::get("home/user/zhanghu","Home\UserController@zhanghu");
+Route::get("home/user/jilu","Home\UserController@jilu");
 Route::post("home/userdetail/update","Home\UserController@update");
 Route::post("home/userdetail/store","Home\UserController@store");
 //前台路由
