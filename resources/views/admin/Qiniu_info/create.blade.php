@@ -24,34 +24,14 @@
                   <h3 class="box-title"><i class="fa fa-plus"></i> 添加视频信息</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form action="{{url('admin/qiniu_info')}}" method="post" class="form-horizontal">
+                <form action="{{url('admin/qiniu_info')}}" method="post" class="form-horizontal" enctype= "multipart/form-data">
                   <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                   <div class="box-body">
 
-                    <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">uid：</label>
-                      <div class="col-sm-4">
-                        <input type="text" name="uid" class="form-control" id="inputEmail3" placeholder="文件号">
-                      </div>
-                    </div>
 					          <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">文件名：</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="文件名" name="fname">
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">键：</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="键名" name="key">
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">上传时间：</label>
-                      <div class="col-sm-4">
-                        <input type="datetime-local" class="form-control" id="inputPassword3" placeholder="上传时间" name="createtime">
+                        <input type="file" class="form-control" id="inputPassword3" placeholder="文件名" name="fname">
                       </div>
                     </div>
 
