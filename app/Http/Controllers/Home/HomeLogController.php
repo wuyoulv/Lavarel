@@ -42,4 +42,17 @@ class HomeLogController extends Controller
         }
         return back()->with("msg","账号或密码错误！");
     }
+
+    //执行退出
+   public function logout(Request $request)
+   {
+       
+      // var_dump(session('User'));
+       
+       $request->session()->forget('adminn');
+       
+       //var_dump(session('User'));
+       //return redirect("/");
+       return back();
+   }
 }

@@ -8,6 +8,7 @@ use App\Model\Film_info;
 use App\Model\Film_type;
 use App\Model\Ad;
 use App\Model\User;
+use App\Model\User_vip;
 
 class UserController extends Controller
 {
@@ -43,11 +44,43 @@ class UserController extends Controller
          $id = session('adminn')['id'];
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
+        //$User_film=User_film::get();
         $Ad=Ad::get();
         $list = Film_info::find($id);   // 
         //echo "<pre>";
         //var_dump($list);
         return view("home.user.jilu",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
+        //echo "1345";
+      //return view('home.user.zhanghu');
+    }
+
+        public function huiyuan()
+    {
+      
+      //echo "111111";
+        //$id = session('adminn')['id'];
+        $Film_info=Film_info::get();
+        $Film_type=Film_type::get();
+        $User_vip=User_vip::get();
+        $Ad=Ad::get();
+        //$list = User::find($id);   // 
+        //echo "<pre>";
+        //print_r($list);
+        return view("home.user.huiyuan",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad]);
+    }
+
+        public function zhifu()
+    {
+        echo '111111';
+        /* $id = session('adminn')['id'];
+        $Film_info=Film_info::get();
+        $Film_type=Film_type::get();
+        $User_film=User_film::get();
+        $Ad=Ad::get();
+        $list = Film_info::find($id);   // */
+        //echo "<pre>";
+        //var_dump($list);
+        //return view("home.user.zhifu",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
         //echo "1345";
       //return view('home.user.zhanghu');
     }

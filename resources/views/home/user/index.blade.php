@@ -50,7 +50,7 @@
 						<a href="https://id.youku.com/bindMobileView.htm" class="icon mobile-icon active-mobile-icon" target="_blank" data-stat-role="ck"></a>
 					</div>
 						<div class="vip-info-box">
-							<a class="vip-buy-btn" href="" >开通会员</a>   <!-- 新页面打开target="_blank" -->
+							<a class="vip-buy-btn" href="{{ url('home/user/huiyuan') }}" >开通会员</a>   <!-- 新页面打开target="_blank" -->
 						</div>
 						<!-- <div class="zpd-info-box zpd-info-box-no" style="display: block;">	
 							<a class="zpd-text" href="#">开通频道会员</a>
