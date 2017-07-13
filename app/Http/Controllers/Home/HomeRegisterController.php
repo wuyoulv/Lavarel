@@ -214,11 +214,28 @@ class HomeRegisterController extends Controller
             return back()->with('验证码错误！');
         }
         //$input = $request->only(['account','picname','password','name','birthday','sex','tel','email','address','months','money','role','buy_time','dead_line','login_time','last_time']);
-        $id=User::insertGetId(['account'=>$account,'password'=>$password,'tel'=>$account,'buy_time'=>null,'dead_line'=>null,'login_time'=>null,'last_time'=>null]);
-        if($id>0){
-            $vf=Login::insertGetId(['account'=>$account,'password'=>$password,'id'=>$id]);
+        
+        try {
+            // 开始事物
+            \DB::beginTransaction();
+            // 向用户注册原始表 添加一条数据
+            $res1 = User::insertGetId(['account'=>$account,'password'=>Md5($password),'tel'=>$account,'buy_time'=>null,'dead_line'=>null,'login_time'=>null,'last_time'=>null]);
+            $res2 = Login::insertGetId(['account'=>$account,'password'=>Md5($password)]);
+            //$res2 = \DB::table('login')->insertGetId(['account'=>$account,'password'=>$password]);
+            if($res1 && $res2){
+                // 全部正确 事物提交
+                \DB::commit();
+            }
+            // 存入用户登录信息
+            session()->put('adminn',$account);
+            // 存入用户基本信息
+            return redirect("a/home");
+            
+        } catch (Exception $e) {
+            // 事物回滚
+            \DB::rollBack();
+            return '注册失败';
         }
-        session()->put('adminn',$account);
-        return redirect("home");
+        
     }
 }

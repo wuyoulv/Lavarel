@@ -340,24 +340,16 @@ var ykQHeader = {
                 <div id="ab_558"></div>
               </div>
             </div>
-            <div id="module_basic_player">
-              <div class="player" id="player" style="">
-                <object type="application/x-shockwave-flash" data="{{asset('home4/img/player_yknpsv.swf')}}" id="movie_player" style="width: 100%; height: 100%;" width="100%" height="100%">
-                  <param name="allowFullScreen" value="true">
-                  <param name="allowscriptaccess" value="always">
-                  <param name="allowFullScreenInteractive" value="true">
-                  <param name="wmode" value="direct">
-                  <param name="bgcolor" value="#000000">
-                  <param name="flashvars" value="skincolor1=ffffff&amp;skincolor2=ffffff&amp;VideoIDS=XMTg2NDYyNDk4OA==&amp;ShowId=308208&amp;category=96&amp;Cp=authorized&amp;sv=true&amp;unCookie=0&amp;frame=undefined&amp;uepflag=0&amp;Tid=0&amp;isAutoPlay=true&amp;playmode=3&amp;show_ce=1&amp;winType=interior&amp;Fid=0&amp;Pt=0&amp;Ob=0&amp;plchid=&amp;embedid=AjQ2NjE1NjI0NwJtb3ZpZS55b3VrdS5jb20CLw==&amp;ysuid=1498459239622Jb7&amp;vext=bc%3D%26pid%3Dundefined%26unCookie%3Dundefined%26frame%3Dundefined%26type%3D1%26fob%3D0%26fpo%3D0%26svt%3D1%26stg%3Dundefined%26cna%3DaZrXERLwL2sCAXlFF%252FpW3%252BWl%26emb%3DAjQ2NjE1NjI0NwJtb3ZpZS55b3VrdS5jb20CLw%3D%3D%26dn%3D%E7%BD%91%E9%A1%B5%26hwc%3D1%26mtype%3Doth&amp;cna=aZrXERLwL2sCAXlFF%2FpW3%2BWl&amp;pageStartTime=1498461594308">
-                  <param name="movie" value="//static.youku.com/v201706261000.0/v/swf/upsplayer/player_yknpsv.swf">
-                  <div class="player_html5">
-                    <div class="picture" style="height: 100%;">
-                      <div style="line-height: 460px;">
-                        <span style="font-size: 18px;">您还没有安装flash播放器,请点击
-                          <a href="http://www.adobe.com/go/getflash" target="_top">这里</a>安装</span></div>
-                    </div>
-                  </div>
-                </object>
+            <div id="module_basic_player" >
+              <div class="player" id="player" style="background-color:#333333;">
+                
+                  <video width="95%" height="90%" controls>
+				    <source src="Http://oslflcaj7.bkt.clouddn.com/14997928416087.mp4" type="video/mp4">
+				    <source src="movie.ogg" type="video/ogg">
+				    您的浏览器不支持 video 标签。
+				</video>
+                  
+                
               </div>
             </div>
           </div>

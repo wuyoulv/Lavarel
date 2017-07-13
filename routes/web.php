@@ -83,21 +83,21 @@ Route::post("home/userdetail/store","Home\UserController@store");
 Route::get("/dydetails","Home\DydetailsController@index");
 Route::get("/dydetails/{id}","Home\DydetailsController@index");
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
-    Route::get('/',"Home\IndexController@index");
+    
     Route::get('/xq/{id}',"Home\XqController@index");
     Route::get('/HomeLog/indexs',"Home\HomeLogController@indexs");
     
     Route::get('/HomeLog/index','Home\HomeLogController@index');
     Route::post('/HomeLog/register','Home\HomeLogController@register');
     Route::get('/user/{id}',"Home\UserController@index");
-
+    Route::get('/homeLog/logout',"Home\HomeLogController@logout"); //执行退出
     //Route::get('home/vipuser/',"Home\VipuserController@index");
     Route::get('home/vipuser/',"Home\VipuserController@index");
     Route::get('/ad', 'Home\AdController@index');//广告
 
 
 });
-
+Route::get('a/home',"Home\IndexController@index");
 Route::post('/home/sendMobileCode','Home\HomeRegisterController@sendMobileCode');
 Route::post('/home/createUser','Home\HomeRegisterController@createUser');
 Route::get('/home/register','Home\HomeRegisterController@index');
