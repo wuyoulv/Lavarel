@@ -31,7 +31,7 @@
                   <div class="box-body">
                   
                     <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">分类ID：</label>
+                      <label for="inputEmail3" class="col-sm-2 control-label">评论ID：</label>
                       <div class="col-sm-4">
                         <input type="text" disabled="disabled"   class="form-control" id="inputEmail3" placeholder="{{$v->id}}">
                         <input type="hidden" name="id" value="{{$v->id}}">
@@ -40,21 +40,26 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">用户ID：</label>
                       <div class="col-sm-4">
-                        <input type="text" name="userid" class="form-control" id="inputEmail3" value="{{$v->userid}}" placeholder="">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">视频名：</label>
-                      <div class="col-sm-4">
-                        <input type="text" name="filmid" class="form-control" id="inputEmail3" value="{{$v->filmid}}" placeholder="">
+
+                        <input type="text" disabled="disabled" name="user" class="form-control" id="inputEmail3" value="{{$v->name}}" placeholder="">
+
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">评论时间：</label>
                       <div class="col-sm-4">
+
                         <input type="text" disabled="disabled"   class="form-control" id="inputEmail3" placeholder="{{$v->time}}">
+                    </div>
+
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">视频名：</label>
+                      <div class="col-sm-4">
+                        <input type="text" disabled="disabled" name="title" class="form-control" id="inputEmail3" value="{{$v->title}}" placeholder="">
                       </div>
-                    </div> 
+                    </div>
+ 
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">评论内容：</label>
                       <div class="col-sm-4">

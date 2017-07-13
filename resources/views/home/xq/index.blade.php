@@ -1039,12 +1039,18 @@ var ykQHeader = {
 	</div>
 	</div></div></div><div class="list_tips" style="display: none;"><div class="tips"><a class="handler"></a><div class="arrow"></div><div class="content"></div></div></div></div></div><div class="clear"></div></div></div>
 	<div class="mainCol"><div id="module_basic_double11"></div><div id="module_basic_sub">
-</div><div id="module_basic_relationleft"><div class="mod modSwitch mod-new">
+</div>
+@endforeach
+
+<div id="module_basic_relationleft"><div class="mod modSwitch mod-new">
 <div class="h">
 <h2 class="moduletitle">大家都在看</h2>
 </div>
-<div class="c">
+
+<div class="c" >
+
 <div class="tab-c" style="display: block;">
+
 <div name="m_pos" id="m_likeshow" modshow="1">
 <div class="yk-row yk-row-sm">
 <div class="modPSlide mod_pslide " id="mdlikeshow">
@@ -1056,14 +1062,14 @@ var ykQHeader = {
 <a href="#" class="iconfont" title="下一组"></a>
 </div>
 <ul class="panel" style="width: 3439px; left: 0px;">
- 
+ @foreach($info as $b)
 <li class="yk-col4 mr1">
 <div class="yk-pack pack-film">
 <div class="p-thumb">
 <a href="http://v.youku.com/v_show/id_XMjc4NTczOTM3Ng==.html" target="_top" title="长城" _ck="" _reck="http://gm.mmstat.com/yt/ytrec.yk.rec?abver=A&amp;apt=1&amp;pg=3&amp;md=1&amp;ord=2&amp;vid=466156247&amp;sid=308208&amp;rtlid=NoRkxcXgj_v166&amp;req_id=NoRkxcXgj_v166&amp;guid=1498459239622Jb7&amp;uid=&amp;rand=rand_770&amp;dct=96&amp;dma=1105&amp;dvid=299112&amp;version=5&amp;utdid=&amp;idfa=&amp;t=1498461596406&amp;pos=0&amp;algInfo=1cf001n-2-1sn-236-1tc-21-1api-2F0406-1lf-2recclurl"></a>
 <i class="bg"></i>
 
-<img src="{{asset('home4/img/ $c->picname ')}}">
+<img src="{{ $b->pic_address }}">
 
 <!-- 精选角标 -->
 
@@ -1073,26 +1079,29 @@ var ykQHeader = {
 <!-- 标题 -->
 <ul class="info-list">
 <li class="title short-title">
-<a href="http://v.youku.com/v_show/id_XMjc4NTczOTM3Ng==.html" target="_top" _ck="" _reck="http://gm.mmstat.com/yt/ytrec.yk.rec?abver=A&amp;apt=1&amp;pg=3&amp;md=1&amp;ord=2&amp;vid=466156247&amp;sid=308208&amp;rtlid=NoRkxcXgj_v166&amp;req_id=NoRkxcXgj_v166&amp;guid=1498459239622Jb7&amp;uid=&amp;rand=rand_770&amp;dct=96&amp;dma=1105&amp;dvid=299112&amp;version=5&amp;utdid=&amp;idfa=&amp;t=1498461596406&amp;pos=0&amp;algInfo=1cf001n-2-1sn-236-1tc-21-1api-2F0406-1lf-2recclurl">{{ $c->title }}</a>
+<a href="http://v.youku.com/v_show/id_XMjc4NTczOTM3Ng==.html" target="_top" _ck="" _reck="http://gm.mmstat.com/yt/ytrec.yk.rec?abver=A&amp;apt=1&amp;pg=3&amp;md=1&amp;ord=2&amp;vid=466156247&amp;sid=308208&amp;rtlid=NoRkxcXgj_v166&amp;req_id=NoRkxcXgj_v166&amp;guid=1498459239622Jb7&amp;uid=&amp;rand=rand_770&amp;dct=96&amp;dma=1105&amp;dvid=299112&amp;version=5&amp;utdid=&amp;idfa=&amp;t=1498461596406&amp;pos=0&amp;algInfo=1cf001n-2-1sn-236-1tc-21-1api-2F0406-1lf-2recclurl">{{ $b->title }}</a>
 </li>
                 
 <li class="subtitle">
-<span>{{ $c->introduction }}</span>
+<span>{{ $b->introduction }}</span>
 </li>
 
 </ul>
 </div>
 </li>
  
-
+@endforeach
   
 </ul>
-@endforeach
+
 </div>
 </div>
 </div>
+
 </div>
+
 </div>
+
 </div></div>
 
 </div></div><div id="module_ad_323" class="ad-flag-wrap"><div id="ab_v_323"></div></div><div id="module_basic_comment"><div class="comment-area ">
@@ -1250,14 +1259,10 @@ var ykQHeader = {
 <div class="comment-section">
 <div class="comment-user-info">
 <a href="#" class="redname" target="_top">
-{{ $v->user }}
+{{ $v->title }}
 </a>
 
-<a href="http://vip.youku.com/" title="优酷土豆黄金会员" target="_top">
-<span class="vip-level-icon" style="background: rgba(0, 0, 0, 0) url('0510000058621a5867bc3d149b050e2e') repeat scroll 0% 0%; height: 22px; margin: 0px;"></span>
-</a>
 
-<a href="http://lv.youku.com/page/grade/compare?uid=570602993" target="_top" title="用户等级" class="user-grade-icon user-grade-lv51"></a>
 
 <span class="comment-timestamp">{{ $v->time }}</span>
 </div>

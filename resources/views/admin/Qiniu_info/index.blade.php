@@ -42,9 +42,7 @@
                   <table class="table table-bordered">
                     <tr>
                     <th>ID</th>
-                    <th>uid</th>
-                    <th>文件名</th>
-                    <th>键名</th>
+                    <th>文件地址</th>
                     <th>创建时间</th>
                     <th>描述</th>
                     <th>操作</th>
@@ -53,9 +51,7 @@
             @foreach ($data as $v)
                 <tr>
                     <td>{{ $v->id }}</td>
-                    <td>{{ $v->uid }}</td>
                     <td>{{ $v->fname }}</td>
-                    <td>{{ $v->key }}</td>
                     <td>{{ $v->createtime }}</td>
                     <td>{{ $v->description }}</td>
                     <td> <a href="/admin/qiniu_info/{{ $v->id }}/edit">编辑</a> 

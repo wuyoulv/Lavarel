@@ -86,7 +86,7 @@ var ykQHeader = {
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="" title="Youku 优酷" attr="idx0"><img src="{{ asset('home6/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
+				<a href="{{ url('home/') }}" title="Youku 优酷" attr="idx0"><img src="{{ asset('home6/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
 			</div>
 			<div class="g-view">
         		<!-- <a href="javascript:void(0)"><i class="ico-list"></i>导视</a> -->
@@ -183,9 +183,12 @@ var ykQHeader = {
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<div class="login-before handle" style="display: none;">
-                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
-					</div>
+					<!-- <div class="login-before handle" style="display: none;">
+					                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
+					</div> -->
+					  <div class="login-before handle" style="display: none;">
+                        <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')->account}}</a>·<a id="qheader_login" href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
+                    </div>
 					<div class="login-after dropdown handle" style="">
 						<a href="" target="_blank">
 							<img class="avatar" src="{{ asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07')}}" title="{{$list->account}}">
@@ -449,31 +452,31 @@ var ykQHeader = {
 					</div>
 					<div class="entry">
 						<label>账号：</label>
-						<input  placeholder="账号" type="text" value="{{$list->account}}" style="width:125px;" name="account"  class="form_input"/>
+						<input  placeholder="账号" type="text" value="{{ session('adminn')->account }}" style="width:125px;" name="account"  class="form_input"/>
 					</div>
 					<div class="entry">
 					  <label></label>
-					  <input   placeholder="头像" style="height:110px;" type="file" value="{{$list->picname}}" name="picname" class="huhu"/>
+					  <input   placeholder="头像" style="height:110px;" type="file" value="{{ session('adminn')->picname }}" name="picname" class="huhu"/>
 					</div>
 					<div class="entry">
 					  <label>真实姓名：</label>
-					  <input   placeholder="真实姓名" type="text" value="{{$list->name}}" name="name" class="form_input" style="width:125px;"/>
+					  <input   placeholder="真实姓名" type="text" value="{{ session('adminn')->name }}" name="name" class="form_input" style="width:125px;"/>
 					</div>
 					<div class="entry">
 						<label>生日：</label>
-						<input   placeholder="生日" type="text" value="{{$list->birthday}}" style="width:125px;" name="birthday"  class="form_input"/>
+						<input   placeholder="生日" type="text" value="{{ session('adminn')->birthday }}" style="width:125px;" name="birthday"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>电话：</label>
-						<input   placeholder="电话" type="text" value="{{$list->tel}}" style="width:125px;" name="tel"  class="form_input"/>
+						<input   placeholder="电话" type="text" value="{{ session('adminn')->tel }}" style="width:125px;" name="tel"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>邮箱：</label>
-						<input  placeholder="邮箱" type="text" value="{{$list->email}}" style="width:155px;" name="email"  class="form_input"/>
+						<input  placeholder="邮箱" type="text" value="{{ session('adminn')->email }}" style="width:155px;" name="email"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>地址：</label>
-						<input type="text" class="form_input" autocomplete="off" value="{{$list->address}}" style="width:185px;"  name="address" id="J_captchaBox"/>
+						<input type="text" class="form_input" autocomplete="off" value="{{ session('adminn')->address }}" style="width:185px;"  name="address" id="J_captchaBox"/>
 					</div>
 					<div class="entry savebtn">
 						<div class="form_btn form_btn_m form_btnmaj_m">
