@@ -18,7 +18,7 @@
 						<div class="login_title">
 							登录
 						</div>
-						<form action="{{ URL('/HomeLog/doLogin') }}" method="post">
+						<form action="{{ URL('/HomeLog/doLogin') }}" method="post" id='123' >
 							<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 							<div class="form_text_ipt">
 								<input name="account" type="text" placeholder="手机号/邮箱">
@@ -37,8 +37,7 @@
 								</div>
 							</div>
 							<div class="form_btn">
-								<button type="button">登录</button>
-								<input type="submit" value="登陆"/>
+								<button type="button" onclick="checkUser();" >登录</button>
 							</div>
 							<div class="form_reg_btn">
 								<span>还没有帐号？</span><a href="{{ URL('/home/register') }}">马上注册</a>
@@ -65,5 +64,21 @@
 		</div>
 		<script type="text/javascript" src="{{ asset('home8/js/jquery.min.js')}}" ></script>
 		<script type="text/javascript" src="{{ asset('home8/js/common.js')}}" ></script>
+        <script>
+            function checkUser(){
+               //var result = document.getElementById("userid").value;
+               //var password = document.getElementById("passid").value;
+
+               /* if(result == ""  ){
+                 alert("用户名不能为空");
+                 return false;
+               }
+               if(password == ""  ){
+                alert("密码不能为空");
+                 return false;
+               } */
+              document.getElementById("123").submit();
+            }
+        </script>
 	</body>
 </html>

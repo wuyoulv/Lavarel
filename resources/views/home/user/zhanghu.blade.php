@@ -86,7 +86,7 @@ var ykQHeader = {
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="" title="Youku 优酷" attr="idx0"><img src="{{ asset('home6/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
+				<a href="{{ url('home/') }}" title="Youku 优酷" attr="idx0"><img src="{{ asset('home6/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
 			</div>
 			<div class="g-view">
         		<!-- <a href="javascript:void(0)"><i class="ico-list"></i>导视</a> -->
@@ -183,9 +183,12 @@ var ykQHeader = {
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<div class="login-before handle" style="display: none;">
-                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
-					</div>
+					<!-- <div class="login-before handle" style="display: none;">
+					                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
+					</div> -->
+					  <div class="login-before handle" style="display: none;">
+                        <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')->account}}</a>·<a id="qheader_login" href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
+                    </div>
 					<div class="login-after dropdown handle" style="">
 						<a href="" target="_blank">
 							<img class="avatar" src="{{ asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07')}}" title="{{$list->account}}">

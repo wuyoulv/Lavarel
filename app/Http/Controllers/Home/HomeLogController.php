@@ -34,12 +34,25 @@ class HomeLogController extends Controller
             //判断密码
             if($password==$cd->password){
                 //存储session跳转页面
-                session()->put("adminn",$cd);
-                return redirect("home/");
+                session()->put("adminn",$dc->account);
+                return redirect("a/home");
                //echo "测试成功!";
                
             }
         }
         return back()->with("msg","账号或密码错误！");
     }
+
+    //执行退出
+   public function logout(Request $request)
+   {
+       
+      // var_dump(session('User'));
+       
+       $request->session()->forget('adminn');
+       
+       //var_dump(session('User'));
+       //return redirect("/");
+       return back();
+   }
 }
