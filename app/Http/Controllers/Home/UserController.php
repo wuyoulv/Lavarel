@@ -12,26 +12,33 @@ use App\Model\User_vip;
 
 class UserController extends Controller
 {
-    public function index($id)
+    public function index()
     {
       
-       $id = session('adminn')['id'];
+        $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $Ad=Ad::get();
-        $list = User::find($id);   // 
-        //echo "<pre>";
-        //print_r($list);die;
-        return view("home.user.index",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
+
+        $list = User::find($id)->toArray();
+       // echo '<pre>';
+        //print_r($list);die; 
+        return view("home.user.index",['ad'=>$Ad,'list'=>$list]);
     }
 
     public function zhanghu()
     {
-         $id = session('adminn')['id'];
+        $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $Ad=Ad::get();
-        $list = User::find($id);   // 
+        $list = User::find($id)->toArray();   // 
         //echo "<pre>";
         //var_dump($list);
         return view("home.user.zhanghu",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
@@ -41,7 +48,10 @@ class UserController extends Controller
 
         public function jilu()
     {
-         $id = session('adminn')['id'];
+        $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         //$User_film=User_film::get();
@@ -87,7 +97,10 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $id = session('adminn')['id'];
+        $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
         $re=User::find($id);
         //echo "<pre>";
         //var_dump($re);
@@ -116,7 +129,10 @@ class UserController extends Controller
         //调用上传方法 $name =   $_FILES['picname']['name'];     $this->doupload($name);
 */
 
- $id = session('adminn')['id'];
+        $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
          $array= [];
         //获取除图片外的信息
         $data = $request->only(['account','name','birthday','tel','email','address']);

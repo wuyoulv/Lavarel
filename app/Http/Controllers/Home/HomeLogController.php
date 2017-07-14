@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Home;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\User;
-
+use App\Model\Login;
 
 class HomeLogController extends Controller
 {
@@ -22,7 +22,7 @@ class HomeLogController extends Controller
         $password=$request->input('password');
 
 
-        $cd=User::where('account','=',$res)->first();
+        $cd=Login::where('account','=',$res)->first();
 
         //$dd = User::where('id',$cd->id)->first();
         // echo"<pre>";
@@ -34,7 +34,7 @@ class HomeLogController extends Controller
             //判断密码
             if($password==$cd->password){
                 //存储session跳转页面
-                session()->put("adminn",$dc->account);
+                session()->put("adminn",$cd->account);
                 return redirect("a/home");
                //echo "测试成功!";
                
