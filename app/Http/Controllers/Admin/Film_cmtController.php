@@ -16,7 +16,7 @@ class Film_cmtController extends Controller
     		$db->where("title","like","%{$filmid}%"); 
     		$where['title'] = $filmid;
     	}
-		$list = $db->paginate(2);
+		$list = $db->paginate(4);
     	return view('admin.Film_cmt.index',['cmt'=>$list,'where'=>$where]);
 	}
 	public function delete($id){

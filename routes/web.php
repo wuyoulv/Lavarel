@@ -90,7 +90,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/HomeLog/index','Home\HomeLogController@index');
     Route::post('/HomeLog/register','Home\HomeLogController@register');
     Route::get('/user/{id}',"Home\UserController@index");
-
+    Route::post('/cmt/add/{w}','Home\XqController@add');
     //Route::get('home/vipuser/',"Home\VipuserController@index");
     Route::get('home/vipuser/',"Home\VipuserController@index");
     Route::get('/ad', 'Home\AdController@index');//广告

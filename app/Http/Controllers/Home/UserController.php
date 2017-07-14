@@ -18,7 +18,7 @@ class UserController extends Controller
         $Ad=Ad::get();
         $list = User::find(4);   // 
         //echo "<pre>";
-        //print_r($list);
+        //print_r($list);die;
         return view("home.user.index",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
     }
 

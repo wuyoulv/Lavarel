@@ -1116,6 +1116,8 @@ var ykQHeader = {
 <div id="commentAction" class="comment-area-form"><div class="comment-form ">
 
 <div class="form-cell form-content commentFormContent">
+<form name="myform" action="{{url('home/cmt/add')}}/{{ $w }}" method="post" onsubmit="return doSubmit()">
+	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 <div class="form-user-info">
 
 <a href="javascript:;" class="form-user-login" hzcharset="hz-4003764-1000494" charset="404-0-1">登录</a>
@@ -1125,36 +1127,21 @@ var ykQHeader = {
 </div>
 <div class="form-wordlimit"><span class="form-wordlimit-input input-count">0</span><span class="form-wordlimit-upper">/300</span></div>
 <div class="form-textarea form-textarea-picdom">
+
 <textarea data-maxlength="300" name="content" placeholder="看点槽点，不吐不快！别憋着，马上大声说出来吧！"></textarea>
 
-<div class="cont-imgbox">
-<div class="cont-imgbox-box fix">
-<div class="cont-imgitem " id="commentimgitem">
-<ul class="fix upload-queue upload-preview"></ul>
-</div>
-<div class="cont-imgupload">
-<div class="upload_div handle">
-<span class="ui-upload-a ui-upload-ative" id="comment1">
-+
-</span>
-</div>
-</div>
-</div>
-</div>
+
+
 
 </div>
 <div class="form-toolbar">
 <div class="form-toolbar-right">
-<div class="form-tool form-action">
+<div class="comment-pager-turn">
+<input type="submit" value="发表评论">
+<!-- <a href="{{url('home/Xq/create')}}" class="form-btn form-btn-large form-btn-submit">发表评论</a>
+ -->
+</div>
 
-<a href="javascript:;" class="form-btn form-btn-large form-btn-submit">发表评论</a>
-
-</div>
-<div class="form-tooltip" style="display: none;">
-<div class="com_overlay_con">
-<div class="tips"></div>
-</div>
-</div>
 </div>
 
 <div class="form-validate" style="display: none;">
@@ -1163,6 +1150,30 @@ var ykQHeader = {
 <span>看不清, <a class="change_verify_code" href="javascript:;">点此刷新</a></span>
 </div>
 </div>
+</form>
+
+<script>
+	//提交判断
+	function doSubmit(){
+		return content();
+	}
+
+	//验证姓名
+	function content(){
+		//获取姓名
+		var content=document.myform.content.value;
+		//判断
+		if(content.match(/^.+$/)==null){
+			alert("您输入的内容为空,请重新输入再发布!");
+			return false;
+		}
+		return true;
+	}
+
+
+
+</script>
+
 </div>
 </div>
 </div>
@@ -1208,43 +1219,7 @@ var ykQHeader = {
 <a data-page="2" href="javascript:;">下一页</a>
 
 </li>
-</ul>
-<ul class="comment-pager-page">
 
-
-
-
-
-<li><span>1</span></li>
-
-
-
-<li><a data-page="2" href="javascript:;">2</a></li>
-
-
-
-<li><a data-page="3" href="javascript:;">3</a></li>
-
-
-
-<li><a data-page="4" href="javascript:;">4</a></li>
-
-
-
-<li><a data-page="5" href="javascript:;">5</a></li>
-
-
-
-<li><a data-page="6" href="javascript:;">6</a></li>
-
-
-
-<li>...</li>
-
-
-<li><a data-page="268" href="javascript:;">268</a></li>
-
-</ul>
 </div>
 </div>
 
@@ -1262,7 +1237,7 @@ var ykQHeader = {
 <div class="comment-item" data-id="4707758754">
 <div class="comment-content">
 <div class="comment-user-avatar">
-<a href="#" target="_top"><img _hz="" src="{{asset('home4/img/35.jpg')}}"></a>
+<a href="#" target="_top"><img src="{{  session('adminn')->picname }}"></a>
 </div>
 <div class="comment-section">
 <div class="comment-user-info">
@@ -1325,42 +1300,7 @@ var ykQHeader = {
 
 </li>
 </ul>
-<ul class="comment-pager-page">
 
-
-
-
-
-<li><span>1</span></li>
-
-
-
-<li><a data-page="2" href="javascript:;">2</a></li>
-
-
-
-<li><a data-page="3" href="javascript:;">3</a></li>
-
-
-
-<li><a data-page="4" href="javascript:;">4</a></li>
-
-
-
-<li><a data-page="5" href="javascript:;">5</a></li>
-
-
-
-<li><a data-page="6" href="javascript:;">6</a></li>
-
-
-
-<li>...</li>
-
-
-<li><a data-page="268" href="javascript:;">268</a></li>
-
-</ul>
 </div>
 </div>
 </div>
