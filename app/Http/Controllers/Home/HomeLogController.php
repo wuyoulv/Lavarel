@@ -34,7 +34,7 @@ class HomeLogController extends Controller
             //判断密码
             if($password==$cd->password){
                 //存储session跳转页面
-                session()->put("adminn",$dc->account);
+                session()->put("adminn",$cd->account);
                 return redirect("a/home");
                //echo "测试成功!";
                
