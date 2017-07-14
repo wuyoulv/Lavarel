@@ -57,6 +57,7 @@ class Film_infoController extends Controller
             $disk = \Storage::disk('qiniu');
             $in = $disk->put("$filename",$request->file('picname'));
             $path = $disk->downloadUrl($in); 
+            //dd($path);
         }else{
             return back()->with("文件格式不正确");
         }
@@ -109,9 +110,11 @@ class Film_infoController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $time=date('Y-m-d H:i:s');
         $input['lasttime']=$time;
         $input = $request->only('title','type_id','director','actor','firsttime','duration','region','language','introduction','limit','score','status','click');
+
         $id = Film_info::where("id",$id)->update($input);
         if($id>0){
             return redirect('/admin/film_info');
