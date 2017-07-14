@@ -9,9 +9,13 @@ use App\Model\Film_type;
 use App\Model\Ad;
 use App\Model\User;
 use App\Model\User_vip;
+use App\Model\User_film;
 
 class UserController extends Controller
 {
+
+
+
     public function index()
     {
       
@@ -26,6 +30,7 @@ class UserController extends Controller
        // echo '<pre>';
         //print_r($list);die; 
         return view("home.user.index",['ad'=>$Ad,'list'=>$list]);
+
     }
 
     public function zhanghu()
@@ -68,28 +73,39 @@ class UserController extends Controller
       
       //echo "111111";
         //$id = session('adminn')['id'];
+        $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $User_vip=User_vip::get();
         $Ad=Ad::get();
+        $list = User::find($id)->toArray();
         //$list = User::find($id);   // 
         //echo "<pre>";
         //print_r($list);
-        return view("home.user.huiyuan",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad]);
+        return view("home.user.huiyuan",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
+        //echo "1345";]);
     }
 
         public function zhifu()
     {
-        echo '111111';
-        /* $id = session('adminn')['id'];
+        //echo '111111';
+        //$id = session('adminn')['id'];
+         $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $User_film=User_film::get();
         $Ad=Ad::get();
-        $list = Film_info::find($id);   // */
+        //$list = Film_info::find($id);  
+        $list = User::find($id)->toArray();
         //echo "<pre>";
         //var_dump($list);
-        //return view("home.user.zhifu",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
+        return view("home.user.zhifu",['userfilm'=>$User_film,'filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
         //echo "1345";
       //return view('home.user.zhanghu');
     }

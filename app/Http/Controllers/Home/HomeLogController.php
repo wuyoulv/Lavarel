@@ -23,16 +23,9 @@ class HomeLogController extends Controller
 
 
         $cd=Login::where('account','=',$res)->first();
-
-        //$dd = User::where('id',$cd->id)->first();
-        // echo"<pre>";
-        // var_dump($cd);
-         // foreach($cd as $dc){
-         // 	var_dump($dc->account);
-         // }
         if(!empty($cd)){
             //判断密码
-            if($password==$cd->password){
+            if(MD5($password)==$cd->password){
                 //存储session跳转页面
                 session()->put("adminn",$cd->account);
                 return redirect("a/home");
@@ -46,13 +39,8 @@ class HomeLogController extends Controller
     //执行退出
    public function logout(Request $request)
    {
-       
-      // var_dump(session('User'));
-       
+
        $request->session()->forget('adminn');
-       
-       //var_dump(session('User'));
-       //return redirect("/");
        return redirect('a/home');
    }
 }

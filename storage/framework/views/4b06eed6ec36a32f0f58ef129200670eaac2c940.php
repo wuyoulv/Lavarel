@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>注册</title>
+		<title>登录</title>
 		<link rel="stylesheet" href="<?php echo e(asset('home8/css/reset.css')); ?>" />
 		<link rel="stylesheet" href="<?php echo e(asset('home8/css/common.css')); ?>" />
 	</head>
@@ -16,43 +16,47 @@
 					
 					<div class="login_form">
 						<div class="login_title">
-							注册
+							登录
 						</div>
-						<form action="<?php echo e(URL('/home/createUser')); ?>" method="post" id='123' >
-							<?php echo e(csrf_field()); ?>
-
-							<div class="form_text_ipt" style="width:60;">
-								<input name="account" type="text" placeholder="手机号" onblur="sendMobileCode()" >
-                                
-							</div>
-							<div class="ececk_warning"><span>数据不能为空</span></div>
-                            <div class="form_text_ipt">
-								<input name="code" type="text" placeholder="验证码">
+						<form action="<?php echo e(URL('/HomeLog/doLogin')); ?>" method="post" id='123' >
+							<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+							<div class="form_text_ipt">
+								<input name="account" type="text" placeholder="手机号/邮箱">
 							</div>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
 							<div class="form_text_ipt">
 								<input name="password" type="password" placeholder="密码">
 							</div>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
-							<div class="form_text_ipt">
-								<input name="repassword" type="password" placeholder="重复密码">
+							<div class="form_check_ipt">
+								<div class="left check_left">
+									<label><input name="" type="checkbox"> 下次自动登录</label>
+								</div>
+								<div class="right check_right">
+									<a href="#">忘记密码</a>
+								</div>
 							</div>
-							<div class="ececk_warning"><span>数据不能为空</span></div>
 							<div class="form_btn">
-								<button type="button" onclick="checkUser();" >注册</button>
+								<button type="button" onclick="checkUser();" >登录</button>
 							</div>
 							<div class="form_reg_btn">
-								<span>已有帐号？</span><a href="/home/login">马上登录</a>
+								<span>还没有帐号？</span><a href="<?php echo e(URL('/home/register')); ?>">马上注册</a>
 							</div>
                             
                             
-                            
-                        
                             
                             
                             
 						</form>
-						
+						<div class="other_login">
+							<div class="left other_left">
+								<span>其它登录方式</span>
+							</div>
+							<div class="right other_right">
+								<a href="#">QQ登录</a>
+								<a href="#">微信登录</a>
+								<a href="#">微博登录</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -61,26 +65,6 @@
 		<script type="text/javascript" src="<?php echo e(asset('home8/js/jquery.min.js')); ?>" ></script>
 		<script type="text/javascript" src="<?php echo e(asset('home8/js/common.js')); ?>" ></script>
         <script>
-            function sendMobileCode()
-                {
-                    //alert('ok')
-                    var tel = $("input[name='account']").val();
-                    //alert(tel);
-                    $.ajax({
-                        url:'/home/sendSms',
-                        type:"get",
-                        data:'account='+tel,
-                        dataType:'text',
-                        headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')},
-                        success:function(data){
-                            alert('验证码已发送！');
-                        },
-                        error:function(){
-                            alert('此账号已存在！');
-                        }
-                    })
-                }
-
             function checkUser(){
                //var result = document.getElementById("userid").value;
                //var password = document.getElementById("passid").value;

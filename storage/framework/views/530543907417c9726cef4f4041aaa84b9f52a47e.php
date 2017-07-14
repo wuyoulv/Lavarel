@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>注册</title>
-		<link rel="stylesheet" href="{{ asset('home8/css/reset.css')}}" />
-		<link rel="stylesheet" href="{{ asset('home8/css/common.css')}}" />
+		<link rel="stylesheet" href="<?php echo e(asset('home8/css/reset.css')); ?>" />
+		<link rel="stylesheet" href="<?php echo e(asset('home8/css/common.css')); ?>" />
 	</head>
 	<body>
 		<div class="wrap login_wrap">
@@ -18,8 +18,9 @@
 						<div class="login_title">
 							注册
 						</div>
-						<form action="{{ URL('/home/createUser') }}" method="post" id='123' >
-							{{ csrf_field() }}
+						<form action="<?php echo e(URL('/home/createUser')); ?>" method="post" id='123' >
+							<?php echo e(csrf_field()); ?>
+
 							<div class="form_text_ipt" style="width:60;">
 								<input name="account" type="text" placeholder="手机号" onblur="sendMobileCode()" >
                                 
@@ -57,8 +58,8 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="{{ asset('home8/js/jquery.min.js')}}" ></script>
-		<script type="text/javascript" src="{{ asset('home8/js/common.js')}}" ></script>
+		<script type="text/javascript" src="<?php echo e(asset('home8/js/jquery.min.js')); ?>" ></script>
+		<script type="text/javascript" src="<?php echo e(asset('home8/js/common.js')); ?>" ></script>
         <script>
             function sendMobileCode()
                 {
@@ -72,10 +73,10 @@
                         dataType:'text',
                         headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')},
                         success:function(data){
-                            alert('验证码已发送！');
+                            alert('验证码以发送！');
                         },
                         error:function(){
-                            alert('此账号已存在！');
+                            alert('验证码发送失败！');
                         }
                     })
                 }

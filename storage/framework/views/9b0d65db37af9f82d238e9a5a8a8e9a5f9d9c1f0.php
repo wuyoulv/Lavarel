@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0036)http://faxian.youku.com/watch_record -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="{{ asset('home7/index.js.下载')}}" id="aplus-sufei"></script><script type="text/javascript" async="" src="{{ asset('home7/saved_resource')}}"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="<?php echo e(asset('home7/index.js.下载')); ?>" id="aplus-sufei"></script><script type="text/javascript" async="" src="<?php echo e(asset('home7/saved_resource')); ?>"></script>
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="data-spm" content="a2hfx">
@@ -10,12 +10,12 @@
 	<meta name="google-site-verification" content="F2zYXuMVH2X76NeYEdAiGokv0QFtgOB1ZgCSZPglQbs">
 	<link rel="Shortcut Icon" href="http://static.youku.com/v1.0.166/index/img/favicon.ico">
 	<title>观看记录_优酷视频</title>
-	<link type="text/css" href="{{ asset('home7/g_74.css')}}" rel="stylesheet">
-			<link type="text/css" href="{{ asset('home7/record_15.css')}}" rel="stylesheet">
-		<link id="YT-loginFrameCss" rel="stylesheet" href="{{ asset('home7/main_1291495.css')}}"><style type="text/css"></style>
-<style type="text/css">div.YT-loginWrap{ background: url(//r1.ykimg.com/05100000594BAEAEADC0B05C0605C491) no-repeat right bottom !important; }</style><script src="{{ asset('home7/index.js(1).下载')}}"></script><script src="{{ asset('home7/index.js(2).下载')}}" id="aplus-sufei"></script></head>
+	<link type="text/css" href="<?php echo e(asset('home7/g_74.css')); ?>" rel="stylesheet">
+			<link type="text/css" href="<?php echo e(asset('home7/record_15.css')); ?>" rel="stylesheet">
+		<link id="YT-loginFrameCss" rel="stylesheet" href="<?php echo e(asset('home7/main_1291495.css')); ?>"><style type="text/css"></style>
+<style type="text/css">div.YT-loginWrap{ background: url(//r1.ykimg.com/05100000594BAEAEADC0B05C0605C491) no-repeat right bottom !important; }</style><script src="<?php echo e(asset('home7/index.js(1).下载')); ?>"></script><script src="<?php echo e(asset('home7/index.js(2).下载')); ?>" id="aplus-sufei"></script></head>
 
-<body class="w1300" data-spm="8251854"><div style="display:block;clear:both;float:none;position:absolute;right:0;bottom:0;border:none;"><object id="MTJ4YWG1VZ3XWU5B" data="{{ asset('home7/MTFlashStore.swf.下载')}}" type="application/x-shockwave-flash" width="10" height="10" style="position:absolute;right:0;bottom:0;border:none;"><param name="movie" value="//irs01.net/MTFlashStore.swf#"><param name="wmode" value="transparent"><param name="version" value="10"><param name="allowScriptAccess" value="always"><param name="flashvars" value="jsproxyfunction=MTJ4YWG1T65R9E8G"></object></div><script id="beacon-aplus" src="{{ asset('home7/aplus_o.js.下载')}}" exparams="userid=&amp;aplus&amp;sidx=0&amp;ckx=|"></script><script>
+<body class="w1300" data-spm="8251854"><div style="display:block;clear:both;float:none;position:absolute;right:0;bottom:0;border:none;"><object id="MTJ4YWG1VZ3XWU5B" data="<?php echo e(asset('home7/MTFlashStore.swf.下载')); ?>" type="application/x-shockwave-flash" width="10" height="10" style="position:absolute;right:0;bottom:0;border:none;"><param name="movie" value="//irs01.net/MTFlashStore.swf#"><param name="wmode" value="transparent"><param name="version" value="10"><param name="allowScriptAccess" value="always"><param name="flashvars" value="jsproxyfunction=MTJ4YWG1T65R9E8G"></object></div><script id="beacon-aplus" src="<?php echo e(asset('home7/aplus_o.js.下载')); ?>" exparams="userid=&amp;aplus&amp;sidx=0&amp;ckx=|"></script><script>
 with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","userid=&aplus&sidx=0&ckx=|",id="beacon-aplus",src="//g.alicdn.com/alilog/mlog/aplus_o.js")
 </script>
 <script type="text/javascript">
@@ -80,19 +80,19 @@ var ykQHeader = {
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="{{ url('a/home/') }}" title="Youku 优酷" attr="idx0"><img src="{{ asset('home7/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
+				<a href="<?php echo e(url('a/home/')); ?>" title="Youku 优酷" attr="idx0"><img src="<?php echo e(asset('home7/yk-logo-1220.png')); ?>" width="140" height="50" alt="Youku 优酷" from="index"></a>
 			</div>
 
 			<div class="g-head-center">
 				<ul class="g-head-nav">
 					<li>
-						<a href="{{ url('a/home/') }}">首页</a>
+						<a href="<?php echo e(url('a/home/')); ?>">首页</a>
 					</li>
 					<li>
-						<a href="{{ url('home/vipuser') }}">会员</a>
+						<a href="<?php echo e(url('home/vipuser')); ?>">会员</a>
 					</li>
 					<li>
-						<a href="{{ url('home/user/index') }}">我的</a>
+						<a href="<?php echo e(url('home/user/index')); ?>">我的</a>
 					</li>
 				</ul>
 				<div class="yk-ucenter"></div>
@@ -103,11 +103,11 @@ var ykQHeader = {
 					                        <a id="qheader_login" href="http://www.youku.com/user_login/">登录</a><a id="qheader_reg" href="http://www.youku.com/user_login/">注册</a>
 					</div> -->
 					  <div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/index') }}"> {{session('adminn')}}</a><a href="/home/homeLog/logout"">   ||退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
+                        <span id="span_userinfo"> <?php if(session('adminn')): ?> <a href="<?php echo e(url('home/user/index')); ?>"> <?php echo e(session('adminn')); ?></a><a href="/home/homeLog/logout"">   ||退出</a> <?php else: ?> [<a  id="qheader_reg" href="<?php echo e(URL('home/login')); ?>"> 登陆 </a>·<a id="qheader_reg" href="<?php echo e(url('home/register')); ?>">注册</a>]</span><?php endif; ?>
                     </div>
 				<!-- <div class="login-after dropdown unload handle" style="display: none;">
                     <a href="http://user.youku.com/page/usc/index" target="_blank">
-                        <img class="avatar" src="{{ asset('home7/sprite.gif')}}">
+                        <img class="avatar" src="<?php echo e(asset('home7/sprite.gif')); ?>">
                         <b class="caret"></b>
                                             <span></span>
                     </a>
@@ -141,7 +141,7 @@ var ykQHeader = {
 							<a target="_blank" href="http://www.soku.com/search_video/q_" class=""></a>
 						</div>
 						<input type="text" style="display:none;">
-					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display:block;"><iframe id="sk_holder_iframe" frameborder="0" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;" src="{{ asset('home7/saved_resource.html')}}"></iframe><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"></div></div></div></div><div><script src="{{ asset('home7/search_tip_1')}}"></script><script src="{{ asset('home7/sideads.json')}}"></script></div><link rel="stylesheet" type="text/css" href="{{ asset('home7/s_kubox.css')}}"></form>
+					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display:block;"><iframe id="sk_holder_iframe" frameborder="0" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;" src="<?php echo e(asset('home7/saved_resource.html')); ?>"></iframe><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"></div></div></div></div><div><script src="<?php echo e(asset('home7/search_tip_1')); ?>"></script><script src="<?php echo e(asset('home7/sideads.json')); ?>"></script></div><link rel="stylesheet" type="text/css" href="<?php echo e(asset('home7/s_kubox.css')); ?>"></form>
 				</div>
 			</div>
 		</div>
@@ -176,7 +176,7 @@ var ykQHeader = {
         <div class="p-thumb">
             <a href="http://v.youku.com/v_show/id_XMTg5MTg0ODcxMg==.html" target="video"></a>
             <i class="bg"></i>
-            <img class="quic" src="{{ asset('home7/054204085866C0AB6A0A3F04D13B3737')}}">
+            <img class="quic" src="<?php echo e(asset('home7/054204085866C0AB6A0A3F04D13B3737')); ?>">
             <ul class="action-btn">
                                 <li class="continue">
                     <a href="http://v.youku.com/v_show/id_XMTg5MTg0ODcxMg==.html?firsttime=0" target="video"><em></em>继续看</a>
@@ -328,7 +328,7 @@ var ykQHeader = {
         <dd><a target="_blank" href="http://www.bjwhzf.gov.cn/accuse.do">北京12318文化市场举报热线</a></dd>
     </dl>
     <dl class="g-w4">
-        <a class="qcode" target="_blank" href="http://mobile.youku.com/index/wireless"><img src="{{ asset('home7/0510000058D0FEA1ADC0AE058F099020')}}" width="84px"></a>
+        <a class="qcode" target="_blank" href="http://mobile.youku.com/index/wireless"><img src="<?php echo e(asset('home7/0510000058D0FEA1ADC0AE058F099020')); ?>" width="84px"></a>
     </dl>
     <div class="g-authentication">
         <a class="aut-1" target="_blank" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006082400023">经营性网站<br>备案信息</a>
@@ -339,17 +339,17 @@ var ykQHeader = {
         <a class="aut-6" target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/0D76560AE65141FF9FEFE3481D205C50">网络文化<br>经营单位</a>
         <a class="aut-7" target="_blank" href="http://www.12377.cn/">暴恐音视频<br>举报专区</a>
         <div style="text-align: center;margin-top:8px;">
-            <a style="padding-left:0;" href="https://credit.szfw.org/CX20170616038883280388.html" target="_blank"><img src="{{ asset('home7/0510000059479119ADC0B05C010B4454')}}" border="0"></a>
+            <a style="padding-left:0;" href="https://credit.szfw.org/CX20170616038883280388.html" target="_blank"><img src="<?php echo e(asset('home7/0510000059479119ADC0B05C010B4454')); ?>" border="0"></a>
        </div>
     </div>
 </div>
 
 </div>
 
-<script src="{{ asset('home7/lib_13.js.下载')}}" id="libjsnode" charset="utf-8"></script>
-<script type="text/javascript" src="{{ asset('home7/g_69.js.下载')}}"></script>
-<script type="text/javascript" src="{{ asset('home7/g_107.js.下载')}}"></script>
-	<script type="text/javascript" src="{{ asset('home7/index_16.js.下载')}}"></script>
+<script src="<?php echo e(asset('home7/lib_13.js.下载')); ?>" id="libjsnode" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo e(asset('home7/g_69.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home7/g_107.js.下载')); ?>"></script>
+	<script type="text/javascript" src="<?php echo e(asset('home7/index_16.js.下载')); ?>"></script>
 
 
-<!-- 1499736591 - 1499736591 --><div id="sideBar" class="side-bar"><div class="feedback"><a href="http://csc.youku.com/feedback-web/web/" target="_blank"></a></div><div id="goTop" data-stat-role="ck"><img width="29" height="65" src="{{ asset('home7/05100000575CCAF767BC3D4B250267B7')}}"></div></div><div style="height: 0px; width: 0px; overflow: hidden;"><object width="0" height="0" tabindex="-1" style="height:0;width:0;overflow:hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="http://aeu.alicdn.com/flash/JSocket.swf" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body></html>
+<!-- 1499736591 - 1499736591 --><div id="sideBar" class="side-bar"><div class="feedback"><a href="http://csc.youku.com/feedback-web/web/" target="_blank"></a></div><div id="goTop" data-stat-role="ck"><img width="29" height="65" src="<?php echo e(asset('home7/05100000575CCAF767BC3D4B250267B7')); ?>"></div></div><div style="height: 0px; width: 0px; overflow: hidden;"><object width="0" height="0" tabindex="-1" style="height:0;width:0;overflow:hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="http://aeu.alicdn.com/flash/JSocket.swf" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body></html>
