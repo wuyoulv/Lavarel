@@ -62,14 +62,16 @@ class Qiniu_infoController extends Controller
             // 要上传的空间
             $bucket = 'yeyu';
 
-            // $pipeline = "a";
 
-            // $fops = 'avthumb/m3u8/noDomain/1/segtime/15/vb/240k'.$file;
+            $pipeline = "a";
 
-            // $policy = array(
-            //   'persistentOps' => $fops,
-            //   'persistentPipeline' => $pipeline
-            // );   
+            $fops = 'avthumb/m3u8/noDomain/1/segtime/15/vb/240k'.$file;
+
+            $policy = array(
+               'persistentOps' => $fops,
+               'persistentPipeline' => $pipeline
+            );   
+
             // 生成上传 Token
             $token = $auth->uploadToken($bucket);
 
@@ -95,7 +97,9 @@ class Qiniu_infoController extends Controller
                 $id = Qiniu_info::insertGetid($input);
                 //return "添加的Id".$id;
                 return redirect('/admin/qiniu_info');
+
                 }        
+
 
         }else{
             return back()->with("文件格式不正确");

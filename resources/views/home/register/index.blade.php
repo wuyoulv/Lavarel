@@ -18,7 +18,7 @@
 						<div class="login_title">
 							注册
 						</div>
-						<form action="{{ URL('/home/createUser') }}" method="post">
+						<form action="{{ URL('/home/createUser') }}" method="post" id='123' >
 							{{ csrf_field() }}
 							<div class="form_text_ipt" style="width:60;">
 								<input name="account" type="text" placeholder="手机号" onblur="sendMobileCode()" >
@@ -37,10 +37,8 @@
 								<input name="repassword" type="password" placeholder="重复密码">
 							</div>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
-							
-							<input type="submit" value="注册"/>
 							<div class="form_btn">
-								<button type="button">注册</button>
+								<button type="button" onclick="checkUser();" >注册</button>
 							</div>
 							<div class="form_reg_btn">
 								<span>已有帐号？</span><a href="/home/login">马上登录</a>
@@ -74,15 +72,28 @@
                         dataType:'text',
                         headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')},
                         success:function(data){
-                            alert('a');
+                            alert('验证码以发送！');
                         },
                         error:function(){
-                            alert('b');
+                            alert('验证码发送失败！');
                         }
                     })
                 }
 
+            function checkUser(){
+               //var result = document.getElementById("userid").value;
+               //var password = document.getElementById("passid").value;
 
+               /* if(result == ""  ){
+                 alert("用户名不能为空");
+                 return false;
+               }
+               if(password == ""  ){
+                alert("密码不能为空");
+                 return false;
+               } */
+              document.getElementById("123").submit();
+            }
         </script>
 	</body>
 </html>
