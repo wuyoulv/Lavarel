@@ -96,6 +96,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     Route::get('/HomeLog/index','Home\HomeLogController@index');
     Route::post('/HomeLog/register','Home\HomeLogController@register');
     Route::get('/user/{id}',"Home\UserController@index");
+    Route::post('/cmt/add/{w}','Home\XqController@add');
     Route::get('/homeLog/logout',"Home\HomeLogController@logout"); //执行退出
     //Route::get('home/vipuser/',"Home\VipuserController@index");
     Route::get('vipuser/',"Home\VipuserController@index");

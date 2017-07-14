@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<script charset="utf-8" src="{{asset('home4/js/ssp_adx_render_yk.js')}}"></script><script charset="utf-8" src="{{asset('home4/js/ssp_adx_render_yk.js')}}"></script><script async="" src="{{asset('home4/js/packed_list.json')}}"></script>@foreach($filminfo as $c)<meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="renderer" content="webkit"><meta name="google-site-verification" content="F2zYXuMVH2X76NeYEdAiGokv0QFtgOB1ZgCSZPglQbs"><meta name="data-spm" content="a2h0j"><title>{{ $c->title}}—在线播放—《{{ $c->title}}》—电影—优酷网，视频高清在线观看</title><meta name="title" content="湄公河行动"><meta name="keywords" content="湄公河行动"><meta name="description" content="{{ $c->title}} 2011年10月5日，两艘中国商船在湄公河金三角水域遭遇袭击，13名中国船员全部遇难，泰国警方从船上搜出90万颗冰毒。消息传回国内，举国震惊。为了查明真相，云南..."><meta name="irTitle" content=""><meta name="irAlbumName" content="湄公河行动"><meta name="irCategory" content="电影"><script type="text/javascript" async="" src="{{asset('home4/js/untitled')}}"></script><script type="text/javascript"> var accessStatus = true; (function(){ function cookie (n, v, op) { if(v !== undefined) { op = op || {};var date, expires = "";if(op.expires) { if(op.expires.constructor == Date) { date = op.expires;} else { date = new Date();date.setTime(date.getTime() + (op.expires * 24 * 60 * 60 * 1000));} expires = '; expires=' + date.toGMTString();} var path = op.path ? '; path=' + op.path : '';var domain = op.domain ? '; domain=' + op.domain : '';var secure = op.secure ? '; secure' : '';window.document.cookie = [n, '=', encodeURIComponent(v), expires, path, domain, secure].join('');} else { v = window.document.cookie.match( new RegExp( "(?:\\s|^)" + n + "\\=([^;]*)") );return v ? decodeURIComponent(v[1]) : null;} } var ua = window.navigator.userAgent;var href = window.location.href;var config = ['iPad','Android','iPhone','iPod','Firefox|Mobile'];try{ var fromx = Cookie("_from_x_");Cookie("xreferrer", document.referrer);}catch(ex){ var fromx = 0;} for(var i=0; i<config.length;i++){if(config[i].indexOf('|') !== -1){ var mStr = {};mStr = config[i].split('|');var mr = false;for(var s=0,len=mStr.length; s<len; s++){ if(ua.indexOf(mStr[s]) !== -1){ mr = true;}else{ mr = false;break;} } if(mr == true){ if (config[i] != 'iPad') { href = '//m.youku.com/video/'+ href.substr(href.indexOf('id_'));}else{ href = href.replace('v_show', 'pad_show');} var referrer = "&source="+encodeURIComponent(document.referrer);href += href.indexOf('?') > 0? referrer : "?"+ referrer;window.location.href = href;return;} }else{ if(ua.indexOf(config[i]) !== -1){ if(href.indexOf("#") !== -1){ var wechat_redirect = href.split('#');href = wechat_redirect[0];} if (config[i] != 'iPad') { href = '//m.youku.com/video/'+ href.substr(href.indexOf('id_'));}else{ href = href.replace('v_show', 'pad_show');} var referrer = "&source="+encodeURIComponent(document.referrer);href += href.indexOf('?') > 0? referrer : "?"+ referrer;window.location.href = href;return;} } } if(accessStatus == false && href.indexOf('?x') === -1 && href.indexOf('&x') === -1){ window.location.href = "//www.youku.com/index/y404/";} })();</script><script type="text/javascript"> var smartvideo_time=new Date().getTime();</script>
-<link media="all" href="{{asset('home4/css/index.css')}}" type="text/css" rel="stylesheet">
+<script charset="utf-8" src="<?php echo e(asset('home4/js/ssp_adx_render_yk.js')); ?>"></script><script charset="utf-8" src="<?php echo e(asset('home4/js/ssp_adx_render_yk.js')); ?>"></script><script async="" src="<?php echo e(asset('home4/js/packed_list.json')); ?>"></script><?php $__currentLoopData = $filminfo; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="renderer" content="webkit"><meta name="google-site-verification" content="F2zYXuMVH2X76NeYEdAiGokv0QFtgOB1ZgCSZPglQbs"><meta name="data-spm" content="a2h0j"><title><?php echo e($c->title); ?>—在线播放—《<?php echo e($c->title); ?>》—电影—优酷网，视频高清在线观看</title><meta name="title" content="湄公河行动"><meta name="keywords" content="湄公河行动"><meta name="description" content="<?php echo e($c->title); ?> 2011年10月5日，两艘中国商船在湄公河金三角水域遭遇袭击，13名中国船员全部遇难，泰国警方从船上搜出90万颗冰毒。消息传回国内，举国震惊。为了查明真相，云南..."><meta name="irTitle" content=""><meta name="irAlbumName" content="湄公河行动"><meta name="irCategory" content="电影"><script type="text/javascript" async="" src="<?php echo e(asset('home4/js/untitled')); ?>"></script><script type="text/javascript"> var accessStatus = true; (function(){ function cookie (n, v, op) { if(v !== undefined) { op = op || {};var date, expires = "";if(op.expires) { if(op.expires.constructor == Date) { date = op.expires;} else { date = new Date();date.setTime(date.getTime() + (op.expires * 24 * 60 * 60 * 1000));} expires = '; expires=' + date.toGMTString();} var path = op.path ? '; path=' + op.path : '';var domain = op.domain ? '; domain=' + op.domain : '';var secure = op.secure ? '; secure' : '';window.document.cookie = [n, '=', encodeURIComponent(v), expires, path, domain, secure].join('');} else { v = window.document.cookie.match( new RegExp( "(?:\\s|^)" + n + "\\=([^;]*)") );return v ? decodeURIComponent(v[1]) : null;} } var ua = window.navigator.userAgent;var href = window.location.href;var config = ['iPad','Android','iPhone','iPod','Firefox|Mobile'];try{ var fromx = Cookie("_from_x_");Cookie("xreferrer", document.referrer);}catch(ex){ var fromx = 0;} for(var i=0; i<config.length;i++){if(config[i].indexOf('|') !== -1){ var mStr = {};mStr = config[i].split('|');var mr = false;for(var s=0,len=mStr.length; s<len; s++){ if(ua.indexOf(mStr[s]) !== -1){ mr = true;}else{ mr = false;break;} } if(mr == true){ if (config[i] != 'iPad') { href = '//m.youku.com/video/'+ href.substr(href.indexOf('id_'));}else{ href = href.replace('v_show', 'pad_show');} var referrer = "&source="+encodeURIComponent(document.referrer);href += href.indexOf('?') > 0? referrer : "?"+ referrer;window.location.href = href;return;} }else{ if(ua.indexOf(config[i]) !== -1){ if(href.indexOf("#") !== -1){ var wechat_redirect = href.split('#');href = wechat_redirect[0];} if (config[i] != 'iPad') { href = '//m.youku.com/video/'+ href.substr(href.indexOf('id_'));}else{ href = href.replace('v_show', 'pad_show');} var referrer = "&source="+encodeURIComponent(document.referrer);href += href.indexOf('?') > 0? referrer : "?"+ referrer;window.location.href = href;return;} } } if(accessStatus == false && href.indexOf('?x') === -1 && href.indexOf('&x') === -1){ window.location.href = "//www.youku.com/index/y404/";} })();</script><script type="text/javascript"> var smartvideo_time=new Date().getTime();</script>
+<link media="all" href="<?php echo e(asset('home4/css/index.css')); ?>" type="text/css" rel="stylesheet">
 </head>
-<body class="page_v  page_thx yk-w1190  w1300 danmuoff" data-spm="8191423"><div style="display: block; clear: both; float: none; position: absolute; right: 0px; bottom: 0px; border: medium none;"><object id="MTJ4DTCEBB1FNW3T" data="mtflashstore.swf" type="application/x-shockwave-flash" style="position: absolute; right: 0px; bottom: 0px; border: medium none;" width="10" height="10"><param name="movie" value="//irs01.net/MTFlashStore.swf#"><param name="wmode" value="transparent"><param name="version" value="10"><param name="allowScriptAccess" value="always"><param name="flashvars" value="jsproxyfunction=MTJ4DTCDWI3L53I6"></object></div><script id="beacon-aplus" src="{{asset('home4/js/aplus_o.js')}}" exparams="userid=&amp;aplus&amp;sidx=eUUVUpq1UFn5XwaNJSAUEGLOPhmwo/aM&amp;ckx=vyoukucomvshowidxmtg2ndyyndk4oahtml|movieyoukucom"></script><script>
-with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","userid=&aplus&sidx=eUUVUpq1UFn5XwaNJSAUEGLOPhmwo/aM&ckx=vyoukucomvshowidxmtg2ndyyndk4oahtml|movieyoukucom",id="beacon-aplus",src="{{asset('home4/js///g.alicdn.com/alilog/mlog/aplus_o.js')}}")
+<body class="page_v  page_thx yk-w1190  w1300 danmuoff" data-spm="8191423"><div style="display: block; clear: both; float: none; position: absolute; right: 0px; bottom: 0px; border: medium none;"><object id="MTJ4DTCEBB1FNW3T" data="mtflashstore.swf" type="application/x-shockwave-flash" style="position: absolute; right: 0px; bottom: 0px; border: medium none;" width="10" height="10"><param name="movie" value="//irs01.net/MTFlashStore.swf#"><param name="wmode" value="transparent"><param name="version" value="10"><param name="allowScriptAccess" value="always"><param name="flashvars" value="jsproxyfunction=MTJ4DTCDWI3L53I6"></object></div><script id="beacon-aplus" src="<?php echo e(asset('home4/js/aplus_o.js')); ?>" exparams="userid=&amp;aplus&amp;sidx=eUUVUpq1UFn5XwaNJSAUEGLOPhmwo/aM&amp;ckx=vyoukucomvshowidxmtg2ndyyndk4oahtml|movieyoukucom"></script><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","userid=&aplus&sidx=eUUVUpq1UFn5XwaNJSAUEGLOPhmwo/aM&ckx=vyoukucomvshowidxmtg2ndyyndk4oahtml|movieyoukucom",id="beacon-aplus",src="<?php echo e(asset('home4/js///g.alicdn.com/alilog/mlog/aplus_o.js')); ?>")
 </script><script type="text/javascript">
 // 去掉860的栅格 ipad
 (function(d) { 
@@ -65,7 +65,7 @@ var ykQHeader = {
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="http://www.youku.com/" title="Youku 优酷" attr="idx0"><img src="{{asset('home4/img/yk-logo-1220.png')}}" alt="Youku 优酷" from="index" width="140" height="50"></a>
+				<a href="http://www.youku.com/" title="Youku 优酷" attr="idx0"><img src="<?php echo e(asset('home4/img/yk-logo-1220.png')); ?>" alt="Youku 优酷" from="index" width="140" height="50"></a>
 			</div>
 												<div class="g-view">
         <a href="javascript:void(0)"><i class="ico-list"></i>导视</a>
@@ -136,42 +136,35 @@ var ykQHeader = {
 										<div class="g-head-center">
 				<ul class="g-head-nav">
 					<li>
-						<a href="{{ url('a/home') }}">首页</a>
-					</li>			
+						<a href="<?php echo e(url('a/home')); ?>">首页</a>
+					</li>
+					<li>
+						<a href="http://faxian.youku.com/">发现</a>
+					</li>
 					<li>
 						<a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">订阅<span class="icon-warn" id="qheader_sub_num" style="display: none;"></span></a>
 					</li>
 					<li>
-						<a href="{{url('home/vipuser')}}">会员</a>
+						<a href="<?php echo e(url('home/vipuser')); ?>">会员</a>
 					</li>
 					<li>
-						<a href="{{ url('home/user/index') }}">我的</a>
+						<a href="<?php echo e(url('home/user/index')); ?>">我的</a>
 					</li>
 				</ul>
 				<div class="yk-ucenter"></div>
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					@if ( session()->get('adminn') == null)
-                                    <div class="login-before handle" style="display: block;">
-                                        <a href="{{ URL('/home/login') }}">
-                                            登录
-                                        </a>
-                                        <a id="qheader_reg" href="{{ URL('/home/register') }}">
-                                            注册
-                                        </a>
-                                    </div>
-                                @else
-                                    <div class="login-before handle" style="display: block;">
-                                        <a id="qheader_reg" href="{{ URL('home/user/index') }}">
-                                            {{ session()->get('adminn') }}
-                                        </a>||
-                                        <a href="/home/homeLog/logout">退出</a>
-                                    </div>
-                                @endif
+					<div class="login-before handle" style="display: block;">
+                        <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
+                            <?php echo e(session('adminn')); ?>
+
+                        </a>||
+                        <a href="/home/homeLog/logout">退出</a>
+                    </div>
 					<div class="login-after dropdown unload handle" style="display: none;">
 						<a href="http://user.youku.com/page/usc/index" target="_top">
-							<img class="avatar" src="{{asset('home4/img/sprite.gif')}}">
+							<img class="avatar" src="<?php echo e(asset('home4/img/sprite.gif')); ?>">
 							<b class="caret"></b>
                             <span></span>
 						</a>
@@ -179,7 +172,10 @@ var ykQHeader = {
 							<div class="content">
 
 							</div>
-							
+							<div class="u-bottom">
+								<a href="#" class="singout">退出登录</a>
+								<a href="http://user.youku.com/page/setting/base_profile" target="_top">账户设置</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -195,7 +191,10 @@ var ykQHeader = {
 							<i class="arrow"></i>
 							<div class="content">
 
-
+<div class="record-login">
+<a href="javascript:void(0);">登录</a>
+同步各端记录
+</div>
 
 
 
@@ -254,7 +253,7 @@ var ykQHeader = {
                                     </li>
 								</ul>
 								<div class="up-cnt-2">
-									<a href="http://rz.tudou.com/" target="_top" style="width: 360px; height: 60px; margin-top: -15px; margin-left: -104px;"><img src="{{asset('home4/img/0510000058da1e9aadc0ae05a00e6ee3')}}"></a>
+									<a href="http://rz.tudou.com/" target="_top" style="width: 360px; height: 60px; margin-top: -15px; margin-left: -104px;"><img src="<?php echo e(asset('home4/img/0510000058da1e9aadc0ae05a00e6ee3')); ?>"></a>
 								</div>
 							</div>
 							<div class="u-bottom">
@@ -283,7 +282,7 @@ var ykQHeader = {
 							<a target="_top" href="http://www.soku.com/search_video/q_" class=""></a>
 						</div>
 						<input style="display: none;" value="" type="text">
-					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display: block;"><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"><div class="sk_adsl"><a target="_top" href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html"><img sk_live="link" log_pos="8" src="{{asset('home4/img/05100000594a26b4adc0b05c0a0f2481')}}"></a><a class="sk_ads_close" href="javascript:;" style="display: inline;"><i sk_live="adclose" class="ico ico_ad_close" style="display: none;"></i></a></div></div></div></div></div><div><script src="{{asset('home4/js/search_tip_1')}}"></script><script src="{{asset('home4/js/sideads.json')}}"></script></div></form>
+					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display: block;"><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"><div class="sk_adsl"><a target="_top" href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html"><img sk_live="link" log_pos="8" src="<?php echo e(asset('home4/img/05100000594a26b4adc0b05c0a0f2481')); ?>"></a><a class="sk_ads_close" href="javascript:;" style="display: inline;"><i sk_live="adclose" class="ico ico_ad_close" style="display: none;"></i></a></div></div></div></div></div><div><script src="<?php echo e(asset('home4/js/search_tip_1')); ?>"></script><script src="<?php echo e(asset('home4/js/sideads.json')); ?>"></script></div></form>
 				</div>
 			</div>
 		</div>
@@ -312,8 +311,8 @@ var ykQHeader = {
           <em class="num">59,344,478</em></span>
       </a>
       <h1 class="title">
-        <a href="http://movie.youku.com/" target="_top">[{{ $c->language }}]</a>
-        <span id="subtitle" title="湄公河行动">{{ $c->title }}</span></h1>
+        <a href="http://movie.youku.com/" target="_top">[<?php echo e($c->language); ?>]</a>
+        <span id="subtitle" title="湄公河行动"><?php echo e($c->title); ?></span></h1>
       <a class="desc-link" href="http://list.youku.com/show/id_zf30366003b7011e69b6d.html" target="_top">节目简介</a></div>
     <div id="module_ad_324" class="ad-flag-wrap ad_area">
       <div id="ab_pip_pre" style="display: block;"></div>
@@ -322,7 +321,7 @@ var ykQHeader = {
           <div style="width: 300px; height: 50px; position: relative; margin: 0px auto;" align="center">
             <div id="ssp_adx" style="width: 300px; height: 50px;">
               <div id="SSP_MASK_324" style="position: absolute; width: 300px; height: 50px; cursor: pointer; background-color: rgb(255, 255, 255); opacity: 0;"></div>
-              <img src="{{asset('home4/img/0d010000594b7a473175121668483244.jpg')}}" style="width: 300px; height: 50px; line-height: 50px;" border="0"></div>
+              <img src="<?php echo e(asset('home4/img/0d010000594b7a473175121668483244.jpg')); ?>" style="width: 300px; height: 50px; line-height: 50px;" border="0"></div>
             <div style="position: absolute; left: 0px; bottom: 0px; width: 30px; height: 17px; z-index: 99; background: rgba(0, 0, 0, 0) url('051000005604c79d67bc3d7ca2063ad4-') no-repeat scroll 0px 0px;"></div>
             <div style="position: absolute; right: 0px; bottom: 0px; padding: 0px 3px; margin: 0px; height: 17px; z-index: 99; text-align: right; font-size: 12px; line-height: 17px; background-color: rgba(0, 0, 0, 0.5); color: white;">睿视</div></div>
         </div>
@@ -347,7 +346,7 @@ var ykQHeader = {
             </div>
             <div id="module_basic_player">
               <div class="player" id="player" style="">
-                <object type="application/x-shockwave-flash" data="{{asset('home4/img/player_yknpsv.swf')}}" id="movie_player" style="width: 100%; height: 100%;" width="100%" height="100%">
+                <object type="application/x-shockwave-flash" data="<?php echo e(asset('home4/img/player_yknpsv.swf')); ?>" id="movie_player" style="width: 100%; height: 100%;" width="100%" height="100%">
                   <param name="allowFullScreen" value="true">
                   <param name="allowscriptaccess" value="always">
                   <param name="allowFullScreenInteractive" value="true">
@@ -581,7 +580,7 @@ var ykQHeader = {
                         <p class="dl-title">扫码用手机看</p>
                         <div class="v-qrcode" id="dimcode_pic">
                           <i class="ico_play_dimcode"></i>
-                          <img id="qrcode_img" src="{{asset('home4/js/qr')}}"></div>
+                          <img id="qrcode_img" src="<?php echo e(asset('home4/js/qr')); ?>"></div>
                         <p class="dl-ps">用
                           <a href="http://mobile.youku.com/index/wireless" target="_top">优酷APP</a>或微信扫码在手机上继续观看</p>
                         <p class="dl-ps">二维码2小时内有效</p></div>
@@ -589,7 +588,8 @@ var ykQHeader = {
                   </div>
                 </div>
                 <div class="panel panel-phone-see" id="panel_phone_see">
-                  <p class="title">{{ $c->title }}
+                  <p class="title"><?php echo e($c->title); ?>
+
                     <span id="phone_dimcode_watch_time"></span></p>
                   <span class="pointer">
                     <i class="icon icon-pointer"></i>
@@ -603,7 +603,7 @@ var ykQHeader = {
                         <p class="ps-title">扫码用手机继续看</p>
                         <div class="ps-twocode" id="phone_dimcode_pic">
                           <i class="ico_play_dimcode"></i>
-                          <img id="phone_qrcode_img" src="{{asset('home4/js/qr')}}"></div>
+                          <img id="phone_qrcode_img" src="<?php echo e(asset('home4/js/qr')); ?>"></div>
                         <div class="ps-twocode" id="phone_dimcode_pic"></div>
                         <p class="ps-ps">用
                           <a href="http://mobile.youku.com/index/wireless" target="_top">优酷APP</a>或微信扫码在手机上继续观看</p>
@@ -665,13 +665,13 @@ var ykQHeader = {
               <div class="body">
                 <div id="Drama" style="display: block;">
                   <div class="tvinfo">
-                    <h3>{{ $c->title }}</h3>
+                    <h3><?php echo e($c->title); ?></h3>
                     <p class="tvintro">
-                      <em>{{ $c->firsttime }}</em></p>
+                      <em><?php echo e($c->firsttime); ?></em></p>
                     <div class="score">
                       <span class="score_yk">
                         <strong>
-                          <em>{{ $c->score }}</em></strong>分</span>
+                          <em><?php echo e($c->score); ?></em></strong>分</span>
                     </div>
                     <div class="score_db_panel" style="display: none;" id="score_db_panel">
                       <div class="ico-arrow-top-white"></div>
@@ -722,21 +722,21 @@ var ykQHeader = {
                                 <div class="items">
                                   <div class="item">
                                     <div class="inner active">
-                                      <div class="program current" id="item_XMTg2NDYyNDk4OA==" title="{{ $c->title }}">
+                                      <div class="program current" id="item_XMTg2NDYyNDk4OA==" title="<?php echo e($c->title); ?>">
                                         <a href="http://v.youku.com/v_show/id_XMTg2NDYyNDk4OA==.html" class="A" data-from="y1.2-2.4.1">
                                           <div class="serial">
                                             <label>1</label>
                                             <span class="playing"></span>
                                           </div>
                                           <div class="cover">
-                                            <img src="{{asset('home4/img/05420408585143626a0a4604e2a87f31')}}" alt="{{ $c->title }}">
+                                            <img src="<?php echo e(asset('home4/img/05420408585143626a0a4604e2a87f31')); ?>" alt="<?php echo e($c->title); ?>">
                                             <span class="c-time">
                                               <i class="bg"></i>
-                                              <span>{{ $c->duration }}</span></span>
+                                              <span><?php echo e($c->duration); ?></span></span>
                                           </div>
-                                          <div class="headline">{{ $c->title }}</div>
+                                          <div class="headline"><?php echo e($c->title); ?></div>
                                           <div class="status">
-                                            <span>{{ $c->click }}次播放</span>
+                                            <span><?php echo e($c->click); ?>次播放</span>
                                           </div>
                                         </a>
                                       </div>
@@ -751,7 +751,7 @@ var ykQHeader = {
                                             <span class="playing"></span>
                                           </div>
                                           <div class="cover">
-                                            <img src="{{asset('home4/img/05420408585b43616a0a480460343403')}}" alt="湄公河行动-1彭于晏拼命抓毒贩">
+                                            <img src="<?php echo e(asset('home4/img/05420408585b43616a0a480460343403')); ?>" alt="湄公河行动-1彭于晏拼命抓毒贩">
                                             <span class="c-time">
                                               <i class="bg"></i>
                                               <span>31:12</span></span>
@@ -773,7 +773,7 @@ var ykQHeader = {
                                             <span class="playing"></span>
                                           </div>
                                           <div class="cover">
-                                            <img src="{{asset('home4/img/05420408585b44a06a0a4b044d956284')}}" alt="湄公河行动-2张涵予搏杀毒枭保护线人">
+                                            <img src="<?php echo e(asset('home4/img/05420408585b44a06a0a4b044d956284')); ?>" alt="湄公河行动-2张涵予搏杀毒枭保护线人">
                                             <span class="c-time">
                                               <i class="bg"></i>
                                               <span>29:08</span></span>
@@ -795,7 +795,7 @@ var ykQHeader = {
                                             <span class="playing"></span>
                                           </div>
                                           <div class="cover">
-                                            <img src="{{asset('home4/img/05420408585b478b6a0a4504eb52d4a7')}}" alt="湄公河行动-3警匪商场追逐枪战">
+                                            <img src="<?php echo e(asset('home4/img/05420408585b478b6a0a4504eb52d4a7')); ?>" alt="湄公河行动-3警匪商场追逐枪战">
                                             <span class="c-time">
                                               <i class="bg"></i>
                                               <span>30:45</span></span>
@@ -817,7 +817,7 @@ var ykQHeader = {
                                             <span class="playing"></span>
                                           </div>
                                           <div class="cover">
-                                            <img src="{{asset('home4/img/05420408585b4a936a0a4004619f35e3')}}" alt="湄公河行动-4火力全开直捣毒枭老巢">
+                                            <img src="<?php echo e(asset('home4/img/05420408585b4a936a0a4004619f35e3')); ?>" alt="湄公河行动-4火力全开直捣毒枭老巢">
                                             <span class="c-time">
                                               <i class="bg"></i>
                                               <span>32:53</span></span>
@@ -1036,7 +1036,7 @@ var ykQHeader = {
 			<div class="r">
 				<div class="c">
 	<a class="list_ad_wrap" id="playlistIkuAD" type="iku" vid="XMjgzNzM0NTYxNg==">
-    <img src="{{asset('home4/img/05100000594b2bda8b6c57a3d50ba7dc')}}" style="position: relative; left: -1px; width: 381px;">
+    <img src="<?php echo e(asset('home4/img/05100000594b2bda8b6c57a3d50ba7dc')); ?>" style="position: relative; left: -1px; width: 381px;">
 	</a>
 				</div>
 			</div>
@@ -1053,7 +1053,7 @@ var ykQHeader = {
 	</div></div></div><div class="list_tips" style="display: none;"><div class="tips"><a class="handler"></a><div class="arrow"></div><div class="content"></div></div></div></div></div><div class="clear"></div></div></div>
 	<div class="mainCol"><div id="module_basic_double11"></div><div id="module_basic_sub">
 </div>
-@endforeach
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 <div id="module_basic_relationleft"><div class="mod modSwitch mod-new">
 <div class="h">
@@ -1075,14 +1075,14 @@ var ykQHeader = {
 <a href="#" class="iconfont" title="下一组"></a>
 </div>
 <ul class="panel" style="width: 3439px; left: 0px;">
- @foreach($info as $b)
+ <?php $__currentLoopData = $info; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <li class="yk-col4 mr1">
 <div class="yk-pack pack-film">
 <div class="p-thumb">
-<a href="{{URL('home/xq')}}/{{$b->id}}"></a>
+<a href="<?php echo e(URL('home/xq')); ?>/<?php echo e($b->id); ?>"></a>
 <i class="bg"></i>
 
-<img src="{{ $b->pic_address }}">
+<img src="<?php echo e($b->pic_address); ?>">
 
 <!-- 精选角标 -->
 
@@ -1092,18 +1092,18 @@ var ykQHeader = {
 <!-- 标题 -->
 <ul class="info-list">
 <li class="title short-title">
-<a href="{{URL('home/xq')}}/{{$b->id}}">{{ $b->title }}</a>
+<a href="<?php echo e(URL('home/xq')); ?>/<?php echo e($b->id); ?>"><?php echo e($b->title); ?></a>
 </li>
                 
 <li class="subtitle">
-<span>{{ $b->introduction }}</span>
+<span><?php echo e($b->introduction); ?></span>
 </li>
 
 </ul>
 </div>
 </li>
  
-@endforeach
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
 </ul>
 
@@ -1121,7 +1121,7 @@ var ykQHeader = {
 <div id="commentAction" class="comment-area-form"><div class="comment-form ">
 
 <div class="form-cell form-content commentFormContent">
-<form name="myform" action="{{url('home/cmt/add')}}/{{ $w }}" method="post" onsubmit="return doSubmit()">
+<form name="myform" action="<?php echo e(url('home/cmt/add')); ?>/<?php echo e($w); ?>" method="post" onsubmit="return doSubmit()">
 	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 <div class="form-user-info">
 
@@ -1143,7 +1143,7 @@ var ykQHeader = {
 <div class="form-toolbar-right">
 <div class="comment-pager-turn">
 <input type="submit" value="发表评论">
-<!-- <a href="{{url('home/Xq/create')}}" class="form-btn form-btn-large form-btn-submit">发表评论</a>
+<!-- <a href="<?php echo e(url('home/Xq/create')); ?>" class="form-btn form-btn-large form-btn-submit">发表评论</a>
  -->
 </div>
 
@@ -1233,28 +1233,30 @@ var ykQHeader = {
 <div class="comment-list-body">
 
 
-@foreach ($filmcmt as $v)
+<?php $__currentLoopData = $filmcmt; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
 
 
 <div class="comment-item" data-id="4707758754">
 <div class="comment-content">
 <div class="comment-user-avatar">
-<img src="{{ URL('uploads') }}/{{ $v->picname }}"></a>
+<img src="<?php echo e(URL('uploads')); ?>/<?php echo e($v->picname); ?>"></a>
 </div>
 <div class="comment-section">
 <div class="comment-user-info">
 <a href="#" class="redname" target="_top">
-{{ $v->name }}
+<?php echo e($v->name); ?>
+
 </a>
 
 
 
-<span class="comment-timestamp">{{ $v->time }}</span>
+<span class="comment-timestamp"><?php echo e($v->time); ?></span>
 </div>
 <div class="comment-text">
 <p>
-{{ $v->text }}
+<?php echo e($v->text); ?>
+
 </p>
 
 
@@ -1265,7 +1267,7 @@ var ykQHeader = {
 </div>
 </div>
 
-@endforeach
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
@@ -1305,7 +1307,7 @@ var ykQHeader = {
 <a href="javascript:;">发表评论</a>
 </div>
 </div>
-</div><div class="s_main page-editor">【李静平 KK034】</div><!-- hit 201706261500, create at 2017-06-26 15:00:00 --><div class="g-footer"><dl class="g-w1"><dt><a target="_top" href="http://c.youku.com/aboutcn/youtu">大优酷事业群</a><a target="_top" href="http://c.youku.com/aboutcn/youku">关于优酷</a></dt><dd><a target="_top" href="http://c.youku.com/abouteg/youtu">Youku Tudou Inc.</a><a target="_top" href="http://c.youku.com/abouteg/youku">Youku.com</a></dd><dd><a target="_top" href="http://c.youku.com/link">友情链接</a><a target="_top" href="http://c.youku.com/aboutcn/adservice/">广告服务</a></dd></dl><dl class="g-w2"><dt> 优酷热门 </dt><dd><a target="_top" href="http://tv.youku.com/">剧集</a><a target="_top" href="http://movie.youku.com/">电影</a><a target="_top" href="http://zy.youku.com/">综艺</a><a target="_top" href="http://music.youku.com/">音乐</a><a target="_top" href="http://child.youku.com/">少儿</a><a target="_top" href="http://news.youku.com/">资讯</a><a target="_top" href="http://jilupian.youku.com/">纪实</a><a target="_top" href="http://gongyi.youku.com/">公益</a></dd><dd><a target="_top" href="http://sports.youku.com/">体育</a><a target="_top" href="http://auto.youku.com/">汽车</a><a target="_top" href="http://tech.youku.com/">科技</a><a target="_top" href="http://finance.youku.com/">财经</a><a target="_top" href="http://ent.youku.com/">娱乐</a><a target="_top" href="http://culture.youku.com/">文化</a><a target="_top" href="http://comic.youku.com/">动漫</a><a target="_top" href="http://fun.youku.com/">搞笑</a></dd><dd><a target="_top" href="http://travel.youku.com/">旅游</a><a target="_top" href="http://fashion.youku.com/">时尚</a><a target="_top" href="http://baby.youku.com/">亲子</a><a target="_top" href="http://edu.youku.com/">教育</a><a target="_top" href="http://game.youku.com/">游戏</a><a target="_top" href="http://vip.youku.com/">会员</a><a target="_top" href="http://faxian.youku.com/?from=PC_main_nav">发现</a><a target="_top" href="http://list.youku.com/category/video">片库</a></dd></dl><dl class="g-w3"><dt>产品中心</dt><dd><a href="javascript:void(0);" class="ikuDownLoad" data-down-href="http://iku.youku.com/channelinstall/ywebbottom" data-down-mac="http://iku.youku.com/channelinstall/macyweb">PC客户端</a></dd><dd><a target="_top" href="http://mobile.youku.com/index/wireless">手机客户端</a></dd><dd><a target="_top" href="http://yj.youku.com/?hmsr=1119youku&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=">智能硬件</a><a target="_top" href="http://cloud.youku.com/">视频云</a></dd></dl><dl class="g-w4"><dt>用户</dt><dd><a target="_top" href="http://rz.tudou.com/">开通大鱼号</a></dd><dt>支持</dt><dd><a id="sttrans" href="javascript:void(0);">繁體版</a><a target="_top" href="http://csc.youku.com/feedback-web/web/">在线反馈</a></dd></dl><div class="g-hr"></div><dl class="g-w1"><dd><a target="_top" href="http://mapp.youku.com/service/licence/">网络文化经营许可证 京网文[2014]0934-236号</a></dd><dd><a target="_top" href="http://mapp.youku.com/service/20130209">京卫网审[2013]第0209号 </a> <a target="_top" href="http://www.bj.cyberpolice.cn/index.htm">网络110报警服务</a></dd><dd> 药品服务许可证(京)-经营-2015-0029</dd><dd> 节目制作经营许可证京字670号 </dd><dd><a target="_top" href="http://mapp.youku.com/service/yingyezhizhao">营业执照</a></dd></dl><dl class="g-w2"><dd>请使用者仔细阅读优酷<a target="_top" href="http://mapp.youku.com/service/agreement" class="mr0">使用协议</a>、<a target="_top" href="http://mapp.youku.com/service/banquan" class="mr0">版权声明</a>、<a target="_top" href="http://mapp.youku.com/service/piracy" class="mr0">反盗版盗链声明</a></dd><dd>Copyright©2017 优酷 youku.com 版权所有</dd><dd>不良信息举报电话: 4008100580</dd><dd><a target="_top" href="http://mapp.youku.com/service/0108283">信息网络传播视听节目许可证0108283号</a></dd><dd><a target="_top" href="http://mapp.youku.com/service/chubanwu">出版物经营许可证</a></dd></dl><dl class="g-w3"><dd><a target="_top" href="http://www.miibeian.gov.cn/">京ICP证060288号</a></dd><dd><a target="_top" href="http://mapp.youku.com/service/chuban">新出网证(京)字160号</a></dd><dd><a target="_top" href="http://www.bjjubao.org/">北京互联网举报中心</a></dd><dd><a target="_top" href="http://www.bjwhzf.gov.cn/accuse.do">北京12318文化市场举报热线</a></dd></dl><dl class="g-w4"><a class="qcode" target="_top" href="http://mobile.youku.com/index/wireless"><img src="{{asset('home4/img/0510000058d0fea1adc0ae058f099020')}}" width="84px"></a></dl><div class="g-authentication"><a class="aut-1" target="_top" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006082400023">经营性网站<br>备案信息</a><a class="aut-2" target="_top" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1786197705">中国互联网<br>诚信联盟</a><a class="aut-3" target="_top" href="http://www.12377.cn/">中国互联网<br>举报中心</a><a class="aut-4" target="_top" href="http://www.12377.cn/node_548446.htm">网络举报<br>APP下载</a><a class="aut-5" target="_top" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000017">京公网安备<br>11000002000017</a><a class="aut-6" target="_top" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/0D76560AE65141FF9FEFE3481D205C50">网络文化<br>经营单位</a><a class="aut-7" target="_top" href="http://www.12377.cn/">暴恐音视频<br>举报专区</a><div style="text-align: center; margin-top: 8px;"><a style="padding-left: 0px;" href="https://credit.szfw.org/CX20170616038883280388.html" target="_top"><img src="{{asset('home4/img/0510000059479119adc0b05c010b4454')}}" border="0"></a></div></div></div><script>var Local={"domain":{"default":"www.youku.com","test":"test.youku.com","subscribe":"ding.youku.com","uc":"i.youku.com","video":"v.youku.com","rz":"rz.youku.com","userlive":"userlive.youku.com","esign":"hetong.youku.com","listpage":"list.youku.com","xinterest":"x.youku.com","ypartner":"yp.youku.com","interact":"hudong.pl.youku.com","creation":"creation.youku.com","uctg":"uctg.youku.com","playlists":"playlists.youku.com","static":"static.youku.com","passport":"account.youku.com","static_ext":"static.ykimg.com","static_ext_js":"js.ykimg.com","static_ext_css":"css.ykimg.com"},"service":{"push":"push.youku.com","interact":"hudong.pl.youku.com"},"debug":false};</script><script type="text/javascript"> var player_thx = 1;var attrs = '';var cateStr = 'dc-3-2034';var PageConfig = { pid:"8fb8456183734a86bfc1c15a1c761cdf", homeHost:"//v.youku.com/", youku_homeurl:"//www.youku.com/", catId:"96", playmode:"3", videoOwner:"97454045", videoId:"466156247", videoId2:"XMTg2NDYyNDk4OA==", currentEncodeVid:"XMTg2NDYyNDk4OA==", catName:"电影", seconds:"7439.00", bullet:"0", folderId:"0", fpos:"0", forder:"0", ftotalpos:"0", showid_en:"f30366003b7011e69b6d", showid:"308208", cp:"authorized", paid:"0", showtype:"正片", tabs:"", singerId:"0", loadinglogo:"//r3.ykimg.com/05100000557F8F8567BC3D322208D068", lottery_open_sidetool:1, lottery_id_sidetool:"", lottery_sidetool:"",  page:{  type:"Num", isdatetype:"", totalepisodes:"5", numTypePageNum:"1", year:"0", firstMon:"0", lastMon:"0", currMon:"0", episodeLast:"5", parentvideoid:'513432', compeleted:'1'  },  playerUrl:'//static.youku.com/v201706261000.0/v/swf/upsplayer/player_yknpsv.swf', copytoclip:1, adsParams:"&ct=c&cs=2034&td=&s=308208&v=466156247&u=97454045&k=%E6%B9%84%E5%85%AC%E6%B2%B3%E8%A1%8C%E5%8A%A8|&tt=%E6%B9%84%E5%85%AC%E6%B2%B3%E8%A1%8C%E5%8A%A8" };</script><script src="{{asset('home4/js/yksdk.js')}}"></script><script src="{{asset('home4/js/lib_12.js')}}" id="libjsnode"></script><script type="text/javascript"> define('playerPlugins', "//"+Local.domain.interact+"/jsapi/interact/playerPlugins.js");define('page/find/play/comment_v2', '//js.ykimg.com/youku/dist/js/page/find/play/comment_v2_27.js');define('page/find/play/spv', '//js.ykimg.com/youku/dist/embed/js/player/spv_4.js');</script><script src="{{asset('home4/js/g_68.js')}}"></script><script src="{{asset('home4/js/g_106.js')}}"></script><script src="{{asset('home4/js/index_130.js')}}"></script><script src="{{asset('home4/js/comment_load_18.js')}}"></script><script src="{{asset('home4/js/p.main.js')}}"></script><script type="text/javascript"> YK_CPA.trackInfo(1);</script><div id="sideTool" class="right-sideBar">
+</div><div class="s_main page-editor">【李静平 KK034】</div><!-- hit 201706261500, create at 2017-06-26 15:00:00 --><div class="g-footer"><dl class="g-w1"><dt><a target="_top" href="http://c.youku.com/aboutcn/youtu">大优酷事业群</a><a target="_top" href="http://c.youku.com/aboutcn/youku">关于优酷</a></dt><dd><a target="_top" href="http://c.youku.com/abouteg/youtu">Youku Tudou Inc.</a><a target="_top" href="http://c.youku.com/abouteg/youku">Youku.com</a></dd><dd><a target="_top" href="http://c.youku.com/link">友情链接</a><a target="_top" href="http://c.youku.com/aboutcn/adservice/">广告服务</a></dd></dl><dl class="g-w2"><dt> 优酷热门 </dt><dd><a target="_top" href="http://tv.youku.com/">剧集</a><a target="_top" href="http://movie.youku.com/">电影</a><a target="_top" href="http://zy.youku.com/">综艺</a><a target="_top" href="http://music.youku.com/">音乐</a><a target="_top" href="http://child.youku.com/">少儿</a><a target="_top" href="http://news.youku.com/">资讯</a><a target="_top" href="http://jilupian.youku.com/">纪实</a><a target="_top" href="http://gongyi.youku.com/">公益</a></dd><dd><a target="_top" href="http://sports.youku.com/">体育</a><a target="_top" href="http://auto.youku.com/">汽车</a><a target="_top" href="http://tech.youku.com/">科技</a><a target="_top" href="http://finance.youku.com/">财经</a><a target="_top" href="http://ent.youku.com/">娱乐</a><a target="_top" href="http://culture.youku.com/">文化</a><a target="_top" href="http://comic.youku.com/">动漫</a><a target="_top" href="http://fun.youku.com/">搞笑</a></dd><dd><a target="_top" href="http://travel.youku.com/">旅游</a><a target="_top" href="http://fashion.youku.com/">时尚</a><a target="_top" href="http://baby.youku.com/">亲子</a><a target="_top" href="http://edu.youku.com/">教育</a><a target="_top" href="http://game.youku.com/">游戏</a><a target="_top" href="http://vip.youku.com/">会员</a><a target="_top" href="http://faxian.youku.com/?from=PC_main_nav">发现</a><a target="_top" href="http://list.youku.com/category/video">片库</a></dd></dl><dl class="g-w3"><dt>产品中心</dt><dd><a href="javascript:void(0);" class="ikuDownLoad" data-down-href="http://iku.youku.com/channelinstall/ywebbottom" data-down-mac="http://iku.youku.com/channelinstall/macyweb">PC客户端</a></dd><dd><a target="_top" href="http://mobile.youku.com/index/wireless">手机客户端</a></dd><dd><a target="_top" href="http://yj.youku.com/?hmsr=1119youku&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=">智能硬件</a><a target="_top" href="http://cloud.youku.com/">视频云</a></dd></dl><dl class="g-w4"><dt>用户</dt><dd><a target="_top" href="http://rz.tudou.com/">开通大鱼号</a></dd><dt>支持</dt><dd><a id="sttrans" href="javascript:void(0);">繁體版</a><a target="_top" href="http://csc.youku.com/feedback-web/web/">在线反馈</a></dd></dl><div class="g-hr"></div><dl class="g-w1"><dd><a target="_top" href="http://mapp.youku.com/service/licence/">网络文化经营许可证 京网文[2014]0934-236号</a></dd><dd><a target="_top" href="http://mapp.youku.com/service/20130209">京卫网审[2013]第0209号 </a> <a target="_top" href="http://www.bj.cyberpolice.cn/index.htm">网络110报警服务</a></dd><dd> 药品服务许可证(京)-经营-2015-0029</dd><dd> 节目制作经营许可证京字670号 </dd><dd><a target="_top" href="http://mapp.youku.com/service/yingyezhizhao">营业执照</a></dd></dl><dl class="g-w2"><dd>请使用者仔细阅读优酷<a target="_top" href="http://mapp.youku.com/service/agreement" class="mr0">使用协议</a>、<a target="_top" href="http://mapp.youku.com/service/banquan" class="mr0">版权声明</a>、<a target="_top" href="http://mapp.youku.com/service/piracy" class="mr0">反盗版盗链声明</a></dd><dd>Copyright©2017 优酷 youku.com 版权所有</dd><dd>不良信息举报电话: 4008100580</dd><dd><a target="_top" href="http://mapp.youku.com/service/0108283">信息网络传播视听节目许可证0108283号</a></dd><dd><a target="_top" href="http://mapp.youku.com/service/chubanwu">出版物经营许可证</a></dd></dl><dl class="g-w3"><dd><a target="_top" href="http://www.miibeian.gov.cn/">京ICP证060288号</a></dd><dd><a target="_top" href="http://mapp.youku.com/service/chuban">新出网证(京)字160号</a></dd><dd><a target="_top" href="http://www.bjjubao.org/">北京互联网举报中心</a></dd><dd><a target="_top" href="http://www.bjwhzf.gov.cn/accuse.do">北京12318文化市场举报热线</a></dd></dl><dl class="g-w4"><a class="qcode" target="_top" href="http://mobile.youku.com/index/wireless"><img src="<?php echo e(asset('home4/img/0510000058d0fea1adc0ae058f099020')); ?>" width="84px"></a></dl><div class="g-authentication"><a class="aut-1" target="_top" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006082400023">经营性网站<br>备案信息</a><a class="aut-2" target="_top" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1786197705">中国互联网<br>诚信联盟</a><a class="aut-3" target="_top" href="http://www.12377.cn/">中国互联网<br>举报中心</a><a class="aut-4" target="_top" href="http://www.12377.cn/node_548446.htm">网络举报<br>APP下载</a><a class="aut-5" target="_top" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000017">京公网安备<br>11000002000017</a><a class="aut-6" target="_top" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/0D76560AE65141FF9FEFE3481D205C50">网络文化<br>经营单位</a><a class="aut-7" target="_top" href="http://www.12377.cn/">暴恐音视频<br>举报专区</a><div style="text-align: center; margin-top: 8px;"><a style="padding-left: 0px;" href="https://credit.szfw.org/CX20170616038883280388.html" target="_top"><img src="<?php echo e(asset('home4/img/0510000059479119adc0b05c010b4454')); ?>" border="0"></a></div></div></div><script>var Local={"domain":{"default":"www.youku.com","test":"test.youku.com","subscribe":"ding.youku.com","uc":"i.youku.com","video":"v.youku.com","rz":"rz.youku.com","userlive":"userlive.youku.com","esign":"hetong.youku.com","listpage":"list.youku.com","xinterest":"x.youku.com","ypartner":"yp.youku.com","interact":"hudong.pl.youku.com","creation":"creation.youku.com","uctg":"uctg.youku.com","playlists":"playlists.youku.com","static":"static.youku.com","passport":"account.youku.com","static_ext":"static.ykimg.com","static_ext_js":"js.ykimg.com","static_ext_css":"css.ykimg.com"},"service":{"push":"push.youku.com","interact":"hudong.pl.youku.com"},"debug":false};</script><script type="text/javascript"> var player_thx = 1;var attrs = '';var cateStr = 'dc-3-2034';var PageConfig = { pid:"8fb8456183734a86bfc1c15a1c761cdf", homeHost:"//v.youku.com/", youku_homeurl:"//www.youku.com/", catId:"96", playmode:"3", videoOwner:"97454045", videoId:"466156247", videoId2:"XMTg2NDYyNDk4OA==", currentEncodeVid:"XMTg2NDYyNDk4OA==", catName:"电影", seconds:"7439.00", bullet:"0", folderId:"0", fpos:"0", forder:"0", ftotalpos:"0", showid_en:"f30366003b7011e69b6d", showid:"308208", cp:"authorized", paid:"0", showtype:"正片", tabs:"", singerId:"0", loadinglogo:"//r3.ykimg.com/05100000557F8F8567BC3D322208D068", lottery_open_sidetool:1, lottery_id_sidetool:"", lottery_sidetool:"",  page:{  type:"Num", isdatetype:"", totalepisodes:"5", numTypePageNum:"1", year:"0", firstMon:"0", lastMon:"0", currMon:"0", episodeLast:"5", parentvideoid:'513432', compeleted:'1'  },  playerUrl:'//static.youku.com/v201706261000.0/v/swf/upsplayer/player_yknpsv.swf', copytoclip:1, adsParams:"&ct=c&cs=2034&td=&s=308208&v=466156247&u=97454045&k=%E6%B9%84%E5%85%AC%E6%B2%B3%E8%A1%8C%E5%8A%A8|&tt=%E6%B9%84%E5%85%AC%E6%B2%B3%E8%A1%8C%E5%8A%A8" };</script><script src="<?php echo e(asset('home4/js/yksdk.js')); ?>"></script><script src="<?php echo e(asset('home4/js/lib_12.js')); ?>" id="libjsnode"></script><script type="text/javascript"> define('playerPlugins', "//"+Local.domain.interact+"/jsapi/interact/playerPlugins.js");define('page/find/play/comment_v2', '//js.ykimg.com/youku/dist/js/page/find/play/comment_v2_27.js');define('page/find/play/spv', '//js.ykimg.com/youku/dist/embed/js/player/spv_4.js');</script><script src="<?php echo e(asset('home4/js/g_68.js')); ?>"></script><script src="<?php echo e(asset('home4/js/g_106.js')); ?>"></script><script src="<?php echo e(asset('home4/js/index_130.js')); ?>"></script><script src="<?php echo e(asset('home4/js/comment_load_18.js')); ?>"></script><script src="<?php echo e(asset('home4/js/p.main.js')); ?>"></script><script type="text/javascript"> YK_CPA.trackInfo(1);</script><div id="sideTool" class="right-sideBar">
 <ul class="yk-toolbar-service js-toolbar" id="toolbarservice" data-stat-role="ck">
 <li class="bigImg yk-toolbar-draw js-draw" id="lotteryToolbarBig" style="display: none;"></li>
 <li class="yk-toolbar-draw js-draw" id="lotteryToolbar" style="display: none;"></li>
@@ -1315,7 +1317,7 @@ var ykQHeader = {
 <div class="qrcode-popup yk-toolbar-group-panel-li" id="showAppQrcode" style="display: none;">
 <div class="qrcode-arrow"></div>
 <p>下载手机客户端</p>
-<img src="{{asset('home4/img/0510000058d0fea1adc0ae058f099020')}}" width="100">
+<img src="<?php echo e(asset('home4/img/0510000058d0fea1adc0ae058f099020')); ?>" width="100">
 <span>微信扫一扫</span><span>视频随时看</span>
 </div>
 </a>			
@@ -1339,5 +1341,5 @@ var ykQHeader = {
 <div class="sideTool sideTool_dark" id="sideToolDark" style="display: block;">
 <div class="handle" id="lighton"><a class="icon-light-off" href="javascript:;" title="开灯"></a></div>
 </div>
-</div><div style="position: absolute; white-space: pre-wrap; top: 0px; left: -99999em; width: 908px; font-family: &quot;Microsoft YaHei&quot;,&quot;微软雅黑&quot;,helvetica,arial,verdana,tahoma,sans-serif; line-height: 20px; font-size: 12px;"></div><ikuadapter><object id="ikuplugin0" type="application/x-youkuagent" width="0" height="0"></object></ikuadapter><div style="height: 0px; width: 0px; overflow: hidden;"><object tabindex="-1" style="height: 0px; width: 0px; overflow: hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket" width="0" height="0"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="{{asset('home4/img/jsocket.swf')}}" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body>
+</div><div style="position: absolute; white-space: pre-wrap; top: 0px; left: -99999em; width: 908px; font-family: &quot;Microsoft YaHei&quot;,&quot;微软雅黑&quot;,helvetica,arial,verdana,tahoma,sans-serif; line-height: 20px; font-size: 12px;"></div><ikuadapter><object id="ikuplugin0" type="application/x-youkuagent" width="0" height="0"></object></ikuadapter><div style="height: 0px; width: 0px; overflow: hidden;"><object tabindex="-1" style="height: 0px; width: 0px; overflow: hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket" width="0" height="0"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="<?php echo e(asset('home4/img/jsocket.swf')); ?>" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body>
 </html>

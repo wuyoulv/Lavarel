@@ -6,18 +6,53 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Film_info;
 use App\Model\Film_cmt;
+use App\Model\User;
 
 class XqController extends Controller
 {
     public function index($id)
     {
     	$filminfo=Film_info::where('id',$id)->get();
-    	//print_r($dara);die;
-        $info=Film_info::get(); 
-    	$filmcmt=Film_cmt::where('film_id',$id)->get();
-    	//where('id',"=",$id)->
-    	//echo "<pre>";
-    	//var_dump($list);die;
-    	return view("home.xq.index",['filminfo'=>$filminfo,'filmcmt'=>$filmcmt,'info'=>$info]);
+        //$user=User::where('id','=',)
+        foreach($filminfo as $q){
+            $w=$q->id;
+            //print_r ($w);die;
+
+        }
+        //echo "<pre>";
+    	 // print_r($w);die;
+        $info=\DB::table('film_info')->limit(4)->get();
+    	$filmcmt=\DB::table('film_cmt')->join('user','film_cmt.user_id','=','user.id')->join('film_info','film_cmt.film_id','=','film_info.id')->select('film_cmt.id','user.name','user.picname','film_info.title','film_cmt.text','film_cmt.time')->where('film_info.id',$id)->get();
+    	// echo "<pre>";
+    	// var_dump($filmcmt);die;
+        // $cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_cmt.id", $id)->get();
+    	return view("home.xq.index",['filminfo'=>$filminfo,'filmcmt'=>$filmcmt,'info'=>$info,'w'=>$w]);
+    }
+
+    public function add(Request $request,$w)
+    {
+        $user=User::where('account','=',session('adminn'))->get();
+        //dd($user);die;
+        foreach($user as $users){
+            $id=$users->id;
+        }
+        $data['user_id'] = $id;
+        $data['title'] = $users->picname;
+         // echo "<pre>";
+         // print_r($usersid);die;
+        
+         //获取指定的部分数据
+        $data['text'] = $request->input("content");
+        // echo "<pre>";
+        // print_r($data);die;
+        $t = time();
+        $data['time']=date('Y-m-d H:i:s',$t);
+        $data['film_id']=$w;
+        // echo "<pre>";
+        // print_r($data);die;
+        \DB::table('film_cmt')->insertGetId(['user_id'=>$data['user_id'],'film_id'=>$data['film_id'],'title'=>$data['title'],'text'=>$data['text'],'time'=>$data['time']]);
+        return redirect("/home/xq/{$w}");
+        
+        
     }
 }

@@ -13,9 +13,9 @@
         <title>
             优酷首页
         </title>
-        <link type="text/css" href="{{ asset('home2/g_74.css')}}" rel="stylesheet">
-        <link type="text/css" href="{{ asset('home2/main_26.css')}}" rel="stylesheet">
-        <link id="YT-loginFrameCss" rel="stylesheet" href="{{ asset('home2/main_495c9db.css')}}">
+        <link type="text/css" href="<?php echo e(asset('home2/g_74.css')); ?>" rel="stylesheet">
+        <link type="text/css" href="<?php echo e(asset('home2/main_26.css')); ?>" rel="stylesheet">
+        <link id="YT-loginFrameCss" rel="stylesheet" href="<?php echo e(asset('home2/main_495c9db.css')); ?>">
         <style type="text/css">
             .prd-list li dl dt{padding-right:10px;color: #555;} .prd-list li dl dt
             > a{letter-spacing:0;} .prd-list li dl dd a{margin-left:7px} #m_223471
@@ -32,7 +32,7 @@
     
     <body class="w1300" data-spm="20023042">
         <div style="display:block;clear:both;float:none;position:absolute;right:0;bottom:0;border:none;">
-            <object id="MTJ4E1K2LF7HQQP9" data="{{ asset('home2/MTFlashStore.swf.下载')}}" type="application/x-shockwave-flash"
+            <object id="MTJ4E1K2LF7HQQP9" data="<?php echo e(asset('home2/MTFlashStore.swf.下载')); ?>" type="application/x-shockwave-flash"
             width="10" height="10" style="position:absolute;right:0;bottom:0;border:none;">
                 
                 <param name="wmode" value="transparent">
@@ -41,9 +41,9 @@
                 <param name="flashvars" value="jsproxyfunction=MTJ4E1K1HK7FVJHV">
             </object>
         </div>
-        <script type="text/javascript" async="" src="{{ asset('home2/saved_resource')}}">
+        <script type="text/javascript" async="" src="<?php echo e(asset('home2/saved_resource')); ?>">
         </script>
-        <script id="beacon-aplus" src="{{ asset('home2/aplus_o.js.下载')}}" exparams="userid=&amp;aplus&amp;sidx=0&amp;ckx=|">
+        <script id="beacon-aplus" src="<?php echo e(asset('home2/aplus_o.js.下载')); ?>" exparams="userid=&amp;aplus&amp;sidx=0&amp;ckx=|">
         </script>
         <script>
             with(document) with(body) with(insertBefore(createElement("script"), firstChild)) setAttribute("exparams", "userid=&aplus&sidx=0&ckx=|", id = "beacon-aplus", src = "//g.alicdn.com/alilog/mlog/aplus_o.js")
@@ -130,14 +130,14 @@
                     <div class="g-box">
                         <div class="yk-logo" id="ab_625">
                             <a href="" title="Youku 优酷" attr="idx0">
-                                <img src="{{ asset('home2/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷"
+                                <img src="<?php echo e(asset('home2/yk-logo-1220.png')); ?>" width="140" height="50" alt="Youku 优酷"
                                 from="index">
                             </a>
                         </div>
                         <div class="g-head-center">
                             <ul class="g-head-nav">
                                 <li>
-                                    <a class="current" href="{{ url('a/home') }}">
+                                    <a class="current" href="<?php echo e(url('a/home')); ?>">
                                         首页
                                     </a>
                                 </li>
@@ -154,12 +154,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{url('home/vipuser')}}">
+                                    <a href="<?php echo e(url('home/vipuser')); ?>">
                                         会员
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('home/user/index') }}">
+                                    <a href="<?php echo e(url('home/user/index')); ?>">
                                         我的
                                     </a>
                                 </li>
@@ -169,26 +169,27 @@
                         </div>
                         <div class="g-ucenter" id="uerCenter">
                             <div class="u-login">
-                                @if ( session()->get('adminn') == null)
+                                <?php if( session()->get('adminn') == null): ?>
                                     <div class="login-before handle" style="display: block;">
-                                        <a href="{{ URL('/home/login') }}">
+                                        <a href="<?php echo e(URL('/home/login')); ?>">
                                             登录
                                         </a>
-                                        <a id="qheader_reg" href="{{ URL('/home/register') }}">
+                                        <a id="qheader_reg" href="<?php echo e(URL('/home/register')); ?>">
                                             注册
                                         </a>
                                     </div>
-                                @else
+                                <?php else: ?>
                                     <div class="login-before handle" style="display: block;">
-                                        <a id="qheader_reg" href="{{ URL('home/user/index') }}">
-                                            {{ session('adminn') }}
+                                        <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
+                                            <?php echo e(session('adminn')); ?>
+
                                         </a>||
                                         <a href="/home/homeLog/logout">退出</a>
                                     </div>
-                                @endif
+                                <?php endif; ?>
                                 <div class="login-after dropdown unload handle" style="display: none;">
                                     <a href="http://user.youku.com/page/usc/index" target="_blank">
-                                        <img class="avatar" src="{{ asset('home2/sprite.gif')}}">
+                                        <img class="avatar" src="<?php echo e(asset('home2/sprite.gif')); ?>">
                                         <b class="caret">
                                         </b>
                                         <span>
@@ -240,14 +241,14 @@
                                         <div class="">
                                             <div class="sk_box sk_youku" style="display:block;">
                                                 <iframe id="sk_holder_iframe" frameborder="0" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;"
-                                                src="{{ asset('home2/saved_resource.html')}}">
+                                                src="<?php echo e(asset('home2/saved_resource.html')); ?>">
                                                 </iframe>
                                                 <div class="main" id="_xbox_refresh">
                                                 </div>
                                                 <div id="_xbox_ad">
                                                     <div class="sk_adsl">
                                                         <a target="_blank" href="">
-                                                            <img sk_live="link" log_pos="8" src="{{ asset('home2/05100000594A26B4ADC0B05C0A0F2481')}}">
+                                                            <img sk_live="link" log_pos="8" src="<?php echo e(asset('home2/05100000594A26B4ADC0B05C0A0F2481')); ?>">
                                                         </a>
                                                         <a class="sk_ads_close" href="javascript:;" style="display: inline;">
                                                             <i sk_live="adclose" class="ico ico_ad_close" style="display: none;">
@@ -259,12 +260,12 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <script src="{{ asset('home2/search_tip_1')}}">
+                                        <script src="<?php echo e(asset('home2/search_tip_1')); ?>">
                                         </script>
-                                        <script src="{{ asset('home2/sideads.json')}}">
+                                        <script src="<?php echo e(asset('home2/sideads.json')); ?>">
                                         </script>
                                     </div>
-                                    <link rel="stylesheet" type="text/css" href="{{ asset('home2/s_kubox.css')}}">
+                                    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('home2/s_kubox.css')); ?>">
                                 </form>
                             </div>
                         </div>
@@ -273,17 +274,18 @@
                         <div class="g-content">
                             <ul class="top-nav-main">
                                 <li class="current ">
-                                    <a href="{{ url('a/home') }}">
+                                    <a href="<?php echo e(url('a/home')); ?>">
                                         首页
                                     </a>
                                 </li>
-                                @foreach ($filmtype as $a) 
+                                <?php $__currentLoopData = $filmtype; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $a): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
                                 <li>
-                                    <a href="{{ url('/dydetails') }}/{{ $a->id }}">
-                                        {{ $a->type }}
+                                    <a href="<?php echo e(url('/dydetails')); ?>/<?php echo e($a->id); ?>">
+                                        <?php echo e($a->type); ?>
+
                                     </a>
                                 </li>
-                                @endforeach
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 
                                 
                             <div class="top-nav-more">
@@ -328,7 +330,7 @@
                                         <li>
                                             <div class="g-nav-app-intro">
                                                 <div class="g-nav-app">
-                                                    <img src="{{ asset('home2/0510000058D0FEA1ADC0AE058F099020')}}" width="70">
+                                                    <img src="<?php echo e(asset('home2/0510000058D0FEA1ADC0AE058F099020')); ?>" width="70">
                                                     <h3>
                                                         <a href="">
                                                             优酷移动APP
@@ -343,7 +345,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="g-nav-iku">
-                                                    <img src="{{ asset('home2/05100000585A30CB67BC3D2037022435')}}" width="73">
+                                                    <img src="<?php echo e(asset('home2/05100000585A30CB67BC3D2037022435')); ?>" width="73">
                                                     <h3>
                                                         <a href="" target="_blank">
                                                             优酷客户端
@@ -365,16 +367,16 @@
                     </div>
                 </div>
             </div>
-            @section('content')
+            <?php $__env->startSection('content'); ?>
                 这是页面主内容区。
-            @show
+            <?php echo $__env->yieldSection(); ?>
 
                     <div class="g-footer">
                         <dl class="g-w1">
                            
                             <dd>
                                 <a  onclick="javaScript:alert('优酷广告投放电话，请拨打：010-88886666')">
-                                <img src="{{ URL('uploads/2222.jpg') }}" width="300" height="120">
+                                <img src="./uploads/2222.jpg" width="300" height="120">
                                 </a>
                             </dd>
                             
@@ -592,7 +594,7 @@
                         </dl>
                         <dl class="g-w4">
                             <a class="qcode" target="_blank" href="http://mobile.youku.com/index/wireless">
-                                <img src="{{ asset('home2/0510000058D0FEA1ADC0AE058F099020')}}" width="84px">
+                                <img src="<?php echo e(asset('home2/0510000058D0FEA1ADC0AE058F099020')); ?>" width="84px">
                             </a>
                         </dl>
                         <div class="g-authentication">
@@ -635,11 +637,11 @@
                         </div>
                     </div>
                 </div>
-                <script type="text/javascript" src="{{ asset('home2/g_68.js.下载')}}">
+                <script type="text/javascript" src="<?php echo e(asset('home2/g_68.js.下载')); ?>">
                 </script>
-                <script type="text/javascript" src="{{ asset('home2/g_107.js.下载')}}">
+                <script type="text/javascript" src="<?php echo e(asset('home2/g_107.js.下载')); ?>">
                 </script>
-                <script type="text/javascript" src="{{ asset('home2/index_56.js.下载')}}">
+                <script type="text/javascript" src="<?php echo e(asset('home2/index_56.js.下载')); ?>">
                 </script>
                 <!-- 1498443733 - 1498475306 -->
                 <div id="sideBar" class="side-bar" style="display: block;">
@@ -648,7 +650,7 @@
                         </a>
                     </div>
                     <div id="goTop" data-stat-role="ck" style="display: none;">
-                        <img width="29" height="65" src="{{ asset('home2/05100000575CCAF767BC3D4B250267B7')}}">
+                        <img width="29" height="65" src="<?php echo e(asset('home2/05100000575CCAF767BC3D4B250267B7')); ?>">
                     </div>
                 </div>
                 <div style="display: none">
