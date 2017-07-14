@@ -32,7 +32,7 @@ class HomeLogController extends Controller
          // }
         if(!empty($cd)){
             //判断密码
-            if($password==$cd->password){
+            if(md5($password)==$cd->password){
                 //存储session跳转页面
                 session()->put("adminn",$cd->account);
                 return redirect("a/home");
@@ -53,6 +53,6 @@ class HomeLogController extends Controller
        
        //var_dump(session('User'));
        //return redirect("/");
-       return back();
+       return redirect('a/home');
    }
 }

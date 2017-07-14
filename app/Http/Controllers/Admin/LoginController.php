@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Gregwar\Captcha\CaptchaBuilder;
-use App\Model\Login;
+use App\Model\Admin;
 
 class LoginController extends Controller
 {
@@ -47,7 +47,7 @@ class LoginController extends Controller
         $admin = $request->input("account");
         $password = $request->input("password");
         //获取对应用户信息
-        $user = Login::get();
+        $user = Admin::get();
         foreach ($user as $users){
             var_dump($users->password);
         }

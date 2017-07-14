@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Film_info;
 use App\Model\Film_cmt;
+use App\Model\User;
 
 class XqController extends Controller
 {
     public function index($id)
     {
     	$filminfo=Film_info::where('id',$id)->get();
+        //$user=User::where('id','=',)
         foreach($filminfo as $q){
             $w=$q->id;
             //print_r ($w);die;
@@ -19,17 +21,23 @@ class XqController extends Controller
         }
         //echo "<pre>";
     	 // print_r($w);die;
-        $info=\DB::table('film_info')->limit(2)->get();
-    	$filmcmt=Film_cmt::where('film_id',$id)->get();
-    	//echo "<pre>";
-    	//var_dump($list);die;
+        $info=\DB::table('film_info')->limit(4)->get();
+    	$filmcmt=\DB::table('film_cmt')->join('user','film_cmt.user_id','=','user.id')->join('film_info','film_cmt.film_id','=','film_info.id')->select('film_cmt.id','user.name','user.picname','film_info.title','film_cmt.text','film_cmt.time')->where('film_info.id',$id)->get();
+    	// echo "<pre>";
+    	// var_dump($filmcmt);die;
+        // $cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_cmt.id", $id)->get();
     	return view("home.xq.index",['filminfo'=>$filminfo,'filmcmt'=>$filmcmt,'info'=>$info,'w'=>$w]);
     }
 
     public function add(Request $request,$w)
     {
-        $data['user_id'] = session('adminn')->id;
-        $data['title'] = session('adminn')->name;
+        $user=User::where('account','=',session('adminn'))->get();
+        //dd($user);die;
+        foreach($user as $users){
+            $id=$users->id;
+        }
+        $data['user_id'] = $id;
+        $data['title'] = $users->picname;
          // echo "<pre>";
          // print_r($usersid);die;
         

@@ -181,7 +181,7 @@
                                 <?php else: ?>
                                     <div class="login-before handle" style="display: block;">
                                         <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
-                                            <?php echo e(session('adminn')->name); ?>
+                                            <?php echo e(session('adminn')); ?>
 
                                         </a>||
                                         <a href="/home/homeLog/logout">退出</a>

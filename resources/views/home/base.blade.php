@@ -181,7 +181,7 @@
                                 @else
                                     <div class="login-before handle" style="display: block;">
                                         <a id="qheader_reg" href="{{ URL('home/user/index') }}">
-                                            {{ session('adminn')->name }}
+                                            {{ session('adminn') }}
                                         </a>||
                                         <a href="/home/homeLog/logout">退出</a>
                                     </div>
