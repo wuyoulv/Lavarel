@@ -1,0 +1,1 @@
+require.config({paths:{loadFrame:"https://account.youku.com/static-resources/js/loadFrame",pops:"http://static.youku.com/paymentcenter/pops/build/js/utils/pop/pop",payBefore:"http://static.youku.com/paymentcenter/payBefore/build/js/utils/payBefore/dist/payBefore"}}),requirejs.config({shim:{loadFrame:{exports:"loadFrame"}}}),define("requirejs-remote",function(){});

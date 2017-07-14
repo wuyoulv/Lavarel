@@ -137,7 +137,7 @@
                         <div class="g-head-center">
                             <ul class="g-head-nav">
                                 <li>
-                                    <a class="current" href="{{ url('home/') }}">
+                                    <a class="current" href="{{ url('a/home') }}">
                                         首页
                                     </a>
                                 </li>
@@ -169,14 +169,23 @@
                         </div>
                         <div class="g-ucenter" id="uerCenter">
                             <div class="u-login">
-                                <div class="login-before handle" style="display: block;">
-                                    <a href="{{ URL('/home/login') }}">
-                                        登录
-                                    </a>
-                                    <a id="qheader_reg" href="{{ URL('/home/register') }}">
-                                        注册
-                                    </a>
-                                </div>
+                                @if ( session()->get('adminn') == null)
+                                    <div class="login-before handle" style="display: block;">
+                                        <a href="{{ URL('/home/login') }}">
+                                            登录
+                                        </a>
+                                        <a id="qheader_reg" href="{{ URL('/home/register') }}">
+                                            注册
+                                        </a>
+                                    </div>
+                                @else
+                                    <div class="login-before handle" style="display: block;">
+                                        <a id="qheader_reg" href="{{ URL('home/user/index') }}">
+                                            {{ session()->get('adminn') }}
+                                        </a>||
+                                        <a href="/home/homeLog/logout">退出</a>
+                                    </div>
+                                @endif
                                 <div class="login-after dropdown unload handle" style="display: none;">
                                     <a href="http://user.youku.com/page/usc/index" target="_blank">
                                         <img class="avatar" src="{{ asset('home2/sprite.gif')}}">
@@ -264,7 +273,7 @@
                         <div class="g-content">
                             <ul class="top-nav-main">
                                 <li class="current ">
-                                    <a href="{{ url('home/') }}">
+                                    <a href="{{ url('a/home') }}">
                                         首页
                                     </a>
                                 </li>

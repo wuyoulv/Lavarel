@@ -44,7 +44,7 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
 
     //影评模块路由
-    Route::get('/cmt','Admin\Film_cmtController@index');  //影评
+    Route::get('/cmt/{id?}','Admin\Film_cmtController@index');  //影评
     Route::get('/cmt/del/{id}','Admin\Film_cmtController@delete');  //影评
     Route::get('/cmt/edit/{id}','Admin\Film_cmtController@edit');  //影评 
     Route::post('/cmt/update','Admin\Film_cmtController@update');
@@ -76,28 +76,35 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
 
 });
+
+//前台路由
 Route::get("home/user/zhanghu","Home\UserController@zhanghu");
+Route::get("home/user/jilu","Home\UserController@jilu");
+Route::get("home/user/huiyuan","Home\UserController@huiyuan");
+Route::get("home/user/zhifu","Home\UserController@zhifu");
 Route::post("home/userdetail/update","Home\UserController@update");
 Route::post("home/userdetail/store","Home\UserController@store");
-//前台路由
+
+
 Route::get("/dydetails","Home\DydetailsController@index");
 Route::get("/dydetails/{id}","Home\DydetailsController@index");
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
-    Route::get('/',"Home\IndexController@index");
+    
     Route::get('/xq/{id}',"Home\XqController@index");
     Route::get('/HomeLog/indexs',"Home\HomeLogController@indexs");
-    
+    Route::get('/homeLog/logout',"Home\HomeLogController@logout"); //执行退出
     Route::get('/HomeLog/index','Home\HomeLogController@index');
     Route::post('/HomeLog/register','Home\HomeLogController@register');
     Route::get('/user/{id}',"Home\UserController@index");
     Route::post('/cmt/add/{w}','Home\XqController@add');
+    Route::get('/homeLog/logout',"Home\HomeLogController@logout"); //执行退出
     //Route::get('home/vipuser/',"Home\VipuserController@index");
-    Route::get('home/vipuser/',"Home\VipuserController@index");
+    Route::get('vipuser/',"Home\VipuserController@index");
     Route::get('/ad', 'Home\AdController@index');//广告
 
 
 });
-
+Route::get('a/home',"Home\IndexController@index");
 Route::post('/home/sendMobileCode','Home\HomeRegisterController@sendMobileCode');
 Route::post('/home/createUser','Home\HomeRegisterController@createUser');
 Route::get('/home/register','Home\HomeRegisterController@index');

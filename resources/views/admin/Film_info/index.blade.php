@@ -72,7 +72,7 @@
                     <td>{{ $v->duration }}</td>
                     <td>{{ $v->region }}</td>
                     <td>{{ $v->language }}</td>
-                    <td>{{ $v->introduction }}</td>
+                    <td>{{ mb_substr($v->introduction,0,12,'utf8') }}</td>
                     <td>{{ $v->limit }}</td>
                     <td>{{ $v->score }}</td>
                     <td>{{ $v->status }}</td>

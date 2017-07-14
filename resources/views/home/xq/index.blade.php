@@ -727,7 +727,7 @@ var ykQHeader = {
                                             <img src="{{asset('home4/img/05420408585143626a0a4604e2a87f31')}}" alt="{{ $c->title }}">
                                             <span class="c-time">
                                               <i class="bg"></i>
-                                              <span>2:03:59</span></span>
+                                              <span>{{ $c->duration }}</span></span>
                                           </div>
                                           <div class="headline">{{ $c->title }}</div>
                                           <div class="status">

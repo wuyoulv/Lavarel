@@ -8,15 +8,18 @@ use App\Model\Film_info;
 use App\Model\Film_type;
 use App\Model\Ad;
 use App\Model\User;
+use App\Model\User_vip;
 
 class UserController extends Controller
 {
     public function index($id)
     {
+      
+       $id = session('adminn')['id'];
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $Ad=Ad::get();
-        $list = User::find(4);   // 
+        $list = User::find($id);   // 
         //echo "<pre>";
         //print_r($list);die;
         return view("home.user.index",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
@@ -24,10 +27,11 @@ class UserController extends Controller
 
     public function zhanghu()
     {
+         $id = session('adminn')['id'];
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $Ad=Ad::get();
-        $list = User::find(4);   // 
+        $list = User::find($id);   // 
         //echo "<pre>";
         //var_dump($list);
         return view("home.user.zhanghu",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
@@ -35,9 +39,55 @@ class UserController extends Controller
       //return view('home.user.zhanghu');
     }
 
+        public function jilu()
+    {
+         $id = session('adminn')['id'];
+        $Film_info=Film_info::get();
+        $Film_type=Film_type::get();
+        //$User_film=User_film::get();
+        $Ad=Ad::get();
+        $list = Film_info::find($id);   // 
+        //echo "<pre>";
+        //var_dump($list);
+        return view("home.user.jilu",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
+        //echo "1345";
+      //return view('home.user.zhanghu');
+    }
+
+        public function huiyuan()
+    {
+      
+      //echo "111111";
+        //$id = session('adminn')['id'];
+        $Film_info=Film_info::get();
+        $Film_type=Film_type::get();
+        $User_vip=User_vip::get();
+        $Ad=Ad::get();
+        //$list = User::find($id);   // 
+        //echo "<pre>";
+        //print_r($list);
+        return view("home.user.huiyuan",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad]);
+    }
+
+        public function zhifu()
+    {
+        echo '111111';
+        /* $id = session('adminn')['id'];
+        $Film_info=Film_info::get();
+        $Film_type=Film_type::get();
+        $User_film=User_film::get();
+        $Ad=Ad::get();
+        $list = Film_info::find($id);   // */
+        //echo "<pre>";
+        //var_dump($list);
+        //return view("home.user.zhifu",['filminfo'=>$Film_info,'filmtype'=>$Film_type,'ad'=>$Ad,'list'=>$list]);
+        //echo "1345";
+      //return view('home.user.zhanghu');
+    }
+
     public function edit($id)
     {
-        $id = 4;
+        $id = session('adminn')['id'];
         $re=User::find($id);
         //echo "<pre>";
         //var_dump($re);
@@ -56,8 +106,7 @@ class UserController extends Controller
         //echo '我进了';
 
         //die();
-        $id = 4;
-
+     
         
        /* $input = $request->only(['account','picname','name','birthday','tel','email','address']);
 
@@ -67,7 +116,7 @@ class UserController extends Controller
         //调用上传方法 $name =   $_FILES['picname']['name'];     $this->doupload($name);
 */
 
-
+ $id = session('adminn')['id'];
          $array= [];
         //获取除图片外的信息
         $data = $request->only(['account','name','birthday','tel','email','address']);
