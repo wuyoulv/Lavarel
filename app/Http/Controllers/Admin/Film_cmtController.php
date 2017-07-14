@@ -25,6 +25,10 @@ class Film_cmtController extends Controller {
 			// dd($list);
 			
 		}
+		if(empty($list)){
+			return back()->withErrors('此分类下无影片或评论信息！');
+			}
+		
 		//查询分类表 id 分类名
 		$type_table = \DB::table('film_type')->select('id', 'type')->get();
 		return view('admin.Film_cmt.index', ['cmt' => $list, 'where' => $where, 'type_table' => $type_table]);

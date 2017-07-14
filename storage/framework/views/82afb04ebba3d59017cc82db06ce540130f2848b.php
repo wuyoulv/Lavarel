@@ -1,5 +1,4 @@
-@extends('admin.base')
-    @section('content')
+    <?php $__env->startSection('content'); ?>
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
@@ -25,7 +24,7 @@
                 </div><!-- /.box-header -->
                 <!-- form start --> 
 
-                <form action="{{url('admin/type/info/')}}" method="post" class="form-horizontal">
+                <form action="<?php echo e(url('admin/type/info/')); ?>" method="post" class="form-horizontal">
                   <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                   <div class="box-body">
                   
@@ -34,9 +33,9 @@
                       <div class="col-sm-4">
                         <select name='type_pid' class="form-control">
                           <option value='0'>==顶级分类==</option>
-                          @foreach($list as $v)
-                          <option value='{{$v->id}}'>{{$v->type}}</option>
-                         @endforeach
+                          <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                          <option value='<?php echo e($v->id); ?>'><?php echo e($v->type); ?></option>
+                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                         
                       </div>
@@ -58,12 +57,13 @@
           </div>
           
                   </div><!-- /.box-footer -->
-                  @if(count($errors)>0)
-                  <div class="mark"><h5>&nbsp;&nbsp;&nbsp;<i class="fa fa-warning text-yellow"></i> @foreach($errors->all() as $error)
-                        {{$error}}
-                       @endforeach
+                  <?php if(count($errors)>0): ?>
+                  <div class="mark"><h5>&nbsp;&nbsp;&nbsp;<i class="fa fa-warning text-yellow"></i> <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php echo e($error); ?>
+
+                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                   </h5><div></div></div>
-                  @endif
+                  <?php endif; ?>
                 </form>
 
               </div><!-- /.box -->
@@ -71,4 +71,5 @@
             </div><!--/.col (right) -->
           </div>   <!-- /.row -->
         </section><!-- /.content -->
-    @endsection
+    <?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
