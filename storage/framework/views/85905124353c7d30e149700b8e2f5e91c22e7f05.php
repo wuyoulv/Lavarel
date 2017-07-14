@@ -19,14 +19,15 @@
 					document.write('<img src="//static.youku.com/lvip/img/ucenter/night_bg.png" class="head-img" id="head-img">');
 					document.getElementById("head-container").style.backgroundColor="#3391d1"
 				}
-				/*<?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> */
-			</script><img src="<?php echo e(session('adminn')->picname); ?>" class="head-img" id="head-img">
+				
+				
+			</script><img src="<?php echo e($list['picname']); ?>" class="head-img" id="head-img">
 			<div class="info-box " id="info-box">
-				<img src="/uploads/<?php echo e($list->picname); ?>" class="user-img">
+				<img src="/uploads/<?php echo e($list['picname']); ?>" class="user-img">
 				<div class="uinfo-box">
 					<p class="icon greet">你好！</p>
 					<div class="u-name">
-						<span class="left user-name" ><?php echo e(session('adminn')->account); ?></span>
+						<span class="left user-name" ><?php echo e(session('adminn')); ?></span>
 						<span class="left icon icon-mark"></span>
 						<div class="u-grade-icon grade-level15" id="grade-btn" data-stat-role="ck">
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
@@ -56,7 +57,7 @@
 						</div> -->
 				</div>
 			</div>
-			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			
 		</div>
 	</div>
 	<div class="head-menu">

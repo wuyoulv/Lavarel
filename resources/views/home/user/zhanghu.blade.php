@@ -166,12 +166,7 @@ var ykQHeader = {
 					<li>
 						<a href="{{ url('a/home/') }}">首页</a>
 					</li>
-					<li>
-						<a href="http://faxian.youku.com/">发现</a>
-					</li>
-					<li>
-						<a id="navSub" href="">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
-					</li>
+				
 					<li>
 						<a href="{{ url('home/vipuser') }}">会员</a>
 					</li>
@@ -184,197 +179,25 @@ var ykQHeader = {
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
 					<!-- <div class="login-before handle" style="display: none;">
-					                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
-					</div> -->
-					  <div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·<a id="qheader_login" href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
+                                            <a id="qheader_login" href="http://www.youku.com/user_login/">登录</a><a id="qheader_reg" href="http://www.youku.com/user_login/">注册</a>
                     </div>
-					<div class="login-after dropdown handle" style="">
-						<a href="" target="_blank">
-							<img class="avatar" src="{{ asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07')}}" title="{{$list['account']}}">
-							<b class="caret"></b>
-                            <span class="vip-level-icon" style="background: url(&quot;https://r1.ykimg.com/0510000058621BCC67BC3D7EF301F388&quot;) 0px 0px no-repeat;"></span>
-						</a>
-						<div class="panel u-panel"><i class="arrow"></i>
-							<div class="content"> 
-								<!-- <div class="code-content">
-								<a class="close-code" href="#">关闭二维码</a>
-								<div class="qr-content">
-								<img src="" id="QR_login">
-								<div class="rf-layer"><a id="QrRefresh" href="javascript:void(0)">二维码失效<br/>点击刷新</a></div>
-								</div>
-								<span>推荐使用优酷APP扫描登录 <br/> 且支持其它扫码工具</span>
-								</div> -->
-								<div class="u-content">  
-									<!-- <div class="u-code">
-									<a class="qrcode-btn" href="javascript:void(0);"></a>
-									</div> -->                     
-									<div class="u-info">
-										<div class="u-avatar">
-											<a href="" target="_blank">
-											<img src="{{ asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07(1)')}}">
-										</a>
-										</div>
-										<div class="u-profile">
-											<div class="u-name">
-												<a href="" class="u-link" target="_blank" title="刁民一位">刁民一位</a>
-												<a href="" target="_blank" class="u-sign">签到</a>
-											</div>
-										<div class="u-credit">
-											<!-- 			<a href="" target="_blank">
-											<span class="vip-level-icon" title="过期会员：VIP3" style="background:url(https://r1.ykimg.com/0510000058621BCC67BC3D7EF301F388) no-repeat 0 0;"></span>
-											</a>
-											
-											<a href="" target="_blank" class="user-grade">
-											<span class="user-grade-icon user-grade-lv16" title="优酷等级：16"></span>
-											</a>
-											
-											<a class="ico-valid-email " href="" target="_blank"></a>
-											<a class="ico-valid-phone ico-valid-phone-done" href="" target="_blank"></a> -->
-										</div>
-										<div class="u-point" style="display: block;">
-										<!-- 	<i class="arrow"></i>
-										<a href="" target="_blank">我的等级积分：<em>291</em><span>立即兑换</span></a> -->
-										</div>
-										</div>
-									</div>                            
-										<!-- <ul class="u-list">
-									     <li>
-									     <a href="" target="_blank" class="u-watch">
-									     <em></em>  节目热播单
-									     </a>
-									     </li>                            
-									     <li>
-									     <a href="" target="_blank" class="u-collect">
-									     <em></em>  我的收藏
-									     </a>
-									     </li>
-									     <li>
-									     <a href="" target="_blank" class="u-zpd">
-									     <em></em>  我的自频道
-									     </a>
-									     </li>
-									       
-									     <li>
-									     <a href="" target="_blank" class="u-center">
-									     <em></em>  创作中心
-									     </a>
-									     </li>
-									     
-									     </ul> -->     
-									<div class="u-task">
-										<div class="task-title">
-											<!-- <a href="" class="fr">查看加速服务</a> -->
-											<!-- <a href="" target="_blank">我的任务</a> -->
-										</div>
-											<div class="task-info">
-												<dl>
-													<!-- <dt>
-														<img src="{{ asset('home6/sign1.png')}}" alt="任务图标">
-													</dt> -->
-												<dd>
-													<!-- <em>签到有礼</em>
-													<span title="百万豪礼等你拿，优酷会员超值兑">百万豪礼等你拿，优酷会员超值兑</span> -->
-												</dd>
-												</dl>
-												<!-- <a target="_blank" href="">签到</a> -->
-											</div>
-									</div>  
-								</div> 
-							</div>
-							<div class="u-bottom">
-								<!-- <a href="" class="singout">退出登录</a>
-								<a href="" target="_blank">账户设置</a> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="u-record">
-					<div class="dropdown">
-						<div class="handle">
-							<!-- <a href="http://faxian.youku.com/watch_record">
-								<i class="ico-urecord"></i>
-								<b class="caret"></b>
-							</a> -->
-						</div>
-						<div class="panel">
-							<i class="arrow"></i>
-							<div class="content">
-
-								<dl class="rec-list">
-									<!-- <dt>更早</dt> -->
-								</dl>
-								<div class="u-bottom">
-									<!-- <a target="_blank" href="http://faxian.youku.com/watch_record" class="fr">查看更多</a>
-									<a href="http://lvip.youku.com/task/pbb/index" target="_blank">节目热播列表</a> -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="u-notice loaded">
-					<div class="dropdown">
-						<div class="handle">
-							<!-- <a href="http://msg.youku.com/page/msg/index?retry=1" target="_blank">
-								<i class="ico-notifications-l2"></i>
-								<b class="caret"></b>
-								<span class="icon-warn" id="qheader_notice_num" style=""></span>
-							</a> -->
-						</div>
-						<div class="panel no-msg">
-							<i class="arrow"></i>
-							<div class="content">
-								<!-- <ul class="msg-list">
-									<li><span>您最近没有收到新的消息</span></li>
-								</ul>  -->
-							</div>
-							<div class="u-bottom">
-								<!-- <a href="http://msg.youku.com/page/msg/index?retry=1" target="_blank" class="fr">查看所有消息</a> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="u-upload">
-					<div class="dropdown ">
-						<div class="handle">
-							<a href="" target="_blank"><i class="ico-upload-l2"></i><b class="caret"></b></a>
-						</div>
-						<div class="panel">
-							<i class="arrow"></i>
-							<div class="content">
-								<ul class="u-list">
-									<!-- <li>
-										<a href="http://sc.youku.com/" target="_blank" class="upload-video">
-											<em></em>  上传视频
-										</a>
-									</li>
-	                                    <li>
-	                                        <a href="http://newvideos.youku.com/u/videos" target="_blank" class="u-creat">
-	                                            <em></em>  视频管理
-	                                        </a>
-	                                    </li>
-									
-									<li>
-										<a href="http://i.youku.com/i/profile/" target="_blank" class="u-zpd">
-											<em></em>  我的自频道
-										</a>
-									</li>
-                                    <li>
-                                        <a href="http://greatvoyage.tudou.com/overview/index" target="_blank" class="data-analysis">
-                                            <em></em>  数据分析
-                                        </a>
-                                    </li> -->
-								</ul>
-								<div class="up-cnt-2">
-									<!-- <a href="http://rz.tudou.com/" target="_blank" style="width:360px;height:60px;margin-top:-15px;margin-left:-104px;"><img src="{{ asset('home6/0510000058DA1E9AADC0AE05A00E6EE3')}}"></a> -->
-								</div>
-							</div>
-							<div class="u-bottom">
-								<!-- <a href="http://user.youku.com/page/setting/base_profile#" data-url="http://iku.youku.com/channelinstall/ywebuploadFloat" class="ikuDownload" target="_self"><i></i>立即下载</a>
-								下载PC客户端，上传视频更轻松！ -->
-							</div>
-						</div>
-					</div>
+                    <div class="login-after dropdown handle" style="">
+                        <a href="http://i.youku.com/i/UMTc2NDQ5NDUyNA==" target="_blank">
+                            <img class="avatar" src="{{asset('home3/image/5.jpg')}}" title="土豆用户_441123631">
+                            <b class="caret"></b>
+                                                <span></span>
+                        </a>
+                            
+                    </div> -->
+                    <div class="login-before handle" style="display: none;">
+                        <span id="span_userinfo">
+                         @if(session('adminn')) 
+                         <a href="{{ url('home/user/index') }}"> {{session('adminn')}}</a>
+                         <a href="/home/homeLog/logout" >   ||退出</a> 
+                         @else || 
+                         <a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>
+                         </span>@endif
+                    </div>
 				</div>
 			</div>
 			<div class="g-so" data-spm="search">

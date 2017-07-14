@@ -17,26 +17,24 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 </script>
 <div id="app">
     <!-- 头部 -->
-    <div id="t-header" style="height:80px;">
+    <div  style="height:80px;">
     <header class="gb-topbar">
         <div class="topbar-inner">
-            <a href="http://vip.youku.com/vips/index.html" class="logo">优酷会员</a>
+            <a href="{{ url('a/home/') }}" class="logo">优酷会员</a>
             <nav>
                 <ul>
-                    <li><a href="http://www.youku.com/">首页</a></li>
-                    <li><a href="http://faxian.youku.com/">发现</a></li>
-                    <li><a href="http://ding.youku.com/u/subscribeUpdate">订阅</a></li>
-                    <li class="active"><a href="http://cps.youku.com/redirect.html?id=00014c9c">会员</a></li>
-                    <li><a href="http://user.youku.com/">我的</a></li>
+                    <li><a href="{{ url('a/home/') }}">首页</a></li>
+                    <li class="active"><a href="{{ url('home/vipuser') }}">会员</a></li>
+                    <li><a href="{{ url('home/user/index') }}">我的</a></li>
 
                 </ul>
             </nav>
-            <div class="ucenter">
+            <div class="ucenter" id="uerCenter">
                 <ul>        
 					<li class="u-logined">
-						<a href="http://cps.youku.com/redirect.html?id=000146c5" title="" target="_blank"><img src="{{ asset('home9/0130391F4555DECBD2017728C87A058524BDB2-89B5-06D6-CE95-E9E3DB9C28D5')}}" alt=""></a>
+						<a href="{{ url('home/user/index') }}" title="" ><img src="/uploads/{{$list['picname']}}" alt=""></a>
 					</li>
-					<li class="u-logout"><a href="http://pay.youku.com/buy/products.html?spm=a2h03.8164468.t-login-card.5~5~5~A#" class="J-logout">退出</a>
+					<li class="u-logout"><a href="/homeLog/logout" >退出</a>
 					</li>
 				<!--	<div class="login-before handle" style="display: none;">
                         <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·<a href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif

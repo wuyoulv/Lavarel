@@ -72,7 +72,7 @@
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="<?php echo e(url('home/')); ?>" title="Youku 优酷" attr="idx0"><img src="<?php echo e(asset('home3/image/yk-logo-1220.png')); ?>" width="140" height="50" alt="Youku 优酷" from="index"></a>
+				<a href="<?php echo e(url('a/home/')); ?>" title="Youku 优酷" attr="idx0"><img src="<?php echo e(asset('home3/image/yk-logo-1220.png')); ?>" width="140" height="50" alt="Youku 优酷" from="index"></a>
 			</div>
 
             <div class="g-head-center">
@@ -80,12 +80,7 @@
 					<li>
 						<a href="<?php echo e(url('a/home')); ?>">首页</a>
 					</li>
-					<li>
-						<a href="http://faxian.youku.com/">发现</a>
-					</li>
-					<li>
-						<a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
-					</li>
+				
 					<li>
 						<a href="<?php echo e(url('home/vipuser')); ?>">会员</a>
 					</li>
@@ -111,8 +106,8 @@
                     <div class="login-before handle" style="display: none;">
                         <span id="span_userinfo">
                          <?php if(session('adminn')): ?> 
-                         <a href="<?php echo e(url('home/user/zhanghu')); ?>"> <?php echo e(session('adminn')); ?></a>·
-                         <a href="/home/homeLog/logout" >退出</a> 
+                         <a href="<?php echo e(url('home/user/index')); ?>"> <?php echo e(session('adminn')); ?></a>
+                         <a href="/home/homeLog/logout" >   ||退出</a> 
                          <?php else: ?> || 
                          <a  id="qheader_reg" href="<?php echo e(URL('home/login')); ?>"> 登陆 </a>·<a id="qheader_reg" href="<?php echo e(url('home/register')); ?>">注册</a>
                          </span><?php endif; ?>

@@ -17,29 +17,27 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 </script>
 <div id="app">
     <!-- 头部 -->
-    <div id="t-header" style="height:80px;">
+    <div  style="height:80px;">
     <header class="gb-topbar">
         <div class="topbar-inner">
-            <a href="http://vip.youku.com/vips/index.html" class="logo">优酷会员</a>
+            <a href="<?php echo e(url('a/home/')); ?>" class="logo">优酷会员</a>
             <nav>
                 <ul>
-                    <li><a href="http://www.youku.com/">首页</a></li>
-                    <li><a href="http://faxian.youku.com/">发现</a></li>
-                    <li><a href="http://ding.youku.com/u/subscribeUpdate">订阅</a></li>
-                    <li class="active"><a href="http://cps.youku.com/redirect.html?id=00014c9c">会员</a></li>
-                    <li><a href="http://user.youku.com/">我的</a></li>
+                    <li><a href="<?php echo e(url('a/home/')); ?>">首页</a></li>
+                    <li class="active"><a href="<?php echo e(url('home/vipuser')); ?>">会员</a></li>
+                    <li><a href="<?php echo e(url('home/user/index')); ?>">我的</a></li>
 
                 </ul>
             </nav>
-            <div class="ucenter">
+            <div class="ucenter" id="uerCenter">
                 <ul>        
 					<li class="u-logined">
-						<a href="http://cps.youku.com/redirect.html?id=000146c5" title="" target="_blank"><img src="<?php echo e(asset('home9/0130391F4555DECBD2017728C87A058524BDB2-89B5-06D6-CE95-E9E3DB9C28D5')); ?>" alt=""></a>
+						<a href="<?php echo e(url('home/user/index')); ?>" title="" ><img src="/uploads/<?php echo e($list['picname']); ?>" alt=""></a>
 					</li>
-					<li class="u-logout"><a href="http://pay.youku.com/buy/products.html?spm=a2h03.8164468.t-login-card.5~5~5~A#" class="J-logout">退出</a>
+					<li class="u-logout"><a href="/homeLog/logout" >退出</a>
 					</li>
 				<!--	<div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo"> <?php if(session('adminn')): ?> <a href="<?php echo e(url('home/user/zhanghu')); ?>"> <?php echo e(session('adminn')->account); ?></a>·<a href="/homeLog/logout">退出</a> <?php else: ?> [<a  id="qheader_reg" href="<?php echo e(URL('home/login')); ?>"> 登陆 </a>·<a id="qheader_reg" href="<?php echo e(url('home/register')); ?>">注册</a>]</span><?php endif; ?>
+                        <span id="span_userinfo"> <?php if(session('adminn')): ?> <a href="<?php echo e(url('home/user/zhanghu')); ?>"> <?php echo e(session('adminn')); ?></a>·<a href="/homeLog/logout">退出</a> <?php else: ?> [<a  id="qheader_reg" href="<?php echo e(URL('home/login')); ?>"> 登陆 </a>·<a id="qheader_reg" href="<?php echo e(url('home/register')); ?>">注册</a>]</span><?php endif; ?>
                     </div> -->
                     <li class="u-record">
                         <a href="http://faxian.youku.com/watch_record" title="记录" target="_blank">记录</a>
@@ -108,7 +106,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
          <dl class="vmp vmp-content vmp-1000020036"></dl>
 		 <dl class="vmp-price vmp-content  vmp-1000020036">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>15.00</dd></dl> 
 		 <dl class="vmp vmp-content product_hide vmp-1000020008"></dl>
-		 <dl class="vmp-price vmp-content product_hide  vmp-1000020008">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>169.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020137"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020137">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>56.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020001"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020001">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>20.00</dd></dl><a  href="<?php echo e(url('home/user/zhifu')); ?>" ><span  >立即ff112f购买</span></a>
+		 <dl class="vmp-price vmp-content product_hide  vmp-1000020008">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>169.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020137"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020137">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>56.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020001"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020001">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>20.00</dd></dl><a  href="<?php echo e(url('home/user/zhifu')); ?>" ><span  >立即购买</span></a>
         
 </div></div>
     </div>

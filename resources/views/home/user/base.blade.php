@@ -72,7 +72,7 @@
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="{{ url('home/') }}" title="Youku 优酷" attr="idx0"><img src="{{asset('home3/image/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
+				<a href="{{ url('a/home/') }}" title="Youku 优酷" attr="idx0"><img src="{{asset('home3/image/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
 			</div>
 
             <div class="g-head-center">
@@ -80,12 +80,7 @@
 					<li>
 						<a href="{{ url('a/home') }}">首页</a>
 					</li>
-					<li>
-						<a href="http://faxian.youku.com/">发现</a>
-					</li>
-					<li>
-						<a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
-					</li>
+				
 					<li>
 						<a href="{{ url('home/vipuser') }}">会员</a>
 					</li>
@@ -111,8 +106,8 @@
                     <div class="login-before handle" style="display: none;">
                         <span id="span_userinfo">
                          @if(session('adminn')) 
-                         <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·
-                         <a href="/home/homeLog/logout" >退出</a> 
+                         <a href="{{ url('home/user/index') }}"> {{session('adminn')}}</a>
+                         <a href="/home/homeLog/logout" >   ||退出</a> 
                          @else || 
                          <a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>
                          </span>@endif
