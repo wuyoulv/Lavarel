@@ -1,8 +1,7 @@
-@extends('admin.base')
-    @section('content')
+    <?php $__env->startSection('content'); ?>
 	<div class="box-body">
   <br/>
-            <form action="{{ URL('admin/user') }}" method="get" class="form-inline">
+            <form action="<?php echo e(URL('admin/user')); ?>" method="get" class="form-inline">
               <div class="form-group">
                 <label for="exampleInputName2">关键字:</label>
                 <input type="text" name="name" class="form-control" id="exampleInputName2" placeholder="账号">
@@ -34,31 +33,32 @@
           <th>上次登录时间</th>
           <th style="width: 100px">操作</th>
         </tr>
-        @foreach($list as $v)
+        <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
-          <td>{{$v->id}}</td>
-          <td>{{$v->account}}</td>
-          <td><img width="30" src="{{ URL('uploads') }}/{{$v->picname}}"/></td>
-          <td>{{$v->name}}</td>
-          <td>{{$v->birthday}}</td>
-          <td>@if ($v->sex == 1) 男 @else 女 @endif</td>
-          <td>{{$v->tel}}</td>
-          <td>{{$v->email}}</td>
-          <td>{{$v->address}}</td>
-          <td>{{$v->months}}</td>
-          <td>{{$v->money}}</td>
-          <td>@if ($v->role == 1) 会员 @else Vip会员 @endif</td>
-          <td>{{$v->buy_time}}</td>
-          <td>{{$v->dead_line}}</td>
-          <td>{{$v->login_time}}</td>
-          <td>{{$v->last_time}}</td>
-          <td><button onclick="doDel({{$v->id}})" class="btn btn-xs btn-danger">删除</button> 
-          <button onclick="window.location='{{URL('admin/user')}}/{{ $v->id }}/edit'" class="btn btn-xs btn-primary" >编辑</button> </td>
+          <td><?php echo e($v->id); ?></td>
+          <td><?php echo e($v->account); ?></td>
+          <td><img width="30" src="<?php echo e(URL('uploads')); ?>/<?php echo e($v->picname); ?>"/></td>
+          <td><?php echo e($v->name); ?></td>
+          <td><?php echo e($v->birthday); ?></td>
+          <td><?php if($v->sex == 1): ?> 男 <?php else: ?> 女 <?php endif; ?></td>
+          <td><?php echo e($v->tel); ?></td>
+          <td><?php echo e($v->email); ?></td>
+          <td><?php echo e($v->address); ?></td>
+          <td><?php echo e($v->months); ?></td>
+          <td><?php echo e($v->money); ?></td>
+          <td><?php if($v->role == 1): ?> 会员 <?php else: ?> Vip会员 <?php endif; ?></td>
+          <td><?php echo e($v->buy_time); ?></td>
+          <td><?php echo e($v->dead_line); ?></td>
+          <td><?php echo e($v->login_time); ?></td>
+          <td><?php echo e($v->last_time); ?></td>
+          <td><button onclick="doDel(<?php echo e($v->id); ?>)" class="btn btn-xs btn-danger">删除</button> 
+          <button onclick="window.location='<?php echo e(URL('admin/user')); ?>/<?php echo e($v->id); ?>/edit'" class="btn btn-xs btn-primary" >编辑</button> </td>
         </tr>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </table>
                 </div><!-- /.box-body -->
-                {{ $list->appends($where)->links() }}
+                <?php echo e($list->appends($where)->links()); ?>
+
 
                 
               </div><!-- /.box -->
@@ -74,19 +74,20 @@
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <input type="hidden" name="_method" value="DELETE">
         </form>
-    @endsection
+    <?php $__env->stopSection(); ?>
     
     
-    @section("myscript")
+    <?php $__env->startSection("myscript"); ?>
       <script type="text/javascript">
             function doDel(id){
                 Modal.confirm({msg:'确定要删除吗？'}).on(function(e){
                    if(e){
-                    $("#mydeleteform").attr("action","{{url('admin/user')}}/"+id).submit();
+                    $("#mydeleteform").attr("action","<?php echo e(url('admin/user')); ?>/"+id).submit();
                     }                    
                 });
             }
       </script>
-    @endsection
+    <?php $__env->stopSection(); ?>
        
       
+<?php echo $__env->make('admin.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -186,9 +186,24 @@ var ykQHeader = {
 					<!-- <div class="login-before handle" style="display: none;">
 					                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
 					</div> -->
-					  <div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo"> <?php if(session('adminn')): ?> <a href="<?php echo e(url('home/user/zhanghu')); ?>"> <?php echo e(session('adminn')); ?></a>·<a id="qheader_login" href="/homeLog/logout">退出</a> <?php else: ?> [<a  id="qheader_reg" href="<?php echo e(URL('home/login')); ?>"> 登陆 </a>·<a id="qheader_reg" href="<?php echo e(url('home/register')); ?>">注册</a>]</span><?php endif; ?>
-                    </div>
+					  <?php if( session()->get('adminn') == null): ?>
+                                    <div class="login-before handle" style="display: block;">
+                                        <a href="<?php echo e(URL('/home/login')); ?>">
+                                            登录
+                                        </a>
+                                        <a id="qheader_reg" href="<?php echo e(URL('/home/register')); ?>">
+                                            注册
+                                        </a>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="login-before handle" style="display: block;">
+                                        <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
+                                            <?php echo e(session()->get('adminn')); ?>
+
+                                        </a>||
+                                        <a href="/home/homeLog/logout">退出</a>
+                                    </div>
+                                <?php endif; ?>
 					<div class="login-after dropdown handle" style="">
 						<a href="" target="_blank">
 							<img class="avatar" src="<?php echo e(asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07')); ?>" title="<?php echo e($list['account']); ?>">

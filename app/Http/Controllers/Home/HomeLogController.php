@@ -53,6 +53,6 @@ class HomeLogController extends Controller
        
        //var_dump(session('User'));
        //return redirect("/");
-       return back();
+       return redirect('a/home');
    }
 }

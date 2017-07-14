@@ -147,21 +147,6 @@ class HomeRegisterController extends Controller
 
     }
     
-   
-    
-    public function asendSms(Request $request)
-    {
-        $number=strval(rand(100000,999999));
-        $smsp=json_encode($number);
-        $phone='18119986561';
-        $name='吴汉';
-        $content=$smsp;
-        $code='SMS_75835027';
-        $data = $this->sms->send($phone, $name, $content, $code); 
-        echo "<pre>";
-        var_dump($data);
-        //$sms->send("$phone","$name","$content",'$code');
-    }
     
     public function sendSms(Request $request){
         $phone = $request ->input('account'); // 用户手机号，接收验证码
