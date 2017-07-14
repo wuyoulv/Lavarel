@@ -1,9 +1,8 @@
-@extends('home.user.base')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!--sub nav-->
 <!--sub nav end-->
-<script src="{{ asset('home3/js/lib_5.js.下载')}}" id="libjsnode" charset="utf-8"></script>
-<script type="text/javascript" src="{{ asset('home3/js/ykheader_96.js.下载')}}"></script>
+<script src="<?php echo e(asset('home3/js/lib_5.js.下载')); ?>" id="libjsnode" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo e(asset('home3/js/ykheader_96.js.下载')); ?>"></script>
 
 <div class="head-banner" id="head-banner">
 	<div class="head-banner-container" id="head-banner-container"><a href="javascript:vod(0);"></a></div>
@@ -22,13 +21,13 @@
 				}
 				
 				
-			</script><img src="{{ $list['picname'] }}" class="head-img" id="head-img">
+			</script><img src="<?php echo e($list['picname']); ?>" class="head-img" id="head-img">
 			<div class="info-box " id="info-box">
-				<img src="/uploads/{{ $list['picname'] }}" class="user-img">
+				<img src="/uploads/<?php echo e($list['picname']); ?>" class="user-img">
 				<div class="uinfo-box">
 					<p class="icon greet">你好！</p>
 					<div class="u-name">
-						<span class="left user-name" >{{ session('adminn') }}</span>
+						<span class="left user-name" ><?php echo e(session('adminn')); ?></span>
 						<span class="left icon icon-mark"></span>
 						<div class="u-grade-icon grade-level15" id="grade-btn" data-stat-role="ck">
 							<div class="view-grade-box" id="view-grade-box" style="display: none;">
@@ -51,7 +50,7 @@
 						<a href="https://id.youku.com/bindMobileView.htm" class="icon mobile-icon active-mobile-icon" target="_blank" data-stat-role="ck"></a>
 					</div>
 						<div class="vip-info-box">
-							<a class="vip-buy-btn" href="{{ url('home/user/huiyuan') }}" >开通会员</a>   <!-- 新页面打开target="_blank" -->
+							<a class="vip-buy-btn" href="<?php echo e(url('home/user/huiyuan')); ?>" >开通会员</a>   <!-- 新页面打开target="_blank" -->
 						</div>
 						<!-- <div class="zpd-info-box zpd-info-box-no" style="display: block;">	
 							<a class="zpd-text" href="#">开通频道会员</a>
@@ -69,7 +68,7 @@
 				<li><a href="http://vip.youku.com/?c=account" target="_blank" data-stat-role="ck">我的会员</a></li>
 				<li><a href="http://msg.youku.com/page/msg/index" target="_blank" data-stat-role="ck">我的消息</a></li>
 				<li><a href="http://cvip.youku.com/page/index" target="_blank" data-stat-role="ck">付费专区</a></li> -->
-				<li><a href="{{ url('home/user/zhanghu') }}" data-stat-role="ck">账户设置</a></li> <!-- 新的页面打开target="_blank" -->
+				<li><a href="<?php echo e(url('home/user/zhanghu')); ?>" data-stat-role="ck">账户设置</a></li> <!-- 新的页面打开target="_blank" -->
 			</ul>
 		</div>	
 	</div>
@@ -108,7 +107,7 @@
 				</div> -->
 				<div class="history-box">
 					<div class="content-title history-tilte">
-						<a href="{{ url('home/user/jilu') }}" data-stat-role="ck">
+						<a href="<?php echo e(url('home/user/jilu')); ?>" data-stat-role="ck">
 							<span class="icon his-icon"></span>
 							<span class="title-text">我的历史记录</span>
 							<span class="icon arrow-right"></span>
@@ -156,7 +155,7 @@
 				<ul id="vip-ul" style="width: 1760px;">
 					<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMjcwNzM5NDU2MA==.html" target="_blank" data-stat-role="ck">
-					<img src="{{ asset('home3/image/050E000058F07C4DADBA1F83EF0314DE')}}">
+					<img src="<?php echo e(asset('home3/image/050E000058F07C4DADBA1F83EF0314DE')); ?>">
 					<i class="bg"></i>
 					<!--i class="icon pre-bord"></i-->
 					<i class="icon vip-free"></i></a>
@@ -177,7 +176,7 @@
 
 			 		<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMTg3Mjc0NTU4OA==.html" target="_blank" data-stat-role="ck">
-						<img src="{{ asset('home3/image/050E000058E2FB3BADBC0993BB089BA3')}}">
+						<img src="<?php echo e(asset('home3/image/050E000058E2FB3BADBC0993BB089BA3')); ?>">
 						<i class="bg"></i>
 						<!--i class="icon pre-bord"></i-->
 						<i class="icon vip-free"></i>
@@ -196,7 +195,7 @@
 
 			 		<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMjcwMzEwODMwOA==.html" target="_blank" data-stat-role="ck">
-						<img src="{{ asset('home3/image/050E000058F6D2A9ADBDD3864F0DBEAE')}}">
+						<img src="<?php echo e(asset('home3/image/050E000058F6D2A9ADBDD3864F0DBEAE')); ?>">
 						<i class="bg"></i>
 						<!--i class="icon pre-bord"></i-->
 						<i class="icon vip-free"></i>
@@ -215,7 +214,7 @@
 
 			 		<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMjc0NzkyNTcwNA==.html" target="_blank" data-stat-role="ck">
-						<img src="{{ asset('home3/image/050E000059103FCBADBAC3E366089797')}}">
+						<img src="<?php echo e(asset('home3/image/050E000059103FCBADBAC3E366089797')); ?>">
 						<i class="bg"></i>
 						<!--i class="icon pre-bord"></i-->
 						<i class="icon vip-free"></i>
@@ -234,7 +233,7 @@
 
 			 		<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMjY0MjExMjY1Mg==.html" target="_blank" data-stat-role="ck">
-						<img src="{{ asset('home3/image/050E000058C9FCB2ADBDD3C42B062228')}}">
+						<img src="<?php echo e(asset('home3/image/050E000058C9FCB2ADBDD3C42B062228')); ?>">
 						<i class="bg"></i>
 						<!--i class="icon pre-bord"></i-->
 						<i class="icon vip-free"></i>
@@ -253,7 +252,7 @@
 
 			 		<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMjc1MTc0NzMyNA==.html" target="_blank" data-stat-role="ck">
-						<img src="{{ asset('home3/image/050E000059140548ADBAC313210D2137')}}">
+						<img src="<?php echo e(asset('home3/image/050E000059140548ADBAC313210D2137')); ?>">
 						<i class="bg"></i>
 						<!--i class="icon pre-bord"></i-->
 						<i class="icon vip-free"></i>
@@ -272,7 +271,7 @@
 
 			 		<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMjc4NDcxNzgzNg==.html" target="_blank" data-stat-role="ck">
-						<img src="{{ asset('home3/image/050E0000592404A2ADBC09664E02E099')}}">
+						<img src="<?php echo e(asset('home3/image/050E0000592404A2ADBC09664E02E099')); ?>">
 						<i class="bg"></i>
 						<!--i class="icon pre-bord"></i-->
 						<i class="icon vip-free"></i>
@@ -291,7 +290,7 @@
 
 			 		<li class="con">
 					<a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_blank" data-stat-role="ck">
-						<img src="{{ asset('home3/image/050E000058D4B19EADBA1FA2E007E3ED')}}">
+						<img src="<?php echo e(asset('home3/image/050E000058D4B19EADBA1FA2E007E3ED')); ?>">
 						<i class="bg"></i>
 						<!--i class="icon pre-bord"></i-->
 						<i class="icon vip-free"></i>
@@ -319,4 +318,5 @@
 	<div class="clear"></div>
 </article>
 <footer>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('home.user.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

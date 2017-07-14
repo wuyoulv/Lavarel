@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <!-- saved from url=(0047)http://user.youku.com/page/setting/base_profile -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="{{ asset('home6/saved_resource')}}"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="<?php echo e(asset('home6/saved_resource')); ?>"></script>
 	<script>var _US_TEST=0</script>
     
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <link rel="stylesheet" href="{{ asset('home6/index.css')}}">
+    <link rel="stylesheet" href="<?php echo e(asset('home6/index.css')); ?>">
     <meta name="title" content="优酷网-中国第一视频网,提供视频播放,视频发布,视频搜索">
     <meta name="keywords" content="视频,视频分享,视频搜索,视频播放">
     <meta name="description" content="视频服务平台,提供视频播放,视频发布,视频搜索,视频分享">
     <link rel="icon" href="" type="image/x-icon">
     <title>个人设置 - 优酷个人中心</title>
-    <link type="text/css" rel="stylesheet" href="{{ asset('home6/youku.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{ asset('home6/i.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{ asset('home6/grid.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{ asset('home6/default.css')}}">
-	<link type="text/css" rel="stylesheet" href="{{ asset('home6/home.css')}}">
+    <link type="text/css" rel="stylesheet" href="<?php echo e(asset('home6/youku.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset('home6/i.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset('home6/grid.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset('home6/default.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset('home6/home.css')); ?>">
 	<style>
 		.huhu{position: absolute;
               top: 0px;
               left: 110px;
-              width: 80px;
-              height: 80px;
+              width: 110px;
+              height: 110px;
               opacity: 0;
               z-index: 999;}
 	</style>
-<link id="YT-loginFrameCss" rel="stylesheet" href="{{ asset('home6/frame_common.css')}}"><style type="text/css" media="screen">div.YT-loginWrap{ background: url(//r1.ykimg.com/051000005955B539ADB9127BD905F9EF) no-repeat right bottom !important; }.YT-loginWrap a:hover,.YT-third-loginbox a:hover,.YT-loginWrap .YT-change-logintype:hover,.YT-loginWrap .YT-change-logintype i,.YT-loginWrap .YT-loginFrame-foot .YT-registe-btn:hover,.YT-loginWrap .YT-loginFrame-body .YT-qr-login .YT-qr-func a:hover{color:#35b5ff}.YT-loginWrap .YT-form .YT-form-btn,.YT-third-loginbox .YT-no-bing-submit,.YT-third-loginbox .YT-thirdbox-body .YT-form .YT-form-btn,.YT-loginWrap .YT-qrLogin .YT-qr-tips-btn,.YT-loginWrap .YT-loginFrame-body .YT-qr-login .YT-qrImg-box .YT-invalid-tips .YT-form-btn,.YT-loginWrap .YT-qrLogin .YT-qr-tips-btn:hover,.YT-loginWrap .YT-form .YT-psd-strong{background-color:#35b5ff}.YT-loginWrap .YT-frame-close{color:#35b5ff}.YT-loginWrap .YT-change-logintype,.YT-loginWrap .YT-loginFrame-body .YT-qr-login .YT-qrImg-box{border-color:#c0e8f6}.YT-loginWrap{background:#fff url(//r1.ykimg.com/3/111/175/75013225601050671712573010271032418363.jpg) no-repeat right bottom !important;color:#333 !important;}.YT-loginWrap .YT-noGet,.YT-loginWrap .disabled-color{color:#333 !important;}.YT-loginWrap a{color:#333 !important;}.YT-loginWrap.normal{ padding:30px 30px 30px 410px;}</style><script type="text/javascript" id="beacon-aplus" async="true" exparams="clog=o&amp;aplus&amp;sidx=aplusSidx&amp;ckx=aplusCkx" src="{{ asset('home6/aplus_o.js.下载')}}"></script><script type="text/javascript" data-env="cn" src="{{ asset('home6/ctl.js.下载')}}"></script><script type="text/javascript" src="{{ asset('home6/aplus_o.js(1).下载')}}" id="open-aplus" exparams="&amp;aplus&amp;asite=910&amp;yk_cookie=1491839458315qSM&amp;yk_user=684227077"></script><script type="text/javascript" src="{{ asset('home6/urchin.js.下载')}}"></script></head>
+<link id="YT-loginFrameCss" rel="stylesheet" href="<?php echo e(asset('home6/frame_common.css')); ?>"><style type="text/css" media="screen">div.YT-loginWrap{ background: url(//r1.ykimg.com/051000005955B539ADB9127BD905F9EF) no-repeat right bottom !important; }.YT-loginWrap a:hover,.YT-third-loginbox a:hover,.YT-loginWrap .YT-change-logintype:hover,.YT-loginWrap .YT-change-logintype i,.YT-loginWrap .YT-loginFrame-foot .YT-registe-btn:hover,.YT-loginWrap .YT-loginFrame-body .YT-qr-login .YT-qr-func a:hover{color:#35b5ff}.YT-loginWrap .YT-form .YT-form-btn,.YT-third-loginbox .YT-no-bing-submit,.YT-third-loginbox .YT-thirdbox-body .YT-form .YT-form-btn,.YT-loginWrap .YT-qrLogin .YT-qr-tips-btn,.YT-loginWrap .YT-loginFrame-body .YT-qr-login .YT-qrImg-box .YT-invalid-tips .YT-form-btn,.YT-loginWrap .YT-qrLogin .YT-qr-tips-btn:hover,.YT-loginWrap .YT-form .YT-psd-strong{background-color:#35b5ff}.YT-loginWrap .YT-frame-close{color:#35b5ff}.YT-loginWrap .YT-change-logintype,.YT-loginWrap .YT-loginFrame-body .YT-qr-login .YT-qrImg-box{border-color:#c0e8f6}.YT-loginWrap{background:#fff url(//r1.ykimg.com/3/111/175/75013225601050671712573010271032418363.jpg) no-repeat right bottom !important;color:#333 !important;}.YT-loginWrap .YT-noGet,.YT-loginWrap .disabled-color{color:#333 !important;}.YT-loginWrap a{color:#333 !important;}.YT-loginWrap.normal{ padding:30px 30px 30px 410px;}</style><script type="text/javascript" id="beacon-aplus" async="true" exparams="clog=o&amp;aplus&amp;sidx=aplusSidx&amp;ckx=aplusCkx" src="<?php echo e(asset('home6/aplus_o.js.下载')); ?>"></script><script type="text/javascript" data-env="cn" src="<?php echo e(asset('home6/ctl.js.下载')); ?>"></script><script type="text/javascript" src="<?php echo e(asset('home6/aplus_o.js(1).下载')); ?>" id="open-aplus" exparams="&amp;aplus&amp;asite=910&amp;yk_cookie=1491839458315qSM&amp;yk_user=684227077"></script><script type="text/javascript" src="<?php echo e(asset('home6/urchin.js.下载')); ?>"></script></head>
 <body class="yk-w1190 w1300">
 <span style="display:none;" id="is_self_exist" data="%22uid%22%3A684227077"></span>
-	<link type="text/css" href="{{ asset('home6/ykheader_43.css')}}" rel="stylesheet">
+	<link type="text/css" href="<?php echo e(asset('home6/ykheader_43.css')); ?>" rel="stylesheet">
 <script type="text/javascript">
 // 去掉860的栅格 ipad
 (function(d) { 
@@ -86,7 +86,7 @@ var ykQHeader = {
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="{{ url('home/') }}" title="Youku 优酷" attr="idx0"><img src="{{ asset('home6/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
+				<a href="" title="Youku 优酷" attr="idx0"><img src="<?php echo e(asset('home6/yk-logo-1220.png')); ?>" width="140" height="50" alt="Youku 优酷" from="index"></a>
 			</div>
 			<div class="g-view">
         		<!-- <a href="javascript:void(0)"><i class="ico-list"></i>导视</a> -->
@@ -164,7 +164,7 @@ var ykQHeader = {
 										<div class="g-head-center">
 				<ul class="g-head-nav">
 					<li>
-						<a href="{{ url('a/home/') }}">首页</a>
+						<a href="<?php echo e(url('home/')); ?>">首页</a>
 					</li>
 					<li>
 						<a href="http://faxian.youku.com/">发现</a>
@@ -173,25 +173,22 @@ var ykQHeader = {
 						<a id="navSub" href="">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
 					</li>
 					<li>
-						<a href="{{ url('home/vipuser') }}">会员</a>
+						<a href="<?php echo e(url('home/vipuser')); ?>">会员</a>
 					</li>
 					<li>
-						<a href="{{ url('home/user/index') }}">我的</a>
+						<a href="<?php echo e(url('home/user/index')); ?>">我的</a>
 					</li>
 				</ul>
 				<div class="yk-ucenter"></div>
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<!-- <div class="login-before handle" style="display: none;">
-					                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
-					</div> -->
-					  <div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·<a id="qheader_login" href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
-                    </div>
+					<div class="login-before handle" style="display: none;">
+                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
+					</div>
 					<div class="login-after dropdown handle" style="">
 						<a href="" target="_blank">
-							<img class="avatar" src="{{ asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07')}}" title="{{$list['account']}}">
+							<img class="avatar" src="<?php echo e(asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07')); ?>" title="<?php echo e($list->account); ?>">
 							<b class="caret"></b>
                             <span class="vip-level-icon" style="background: url(&quot;https://r1.ykimg.com/0510000058621BCC67BC3D7EF301F388&quot;) 0px 0px no-repeat;"></span>
 						</a>
@@ -212,7 +209,7 @@ var ykQHeader = {
 									<div class="u-info">
 										<div class="u-avatar">
 											<a href="" target="_blank">
-											<img src="{{ asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07(1)')}}">
+											<img src="<?php echo e(asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07(1)')); ?>">
 										</a>
 										</div>
 										<div class="u-profile">
@@ -270,7 +267,7 @@ var ykQHeader = {
 											<div class="task-info">
 												<dl>
 													<!-- <dt>
-														<img src="{{ asset('home6/sign1.png')}}" alt="任务图标">
+														<img src="<?php echo e(asset('home6/sign1.png')); ?>" alt="任务图标">
 													</dt> -->
 												<dd>
 													<!-- <em>签到有礼</em>
@@ -366,7 +363,7 @@ var ykQHeader = {
                                     </li> -->
 								</ul>
 								<div class="up-cnt-2">
-									<!-- <a href="http://rz.tudou.com/" target="_blank" style="width:360px;height:60px;margin-top:-15px;margin-left:-104px;"><img src="{{ asset('home6/0510000058DA1E9AADC0AE05A00E6EE3')}}"></a> -->
+									<!-- <a href="http://rz.tudou.com/" target="_blank" style="width:360px;height:60px;margin-top:-15px;margin-left:-104px;"><img src="<?php echo e(asset('home6/0510000058DA1E9AADC0AE05A00E6EE3')); ?>"></a> -->
 								</div>
 							</div>
 							<div class="u-bottom">
@@ -395,7 +392,7 @@ var ykQHeader = {
 							<a target="_blank" href="" class=""></a>
 						</div>
 						<input type="text" style="display:none;">
-					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display:block;"><iframe id="sk_holder_iframe" frameborder="0" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;" src="{{ asset('home6/saved_resource.html')}}"></iframe><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"><div class="sk_adsl"><a target="_blank" href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html"><img sk_live="link" log_pos="8" src="{{ asset('home6/05100000595629FCADB9127F7606122D')}}"></a><a class="sk_ads_close" href="javascript:;" style="display: inline;"><i sk_live="adclose" class="ico ico_ad_close" style="display: none;"></i></a></div></div></div></div></div><div><script src="{{ asset('home6/search_tip_1')}}"></script><script src="{{ asset('home6/sideads.json')}}"></script></div><link rel="stylesheet" type="text/css" href="{{ asset('home6/s_kubox.css')}}"></form>
+					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display:block;"><iframe id="sk_holder_iframe" frameborder="0" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;" src="<?php echo e(asset('home6/saved_resource.html')); ?>"></iframe><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"><div class="sk_adsl"><a target="_blank" href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html"><img sk_live="link" log_pos="8" src="<?php echo e(asset('home6/05100000595629FCADB9127F7606122D')); ?>"></a><a class="sk_ads_close" href="javascript:;" style="display: inline;"><i sk_live="adclose" class="ico ico_ad_close" style="display: none;"></i></a></div></div></div></div></div><div><script src="<?php echo e(asset('home6/search_tip_1')); ?>"></script><script src="<?php echo e(asset('home6/sideads.json')); ?>"></script></div><link rel="stylesheet" type="text/css" href="<?php echo e(asset('home6/s_kubox.css')); ?>"></form>
 				</div>
 			</div>
 		</div>
@@ -404,12 +401,12 @@ var ykQHeader = {
 <div id="qnotice" class="notice-wrap"></div>
 <!--sub nav-->
 <!--sub nav end-->
-<script src="{{ asset('home6/lib_5.js.下载')}}" id="libjsnode" charset="utf-8"></script>
-<script type="text/javascript" src="{{ asset('home6/ykheader_92.js.下载')}}"></script>
-<link type="text/css" rel="stylesheet" href="{{ asset('home6/setting.css')}}">
-<script src="{{ asset('home6/prototype.js.下载')}}"></script><script>if(!window.Nova){Nova={};}if(!window.NovaOptions){NovaOptions={};NovaOptions.compatibleMode=true;}</script>
-<script src="{{ asset('home6/common.js.下载')}}"></script>
-<script type="text/javascript" src="{{ asset('home6/resize.js.下载')}}"></script>
+<script src="<?php echo e(asset('home6/lib_5.js.下载')); ?>" id="libjsnode" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo e(asset('home6/ykheader_92.js.下载')); ?>"></script>
+<link type="text/css" rel="stylesheet" href="<?php echo e(asset('home6/setting.css')); ?>">
+<script src="<?php echo e(asset('home6/prototype.js.下载')); ?>"></script><script>if(!window.Nova){Nova={};}if(!window.NovaOptions){NovaOptions={};NovaOptions.compatibleMode=true;}</script>
+<script src="<?php echo e(asset('home6/common.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home6/resize.js.下载')); ?>"></script>
 <div class="s_body">
 <script type="text/javascript">if (!sslDomain) { var sslDomain = 'passport.youku.com';}</script>
 <div class="YK yk-con">
@@ -443,40 +440,40 @@ var ykQHeader = {
 	<div class="formbox">
 			<fieldset>	
 				
-				<form action="{{url('home/userdetail/update')}}" method="post" id="sv_profile" enctype="multipart/form-data">
-				<input type="hidden" name="_token" value="{{csrf_token()}}"/>
+				<form action="<?php echo e(url('home/userdetail/update')); ?>" method="post" id="sv_profile">
+				<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>"/>
 				
-				<div class="entry" width="80">
+				<div class="entry" >
 						<label>头像：</label>
-						<img src="/uploads/{{$list['picname']}}" class="user-img " >
+						<img src="/uploads/<?php echo e($list->picname); ?>" class="user-img">
 					</div>
 					<div class="entry">
 						<label>账号：</label>
-						<input readonly placeholder="账号" type="text" value="{{$list['account']}}" style="width:125px;" name="account"  class="form_input"/>
+						<input  placeholder="账号" type="text" value="<?php echo e($list->account); ?>" style="width:125px;" name="account"  class="form_input"/>
 					</div>
 					<div class="entry">
 					  <label></label>
-					  <input   placeholder="头像" style="height:110px;" type="file" value="{{$list['picname']}}" name="picname" class="huhu"/>
+					  <input   placeholder="头像" style="height:110px;" type="file" value="<?php echo e($list->picname); ?>" name="picname" class="huhu"/>
 					</div>
 					<div class="entry">
 					  <label>真实姓名：</label>
-					  <input   placeholder="真实姓名" type="text" value="{{$list['name']}}" name="name" class="form_input" style="width:125px;"/>
+					  <input   placeholder="真实姓名" type="text" value="<?php echo e($list->name); ?>" name="name" class="form_input" style="width:125px;"/>
 					</div>
 					<div class="entry">
 						<label>生日：</label>
-						<input   placeholder="生日" type="text" value="{{$list['birthday']}}" style="width:125px;" name="birthday"  class="form_input"/>
+						<input   placeholder="生日" type="text" value="<?php echo e($list->birthday); ?>" style="width:125px;" name="birthday"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>电话：</label>
-						<input   placeholder="电话" type="text" value="{{$list['tel']}}" style="width:125px;" name="tel"  class="form_input"/>
+						<input   placeholder="电话" type="text" value="<?php echo e($list->tel); ?>" style="width:125px;" name="tel"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>邮箱：</label>
-						<input  placeholder="邮箱" type="text" value="{{$list['email']}}" style="width:155px;" name="email"  class="form_input"/>
+						<input  placeholder="邮箱" type="text" value="<?php echo e($list->email); ?>" style="width:155px;" name="email"  class="form_input"/>
 					</div>
 					<div class="entry">
 						<label>地址：</label>
-						<input type="text" class="form_input" autocomplete="off" value="{{$list['address']}}" style="width:185px;"  name="address" id="J_captchaBox"/>
+						<input type="text" class="form_input" autocomplete="off" value="<?php echo e($list->address); ?>" style="width:185px;"  name="address" id="J_captchaBox"/>
 					</div>
 					<div class="entry savebtn">
 						<div class="form_btn form_btn_m form_btnmaj_m">
@@ -491,7 +488,7 @@ var ykQHeader = {
 		<p>资料更完整，帐号更安全。完善个人资料将帮助我们改善服务。</p>
 	</div>
 </div>
-<script src="{{ asset('home6/birthday.js.下载')}}"></script>
+<script src="<?php echo e(asset('home6/birthday.js.下载')); ?>"></script>
 <!-- content end -->
 			</div>
 </div>    
@@ -602,7 +599,7 @@ var ykQHeader = {
         <dd><a target="_blank" href="">北京12318文化市场举报热线</a></dd>
     </dl>
     <dl class="g-w4">
-        <a class="qcode" target="_blank" href=""><img src="{{ asset('home6/0510000058D0FEA1ADC0AE058F099020')}}" width="84px"></a>
+        <a class="qcode" target="_blank" href=""><img src="<?php echo e(asset('home6/0510000058D0FEA1ADC0AE058F099020')); ?>" width="84px"></a>
     </dl>
     <div class="g-authentication">
         <a class="aut-1" target="_blank" href="">经营性网站<br>备案信息</a>
@@ -615,5 +612,5 @@ var ykQHeader = {
     </div>
 </div>
 
-<div id="sideBar" class="side-bar"><div class="feedback"><a href="http://csc.youku.com/feedback-web/web/" target="_blank"></a></div><div id="goTop" data-stat-role="ck"><img width="29" height="65" src="{{ asset('home6/05100000575CCAF767BC3D4B250267B7')}}"></div></div><script src="{{ asset('home6/qwindow.js.下载')}}"></script>
-<script src="{{ asset('home6/city.js.下载')}}"></script><script src="{{ asset('home6/setting.js.下载')}}"></script><script type="text/javascript" src="{{ asset('home6/login.js.下载')}}"></script><div style="height: 0px; width: 0px; overflow: hidden;"><object width="0" height="0" tabindex="-1" style="height:0;width:0;overflow:hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="http://aeu.alicdn.com/flash/JSocket.swf" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body></html>
+<div id="sideBar" class="side-bar"><div class="feedback"><a href="http://csc.youku.com/feedback-web/web/" target="_blank"></a></div><div id="goTop" data-stat-role="ck"><img width="29" height="65" src="<?php echo e(asset('home6/05100000575CCAF767BC3D4B250267B7')); ?>"></div></div><script src="<?php echo e(asset('home6/qwindow.js.下载')); ?>"></script>
+<script src="<?php echo e(asset('home6/city.js.下载')); ?>"></script><script src="<?php echo e(asset('home6/setting.js.下载')); ?>"></script><script type="text/javascript" src="<?php echo e(asset('home6/login.js.下载')); ?>"></script><div style="height: 0px; width: 0px; overflow: hidden;"><object width="0" height="0" tabindex="-1" style="height:0;width:0;overflow:hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="http://aeu.alicdn.com/flash/JSocket.swf" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body></html>

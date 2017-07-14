@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <!-- saved from url=(0079)http://user.youku.com/page/usc/index?spm=a2hww.20023042.qheader.5~5~5!2~1~3!5~A -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="{{asset('home3/js/saved_resource')}}"></script><script async="" src="{{asset('home3/js/get_putdata.json')}}"></script>
-	<script src="{{asset('home3/js/hm.js.下载')}}"></script><script>var _US_TEST=0</script>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="<?php echo e(asset('home3/js/saved_resource')); ?>"></script><script async="" src="<?php echo e(asset('home3/js/get_putdata.json')); ?>"></script>
+	<script src="<?php echo e(asset('home3/js/hm.js.下载')); ?>"></script><script>var _US_TEST=0</script>
     
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <link rel="stylesheet" href="{{asset('home3/css/index.css')}}">
+    <link rel="stylesheet" href="<?php echo e(asset('home3/css/index.css')); ?>">
     <meta name="title" content="优酷网-中国第一视频网,提供视频播放,视频发布,视频搜索">
     <meta name="keywords" content="视频,视频分享,视频搜索,视频播放">
     <meta name="description" content="视频服务平台,提供视频播放,视频发布,视频搜索,视频分享">
     <link rel="icon" href="http://static.youku.com/v1.0.166/index/img/favicon.ico" type="image/x-icon">
     <title>个人中心</title>
-<link id="YT-loginFrameCss" rel="stylesheet" href="{{asset('home3/css/main_495c9db.css')}}"></head>
+<link id="YT-loginFrameCss" rel="stylesheet" href="<?php echo e(asset('home3/css/main_495c9db.css')); ?>"></head>
 <body class="f6 w1300">
 
-	<link type="text/css" href="{{asset('home3/css/ykheader_43.css')}}" rel="stylesheet">
+	<link type="text/css" href="<?php echo e(asset('home3/css/ykheader_43.css')); ?>" rel="stylesheet">
     <script type="text/javascript">
         // 去掉860的栅格 ipad
         (function(d) { 
@@ -72,13 +72,13 @@
 	<div class="g-header-container">
 		<div class="g-box">
 			<div class="yk-logo">
-				<a href="{{ url('home/') }}" title="Youku 优酷" attr="idx0"><img src="{{asset('home3/image/yk-logo-1220.png')}}" width="140" height="50" alt="Youku 优酷" from="index"></a>
+				<a href="http://www.youku.com/" title="Youku 优酷" attr="idx0"><img src="<?php echo e(asset('home3/image/yk-logo-1220.png')); ?>" width="140" height="50" alt="Youku 优酷" from="index"></a>
 			</div>
 
             <div class="g-head-center">
 				<ul class="g-head-nav">
 					<li>
-						<a href="{{ url('a/home') }}">首页</a>
+						<a href="<?php echo e(url('home/')); ?>">首页</a>
 					</li>
 					<li>
 						<a href="http://faxian.youku.com/">发现</a>
@@ -87,36 +87,295 @@
 						<a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
 					</li>
 					<li>
-						<a href="{{ url('home/vipuser') }}">会员</a>
+						<a href="<?php echo e(url('home/vipuser')); ?>">会员</a>
 					</li>
 					<li>
-						<a href="{{ url('home/user/index') }}">我的</a>
+						<a href="<?php echo e(url('home/user/index')); ?>">我的</a>
 					</li>
 				</ul>
 				<div class="yk-ucenter"></div>
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<!-- <div class="login-before handle" style="display: none;">
-                                            <a id="qheader_login" href="http://www.youku.com/user_login/">登录</a><a id="qheader_reg" href="http://www.youku.com/user_login/">注册</a>
-                    </div>
-                    <div class="login-after dropdown handle" style="">
-                        <a href="http://i.youku.com/i/UMTc2NDQ5NDUyNA==" target="_blank">
-                            <img class="avatar" src="{{asset('home3/image/5.jpg')}}" title="土豆用户_441123631">
-                            <b class="caret"></b>
-                                                <span></span>
-                        </a>
-                            
-                    </div> -->
-                    <div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo">
-                         @if(session('adminn')) 
-                         <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·
-                         <a href="/home/homeLog/logout" >退出</a> 
-                         @else || 
-                         <a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>
-                         </span>@endif
-                    </div>
+					<div class="login-before handle" style="display: none;">
+                        <a id="qheader_login" href="http://www.youku.com/user_login/">登录</a><a id="qheader_reg" href="http://www.youku.com/user_login/">注册</a>
+					</div>
+					<div class="login-after dropdown handle" style="">
+						<a href="http://i.youku.com/i/UMTc2NDQ5NDUyNA==" target="_blank">
+							<img class="avatar" src="<?php echo e(asset('home3/image/5.jpg')); ?>" title="土豆用户_441123631">
+							<b class="caret"></b>
+                            <span></span>
+						</a>
+						<div class="panel u-panel"><i class="arrow"></i>
+							<div class="content"> 
+
+
+
+
+
+
+
+
+
+                                <!-- <div class="code-content">
+                                <a class="close-code" href="#">关闭二维码</a>
+                                <div class="qr-content">
+                                <img src="" id="QR_login">
+                                <div class="rf-layer"><a id="QrRefresh" href="javascript:void(0)">二维码失效<br/>点击刷新</a></div>
+                                </div>
+                                <span>推荐使用优酷APP扫描登录 <br/> 且支持其它扫码工具</span>
+                                </div> -->
+                                <div class="u-content">  
+                                    <!-- <div class="u-code">
+                                    <a class="qrcode-btn" href="javascript:void(0);"></a>
+                                    </div> -->                     
+                                    <div class="u-info">
+                                    <div class="u-avatar">
+                                    <a href="http://i.youku.com/i/UMTc2NDQ5NDUyNA==" target="_blank">
+                                    <img src="<?php echo e(asset('home3/image/5(1).jpg')); ?>">
+                                    </a>
+                                    </div>
+                                    <div class="u-profile">
+                                    <div class="u-name">
+                                    <a href="http://i.youku.com/i/UMTc2NDQ5NDUyNA==" class="u-link" target="_blank" title="土豆用户_441123631">土豆用户_441123631</a>
+                                    <a href="http://actives.youku.com/task/signv2/index" target="_blank" class="u-sign">签到</a>
+                                    </div>
+                                    <div class="u-credit">
+
+                                    <a href="http://cps.youku.com/redirect.html?id=000145df" target="_blank" class="user-grade">
+                                    <span class="user-grade-icon user-grade-lv15" title="优酷等级：15"></span>
+                                    </a>
+
+                                    <a class="ico-valid-email ico-valid-email-done" href="http://id.youku.com/" target="_blank"></a>
+                                    <a class="ico-valid-phone " href="http://id.youku.com/" target="_blank"></a>
+                                    </div>
+                                    <div class="u-point" style="display: block;">
+                                    <i class="arrow"></i>
+                                    <a href="http://point.youku.com/page/mall/index" target="_blank">我的等级积分：<em>55</em><span>立即兑换</span></a>
+                                    </div>
+                                    </div>
+                                    </div>                            
+                                    <ul class="u-list">
+                                        <li>
+                                        <a href="http://lvip.youku.com/task/pbb/index" target="_blank" class="u-watch">
+                                        <em></em>  节目热播单
+                                        </a>
+                                        </li>                            
+                                        <li>
+                                        <a href="http://faxian.youku.com/favorite" target="_blank" class="u-collect">
+                                        <em></em>  我的收藏
+                                        </a>
+                                        </li>
+                                        <li>
+                                        <a href="http://i.youku.com/i/UMTc2NDQ5NDUyNA==" target="_blank" class="u-zpd">
+                                        <em></em>  我的自频道
+                                        </a>
+                                        </li>
+                                          
+                                        <li>
+                                        <a href="http://creation.youku.com/" target="_blank" class="u-center">
+                                        <em></em>  创作中心
+                                        </a>
+                                        </li>
+
+                                    </ul>     
+                                    <div class="u-task">
+                                        <div class="task-title">
+                                        <!-- <a href="" class="fr">查看加速服务</a> -->
+                                        <a href="http://user.youku.com/page/usc/index" target="_blank">我的任务</a>
+                                        </div>
+                                        <div class="task-info"><dl><dt><img src="<?php echo e(asset('home3/image/sign1.png')); ?>" alt="任务图标"></dt><dd><em>签到有礼</em><span title="百万豪礼等你拿，优酷会员超值兑">百万豪礼等你拿，优酷会员超值兑</span></dd></dl><a target="_blank" href="http://actives.youku.com/task/show/index">签到</a></div>
+                                    </div>  
+                                </div> 
+                            </div>
+							<div class="u-bottom">
+								<a href="http://user.youku.com/page/usc/index?spm=a2hww.20023042.qheader.5~5~5!2~1~3!5~A#" class="singout">退出登录</a>
+								<a href="http://user.youku.com/page/setting/base_profile" target="_blank">账户设置</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="u-record">
+					<div class="dropdown">
+						<div class="handle">
+							<a href="http://faxian.youku.com/watch_record">
+								<i class="ico-urecord"></i>
+								<b class="caret"></b>
+							</a>
+						</div>
+						<div class="panel">
+							<i class="arrow"></i>
+							<div class="content">
+
+<dl class="rec-list">
+
+  
+
+  
+
+
+
+
+<dt>一周内</dt>
+      
+
+
+<dd>
+<a href="http://v.youku.com/v_show/id_XMTQwNzg1NDkyMA==.html?firsttime=3149" target="video" title="我是证人">我是证人</a> 
+<span class="rec-st">
+<i class="ico-device ico-pc"></i> 
+看到47%
+</span>
+</dd> 
+
+
+
+      
+
+
+<dd>
+<a href="http://v.youku.com/v_show/id_XMjgzODc1NDcyOA==.html" target="video" title="沈梦辰移情恋上李易峰? 170621 脑大洞开">沈梦辰移情恋上李易峰? 170621 脑大洞开</a> 
+<span class="rec-st">
+<i class="ico-device ico-pc"></i> 
+看到1%
+</span>
+</dd> 
+
+
+
+      
+
+
+<dd>
+<a href="http://v.youku.com/v_show/id_XMjgzODg5NTc2MA==.html" target="video" title="吴秀波微信名意外曝光 &quot;不二&quot;疑似暗藏玄机 01 170621">吴秀波微信名意外曝光 "不二"疑似暗藏玄机 01 170621</a> 
+<span class="rec-st">
+<i class="ico-device ico-pc"></i> 
+看到1集  
+1%
+</span>
+</dd> 
+
+
+
+      
+
+
+<dd>
+<a href="http://v.youku.com/v_show/id_XMjgyMzEyMjE2NA==.html?firsttime=88" target="video" title="《变形金刚5:最后的骑士》中国独家预告片">《变形金刚5:最后的骑士》中国独家预告片</a> 
+<span class="rec-st">
+<i class="ico-device ico-pc"></i> 
+看到100%
+</span>
+</dd> 
+
+
+
+      
+
+
+<dd>
+<a href="http://v.youku.com/v_show/id_XMTg2Mjk5Mjc4NA==.html?firsttime=842" target="video" title="外公芳龄38">外公芳龄38</a> 
+<span class="rec-st">
+<i class="ico-device ico-pc"></i> 
+看到14%
+</span>
+</dd> 
+
+
+
+      
+
+
+<dd>
+<a href="http://v.youku.com/v_show/id_XMTg3NjYzODMwOA==.html?firsttime=181" target="video" title="于谦酒醉不舍酱婶收官 161223">于谦酒醉不舍酱婶收官 161223</a> 
+<span class="rec-st">
+<i class="ico-device ico-pc"></i> 
+看到12-23期  
+7%
+</span>
+</dd> 
+
+
+
+
+
+  
+
+
+
+
+
+  
+ 
+</dl>
+
+<div class="u-bottom">
+<a target="_blank" href="http://faxian.youku.com/watch_record" class="fr">查看更多</a>
+<a href="http://lvip.youku.com/task/pbb/index" target="_blank">节目热播列表</a>
+</div>
+</div>
+						</div>
+					</div>
+				</div>
+				<div class="u-notice">
+					<div class="dropdown">
+						<div class="handle">
+							<a href="http://msg.youku.com/page/msg/index?retry=1" target="_blank">
+								<i class="ico-notifications-l2"></i>
+								<b class="caret"></b>
+								<span class="icon-warn" id="qheader_notice_num" style="display:none;"></span>
+							</a>
+						</div>
+						<div class="panel">
+							<i class="arrow"></i>
+							<div class="content">
+							</div>
+							<div class="u-bottom">
+								<a href="http://msg.youku.com/page/msg/index?retry=1" target="_blank" class="fr">查看所有消息</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="u-upload">
+					<div class="dropdown ">
+						<div class="handle">
+							<a href="http://sc.youku.com/" target="_blank"><i class="ico-upload-l2"></i><b class="caret"></b></a>
+						</div>
+<div class="panel">
+    <i class="arrow"></i>
+    <div class="content">
+        <ul class="u-list">
+            <li>
+                <a href="http://sc.youku.com/" target="_blank" class="upload-video">
+                    <em></em>  上传视频
+                </a>
+            </li>
+            <li>
+                <a href="http://newvideos.youku.com/u/videos" target="_blank" class="u-creat">
+                    <em></em>  视频管理
+                </a>
+            </li>
+            <li>
+                <a href="http://i.youku.com/i/profile/" target="_blank" class="u-zpd">
+                    <em></em>  我的自频道
+                </a>
+            </li>
+            <li>
+                <a href="http://mp.dayu.com/dashboard/stat/video" target="_blank" class="data-analysis">
+                    <em></em>  数据分析
+                </a>
+            </li>
+        </ul>
+        <div class="up-cnt-2">
+            <a href="http://rz.tudou.com/" target="_blank" style="width:360px;height:60px;margin-top:-15px;margin-left:-104px;"><img src="<?php echo e(asset('home3/image/0510000058DA1E9AADC0AE05A00E6EE3')); ?>"></a>
+        </div>
+    </div>
+    <div class="u-bottom">
+        <a href="http://user.youku.com/page/usc/index?spm=a2hww.20023042.qheader.5~5~5!2~1~3!5~A#" data-url="http://iku.youku.com/channelinstall/ywebuploadFloat" class="ikuDownload" target="_self"><i></i>立即下载</a>
+        下载PC客户端，上传视频更轻松！
+    </div>
+</div>
+					</div>
 				</div>
 			</div>
 			<div class="g-so" data-spm="search">
@@ -137,16 +396,16 @@
 							<a target="_blank" href="http://www.soku.com/search_video/q_" class=""></a>
 						</div>
 						<input type="text" style="display:none;">
-					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display:block;"><iframe id="sk_holder_iframe" frameborder="0" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;" src="{{asset('home3/js/saved_resource.html')}}"></iframe><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"><div class="sk_adsl"><a target="_blank" href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html"><img sk_live="link" log_pos="8" src="{{asset('home3/image/05100000594A26B4ADC0B05C0A0F2481')}}"></a><a class="sk_ads_close" href="javascript:;" style="display: inline;"><i sk_live="adclose" class="ico ico_ad_close" style="display: none;"></i></a></div></div></div></div></div><div><script src="{{asset('home3/js/search_tip_1')}}"></script><script src="{{asset('home3/js/sideads.json')}}"></script></div><link rel="stylesheet" type="text/css" href="{{asset('home3/css/s_kubox.css')}}"></form>
+					<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display:block;"><iframe id="sk_holder_iframe" frameborder="0" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;" src="<?php echo e(asset('home3/js/saved_resource.html')); ?>"></iframe><div class="main" id="_xbox_refresh"></div><div id="_xbox_ad"><div class="sk_adsl"><a target="_blank" href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html"><img sk_live="link" log_pos="8" src="<?php echo e(asset('home3/image/05100000594A26B4ADC0B05C0A0F2481')); ?>"></a><a class="sk_ads_close" href="javascript:;" style="display: inline;"><i sk_live="adclose" class="ico ico_ad_close" style="display: none;"></i></a></div></div></div></div></div><div><script src="<?php echo e(asset('home3/js/search_tip_1')); ?>"></script><script src="<?php echo e(asset('home3/js/sideads.json')); ?>"></script></div><link rel="stylesheet" type="text/css" href="<?php echo e(asset('home3/css/s_kubox.css')); ?>"></form>
 				</div>
 			</div>
 		</div>
 			</div>
 </div><div id="qnotice" class="notice-wrap"></div>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
             这是页面主内容区。
-@show
+<?php echo $__env->yieldSection(); ?>
 
 	<div class="g-footer">
     <dl class="g-w1">
@@ -248,7 +507,7 @@
         <dd><a target="_blank" href="http://www.bjwhzf.gov.cn/accuse.do">北京12318文化市场举报热线</a></dd>
     </dl>
     <dl class="g-w4">
-        <a class="qcode" target="_blank" href="http://mobile.youku.com/index/wireless"><img src="{{asset('home3/image/0510000058D0FEA1ADC0AE058F099020')}}" width="84px"></a>
+        <a class="qcode" target="_blank" href="http://mobile.youku.com/index/wireless"><img src="<?php echo e(asset('home3/image/0510000058D0FEA1ADC0AE058F099020')); ?>" width="84px"></a>
     </dl>
     <div class="g-authentication">
         <a class="aut-1" target="_blank" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006082400023">经营性网站<br>备案信息</a>
@@ -259,7 +518,7 @@
         <a class="aut-6" target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/0D76560AE65141FF9FEFE3481D205C50">网络文化<br>经营单位</a>
         <a class="aut-7" target="_blank" href="http://www.12377.cn/">暴恐音视频<br>举报专区</a>
         <div style="text-align: center;margin-top:8px;">
-            <a style="padding-left:0;" href="https://credit.szfw.org/CX20170616038883280388.html" target="_blank"><img src="{{asset('home3/image/0510000059479119ADC0B05C010B4454')}}" border="0"></a>
+            <a style="padding-left:0;" href="https://credit.szfw.org/CX20170616038883280388.html" target="_blank"><img src="<?php echo e(asset('home3/image/0510000059479119ADC0B05C010B4454')); ?>" border="0"></a>
        </div>
     </div>
 </div>
@@ -613,9 +872,9 @@
 <script type="text/javascript">
 var appData= {"path":"static.youku.com/lvip", "score":'6968',"today_score":'0','upgrade_score':'392','today_max_score':'130', 'today_score':'0','grade':'15', 'is_login':"1"}
 </script>
-<script type="text/javascript" src="{{asset('home3/js/template.js.下载')}}"></script>
-<script type="text/javascript" src="{{asset('home3/js/index.js.下载')}}"></script>
-<script type="text/javascript" src="{{asset('home3/js/tdstat.js.下载')}}"></script>
+<script type="text/javascript" src="<?php echo e(asset('home3/js/template.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home3/js/index.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home3/js/tdstat.js.下载')); ?>"></script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -627,4 +886,4 @@ var _hmt = _hmt || [];
 </script>
 
 
-<div id="sideBar" class="side-bar"><div class="feedback"><a href="http://csc.youku.com/feedback-web/web/" target="_blank"></a></div><div id="goTop" data-stat-role="ck"><img width="29" height="65" src="{{asset('home3/image/05100000575CCAF767BC3D4B250267B7')}}"></div></div><div style="height: 0px; width: 0px; overflow: hidden;"><object width="0" height="0" tabindex="-1" style="height:0;width:0;overflow:hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="http://aeu.alicdn.com/flash/JSocket.swf" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body></html>
+<div id="sideBar" class="side-bar"><div class="feedback"><a href="http://csc.youku.com/feedback-web/web/" target="_blank"></a></div><div id="goTop" data-stat-role="ck"><img width="29" height="65" src="<?php echo e(asset('home3/image/05100000575CCAF767BC3D4B250267B7')); ?>"></div></div><div style="height: 0px; width: 0px; overflow: hidden;"><object width="0" height="0" tabindex="-1" style="height:0;width:0;overflow:hidden;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="JSocket"><param name="allowScriptAccess" value="always"><param name="movie" value="http://aeu.alicdn.com/flash/JSocket.swf"> <embed src="http://aeu.alicdn.com/flash/JSocket.swf" name="JSocket" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" width="0" height="0"></object></div></body></html>

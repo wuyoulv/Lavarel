@@ -9,10 +9,10 @@
     <!--[if lt IE 9]>
     <script src="//static.youku.com/paymentcenter/vip-pc/build/js/libs/html5shiv.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="{{ asset('home9/payProductList-bbba9f2cf5.css')}}">
-<script type="text/javascript" async="" src="{{ asset('home9/index.js.下载')}}" id="aplus-sufei"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="loadFrame" src="{{ asset('home9/loadFrame.js.下载')}}"></script><script src="{{ asset('home9/index.js(1).下载')}}"></script><script src="{{ asset('home9/index.js(2).下载')}}" id="aplus-sufei"></script><script src="{{ asset('home9/share.js.下载')}}"></script><link rel="stylesheet" href="{{ asset('home9/share_style0_16.css')}}"></head>
+    <link rel="stylesheet" href="<?php echo e(asset('home9/payProductList-bbba9f2cf5.css')); ?>">
+<script type="text/javascript" async="" src="<?php echo e(asset('home9/index.js.下载')); ?>" id="aplus-sufei"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="loadFrame" src="<?php echo e(asset('home9/loadFrame.js.下载')); ?>"></script><script src="<?php echo e(asset('home9/index.js(1).下载')); ?>"></script><script src="<?php echo e(asset('home9/index.js(2).下载')); ?>" id="aplus-sufei"></script><script src="<?php echo e(asset('home9/share.js.下载')); ?>"></script><link rel="stylesheet" href="<?php echo e(asset('home9/share_style0_16.css')); ?>"></head>
 
-<body data-spm="8224028" class="l-mini"><script type="text/javascript" async="" src="{{ asset('home9/saved_resource')}}"></script><script id="beacon-aplus" src="{{ asset('home9/aplus_o.js.下载')}}" exparams="userid=&amp;aplus&amp;sidx=eUUVUhgXZ1nw5rsc7EMxMmE8+M3dwHlM&amp;ckx=payyoukucombuyproductshtml|vipyoukucom"></script><script>
+<body data-spm="8224028" class="l-mini"><script type="text/javascript" async="" src="<?php echo e(asset('home9/saved_resource')); ?>"></script><script id="beacon-aplus" src="<?php echo e(asset('home9/aplus_o.js.下载')); ?>" exparams="userid=&amp;aplus&amp;sidx=eUUVUhgXZ1nw5rsc7EMxMmE8+M3dwHlM&amp;ckx=payyoukucombuyproductshtml|vipyoukucom"></script><script>
 with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","userid=&aplus&sidx=eUUVUhgXZ1nw5rsc7EMxMmE8+M3dwHlM&ckx=payyoukucombuyproductshtml|vipyoukucom",id="beacon-aplus",src="//g.alicdn.com/alilog/mlog/aplus_o.js")
 </script>
 <div id="app">
@@ -34,12 +34,12 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
             <div class="ucenter">
                 <ul>        
 					<li class="u-logined">
-						<a href="http://cps.youku.com/redirect.html?id=000146c5" title="" target="_blank"><img src="{{ asset('home9/0130391F4555DECBD2017728C87A058524BDB2-89B5-06D6-CE95-E9E3DB9C28D5')}}" alt=""></a>
+						<a href="http://cps.youku.com/redirect.html?id=000146c5" title="" target="_blank"><img src="<?php echo e(asset('home9/0130391F4555DECBD2017728C87A058524BDB2-89B5-06D6-CE95-E9E3DB9C28D5')); ?>" alt=""></a>
 					</li>
 					<li class="u-logout"><a href="http://pay.youku.com/buy/products.html?spm=a2h03.8164468.t-login-card.5~5~5~A#" class="J-logout">退出</a>
 					</li>
 				<!--	<div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·<a href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
+                        <span id="span_userinfo"> <?php if(session('adminn')): ?> <a href="<?php echo e(url('home/user/zhanghu')); ?>"> <?php echo e(session('adminn')); ?></a>·<a href="/homeLog/logout">退出</a> <?php else: ?> [<a  id="qheader_reg" href="<?php echo e(URL('home/login')); ?>"> 登陆 </a>·<a id="qheader_reg" href="<?php echo e(url('home/register')); ?>">注册</a>]</span><?php endif; ?>
                     </div> -->
                     <li class="u-record">
                         <a href="http://faxian.youku.com/watch_record" title="记录" target="_blank">记录</a>
@@ -108,7 +108,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
          <dl class="vmp vmp-content vmp-1000020036"></dl>
 		 <dl class="vmp-price vmp-content  vmp-1000020036">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>15.00</dd></dl> 
 		 <dl class="vmp vmp-content product_hide vmp-1000020008"></dl>
-		 <dl class="vmp-price vmp-content product_hide  vmp-1000020008">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>169.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020137"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020137">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>56.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020001"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020001">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>20.00</dd></dl><a  href="{{ url('home/user/zhifu') }}" ><span  >立即购买</span></a>
+		 <dl class="vmp-price vmp-content product_hide  vmp-1000020008">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>169.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020137"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020137">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>56.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020001"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020001">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>20.00</dd></dl><a  href="<?php echo e(url('home/user/zhifu')); ?>" ><span  >立即ff112f购买</span></a>
         
 </div></div>
     </div>
@@ -310,11 +310,11 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
     </div>
 </div></div></div>
 </div>
-<script type="text/javascript" src="{{ asset('home9/tdstat.js.下载')}}"></script>
-<script type="text/javascript" src="{{ asset('home9/require.js.下载')}}"></script>
-<script type="text/javascript" src="{{ asset('home9/config-build.js.下载')}}"></script>
-<script type="text/javascript" src="{{ asset('home9/requirejs-remote-8a67cc3a6e.js.下载')}}"></script>
-<script type="text/javascript" src="{{ asset('home9/payProductList-b3024e8b0e.js.下载')}}"></script>
+<script type="text/javascript" src="<?php echo e(asset('home9/tdstat.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home9/require.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home9/config-build.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home9/requirejs-remote-8a67cc3a6e.js.下载')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('home9/payProductList-b3024e8b0e.js.下载')); ?>"></script>
 
 
 
