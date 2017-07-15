@@ -1072,7 +1072,7 @@ var ykQHeader = {
 <li class="yk-col4 mr1">
 <div class="yk-pack pack-film">
 <div class="p-thumb">
-<a href="{{URL('home/xq')}}/{{$b->id}}"></a>
+<a href="{{URL('a/xq')}}/{{$b->id}}"></a>
 <i class="bg"></i>
 
 <img src="{{ $b->pic_address }}">
@@ -1085,7 +1085,7 @@ var ykQHeader = {
 <!-- 标题 -->
 <ul class="info-list">
 <li class="title short-title">
-<a href="{{URL('home/xq')}}/{{$b->id}}">{{ $b->title }}</a>
+<a href="{{URL('a/xq')}}/{{$b->id}}">{{ $b->title }}</a>
 </li>
                 
 <li class="subtitle">

@@ -1074,7 +1074,7 @@ var ykQHeader = {
 <li class="yk-col4 mr1">
 <div class="yk-pack pack-film">
 <div class="p-thumb">
-<a href="<?php echo e(URL('home/xq')); ?>/<?php echo e($b->id); ?>"></a>
+<a href="<?php echo e(URL('a/xq')); ?>/<?php echo e($b->id); ?>"></a>
 <i class="bg"></i>
 
 <img src="<?php echo e($b->pic_address); ?>">
@@ -1087,7 +1087,7 @@ var ykQHeader = {
 <!-- 标题 -->
 <ul class="info-list">
 <li class="title short-title">
-<a href="<?php echo e(URL('home/xq')); ?>/<?php echo e($b->id); ?>"><?php echo e($b->title); ?></a>
+<a href="<?php echo e(URL('a/xq')); ?>/<?php echo e($b->id); ?>"><?php echo e($b->title); ?></a>
 </li>
                 
 <li class="subtitle">
