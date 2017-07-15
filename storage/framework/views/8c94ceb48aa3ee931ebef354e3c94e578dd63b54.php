@@ -2561,7 +2561,7 @@
                                                                 <li class="yk-col4 mr1">
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
-                                                                            <a href="<?php echo e(URL('home/xq')); ?>/<?php echo e($b->id); ?>" data-from="1-1"
+                                                                            <a href="<?php echo e(URL('a/xq')); ?>/<?php echo e($b->id); ?>" data-from="1-1"
                                                                              title="<?php echo e($b->title); ?>">
                                                                             </a>
                                                                             <i class="bg">
@@ -2647,7 +2647,7 @@
                                                                 <li class="yk-col4 mr1">
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
-                                                                            <a href="<?php echo e(URL('home/xq')); ?>/<?php echo e($b->id); ?>" data-from="1-1"
+                                                                            <a href="<?php echo e(URL('a/xq')); ?>/<?php echo e($b->id); ?>" data-from="1-1"
                                                                              title="<?php echo e($b->title); ?>">
                                                                             </a>
                                                                             <i class="bg">

@@ -90,7 +90,7 @@ Route::get("/dydetails","Home\DydetailsController@index");
 Route::get("/dydetails/{id}","Home\DydetailsController@index");
 Route::group(['prefix' => 'home','middleware' => 'home'], function () {
     
-    Route::get('/xq/{id}',"Home\XqController@index");
+    
     Route::get('/HomeLog/indexs',"Home\HomeLogController@indexs");
     Route::get('/homeLog/logout',"Home\HomeLogController@logout"); //执行退出
     Route::get('/HomeLog/index','Home\HomeLogController@index');
@@ -103,6 +103,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
 
 
 });
+Route::get('a/xq/{id}',"Home\XqController@index");
 Route::get('a/home',"Home\IndexController@index");
 Route::post('/home/sendMobileCode','Home\HomeRegisterController@sendMobileCode');
 Route::post('/home/createUser','Home\HomeRegisterController@createUser');
