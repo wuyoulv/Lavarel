@@ -137,7 +137,10 @@ var ykQHeader = {
 				<ul class="g-head-nav">
 					<li>
 						<a href="<?php echo e(url('a/home')); ?>">首页</a>
-					</li>			
+					</li>
+					<li>
+						<a href="http://faxian.youku.com/">发现</a>
+					</li>
 					<li>
 						<a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">订阅<span class="icon-warn" id="qheader_sub_num" style="display: none;"></span></a>
 					</li>
@@ -152,24 +155,13 @@ var ykQHeader = {
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<?php if( session()->get('adminn') == null): ?>
-                                    <div class="login-before handle" style="display: block;">
-                                        <a href="<?php echo e(URL('/home/login')); ?>">
-                                            登录
-                                        </a>
-                                        <a id="qheader_reg" href="<?php echo e(URL('/home/register')); ?>">
-                                            注册
-                                        </a>
-                                    </div>
-                                <?php else: ?>
-                                    <div class="login-before handle" style="display: block;">
-                                        <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
-                                            <?php echo e(session()->get('adminn')); ?>
+					<div class="login-before handle" style="display: block;">
+                        <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
+                            <?php echo e(session('adminn')); ?>
 
-                                        </a>||
-                                        <a href="/home/homeLog/logout">退出</a>
-                                    </div>
-                                <?php endif; ?>
+                        </a>||
+                        <a href="/home/homeLog/logout">退出</a>
+                    </div>
 					<div class="login-after dropdown unload handle" style="display: none;">
 						<a href="http://user.youku.com/page/usc/index" target="_top">
 							<img class="avatar" src="<?php echo e(asset('home4/img/sprite.gif')); ?>">
@@ -180,7 +172,10 @@ var ykQHeader = {
 							<div class="content">
 
 							</div>
-							
+							<div class="u-bottom">
+								<a href="#" class="singout">退出登录</a>
+								<a href="http://user.youku.com/page/setting/base_profile" target="_top">账户设置</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -196,7 +191,10 @@ var ykQHeader = {
 							<i class="arrow"></i>
 							<div class="content">
 
-
+<div class="record-login">
+<a href="javascript:void(0);">登录</a>
+同步各端记录
+</div>
 
 
 

@@ -27,22 +27,7 @@
                     <li><a href="http://user.youku.com">我的</a></li>
                 </ul>
             </nav>
-            <div class="ucenter">
-                <ul>
-                    <li class="u-record">
-                        <a href="http://faxian.youku.com/watch_record" title="记录" target="_blank">记录</a>
-                    </li>
-                    <li class="u-notify">
-                        <a href="http://msg.youku.com/page/msg/index?retry=1" title="通知" target="_blank">通知</a>
-                    </li>
-                    <li class="u-upload">
-                        <a href="http://sc.youku.com/" title="上传" target="_blank">上传</a>
-                    </li>
-                    <li class="u-search">
-                        <a href="//cps.youku.com/redirect.html?id=00014fb7" title="搜库" target="_blank">搜库</a>
-                    </li>
-                </ul>
-            </div>
+
         </div>
     </header>
     
@@ -137,300 +122,31 @@
         <div id="notice" class="marquee-container"></div><span class="notice-close">×</span>
     </div>
 </div></div>
-        <!-- 最新上线 -->
-        <div id="t-lastest-online" data-spm="2069780" style="height: 450px;" data-spm-max-idx="48"><div class="movie-slider-module lastest-online">
+
+
+ <div id="t-lastest-online" data-spm="2069780"  data-spm-max-idx="48"><div class="movie-slider-module lastest-online">
     <header class="main-title">
-        <h1 class="tit">近期热播</h1>
-        <a href="http://vip.youku.com/vips/TV.html?tag=10005&amp;pt=1" class="more" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.1">更多</a>
+        <h1 class="tit">VIP独播</h1>
+       
     </header>
     <div class="m-slider" style="width: 1080px; height: 374px;">
-        <div class="move">
-            <a href="#" class="prev" style="display: block;" data-spm-anchor-id="a2h03.8164468.2069780.2">prev</a>
-            <a href="#" class="next" data-spm-anchor-id="a2h03.8164468.2069780.3" style="display: none;">next</a>
-        </div>
-        <div class="inner" style="width: 1080px; height: 374px;">
-            <ul class="slider-box" style="left: -2200px;">
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.4">
-                                    <img data-original="http://r1.ykimg.com/051600005950CB63859B5DDF6003B9CE" alt="火星情报局 第三季" src="{{ asset('home5/051600005950cb63859b5ddf6003b9ce')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.5">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.6">火星情报局 第三季</a></h2>
-                                <p class="txt">谦谦升副局长逼退汪涵</p>
-                                <span class="scores">9.2</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjg1MjMxOTg4NA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.7">
-                                    <img data-original="http://r1.ykimg.com/0516000059552643ADC0AEC6B408F8D8" alt="蓝精灵:寻找神秘村" src="{{ asset('home5/0516000059552643adc0aec6b408f8d8')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjg1MjMxOTg4NA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.8">观看正片</a>
-                                <span class="free-icon">会员用券</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjg1MjMxOTg4NA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.9">蓝精灵:寻找神秘村</a></h2>
-                                <p class="txt">激萌蓝精灵奇趣大冒险</p>
-                                <span class="scores">7.5</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjg1MjM4ODM0MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.10">
-                                    <img data-original="http://r1.ykimg.com/051600005954C9E1ADB91280D30E2818" alt="麻烦家族" src="{{ asset('home5/051600005954c9e1adb91280d30e2818')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjg1MjM4ODM0MA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.11">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjg1MjM4ODM0MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.12">麻烦家族</a></h2>
-                                <p class="txt">黄磊电影导演处女作</p>
-                                <span class="scores">8.0</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjg1MjczNTYwOA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.13">
-                                    <img data-original="http://r1.ykimg.com/0516000059534931859B5CA7C10B095B" alt="岳岳阿德莱德相声专场" src="{{ asset('home5/0516000059534931859b5ca7c10b095b')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjg1MjczNTYwOA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.14">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjg1MjczNTYwOA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.15">岳岳阿德莱德相声专场</a></h2>
-                                <p class="txt">岳云鹏自曝“牵手门”真相</p>
-                                <span class="scores">7.6</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjgzOTYxNjM1Ng==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.16">
-                                    <img data-original="http://r1.ykimg.com/051600005948DEADADBC095D02029A3D" alt="拆弹专家" src="{{ asset('home5/051600005948deadadbc095d02029a3d')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjgzOTYxNjM1Ng==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.17">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjgzOTYxNjM1Ng==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.18">拆弹专家</a></h2>
-                                <p class="txt">刘德华终极对决姜武</p>
-                                <span class="scores">8.6</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.19">
-                                    <img data-original="http://r1.ykimg.com/05160000594AA9EBAD9E070A7A0720EB" alt="军师联盟" src="{{ asset('home5/05160000594aa9ebad9e070a7a0720eb')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.20">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.21">军师联盟</a></h2>
-                                <p class="txt">吴秀波演绎权谋大戏</p>
-                                <span class="scores">9.7</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.22">
-                                    <img data-original="http://r1.ykimg.com/0516000058D4B19EADBA1FA2E007E3ED" alt="嫌疑人X的献身" src="{{ asset('home5/0516000058d4b19eadba1fa2e007e3ed')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.23">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjgzMDE0NjQxNg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.24">嫌疑人X的献身</a></h2>
-                                <p class="txt">王凯破杀人烧尸悬案</p>
-                                <span class="scores">8.5</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjc5OTc2NDQ4MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.25">
-                                    <img data-original="http://r1.ykimg.com/0516000058F97D47ADBC09F74B012C49" alt="春娇救志明" src="{{ asset('home5/0516000058f97d47adbc09f74b012c49')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjc5OTc2NDQ4MA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.26">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjc5OTc2NDQ4MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.27">春娇救志明</a></h2>
-                                <p class="txt">春娇志 明八年恋情告急</p>
-                                <span class="scores">8.2</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjgwNTM5NDkyOA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.28">
-                                    <img data-original="http://r1.ykimg.com/051600005937B639ADB912072F0DE179" alt="夏天十九岁的肖像" src="{{ asset('home5/051600005937b639adb912072f0de179')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjgwNTM5NDkyOA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.29">观看正片</a>
-                                <span class="free-icon">会员用券</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjgwNTM5NDkyOA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.30">夏天十九岁的肖像</a></h2>
-                                <p class="txt">黄子韬偷窥失足女玩包养</p>
-                                <span class="scores">8.8</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjgwNjYyNjEwMA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.31">
-                                    <img data-original="http://r1.ykimg.com/051600005934C587ADBDD3647F09BF4B" alt="楚乔传" src="{{ asset('home5/051600005934c587adbdd3647f09bf4b')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjgwNjYyNjEwMA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.32">观看正片</a>
-                                
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjgwNjYyNjEwMA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.33">楚乔传</a></h2>
-                                <p class="txt">赵丽颖超燃对打林更新</p>
-                                <span class="scores">9.5</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjc3NDQ3NDI0MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.34">
-                                    <img data-original="http://r1.ykimg.com/0516000058F97BFEADBC09F69D0609EA" alt="喜欢你" src="{{ asset('home5/0516000058f97bfeadbc09f69d0609ea')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjc3NDQ3NDI0MA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.35">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjc3NDQ3NDI0MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.36">喜欢你</a></h2>
-                                <p class="txt">金城武周冬雨高甜虐狗</p>
-                                <span class="scores">8.8</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjY1NDM3NDY0OA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.37">
-                                    <img data-original="http://r1.ykimg.com/0516000058D1E6B6ADBC099A4D035D2D" alt="了不起的菲丽西" src="{{ asset('home5/0516000058d1e6b6adbc099a4d035d2d')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjY1NDM3NDY0OA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.38">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjY1NDM3NDY0OA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.39">了不起的菲丽西</a></h2>
-                                <p class="txt">灰姑娘冒险游古典巴黎</p>
-                                <span class="scores">8.5</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjc4MzMzODI3Mg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.40">
-                                    <img data-original="http://r1.ykimg.com/05160000594A783AADBC09E67006DAF4" alt="脑大洞开 第一季" src="{{ asset('home5/05160000594a783aadbc09e67006daf4')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjc4MzMzODI3Mg==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.41">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjc4MzMzODI3Mg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.42">脑大洞开 第一季</a></h2>
-                                <p class="txt">大张伟遭怒怼“神经病”</p>
-                                <span class="scores">8.7</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjc1MjM4Njc2MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.43">
-                                    <img data-original="http://r1.ykimg.com/05160000592D2378ADC0AE06B70CB9F5" alt="傲娇与偏见" src="{{ asset('home5/05160000592d2378adc0ae06b70cb9f5')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjc1MjM4Njc2MA==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.44">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjc1MjM4Njc2MA==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.45">傲娇与偏见</a></h2>
-                                <p class="txt">帝君下凡再还凤九情债</p>
-                                <span class="scores">9.0</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-item" style="width: 200px; height: 374px;">
-                        <div class="slider-info-box">
-                            <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjc1Mzg3ODAxMg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.46">
-                                    <img data-original="http://r1.ykimg.com/05160000592BD783ADB912072B0DEB5A" alt="极速之巅" src="{{ asset('home5/05160000592bd783adb912072b0deb5a')}}" style="display: inline;" width="200" height="300">
-                                </a>
-                                <a href="http://v.youku.com/v_show/id_XMjc1Mzg3ODAxMg==.html?spm=a2h03.8164468.2069780.47" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.47">观看正片</a>
-                                <span class="free-icon">会员免费</span>
-                            </div>
-                            <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjc1Mzg3ODAxMg==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.48">极速之巅</a></h2>
-                                <p class="txt">毒枭摇身变偷天劫车手</p>
-                                <span class="scores">7.5</span>
-                            </div>
-                        </div>
-                    </li>
-            </ul>
-        </div>
-    </div>
-</div></div>
 
-
-
-
-
-
-
-
-
-
-
- <div id="t-lastest-online" data-spm="2069780" style="height: 450px;" data-spm-max-idx="48"><div class="movie-slider-module lastest-online">
-    <header class="main-title">
-        <h1 class="tit">近期热播</h1>
-        <a href="http://vip.youku.com/vips/TV.html?tag=10005&amp;pt=1" class="more" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.1">更多</a>
-    </header>
-    <div class="m-slider" style="width: 1080px; height: 374px;">
-        <div class="move">
-            <a href="#" class="prev" style="display: block;" data-spm-anchor-id="a2h03.8164468.2069780.2">prev</a>
-            <a href="#" class="next" data-spm-anchor-id="a2h03.8164468.2069780.3" style="display: none;">next</a>
-        </div>
         <div class="inner" style="width: 1080px; height: 374px;">
             <ul class="slider-box">
-            @foreach($film_info as $v)
+            @foreach($info_vip as $v)
                     <li class="slider-item" style="width: 200px; height: 374px;">
                         <div class="slider-info-box">
                             <div class="img-box">
-                                <a href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.4">
-                                    <img data-original="http://r1.ykimg.com/051600005950CB63859B5DDF6003B9CE" alt="火星情报局 第三季" src="{{ asset('home5/051600005950cb63859b5ddf6003b9ce')}}" style="display: inline;" width="200" height="300">
+                                <a href="{{url('/home/vipuser')}}/{{$v->id}}" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.4">
+                                    <img data-original="" alt="{{$v->title}}}" src="{{$v->pic_address}}" style="display: inline;" width="200" height="300">
                                 </a>
-                                <a href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.5">观看正片</a>
+                                <a href="{{url('/home/vipuser')}}/{{$v->id}}" target="_top" class="play-btn" data-spm-anchor-id="a2h03.8164468.2069780.5">观看正片</a>
                                 <span class="free-icon">会员免费</span>
                             </div>
                             <div class="info">
-                                <h2><a href="http://v.youku.com/v_show/id_XMjg2MDI0NTc5Ng==.html" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.6">{{$v->title}}</a></h2>
-                                <p class="txt">{{$v->introduction}}</p>
-                                <span class="scores">9.2</span>
+                                <h2><a href="{{url('/home/vipuser')}}/{{$v->id}}" target="_top" data-spm-anchor-id="a2h03.8164468.2069780.6">{{$v->title}}</a></h2>
+                                <p class="txt">{{mb_substr($v->introduction,0,10)}}</p>
+                                <span class="scores">{{$v->score}}</span>
                             </div>
                         </div>
                     </li>

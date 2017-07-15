@@ -1,5 +1,4 @@
-@extends('admin.base')
-@section('content')
+<?php $__env->startSection('content'); ?>
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
@@ -21,7 +20,7 @@
                 <div class="box-header with-border">
                   <h3 class="box-title"><i class="fa fa-th"></i> 分类浏览</h3>
                   <div class="box-tools">
-                    <form action="{{url('admin/type')}}" method="get">
+                    <form action="<?php echo e(url('admin/type')); ?>" method="get">
                     <div class="input-group" style="width: 150px;">
                       <input type="text" name="type" class="form-control input-sm pull-right" placeholder="分类"/>
                       <div class="input-group-btn">
@@ -40,23 +39,24 @@
                       <th>修改时间</th>
                       <th style="width: 100px">操作</th>
                     </tr>
-                    @foreach($list as $stu)
+                    <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $stu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
-                            <td>{{$stu->id}}</td>
-                            <td>{{$stu->type}}</td>
-                            <td>{{$stu->addtime}}</td>
-                            <td>{{$stu->edittime}}</td>
-                            <td> <button onclick="doDel({{$stu->id}})" class="btn btn-xs btn-danger">删除</button>
-                            <button onclick="doEdit({{$stu->id}})" class= "btn btn-xs btn-primary">编辑</button></td>
+                            <td><?php echo e($stu->id); ?></td>
+                            <td><?php echo e($stu->type); ?></td>
+                            <td><?php echo e($stu->addtime); ?></td>
+                            <td><?php echo e($stu->edittime); ?></td>
+                            <td> <button onclick="doDel(<?php echo e($stu->id); ?>)" class="btn btn-xs btn-danger">删除</button>
+                            <button onclick="doEdit(<?php echo e($stu->id); ?>)" class= "btn btn-xs btn-primary">编辑</button></td>
                             
                         </tr>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                   
                    
                   </table>
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
-                {{$list->appends($where)->links()}}
+                <?php echo e($list->appends($where)->links()); ?>
+
                 </div>
               </div><!-- /.box -->
 
@@ -70,15 +70,15 @@
         <form action="" style="display:none;" id="mydeleteform" method="post">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         </form>
-    @endsection
+    <?php $__env->stopSection(); ?>
 
-        @section("myscript")
+        <?php $__env->startSection("myscript"); ?>
       <script type="text/javascript">
             function doDel(id){
             Modal.confirm({msg:'是否删除此类别？'}).on(function (e){
                 if(e){
                     var form = document.getElementById("mydeleteform");
-                    form.action = "{{URL('/admin/type/del')}}/"+id;
+                    form.action = "<?php echo e(URL('/admin/type/del')); ?>/"+id;
                     form.submit(); 
                 }
             });
@@ -87,10 +87,11 @@
 
          function doEdit(id){
               var form = document.getElementById('mydeleteform');
-              form.action = "{{url('/admin/type/edit')}}/"+id;
+              form.action = "<?php echo e(url('/admin/type/edit')); ?>/"+id;
               form.submit();
 
             }
 
     </script>
-    @endsection
+    <?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

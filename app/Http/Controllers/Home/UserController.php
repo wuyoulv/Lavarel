@@ -26,6 +26,7 @@ class UserController extends Controller
         $Film_info=Film_info::get();
         $Film_type=Film_type::get();
         $Ad=Ad::get();
+
         $list = User::find($id)->toArray();
        // echo '<pre>';
         //print_r($list);die; 

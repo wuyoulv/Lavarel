@@ -13,7 +13,7 @@ class Film_cmtController extends Controller {
 			//通过影片id链接查询 评论内容和用户
 			//$list=array();
 			foreach ($db as $key => $v) {
-				$film_cmt[] = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where('film_id', $v->id)->where("film_info.title", "like", "%{$request->input('title') }%")->paginate(5);
+				$film_cmt[] = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id','film_info.language' 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where('film_id', $v->id)->where("film_info.title", "like", "%{$request->input('title') }%")->paginate(5);
 				$list = $film_cmt;
 				$where['title'] = $request->input('title');
 			}
@@ -25,6 +25,10 @@ class Film_cmtController extends Controller {
 			// dd($list);
 			
 		}
+		if(empty($list)){
+			return back()->withErrors('此分类下无影片或评论信息！');
+			}
+		
 		//查询分类表 id 分类名
 		$type_table = \DB::table('film_type')->select('id', 'type')->get();
 		return view('admin.Film_cmt.index', ['cmt' => $list, 'where' => $where, 'type_table' => $type_table]);
@@ -32,6 +36,7 @@ class Film_cmtController extends Controller {
 	public function join($like) {
 		$film_cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_info.title", "like", "%{$like}%")->paginate(5);
 		return $film_cmt;
+
 
 	}
 	public function delete($id) {

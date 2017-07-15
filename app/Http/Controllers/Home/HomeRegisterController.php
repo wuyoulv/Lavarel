@@ -152,7 +152,8 @@ class HomeRegisterController extends Controller
         
         $user=Login::where('account','=',$account)->get();
         if(!empty($user)){
-            return back()->with('此账号已存在！');
+            //return back()->with('status','此账号已存在！');
+            return json_encode(['info' => '此账号已存在！']);
         }
         $phone = $request ->input('account'); // 用户手机号，接收验证码
         $name = '兄弟连';  // 短信签名,可以在阿里大鱼的管理中心看到

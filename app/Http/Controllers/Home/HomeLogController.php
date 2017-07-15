@@ -25,7 +25,7 @@ class HomeLogController extends Controller
         $cd=Login::where('account','=',$res)->first();
         if(!empty($cd)){
             //判断密码
-            if(MD5($password)==$cd->password){
+            if(md5($password)==$cd->password){
                 //存储session跳转页面
                 session()->put("adminn",$cd->account);
                 return redirect("a/home");

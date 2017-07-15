@@ -11,10 +11,10 @@ class VipuserController extends Controller
 {
     public function index()
     {
-    	$db = \DB::table('film_info')->get();
-    	
-    	    	
-    	return view("home.vipuser.vipuser",['film_info'=>$db]);
+    	$db = \DB::table('film_info')->select('id','title','pic_address','introduction','score','status')->where('status','1')->get();
+
+    	  
+    	return view("home.vipuser.vipuser",['info_vip'=>$db]);
     }
 }
 
