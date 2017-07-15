@@ -2562,7 +2562,7 @@
                                                                 <li class="yk-col4 mr1">
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
-                                                                            <a href="{{URL('home/xq')}}/{{$b->id}}" data-from="1-1"
+                                                                            <a href="{{URL('a/xq')}}/{{$b->id}}" data-from="1-1"
                                                                              title="{{$b->title}}">
                                                                             </a>
                                                                             <i class="bg">
@@ -2646,7 +2646,7 @@
                                                                 <li class="yk-col4 mr1">
                                                                     <div class="yk-pack pack-film">
                                                                         <div class="p-thumb">
-                                                                            <a href="{{URL('home/xq')}}/{{$b->id}}" data-from="1-1"
+                                                                            <a href="{{URL('a/xq')}}/{{$b->id}}" data-from="1-1"
                                                                              title="{{$b->title}}">
                                                                             </a>
                                                                             <i class="bg">

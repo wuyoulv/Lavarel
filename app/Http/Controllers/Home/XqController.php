@@ -12,21 +12,33 @@ class XqController extends Controller
 {
     public function index($id)
     {
-    	$filminfo=Film_info::where('id',$id)->get();
-        //$user=User::where('id','=',)
+    	$info=\DB::table('film_info')->limit(4)->get();
+        $filmcmt=\DB::table('film_cmt')->join('user','film_cmt.user_id','=','user.id')->join('film_info','film_cmt.film_id','=','film_info.id')->select('film_cmt.id','user.name','user.picname','film_info.title','film_cmt.text','film_cmt.time')->where('film_info.id',$id)->get();
+
+        $filminfo=Film_info::where('id',$id)->get();
         foreach($filminfo as $q){
             $w=$q->id;
-            //print_r ($w);die;
-
         }
-        //echo "<pre>";
-    	 // print_r($w);die;
-        $info=\DB::table('film_info')->limit(4)->get();
-    	$filmcmt=\DB::table('film_cmt')->join('user','film_cmt.user_id','=','user.id')->join('film_info','film_cmt.film_id','=','film_info.id')->select('film_cmt.id','user.name','user.picname','film_info.title','film_cmt.text','film_cmt.time')->where('film_info.id',$id)->get();
-    	// echo "<pre>";
-    	// var_dump($filmcmt);die;
-        // $cmt = \DB::table('film_cmt')->join('film_info', 'film_cmt.film_id', '=', 'film_info.id')->join('user', 'film_cmt.user_id', '=', 'user.id')->select('film_cmt.id', 'user.name', 'film_info.title', 'film_cmt.time', 'film_cmt.text')->where("film_cmt.id", $id)->get();
-    	return view("home.xq.index",['filminfo'=>$filminfo,'filmcmt'=>$filmcmt,'info'=>$info,'w'=>$w]);
+
+        
+        $filminfo2 = Film_info::select('status')->where('id','=',$id)->first()->toArray();
+        $last2 = last($filminfo2);
+
+        if(session('adminn')){
+            $user=User::select('role')->where('account','=',session('adminn'))->first()->toArray();
+            $last = last($user);
+            if($last>=$last2){
+                return view("home.xq.index",['filminfo'=>$filminfo,'filmcmt'=>$filmcmt,'info'=>$info,'w'=>$w]);
+            }else{
+                return redirect('a/home');
+            }
+        }else{
+            if($last2>0){
+                return view("home.xq.index",['filminfo'=>$filminfo,'filmcmt'=>$filmcmt,'info'=>$info,'w'=>$w]);
+            }else{
+                return redirect('a/home');
+            }
+        }
     }
 
     public function add(Request $request,$w)

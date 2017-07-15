@@ -25,6 +25,12 @@
 								<input name="account" type="text" placeholder="手机号" onblur="sendMobileCode()" >
                                 
 							</div>
+                            <?php if(session('status')): ?>
+                                <div class="alert alert-success">
+                                    <?php echo e(session('status')); ?>
+
+                                </div>
+                            <?php endif; ?>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
                             <div class="form_text_ipt">
 								<input name="code" type="text" placeholder="验证码">
@@ -70,13 +76,13 @@
                         url:'/home/sendSms',
                         type:"get",
                         data:'account='+tel,
-                        dataType:'text',
+                        dataType:'json',
                         headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')},
                         success:function(data){
-                            alert('验证码已发送！');
+                            alert(data);
                         },
                         error:function(){
-                            alert('此账号已存在！');
+                            alert('111此账号已存在！');
                         }
                     })
                 }
