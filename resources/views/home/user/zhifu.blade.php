@@ -118,7 +118,11 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
             <span class="total_price_tittle">实付款：</span>
             <span class="total_num ">￥15.00</span>
         </div>
-
+        <form>
+            <input name='hidden' value="{{ csrf_token }}"/>
+            <input name="months" value=""/>
+            <input name="months" value=""/>
+        </form>
         <div class="pay_opear">
 
             <div class="other_pay_toggle_btn" onselectstart="return false;" style="display: none;" data-spm="2300675" data-spm-click="gostr=/yt/gldclk.youkuclick;locaid=xiadanPCqitazhifu" dataid="xiadanPCqitazhifu">
@@ -134,8 +138,10 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
             <div class="all_play_ways" data-spm="2300676">
                 <!-- <div class="all_play_ways"></div>-->
                 <div class="pay_by_qrcode">
-                    <div class="scan_icon"></div>
-                    <img class="paly_qrcode" src="{{ asset('home10/qr')}}" order_seq="b30782c4ffdefab1eaeeee973b75ee85">
+                    <div >
+                        <button id="123" type="button" onclick="checkUser();">支付</button>
+                    </div>
+                    
                 </div>
                 <dl class="pay_way pay_by_zhifubao" data-spm-click="gostr=/yt/gldclk.youkuclick;locaid=xiadanPCzhifubao" dataid="xiadanPCzhifubao">
                     <dt class="box"></dt>
@@ -252,7 +258,11 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 <script type="text/javascript" src="{{ asset('home10/config-build.js.下载')}}"></script>
 <script type="text/javascript" src="{{ asset('home10/requirejs-remote-8a67cc3a6e.js.下载')}}"></script>
 <script type="text/javascript" src="{{ asset('home10/payIndex-1ac0a80735.js.下载')}}"></script>
-
+<script type="text/javascript">
+     function checkUser()
+              document.getElementById("123").submit();
+            }
+</script>
 
 
 

@@ -134,8 +134,10 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
             <div class="all_play_ways" data-spm="2300676">
                 <!-- <div class="all_play_ways"></div>-->
                 <div class="pay_by_qrcode">
-                    <div class="scan_icon"></div>
-                    <img class="paly_qrcode" src="<?php echo e(asset('home10/qr')); ?>" order_seq="b30782c4ffdefab1eaeeee973b75ee85">
+                    <div >
+                        <button id="123" type="button" onclick="checkUser();">支付</button>
+                    </div>
+                    
                 </div>
                 <dl class="pay_way pay_by_zhifubao" data-spm-click="gostr=/yt/gldclk.youkuclick;locaid=xiadanPCzhifubao" dataid="xiadanPCzhifubao">
                     <dt class="box"></dt>
@@ -252,7 +254,11 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 <script type="text/javascript" src="<?php echo e(asset('home10/config-build.js.下载')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('home10/requirejs-remote-8a67cc3a6e.js.下载')); ?>"></script>
 <script type="text/javascript" src="<?php echo e(asset('home10/payIndex-1ac0a80735.js.下载')); ?>"></script>
-
+<script type="text/javascript">
+     function checkUser()
+              document.getElementById("123").submit();
+            }
+</script>
 
 
 

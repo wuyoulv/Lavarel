@@ -20,9 +20,15 @@ class XqController extends Controller
             $w=$q->id;
         }
 
+        //影片点击量加一
+        $data['click']=($q->click)+1;
+        Film_info::where('id',$id)->Update($data);
+
+        //获取影片的状态
         $filminfo2 = Film_info::select('status')->where('id','=',$id)->first()->toArray();
         $last2 = last($filminfo2);
 
+        //判断会员权限是否大于影片权限
         if(session('adminn')){
             $user=User::select('role')->where('account','=',session('adminn'))->first()->toArray();
             $last = last($user);
@@ -64,5 +70,17 @@ class XqController extends Controller
         \DB::table('film_cmt')->insertGetId(['user_id'=>$data['user_id'],'film_id'=>$data['film_id'],'title'=>$data['title'],'text'=>$data['text'],'time'=>$data['time']]);
         return redirect("/home/xq/{$w}");
         
+    }
+
+    public function updates(Request $request)
+    {
+        $cc=User::where('account','=',session('adminn'))->get();
+        foreach($cc as $dd){
+            $id=$dd->id;
+        }
+        $data = $request->only(['months','money','buy_time','dead_line']);
+            User::where('id',$id)->Update($data);
+            $res1 = User_vip::insertGetId(['userid'=>$id,'role'=>1]);
+         return redirect('home/user/zhanghu');
     }
 }
