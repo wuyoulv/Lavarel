@@ -19,7 +19,6 @@
           <th>会员号</th>
           <th>账号</th>
           <th>头像</th>
-          <th>密码</th>
           <th>真实姓名</th>
           <th>生日</th>
           <th>性别</th>
@@ -39,8 +38,7 @@
         <tr>
           <td>{{$v->id}}</td>
           <td>{{$v->account}}</td>
-          <td>{{$v->picname}}</td>
-          <td>{{$v->password}}</td>
+          <td><img width="30" src="{{ URL('uploads') }}/{{$v->picname}}"/></td>
           <td>{{$v->name}}</td>
           <td>{{$v->birthday}}</td>
           <td>@if ($v->sex == 1) 男 @else 女 @endif</td>

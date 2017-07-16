@@ -32,9 +32,21 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">分类：</label>
                       <div class="col-sm-4">
-                        <input type="text" name="type" class="form-control" id="inputEmail3" value="" placeholder="类型">
+                        <select name='type_pid' class="form-control">
+                          <option value='0'>==顶级分类==</option>
+                          @foreach($list as $v)
+                          <option value='{{$v->id}}'>{{$v->type}}</option>
+                         @endforeach
+                        </select>
+                        
                       </div>
                     </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">添加分类：</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="type" class="form-control" id="inputEmail3" value="" placeholder="类型">
+                      </div>
+                    </div>                   
 
                   </div><!-- /.box-body -->
                   <div class="box-footer">
@@ -46,8 +58,14 @@
           </div>
           
                   </div><!-- /.box-footer -->
+                  @if(count($errors)>0)
+                  <div class="mark"><h5>&nbsp;&nbsp;&nbsp;<i class="fa fa-warning text-yellow"></i> @foreach($errors->all() as $error)
+                        {{$error}}
+                       @endforeach
+                  </h5><div></div></div>
+                  @endif
                 </form>
-        <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+
               </div><!-- /.box -->
        
             </div><!--/.col (right) -->

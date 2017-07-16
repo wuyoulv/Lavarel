@@ -30,14 +30,30 @@
                   <div class="box-body">
                   
                     <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">评论ID：</label>
+                      <label for="inputEmail3" class="col-sm-2 control-label">分类ID：</label>
                       <div class="col-sm-4">
                         <input type="text" disabled="disabled"   class="form-control" id="inputEmail3" placeholder="{{$v->id}}">
                         <input type="hidden" name="id" value="{{$v->id}}">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">分类：</label>
+                      <label for="inputEmail3" class="col-sm-2 control-label">所属分类：</label>
+                      <div class="col-sm-4">
+                        <select name='type_pid' class="form-control">
+                          <option value='0'>==顶级分类==</option>
+                          @foreach($type as $val)
+                            @if($v->type_pid==$val->id)
+                            <option selected = "selected" value='{{$val->id}}'>{{$val->type}}</option>
+                            @else
+                            <option value='{{$val->id}}'>{{$val->type}}</option>
+                            @endif
+                         @endforeach
+                        </select>
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">分类名：</label>
                       <div class="col-sm-4">
                         <input type="text" name="type" class="form-control" id="inputEmail3" value="{{$v->type}}" placeholder="类型">
                       </div>

@@ -22,7 +22,7 @@ class UserController extends Controller
            $list=User::where("account","like","%{$name}%")->paginate(1); 
            $where['name']=$name;
         }else{
-            $list = User::paginate(1);
+            $list = User::paginate(8);
         }
         
         

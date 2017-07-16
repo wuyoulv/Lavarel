@@ -166,12 +166,7 @@ var ykQHeader = {
 					<li>
 						<a href="{{ url('a/home/') }}">首页</a>
 					</li>
-					<li>
-						<a href="http://faxian.youku.com/">发现</a>
-					</li>
-					<li>
-						<a id="navSub" href="">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
-					</li>
+				
 					<li>
 						<a href="{{ url('home/vipuser') }}">会员</a>
 					</li>
@@ -183,12 +178,23 @@ var ykQHeader = {
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<!-- <div class="login-before handle" style="display: none;">
-					                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
-					</div> -->
-					  <div class="login-before handle" style="display: none;">
-                        <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·<a id="qheader_login" href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
-                    </div>
+					  @if ( session()->get('adminn') == null)
+                                    <div class="login-before handle" style="display: block;">
+                                        <a href="{{ URL('/home/login') }}">
+                                            登录
+                                        </a>
+                                        <a id="qheader_reg" href="{{ URL('/home/register') }}">
+                                            注册
+                                        </a>
+                                    </div>
+                                @else
+                                    <div class="login-before handle" style="display: block;">
+                                        <a id="qheader_reg" href="{{ URL('home/user/index') }}">
+                                            {{ session()->get('adminn') }}
+                                        </a>||
+                                        <a href="/home/homeLog/logout">退出</a>
+                                    </div>
+                                @endif
 					<div class="login-after dropdown handle" style="">
 						<a href="" target="_blank">
 							<img class="avatar" src="{{ asset('home6/0130391F4555DECBD12EA528C87A0559FDED60-5F54-5808-E1B9-BE3645600E07')}}" title="{{$list['account']}}">
@@ -375,6 +381,7 @@ var ykQHeader = {
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 			<div class="g-so" data-spm="search">

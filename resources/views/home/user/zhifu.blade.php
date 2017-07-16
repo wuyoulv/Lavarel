@@ -9,32 +9,30 @@
     <!--[if lt IE 9]>
     <script src="//static.youku.com/paymentcenter/vip-pc/build/js/libs/html5shiv.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="./优酷会员支付-影像特权派_files/payIndex-57717dfaae.css">
-<script type="text/javascript" async="" src="./优酷会员支付-影像特权派_files/index.js.下载" id="aplus-sufei"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="loadFrame" src="./优酷会员支付-影像特权派_files/loadFrame.js.下载"></script><script src="./优酷会员支付-影像特权派_files/index.js(1).下载"></script><script src="./优酷会员支付-影像特权派_files/index.js(2).下载" id="aplus-sufei"></script></head>
+    <link rel="stylesheet" href="{{ asset('home10/payIndex-57717dfaae.css')}}">
+<script type="text/javascript" async="" src="{{ asset('home10/index.js.下载')}}" id="aplus-sufei"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="loadFrame" src="{{ asset('home10/loadFrame.js.下载')}}"></script><script src="{{ asset('home10/index.js(1).下载')}}"></script><script src="{{ asset('home10/index.js(2).下载')}}" id="aplus-sufei"></script></head>
 
-<body data-spm="8224040" class="l-mini" data-templeclass-cid="templeClass-0"><script type="text/javascript" async="" src="./优酷会员支付-影像特权派_files/saved_resource"></script><script id="beacon-aplus" src="./优酷会员支付-影像特权派_files/aplus_o.js.下载" exparams="userid=&amp;aplus&amp;sidx=eUUVUjQXZ1nsQzEyP4Cn9/jSxBrqKmCM&amp;ckx=payyoukucombuyorder|payyoukucombuyproductshtml"></script><script>
+<body data-spm="8224040" class="l-mini" data-templeclass-cid="templeClass-0"><script type="text/javascript" async="" src="{{ asset('home10/saved_resource')}}"></script><script id="beacon-aplus" src="{{ asset('home10/aplus_o.js.下载')}}" exparams="userid=&amp;aplus&amp;sidx=eUUVUjQXZ1nsQzEyP4Cn9/jSxBrqKmCM&amp;ckx=payyoukucombuyorder|payyoukucombuyproductshtml"></script><script>
 with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","userid=&aplus&sidx=eUUVUjQXZ1nsQzEyP4Cn9/jSxBrqKmCM&ckx=payyoukucombuyorder|payyoukucombuyproductshtml",id="beacon-aplus",src="//g.alicdn.com/alilog/mlog/aplus_o.js")
 </script>
 <div id="app">
     <!-- 头部 -->
-    <div id="t-header" data-spm="2069755" style="height:80px;">
+    <div  data-spm="2069755" style="height:80px;">
     <header class="gb-topbar">
         <div class="topbar-inner">
-            <a href="http://vip.youku.com/vips/index.html" class="logo">优酷会员</a>
+            <a href="{{ url('a/home/') }}" class="logo">优酷会员</a>
             <nav>
                 <ul>
-                    <li><a href="http://www.youku.com/">首页</a></li>
-                    <li><a href="http://faxian.youku.com/">发现</a></li>
-                    <li><a href="http://ding.youku.com/u/subscribeUpdate">订阅</a></li>
-                    <li class="active"><a href="http://cps.youku.com/redirect.html?id=00014c9c">会员</a></li>
-                    <li><a href="http://user.youku.com/">我的</a></li>
+                    <li><a href="{{ url('a/home/') }}">首页</a></li>
+                    <li class="active"><a href="{{ url('home/vipuser') }}">会员</a></li>
+                    <li><a href="{{ url('home/user/index') }}">我的</a></li>
                 </ul>
             </nav>
             <div class="ucenter">
                 <ul>        <li class="u-logined">
-            <a href="http://cps.youku.com/redirect.html?id=000146c5" title="" target="_blank"><img src="./优酷会员支付-影像特权派_files/0130391F4555DECBD2017728C87A058524BDB2-89B5-06D6-CE95-E9E3DB9C28D5" alt=""></a>
+            <a href="{{ url('home/user/index') }}" title="" ><img src="/uploads/{{$list['picname']}}" alt=""></a>
         </li>
-        <li class="u-logout"><a href="http://pay.youku.com/buy/order?productid=1000020036&amp;amount=1&amp;activityCode=buy_pc&amp;spm=a2h03.8164468.t-login-card.5~5~5~A#" class="J-logout">退出</a></li>
+        <li class="u-logout"><a href="/homeLog/logout" class="J-logout">退出</a></li>
 
                     <li class="u-record">
                         <a href="http://faxian.youku.com/watch_record" title="记录" target="_blank">记录</a>
@@ -53,7 +51,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 
     <!-- 内容 -->
     <div id="t-content" style="background-image: url(&quot;&quot;);">
-    <div class="account"><span class="account_desc">开通账号:</span><span class="nikename">刁民一位</span></div>
+    <div class="account"><span class="account_desc">开通账号:</span><span class="nikename">{{$list['account']}}</span></div>
     <div class="order">
         <div class="order_tittle">
             <span class="order_text_desc">确认订单信息</span>
@@ -75,7 +73,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
             <tbody>
             <tr>
                 <td class="product_tittle">
-                    <img src="./优酷会员支付-影像特权派_files/0510000056A045DA67BC3D0B8B0CF30E">
+                    <img src="{{ asset('home10/0510000056A045DA67BC3D0B8B0CF30E')}}">
                     <span>优酷黄金会员</span>
                 </td>
                 <td class="product_name">连续包月</td>
@@ -137,7 +135,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
                 <!-- <div class="all_play_ways"></div>-->
                 <div class="pay_by_qrcode">
                     <div class="scan_icon"></div>
-                    <img class="paly_qrcode" src="./优酷会员支付-影像特权派_files/qr" order_seq="b30782c4ffdefab1eaeeee973b75ee85">
+                    <img class="paly_qrcode" src="{{ asset('home10/qr')}}" order_seq="b30782c4ffdefab1eaeeee973b75ee85">
                 </div>
                 <dl class="pay_way pay_by_zhifubao" data-spm-click="gostr=/yt/gldclk.youkuclick;locaid=xiadanPCzhifubao" dataid="xiadanPCzhifubao">
                     <dt class="box"></dt>
@@ -249,11 +247,11 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 </div>
 <div class="mark product_hide"></div>
 
-<script type="text/javascript" src="./优酷会员支付-影像特权派_files/tdstat.js.下载"></script>
-<script type="text/javascript" src="./优酷会员支付-影像特权派_files/require.js.下载"></script>
-<script type="text/javascript" src="./优酷会员支付-影像特权派_files/config-build.js.下载"></script>
-<script type="text/javascript" src="./优酷会员支付-影像特权派_files/requirejs-remote-8a67cc3a6e.js.下载"></script>
-<script type="text/javascript" src="./优酷会员支付-影像特权派_files/payIndex-1ac0a80735.js.下载"></script>
+<script type="text/javascript" src="{{ asset('home10/tdstat.js.下载')}}"></script>
+<script type="text/javascript" src="{{ asset('home10/require.js.下载')}}"></script>
+<script type="text/javascript" src="{{ asset('home10/config-build.js.下载')}}"></script>
+<script type="text/javascript" src="{{ asset('home10/requirejs-remote-8a67cc3a6e.js.下载')}}"></script>
+<script type="text/javascript" src="{{ asset('home10/payIndex-1ac0a80735.js.下载')}}"></script>
 
 
 

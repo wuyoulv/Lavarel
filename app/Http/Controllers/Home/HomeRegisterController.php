@@ -147,23 +147,14 @@ class HomeRegisterController extends Controller
 
     }
     
-   
-    
-    public function asendSms(Request $request)
-    {
-        $number=strval(rand(100000,999999));
-        $smsp=json_encode($number);
-        $phone='18119986561';
-        $name='吴汉';
-        $content=$smsp;
-        $code='SMS_75835027';
-        $data = $this->sms->send($phone, $name, $content, $code); 
-        echo "<pre>";
-        var_dump($data);
-        //$sms->send("$phone","$name","$content",'$code');
-    }
     
     public function sendSms(Request $request){
+        
+        $user=Login::where('account','=',$account)->get();
+        if(!empty($user)){
+            //return back()->with('status','此账号已存在！');
+            return json_encode(['info' => '此账号已存在！']);
+        }
         $phone = $request ->input('account'); // 用户手机号，接收验证码
         $name = '兄弟连';  // 短信签名,可以在阿里大鱼的管理中心看到
         $num = rand(100000, 999999); // 生成随机验证码
@@ -206,8 +197,8 @@ class HomeRegisterController extends Controller
         if(!$password==$repassword){
             return back()->with('两次密码输入不一致');
         }
-        $user=Login::where('account','=',$account);
-        if(empty($user)){
+        $user=Login::where('account','=',$account)->get();
+        if(!empty($user)){
             return back()->with('此账号已存在！');
         }
         if(session()->get('num')!=$code){
