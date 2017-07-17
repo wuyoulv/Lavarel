@@ -64,7 +64,7 @@
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">首映时间：</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="首映时间" name="firsttime" value="{{ $data->firsttime }}"/>
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="首映时间" name="firsttime" readonly value="{{ $data->firsttime }}"/>
                       </div>
                     </div>
 
