@@ -36,9 +36,9 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">图片：</label>
+                      <label for="inputPassword3" class="col-sm-2 control-label">视频：</label>
                       <div class="col-sm-4">
-                        <input type="file" class="form-control" id="inputPassword3"  name="picname">
+                        <input type="file" class="form-control" id="inputPassword3"  name="video_name">
                       </div>
                     </div>
 

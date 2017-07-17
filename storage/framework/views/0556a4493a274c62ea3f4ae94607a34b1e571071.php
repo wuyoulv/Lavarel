@@ -136,28 +136,40 @@ var ykQHeader = {
 										<div class="g-head-center">
 				<ul class="g-head-nav">
 					<li>
-						<a href="http://www.youku.com/">首页</a>
-					</li>
-					<li>
-						<a href="http://faxian.youku.com/">发现</a>
-					</li>
+						<a href="<?php echo e(url('a/home')); ?>">首页</a>
+					</li>			
 					<li>
 						<a id="navSub" href="http://ding.youku.com/u/subscribeUpdate">订阅<span class="icon-warn" id="qheader_sub_num" style="display: none;"></span></a>
 					</li>
 					<li>
-						<a href="http://cps.youku.com/redirect.html?id=00014c9c">会员</a>
+						<a href="<?php echo e(url('home/vipuser')); ?>">会员</a>
 					</li>
 					<li>
-						<a href="http://user.youku.com/">我的</a>
+						<a href="<?php echo e(url('home/user/index')); ?>">我的</a>
 					</li>
 				</ul>
 				<div class="yk-ucenter"></div>
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<div class="login-before handle" style="display: block;">
-                        <a id="qheader_login" href="http://www.youku.com/user_login/">登录</a><a id="qheader_reg" href="http://www.youku.com/user_login/">注册</a>
-					</div>
+					<?php if( session()->get('adminn') == null): ?>
+                                    <div class="login-before handle" style="display: block;">
+                                        <a href="<?php echo e(URL('/home/login')); ?>">
+                                            登录
+                                        </a>
+                                        <a id="qheader_reg" href="<?php echo e(URL('/home/register')); ?>">
+                                            注册
+                                        </a>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="login-before handle" style="display: block;">
+                                        <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
+                                            <?php echo e(session()->get('adminn')); ?>
+
+                                        </a>||
+                                        <a href="/home/homeLog/logout">退出</a>
+                                    </div>
+                                <?php endif; ?>
 					<div class="login-after dropdown unload handle" style="display: none;">
 						<a href="http://user.youku.com/page/usc/index" target="_top">
 							<img class="avatar" src="<?php echo e(asset('home4/img/sprite.gif')); ?>">
@@ -168,10 +180,7 @@ var ykQHeader = {
 							<div class="content">
 
 							</div>
-							<div class="u-bottom">
-								<a href="#" class="singout">退出登录</a>
-								<a href="http://user.youku.com/page/setting/base_profile" target="_top">账户设置</a>
-							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -187,10 +196,7 @@ var ykQHeader = {
 							<i class="arrow"></i>
 							<div class="content">
 
-<div class="record-login">
-<a href="javascript:void(0);">登录</a>
-同步各端记录
-</div>
+
 
 
 
@@ -307,7 +313,7 @@ var ykQHeader = {
           <em class="num">59,344,478</em></span>
       </a>
       <h1 class="title">
-        <a href="http://movie.youku.com/" target="_top">[<?php echo e($c->type); ?>]</a>
+        <a href="http://movie.youku.com/" target="_top">[<?php echo e($c->language); ?>]</a>
         <span id="subtitle" title="湄公河行动"><?php echo e($c->title); ?></span></h1>
       <a class="desc-link" href="http://list.youku.com/show/id_zf30366003b7011e69b6d.html" target="_top">节目简介</a></div>
     <div id="module_ad_324" class="ad-flag-wrap ad_area">
@@ -340,16 +346,17 @@ var ykQHeader = {
                 <div id="ab_558"></div>
               </div>
             </div>
-            <div id="module_basic_player" >
+            <div id="module_basic_player">
               <div class="player" id="player" style="background-color:#333333;">
-                
-                  <video width="95%" height="90%" controls>
-				    <source src="Http://oslflcaj7.bkt.clouddn.com/14997928416087.mp4" type="video/mp4">
-				    <source src="movie.ogg" type="video/ogg">
-				    您的浏览器不支持 video 标签。
-				</video>
-                  
-                
+                <object style="background-color:#333333;" width="100%" height="100%">
+                        <div class="player" id="player" style="background-color:#333333;">
+                            <video width="95%" height="90%" controls>
+                                <source src="<?php echo e($c->video_address); ?>" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                                您的浏览器不支持 video 标签。
+                            </video>
+                        </div>
+                </object>
               </div>
             </div>
           </div>
@@ -720,7 +727,7 @@ var ykQHeader = {
                                             <img src="<?php echo e(asset('home4/img/05420408585143626a0a4604e2a87f31')); ?>" alt="<?php echo e($c->title); ?>">
                                             <span class="c-time">
                                               <i class="bg"></i>
-                                              <span>2:03:59</span></span>
+                                              <span><?php echo e($c->duration); ?></span></span>
                                           </div>
                                           <div class="headline"><?php echo e($c->title); ?></div>
                                           <div class="status">
@@ -1067,7 +1074,7 @@ var ykQHeader = {
 <li class="yk-col4 mr1">
 <div class="yk-pack pack-film">
 <div class="p-thumb">
-<a href="http://v.youku.com/v_show/id_XMjc4NTczOTM3Ng==.html" target="_top" title="长城" _ck="" _reck="http://gm.mmstat.com/yt/ytrec.yk.rec?abver=A&amp;apt=1&amp;pg=3&amp;md=1&amp;ord=2&amp;vid=466156247&amp;sid=308208&amp;rtlid=NoRkxcXgj_v166&amp;req_id=NoRkxcXgj_v166&amp;guid=1498459239622Jb7&amp;uid=&amp;rand=rand_770&amp;dct=96&amp;dma=1105&amp;dvid=299112&amp;version=5&amp;utdid=&amp;idfa=&amp;t=1498461596406&amp;pos=0&amp;algInfo=1cf001n-2-1sn-236-1tc-21-1api-2F0406-1lf-2recclurl"></a>
+<a href="<?php echo e(URL('a/xq')); ?>/<?php echo e($b->id); ?>"></a>
 <i class="bg"></i>
 
 <img src="<?php echo e($b->pic_address); ?>">
@@ -1080,7 +1087,7 @@ var ykQHeader = {
 <!-- 标题 -->
 <ul class="info-list">
 <li class="title short-title">
-<a href="http://v.youku.com/v_show/id_XMjc4NTczOTM3Ng==.html" target="_top" _ck="" _reck="http://gm.mmstat.com/yt/ytrec.yk.rec?abver=A&amp;apt=1&amp;pg=3&amp;md=1&amp;ord=2&amp;vid=466156247&amp;sid=308208&amp;rtlid=NoRkxcXgj_v166&amp;req_id=NoRkxcXgj_v166&amp;guid=1498459239622Jb7&amp;uid=&amp;rand=rand_770&amp;dct=96&amp;dma=1105&amp;dvid=299112&amp;version=5&amp;utdid=&amp;idfa=&amp;t=1498461596406&amp;pos=0&amp;algInfo=1cf001n-2-1sn-236-1tc-21-1api-2F0406-1lf-2recclurl"><?php echo e($b->title); ?></a>
+<a href="<?php echo e(URL('a/xq')); ?>/<?php echo e($b->id); ?>"><?php echo e($b->title); ?></a>
 </li>
                 
 <li class="subtitle">
@@ -1109,6 +1116,8 @@ var ykQHeader = {
 <div id="commentAction" class="comment-area-form"><div class="comment-form ">
 
 <div class="form-cell form-content commentFormContent">
+<form name="myform" action="<?php echo e(url('home/cmt/add')); ?>/<?php echo e($w); ?>" method="post" onsubmit="return doSubmit()">
+	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 <div class="form-user-info">
 
 <a href="javascript:;" class="form-user-login" hzcharset="hz-4003764-1000494" charset="404-0-1">登录</a>
@@ -1118,36 +1127,21 @@ var ykQHeader = {
 </div>
 <div class="form-wordlimit"><span class="form-wordlimit-input input-count">0</span><span class="form-wordlimit-upper">/300</span></div>
 <div class="form-textarea form-textarea-picdom">
+
 <textarea data-maxlength="300" name="content" placeholder="看点槽点，不吐不快！别憋着，马上大声说出来吧！"></textarea>
 
-<div class="cont-imgbox">
-<div class="cont-imgbox-box fix">
-<div class="cont-imgitem " id="commentimgitem">
-<ul class="fix upload-queue upload-preview"></ul>
-</div>
-<div class="cont-imgupload">
-<div class="upload_div handle">
-<span class="ui-upload-a ui-upload-ative" id="comment1">
-+
-</span>
-</div>
-</div>
-</div>
-</div>
+
+
 
 </div>
 <div class="form-toolbar">
 <div class="form-toolbar-right">
-<div class="form-tool form-action">
+<div class="comment-pager-turn">
+<input type="submit" value="发表评论">
+<!-- <a href="<?php echo e(url('home/Xq/create')); ?>" class="form-btn form-btn-large form-btn-submit">发表评论</a>
+ -->
+</div>
 
-<a href="javascript:;" class="form-btn form-btn-large form-btn-submit">发表评论</a>
-
-</div>
-<div class="form-tooltip" style="display: none;">
-<div class="com_overlay_con">
-<div class="tips"></div>
-</div>
-</div>
 </div>
 
 <div class="form-validate" style="display: none;">
@@ -1156,6 +1150,30 @@ var ykQHeader = {
 <span>看不清, <a class="change_verify_code" href="javascript:;">点此刷新</a></span>
 </div>
 </div>
+</form>
+
+<script>
+	//提交判断
+	function doSubmit(){
+		return content();
+	}
+
+	//验证姓名
+	function content(){
+		//获取姓名
+		var content=document.myform.content.value;
+		//判断
+		if(content.match(/^.+$/)==null){
+			alert("您输入的内容为空,请重新输入再发布!");
+			return false;
+		}
+		return true;
+	}
+
+
+
+</script>
+
 </div>
 </div>
 </div>
@@ -1163,9 +1181,7 @@ var ykQHeader = {
 <div class="comment-tab">
 <ul class="comment-tab-left">
 <li data-type="all" class="current comment-show">全部评论<em class="num" id="allCommentNum">(8,014)</em></li>
-<li data-type="db" class="comment-show">豆瓣评论</li>
-<li data-type="owner">频道主说</li>
-<li data-type="star">明星说</li>
+
 </ul>
 <ul class="comment-tab-right">
 <li data-type="my" class="comment-show">我的评论消息</li>
@@ -1201,43 +1217,7 @@ var ykQHeader = {
 <a data-page="2" href="javascript:;">下一页</a>
 
 </li>
-</ul>
-<ul class="comment-pager-page">
 
-
-
-
-
-<li><span>1</span></li>
-
-
-
-<li><a data-page="2" href="javascript:;">2</a></li>
-
-
-
-<li><a data-page="3" href="javascript:;">3</a></li>
-
-
-
-<li><a data-page="4" href="javascript:;">4</a></li>
-
-
-
-<li><a data-page="5" href="javascript:;">5</a></li>
-
-
-
-<li><a data-page="6" href="javascript:;">6</a></li>
-
-
-
-<li>...</li>
-
-
-<li><a data-page="268" href="javascript:;">268</a></li>
-
-</ul>
 </div>
 </div>
 
@@ -1255,12 +1235,12 @@ var ykQHeader = {
 <div class="comment-item" data-id="4707758754">
 <div class="comment-content">
 <div class="comment-user-avatar">
-<a href="#" target="_top"><img _hz="" src="<?php echo e(asset('home4/img/35.jpg')); ?>"></a>
+<img src="<?php echo e(URL('uploads')); ?>/<?php echo e($v->picname); ?>"></a>
 </div>
 <div class="comment-section">
 <div class="comment-user-info">
 <a href="#" class="redname" target="_top">
-<?php echo e($v->title); ?>
+<?php echo e($v->name); ?>
 
 </a>
 
@@ -1277,16 +1257,6 @@ var ykQHeader = {
 
 </div>
 
-<div class="comment-handle">
-
-<a href="javascript:;" data-id="4707758754" class="comment-handle-btn comment-handle-up">12027</a>
-
-
-<a href="javascript:;" data-id="4707758754" class="comment-handle-btn comment-handle-down">219</a>
-
-
-<a href="javascript:;" data-id="4707758754" data-uid="570602993" class="comment-handle-btn comment-handle-reply">(112)</a>
-</div>
 </div>
 
 </div>
@@ -1320,42 +1290,7 @@ var ykQHeader = {
 
 </li>
 </ul>
-<ul class="comment-pager-page">
 
-
-
-
-
-<li><span>1</span></li>
-
-
-
-<li><a data-page="2" href="javascript:;">2</a></li>
-
-
-
-<li><a data-page="3" href="javascript:;">3</a></li>
-
-
-
-<li><a data-page="4" href="javascript:;">4</a></li>
-
-
-
-<li><a data-page="5" href="javascript:;">5</a></li>
-
-
-
-<li><a data-page="6" href="javascript:;">6</a></li>
-
-
-
-<li>...</li>
-
-
-<li><a data-page="268" href="javascript:;">268</a></li>
-
-</ul>
 </div>
 </div>
 </div>

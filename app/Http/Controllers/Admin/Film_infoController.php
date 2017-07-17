@@ -51,16 +51,21 @@ class Film_infoController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->file("picname")){
-            $file = $request->file("picname");
-            $filename = time().rand(1000,9999).".".$file->getClientOriginalExtension();
-            $disk = \Storage::disk('qiniu');
-            $in = $disk->put("$filename",$request->file('picname'));
-            $path = $disk->downloadUrl($in); 
-            //dd($path);
-        }else{
-            return back()->with("文件格式不正确");
-        }
+        //上传视频
+        $v_file = $request->file("video_name");
+        $v_filename = time().rand(1000,9999).".".$v_file->getClientOriginalExtension();
+
+        $pipeline = "a";  //建立队列
+        $fops = 'avthumb/m3u8/noDomain/1/segtime/15/vb/240k'.$v_file; //切片处理
+        $policy = array(
+           'persistentOps' => $fops,
+           'persistentPipeline' => $pipeline
+        );
+
+        $v_disk = \Storage::disk('qiniu');
+        $v_filePath = $v_file->getRealPath();
+        $in = $v_disk->put($v_filename,fopen($v_filePath,'r+'));
+        $v_path = 'Http://oslflcaj7.bkt.clouddn.com/'.$v_filename;
 
 
         $time=date('Y-m-d H:i:s');
@@ -68,7 +73,7 @@ class Film_infoController extends Controller
         $input['addtime'] = $time;
         $input['edittime'] = $time;
 
-        $input['pic_address'] = $path;
+        $input['video_address'] = $v_path;
         $id=Film_info::insertGetid($input);
 
         return redirect('/admin/film_info');
@@ -112,7 +117,7 @@ class Film_infoController extends Controller
     {
 
         $time=date('Y-m-d H:i:s');
-        $input['lasttime']=$time;
+        $input['edittime']=$time;
         $input = $request->only('title','type_id','director','actor','firsttime','duration','region','language','introduction','limit','score','status','click');
 
         $id = Film_info::where("id",$id)->update($input);
@@ -131,8 +136,9 @@ class Film_infoController extends Controller
      */
     public function destroy($id)
     {
+       // $key = Film_info->where("id",$id)->get('')
         Film_info::where("id",$id)->delete();
-        \Storage::delete($key);
+        //\Storage::delete($key);
         return redirect('/admin/film_info');
     }
 }

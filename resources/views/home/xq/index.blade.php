@@ -350,7 +350,7 @@ var ykQHeader = {
                 <object style="background-color:#333333;" width="100%" height="100%">
                         <div class="player" id="player" style="background-color:#333333;">
                             <video width="95%" height="90%" controls>
-                                <source src="Http://oslflcaj7.bkt.clouddn.com/14997928416087.mp4" type="video/mp4">
+                                <source src="{{ $c->video_address }}" type="video/mp4">
                                 <source src="movie.ogg" type="video/ogg">
                                 您的浏览器不支持 video 标签。
                             </video>

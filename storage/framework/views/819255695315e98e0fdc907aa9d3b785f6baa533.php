@@ -181,7 +181,7 @@
                                 <?php else: ?>
                                     <div class="login-before handle" style="display: block;">
                                         <a id="qheader_reg" href="<?php echo e(URL('home/user/index')); ?>">
-                                            <?php echo e(session()->get('adminn')); ?>
+                                            <?php echo e(session('adminn')); ?>
 
                                         </a>||
                                         <a href="/home/homeLog/logout">退出</a>
@@ -376,7 +376,7 @@
                            
                             <dd>
                                 <a  onclick="javaScript:alert('优酷广告投放电话，请拨打：010-88886666')">
-                                <img src="./uploads/2222.jpg" width="300" height="120">
+                                <img src="<?php echo e(URL('uploads/2222.jpg')); ?>" width="300" height="120">
                                 </a>
                             </dd>
                             

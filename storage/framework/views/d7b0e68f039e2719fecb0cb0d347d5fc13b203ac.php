@@ -42,7 +42,7 @@
                     <tr>
                         <th>ID</th>
                         <th>电影名</th>
-                        <th>图片地址</th>
+                        <th>视频地址</th>
                         <th>类型</th>
                         <th>导演</th>
                         <th>演员</th>
@@ -63,7 +63,7 @@
                 <tr>
                     <td><?php echo e($v->id); ?></td>
                     <td><?php echo e($v->title); ?></td>
-                    <td><?php echo e(substr($v->pic_address,33,18)); ?></td>
+                    <td><?php echo e(substr($v->video_address,33,18)); ?></td>
                     <td><?php echo e($v->type_id); ?></td>
                     <td><?php echo e($v->director); ?></td>
                     <td><?php echo e($v->actor); ?></td>

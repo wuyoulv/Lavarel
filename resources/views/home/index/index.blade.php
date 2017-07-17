@@ -2567,7 +2567,7 @@
                                                                             </a>
                                                                             <i class="bg">
                                                                             </i>
-                                                                            <img class="quic" src="{{ $b->pic_address }}">
+                                                                            <img class="quic" src="{{ $b->video_address }}?vframe/png/offset/5">
                                                                         </div>
                                                                         <ul class="p-info pos-bottom">
                                                                             <li class="status hover-hide">
@@ -2651,7 +2651,7 @@
                                                                             </a>
                                                                             <i class="bg">
                                                                             </i>
-                                                                            <img class="quic" src="{{ $b->pic_address }}">
+                                                                            <img class="quic" src="{{ $b->video_address }}?vframe/png/offset/5">
                                                                         </div>
                                                                         <ul class="p-info pos-bottom">
                                                                             <li class="status hover-hide">
