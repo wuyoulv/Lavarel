@@ -102,7 +102,7 @@ Route::group(['prefix' => 'home','middleware' => 'home'], function () {
 
     Route::get('vipuser/',"Home\VipuserController@index");
     Route::get('/ad', 'Home\AdController@index');//广告
-    Route::get('/xq/updates','Home\XqController@updates');//支付
+    Route::post('/xq/updates','Home\XqController@updates');//支付
 
 
 });

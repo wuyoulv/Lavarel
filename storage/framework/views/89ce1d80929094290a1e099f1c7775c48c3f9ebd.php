@@ -34,7 +34,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 					<li class="u-logined">
 						<a href="<?php echo e(url('home/user/index')); ?>" title="" ><img src="/uploads/<?php echo e($list['picname']); ?>" alt=""></a>
 					</li>
-					<li class="u-logout"><a href="/homeLog/logout" >退出</a>
+					<li class="u-logout"><a href="<?php echo e(URL('home/homeLog/logout')); ?>" >退出</a>
 					</li>
 				<!--	<div class="login-before handle" style="display: none;">
                         <span id="span_userinfo"> <?php if(session('adminn')): ?> <a href="<?php echo e(url('home/user/zhanghu')); ?>"> <?php echo e(session('adminn')); ?></a>·<a href="/homeLog/logout">退出</a> <?php else: ?> [<a  id="qheader_reg" href="<?php echo e(URL('home/login')); ?>"> 登陆 </a>·<a id="qheader_reg" href="<?php echo e(url('home/register')); ?>">注册</a>]</span><?php endif; ?>
@@ -89,11 +89,31 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
     </div>
     <script src="<?php echo e(asset('js/jquery-3.2.1.slim.min.js')); ?>"></script>
     <script type="text/javascript">
+
         $(".product_name").click(function(){
-            alert($(this).html());
-            
-            $(window).attr('location',"<?php echo e(('http://www.laravel.com/a/home')); ?>");
-                            
+            var a=$(this).attr('productname');
+            var b=$(this).attr('price');
+            //alert("确定购买");
+            $.ajax({
+                url:"<?php echo e(URL('home/xq/updates')); ?>",
+                type:"post",
+                dataType:"json",
+                headers: { 'X-CSRF-TOKEN' : '<?php echo e(csrf_token()); ?>' },
+                data:{'months':a, 'money':b},
+                success:function(data){
+                    //var da=json_decode(data);
+                    if(data ==  1){
+                        alert("购买失败！");
+                    }else{
+                        alert("购买成功！");
+                        return window.location.href = "<?php echo e(URL('home/user/index')); ?>";
+                    }
+                },
+                error:function(){
+                    alert('aaa');
+                }
+            });
+   
         });
     </script>
     <!-- 轮播 -->

@@ -95,17 +95,25 @@ class XqController extends Controller
         }
         $tmpDate = "$tmpYear-$tmpMonth-$tmpDay $tmpH";
         $data['dead_line'] = $tmpDate;
-        $data['months'] = $request->input('months');
-        $data['money'] = $request->input('money');
+        $data['months'] = $_POST['months'];
+        $data['money'] = $_POST['money'];
         $data['buy_time'] = date("Y-m-d H:i:s");
-            User::where('id',$id)->Update($data);
+        
+        $cc = User::where('id',$id)->Update($data);
 
+        if(!empty($cc)){
             //判断User_vip表里是否有当前id号
-            $us=User_vip::first('userid','=',$id);
+            
+            $us=User_vip::where('userid','=',$id)->get();
+            //return 2;
             if(empty($us)){
                 $res1 = User_vip::insertGetId(['userid'=>$id,'role'=>1]);
+                return 2;
             }
-            
+            return 2;
+        }else{
+            return 1;
+        }
          return redirect('home/user/index');
     }
 }

@@ -34,7 +34,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 					<li class="u-logined">
 						<a href="{{ url('home/user/index') }}" title="" ><img src="/uploads/{{$list['picname']}}" alt=""></a>
 					</li>
-					<li class="u-logout"><a href="/homeLog/logout" >退出</a>
+					<li class="u-logout"><a href="{{ URL('home/homeLog/logout') }}" >退出</a>
 					</li>
 				<!--	<div class="login-before handle" style="display: none;">
                         <span id="span_userinfo"> @if(session('adminn')) <a href="{{ url('home/user/zhanghu') }}"> {{session('adminn')}}</a>·<a href="/homeLog/logout">退出</a> @else [<a  id="qheader_reg" href="{{URL('home/login')}}"> 登陆 </a>·<a id="qheader_reg" href="{{url('home/register')}}">注册</a>]</span>@endif
@@ -89,14 +89,31 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
     </div>
     <script src="{{ asset('js/jquery-3.2.1.slim.min.js') }}"></script>
     <script type="text/javascript">
+
         $(".product_name").click(function(){
-            alert($(this).html());
-            $(this).post({{ URL('home/xq/updates') }},{
-                    months:$(this).attr('productname').val(),
-                    money:""
-                    },function(data,status,xhr),dataType);
-            $(window).attr('location',"{{ ('http://www.laravel.com/a/home') }}");
-                            
+            var a=$(this).attr('productname');
+            var b=$(this).attr('price');
+            //alert("确定购买");
+            $.ajax({
+                url:"{{ URL('home/xq/updates') }}",
+                type:"post",
+                dataType:"json",
+                headers: { 'X-CSRF-TOKEN' : '{{ csrf_token() }}' },
+                data:{'months':a, 'money':b},
+                success:function(data){
+                    //var da=json_decode(data);
+                    if(data ==  1){
+                        alert("购买失败！");
+                    }else{
+                        alert("购买成功！");
+                        return window.location.href = "{{ URL('home/user/index') }}";
+                    }
+                },
+                error:function(){
+                    alert('aaa');
+                }
+            });
+   
         });
     </script>
     <!-- 轮播 -->
