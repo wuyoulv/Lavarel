@@ -118,10 +118,10 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
             <span class="total_price_tittle">实付款：</span>
             <span class="total_num ">￥15.00</span>
         </div>
-        <form>
+        <form action="{{ URL('home/xq/updates') }}" method="post" id="123">
             <input name='hidden' value="{{ csrf_token }}"/>
             <input name="months" value=""/>
-            <input name="months" value=""/>
+            <input name="money" value=""/>
         </form>
         <div class="pay_opear">
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Film_info;
 use App\Model\Film_cmt;
 use App\Model\User;
+use App\Model\User_vip;
 
 class XqController extends Controller
 {
@@ -78,9 +79,33 @@ class XqController extends Controller
         foreach($cc as $dd){
             $id=$dd->id;
         }
-        $data = $request->only(['months','money','buy_time','dead_line']);
+
+        $months=$request->input('months');
+        date_default_timezone_set('prc');
+        if (date("n") + $months >= 12) {
+            $tmpMonth = date("n") + $months - 11;
+            $tmpYear = date ("Y") + 1;
+            $tmpDay = date("d");
+            $tmpH = date("H:i:s");
+        }else{
+            $tmpMonth = date ("n") + $months;
+            $tmpYear = date ("Y");
+            $tmpDay = date("d");
+            $tmpH = date("H:i:s");
+        }
+        $tmpDate = "$tmpYear-$tmpMonth-$tmpDay $tmpH";
+        $data['dead_line'] = $tmpDate;
+        $data['months'] = $request->input('months');
+        $data['money'] = $request->input('money');
+        $data['buy_time'] = date("Y-m-d H:i:s");
             User::where('id',$id)->Update($data);
-            $res1 = User_vip::insertGetId(['userid'=>$id,'role'=>1]);
-         return redirect('home/user/zhanghu');
+
+            //判断User_vip表里是否有当前id号
+            $us=User_vip::first('userid','=',$id);
+            if(empty($us)){
+                $res1 = User_vip::insertGetId(['userid'=>$id,'role'=>1]);
+            }
+            
+         return redirect('home/user/index');
     }
 }

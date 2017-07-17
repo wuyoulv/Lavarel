@@ -166,12 +166,7 @@ var ykQHeader = {
 					<li>
 						<a href="<?php echo e(url('a/home/')); ?>">首页</a>
 					</li>
-					<li>
-						<a href="http://faxian.youku.com/">发现</a>
-					</li>
-					<li>
-						<a id="navSub" href="">订阅<span class="icon-warn" id="qheader_sub_num" style="display:none;"></span></a>
-					</li>
+				
 					<li>
 						<a href="<?php echo e(url('home/vipuser')); ?>">会员</a>
 					</li>
@@ -183,9 +178,6 @@ var ykQHeader = {
 			</div>
 			<div class="g-ucenter" id="uerCenter">
 				<div class="u-login">
-					<!-- <div class="login-before handle" style="display: none;">
-					                        <a id="qheader_login" href="">登录</a><a id="qheader_reg" href="">注册</a>
-					</div> -->
 					  <?php if( session()->get('adminn') == null): ?>
                                     <div class="login-before handle" style="display: block;">
                                         <a href="<?php echo e(URL('/home/login')); ?>">
@@ -390,6 +382,7 @@ var ykQHeader = {
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 			<div class="g-so" data-spm="search">

@@ -69,47 +69,33 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
     <div id="t-product-list">
         <div class="product-list-warp"><div class="product-list">
         <h2 class="product_tittle">优酷黄金会员</h2>
-                <div class="price_desc">
-                    <span class="sales">省钱省心每月</span>
-                    <span class="price">15</span>
-                    <span class="unit">元</span>
-                    <span class="origin_price"></span>
-
-                </div>
+                
 
         <dl class="product_desc ">
             <dt class="product_desc_name">套餐</dt>
             <dt class="product_desc_first" data-spm="2300654">
             <div class="product_desc_first_warp">
-                    <span class="product_name product_active" onselectstart="return false;" productname="连续包月" productid="1000020036" price="15" originprice="" sales="省钱省心每月" buymax="3" buymaxmes="最多选3份" producttype="2">连续包月</span>
+                    <span class="product_name" onselectstart="return false;" onclick="checkUser()" productname="12" productid="1000020036" price="169" originprice="" sales="省钱省心每月" buymax="3" buymaxmes="最多选3份" producttype="2">12个月 169元</span>
 
-                    <span class="product_name" onselectstart="return false;" productname="12个月" productid="1000020008" price="169" originprice="" sales="" buymax="3" buymaxmes="最多选3份" producttype="1">12个月</span>
+                    <span class="product_name" onselectstart="return false;" productname="6" productid="1000020008" price="96" originprice="" sales="" buymax="3" buymaxmes="最多选3份" producttype="1">6个月 96元</span>
 
-                    <span class="product_name" onselectstart="return false;" productname="3个月" productid="1000020137" price="56" originprice="" sales="" buymax="3" buymaxmes="最多选3份" producttype="1">3个月</span>
+                    <span class="product_name" onselectstart="return false;" productname="3" productid="1000020137" price="56" originprice="" sales="" buymax="3" buymaxmes="最多选3份" producttype="1">3个月 56元</span>
 
-                    <span class="product_name" onselectstart="return false;" productname="1个月" productid="1000020001" price="20" originprice="" sales="" buymax="3" buymaxmes="最多选3份" producttype="1">1个月</span>
-
+                    <span class="product_name" onselectstart="return false;" productname="1" productid="1000020001" price="20" originprice="" sales="" buymax="3" buymaxmes="最多选3份" producttype="1">1个月 20元</span>
             </div>
             </dt>
-        </dl>
-        <dl class="num_desc">
-            <dt class="product_desc_name">数量</dt>
-            <dt class="num_opear">
-                <input class="product_num product_num_disable" type="text" value="1" disabled="disabled">
-                <span class="num_up num_up_disable" onselectstart="return false;" data-spm="2300655" data-spm-click="gostr=/yt/gldclk.youkuclick;locaid=shangpinPCshuliangjia" dataid="shangpinPCshuliangjia"> <span class="icon_up"></span></span>
-                <span class="num_down num_down_disable" data-spm="2300655" data-spm-click="gostr=/yt/gldclk.youkuclick;locaid=shangpinPCshuliangjian" dataid="shangpinPCshuliangjian" onselectstart="return false;"><span class="icon_down"></span></span>
-                <span class="msg_error product_hide">最多只能选<em>3</em>份</span>
-            </dt>
-
-        </dl>
-
-         <dl class="vmp vmp-content vmp-1000020036"></dl>
-		 <dl class="vmp-price vmp-content  vmp-1000020036">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>15.00</dd></dl> 
-		 <dl class="vmp vmp-content product_hide vmp-1000020008"></dl>
-		 <dl class="vmp-price vmp-content product_hide  vmp-1000020008">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>169.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020137"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020137">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>56.00</dd></dl> <dl class="vmp vmp-content product_hide vmp-1000020001"></dl><dl class="vmp-price vmp-content product_hide  vmp-1000020001">     <dt class="vmp-offerPrice-desc">价格</dt>          <dd class="vmp-offerPrice"><span class="vmp-unit">￥</span>20.00</dd></dl><a  href="<?php echo e(url('home/user/zhifu')); ?>" ><span  >立即购买</span></a>
-        
+        </dl>     
 </div></div>
     </div>
+    <script src="<?php echo e(asset('js/jquery-3.2.1.slim.min.js')); ?>"></script>
+    <script type="text/javascript">
+        $(".product_name").click(function(){
+            alert($(this).html());
+            
+            $(window).attr('location',"<?php echo e(('http://www.laravel.com/a/home')); ?>");
+                            
+        });
+    </script>
     <!-- 轮播 -->
     <div id="t-full-slider" data-spm="2300653" style="height:550px;" data-spm-max-idx="2"><div class="index-main-slider">
     <div class="switch-wrapper" style="width:100%;height:550px"><ul class="switch-list" style="width: 100%; height: 550px;">
