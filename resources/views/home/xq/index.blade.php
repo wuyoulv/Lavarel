@@ -1075,7 +1075,7 @@ var ykQHeader = {
 <a href="{{URL('a/xq')}}/{{$b->id}}"></a>
 <i class="bg"></i>
 
-<img src="{{ $b->pic_address }}">
+<img src="{{ $b->video_address }}?vframe/png/offset/5">
 
 <!-- 精选角标 -->
 
