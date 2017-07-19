@@ -36,6 +36,7 @@ class XqController extends Controller
             if($last>=$last2){
                 return view("home.xq.index",['filminfo'=>$filminfo,'filmcmt'=>$filmcmt,'info'=>$info,'w'=>$w]);
             }else{
+                session()->put("msg","此为会员电影，请办理会员！");
                 return redirect('a/home');
             }
         }else{
@@ -69,7 +70,7 @@ class XqController extends Controller
         // echo "<pre>";
         // print_r($data);die;
         \DB::table('film_cmt')->insertGetId(['user_id'=>$data['user_id'],'film_id'=>$data['film_id'],'title'=>$data['title'],'text'=>$data['text'],'time'=>$data['time']]);
-        return redirect("/home/xq/{$w}");
+        return redirect("a/xq/{$w}");
         
     }
 
@@ -98,7 +99,7 @@ class XqController extends Controller
         $data['months'] = $_POST['months'];
         $data['money'] = $_POST['money'];
         $data['buy_time'] = date("Y-m-d H:i:s");
-        
+        $data['role'] = 2;
         $cc = User::where('id',$id)->Update($data);
 
         if(!empty($cc)){

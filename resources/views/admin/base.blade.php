@@ -306,7 +306,7 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">主导航</li>
-            <li class="active treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-gittip"></i><span>前台会员管理</span><i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -317,7 +317,7 @@
               </ul>
             </li> 
 
-            <li class="active treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> VIP会员管理</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -327,7 +327,7 @@
               </ul>
             </li>
 
-            <li class="active treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 信息管理</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -336,7 +336,7 @@
                 <li><a href="{{url('admin/user_film')}}"><i class="fa fa-circle-o"></i> 用户与电影</a></li>
               </ul>
             </li>
-            <li class="active treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 影片分类管理</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -346,7 +346,7 @@
               </ul>
             </li>
 
-            <li class="active treeview">
+            <li class="treeview">
             <a href="">
             		<i class="fa fa-bomb"></i> <span>谷宇模块</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
@@ -356,7 +356,7 @@
               </ul>
             </li>
 
-          <li class="active treeview">
+          <li class="treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 影片评论管理</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -365,7 +365,7 @@
               </ul>
             </li>      
 
-             <li class="active treeview">
+             <li class="treeview">
               <a href="#">
                 <i class="fa fa-bomb"></i> <span> 视频信息</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -374,15 +374,7 @@
                 <li><a href="{{url('admin/film_info/create')}}"><i class="fa fa-circle-o"></i> 添加视频</a></li>
               </ul>
             </li>
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-bomb"></i> <span> 七牛云视频信息</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="{{url('admin/qiniu_info')}}"><i class="fa fa-circle-o"></i> 浏览七牛云</a></li>
-                <li><a href="{{url('admin/qiniu_info/create')}}"><i class="fa fa-circle-o"></i> 添加七牛云</a></li>
-              </ul>
-            </li>
+            
             
           </ul>
         </section>

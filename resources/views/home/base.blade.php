@@ -31,10 +31,10 @@
     </head>
     
     <body class="w1300" data-spm="20023042">
+        
         <div style="display:block;clear:both;float:none;position:absolute;right:0;bottom:0;border:none;">
             <object id="MTJ4E1K2LF7HQQP9" data="{{ asset('home2/MTFlashStore.swf.下载')}}" type="application/x-shockwave-flash"
             width="10" height="10" style="position:absolute;right:0;bottom:0;border:none;">
-                
                 <param name="wmode" value="transparent">
                 <param name="version" value="10">
                 <param name="allowScriptAccess" value="always">

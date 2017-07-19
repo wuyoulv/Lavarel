@@ -36,7 +36,7 @@ class HomeRegisterController extends Controller
         $result = User::find(['account' => $request['tel']]);
         if ($result) {
             // 返回错误信息
-            return responseMsg('手机号码已注册!', 400);
+            return 1;
         }
         // 调用发送验证码 代码片段
         $smsResult = $this->codeSnippet->mobileCodeForSms($request['tel'], config('subassembly.autograph'), config('subassembly.template_id'));
@@ -147,15 +147,14 @@ class HomeRegisterController extends Controller
 
     }
     
-    
     public function sendSms(Request $request){
         
-        $user=Login::where('account','=',$account)->get();
-        if(!empty($user)){
-            //return back()->with('status','此账号已存在！');
-            return json_encode(['info' => '此账号已存在！']);
-        }
+        
         $phone = $request ->input('account'); // 用户手机号，接收验证码
+        $user=Login::where('account','=',$phone)->first();
+        if($user){
+            return '1';
+        }
         $name = '兄弟连';  // 短信签名,可以在阿里大鱼的管理中心看到
         $num = rand(100000, 999999); // 生成随机验证码
         session()->put('num',$num);
@@ -172,9 +171,9 @@ class HomeRegisterController extends Controller
         //echo "验证码：".session('alidayu').'<br/>';
         if(property_exists($request,'result')){
            // 使用PHP函数json_encode方法将给定数组转化为JSON：
-            return json_encode(['ResultData' => '成功', 'info' => '已发送']);
+            return '2';
         }else{
-            return json_encode(['ResultData' => '失败', 'info' => '重复发送']);
+            return '3';
         }
         
     }
@@ -191,13 +190,12 @@ class HomeRegisterController extends Controller
         $account=$request->input('account');
         $password=$request->input('password');
         $repassword=$request->input('repassword');
-        
         $code=$request->input('code');
         
         if(!$password==$repassword){
             return back()->with('两次密码输入不一致');
         }
-        $user=Login::where('account','=',$account)->get();
+        $user=Login::where('account','=',$account)->first();
         if(!empty($user)){
             return back()->with('此账号已存在！');
         }
@@ -205,8 +203,7 @@ class HomeRegisterController extends Controller
             return back()->with('验证码错误！');
         }
         //$input = $request->only(['account','picname','password','name','birthday','sex','tel','email','address','months','money','role','buy_time','dead_line','login_time','last_time']);
-        
-        try {
+                try {
             // 开始事物
             \DB::beginTransaction();
             // 向用户注册原始表 添加一条数据

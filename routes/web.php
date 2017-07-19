@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',"Home\IndexController@index");
 
 
 
@@ -82,7 +80,7 @@ Route::get("home/user/zhanghu","Home\UserController@zhanghu");
 Route::get("home/user/jilu","Home\UserController@jilu");
 Route::get("home/user/huiyuan","Home\UserController@huiyuan");
 Route::get("home/user/zhifu","Home\UserController@zhifu");
-Route::post("home/userdetail/update","Home\UserController@update");
+Route::post("a/userdetail/updatesss","Home\UserController@updates");
 Route::post("home/userdetail/store","Home\UserController@store");
 
 

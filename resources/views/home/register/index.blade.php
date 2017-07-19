@@ -21,7 +21,7 @@
 						<form action="{{ URL('/home/createUser') }}" method="post" id='123' >
 							{{ csrf_field() }}
 							<div class="form_text_ipt" style="width:60;">
-								<input name="account" type="text" placeholder="手机号" onblur="sendMobileCode()" >
+								<input name="account" type="text" placeholder="手机号" onblur="send()" >
                                 
 							</div>
                             @if (session('status'))
@@ -29,6 +29,7 @@
                                     {{ session('status') }}
                                 </div>
                             @endif
+                            <div id="phone_exist" class="ececk_warning"><span>此账号不可用</span></div>
 							<div class="ececk_warning"><span>数据不能为空</span></div>
                             <div class="form_text_ipt">
 								<input name="code" type="text" placeholder="验证码">
@@ -48,13 +49,6 @@
 							<div class="form_reg_btn">
 								<span>已有帐号？</span><a href="/home/login">马上登录</a>
 							</div>
-                            
-                            
-                            
-                        
-                            
-                            
-                            
 						</form>
 						
 						</div>
@@ -65,38 +59,37 @@
 		<script type="text/javascript" src="{{ asset('home8/js/jquery.min.js')}}" ></script>
 		<script type="text/javascript" src="{{ asset('home8/js/common.js')}}" ></script>
         <script>
-            function sendMobileCode()
+            function send()
                 {
                     //alert('ok')
                     var tel = $("input[name='account']").val();
+
                     //alert(tel);
                     $.ajax({
                         url:'/home/sendSms',
                         type:"get",
                         data:'account='+tel,
-                        dataType:'json',
-                        headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')},
+                        headers:  { 'X-CSRF-TOKEN' : '{{ csrf_token() }}' },
+                        datatype:"text",
                         success:function(data){
-                            alert(data);
+                        	//alert(data);
+                            if(data=='1'){
+                            	$("#phone_exist").attr("style","display:block");
+                            	$("#phone_exist").html("此账号不可用");
+                            	//alert('此账号不可用！');
+                            }else{
+                            	//alert("验证码发送失败！");
+                            	$("#phone_exist").attr("style","display:block");
+                            	$("#phone_exist").html("此账号可用");
+                            }
                         },
-                        error:function(){
-                            alert('111此账号已存在！');
-                        }
-                    })
+ 						error:function(){
+ 							alert("youwenti");
+ 						}
+                    });
                 }
 
             function checkUser(){
-               //var result = document.getElementById("userid").value;
-               //var password = document.getElementById("passid").value;
-
-               /* if(result == ""  ){
-                 alert("用户名不能为空");
-                 return false;
-               }
-               if(password == ""  ){
-                alert("密码不能为空");
-                 return false;
-               } */
               document.getElementById("123").submit();
             }
         </script>

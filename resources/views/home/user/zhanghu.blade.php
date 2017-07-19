@@ -268,7 +268,7 @@ var ykQHeader = {
 	<div class="formbox">
 			<fieldset>	
 				
-				<form action="{{url('home/userdetail/update')}}" method="post" id="sv_profile" enctype="multipart/form-data">
+				<form action="{{url('a/userdetail/updatesss')}}" method="post" id="sv_profile" enctype="multipart/form-data">
 				<input type="hidden" name="_token" value="{{csrf_token()}}"/>
 				
 				<div class="entry" width="80">
